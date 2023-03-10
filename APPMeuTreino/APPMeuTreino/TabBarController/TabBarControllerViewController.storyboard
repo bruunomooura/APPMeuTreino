@@ -10,7 +10,7 @@
         <scene sceneID="qAd-Ru-eXX">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarControllerViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D5g-4W-193" customClass="TabBarControllerViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="Fundo icone" id="mGx-Yc-Gip">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="IconBackground" id="mGx-Yc-Gip">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -71,7 +71,7 @@
         <scene sceneID="gQG-3x-qBp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tDp-nf-WYP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="casa-3" id="9qp-AR-Uoq"/>
+                    <tabBarItem key="tabBarItem" title="" image="IconHome" id="9qp-AR-Uoq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mOi-h4-96N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -90,7 +90,7 @@
         <scene sceneID="Drn-cu-A2W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fdi-IV-03y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="halteres-2" id="3Cb-kK-H44"/>
+                    <tabBarItem key="tabBarItem" title="" image="IconTraining" id="3Cb-kK-H44"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVZ-Bm-MX3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -109,7 +109,7 @@
         <scene sceneID="oWc-8o-Chz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qsa-yY-ER0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="calendario-2" id="WDb-iQ-PLm"/>
+                    <tabBarItem key="tabBarItem" title="" image="IconCalendar" id="WDb-iQ-PLm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="p8j-pS-BM5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -128,7 +128,7 @@
         <scene sceneID="PKi-Ql-vhB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4J9-8R-GyO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="configuracoes-cog-2" id="cHv-Ce-VK2"/>
+                    <tabBarItem key="tabBarItem" title="" image="IconSettings" id="cHv-Ce-VK2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2eo-x4-Xza">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -145,10 +145,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Fundo icone" width="47" height="47"/>
-        <image name="calendario-2" width="32" height="32"/>
-        <image name="casa-3" width="32" height="32"/>
-        <image name="configuracoes-cog-2" width="32" height="32"/>
-        <image name="halteres-2" width="32" height="32"/>
+        <image name="IconBackground" width="47" height="47"/>
+        <image name="IconCalendar" width="32" height="32"/>
+        <image name="IconHome" width="32" height="32"/>
+        <image name="IconSettings" width="32" height="32"/>
+        <image name="IconTraining" width="32" height="32"/>
     </resources>
 </document>
