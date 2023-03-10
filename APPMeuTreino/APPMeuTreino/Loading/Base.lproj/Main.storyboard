@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo 1 com nome 3" translatesAutoresizingMaskIntoConstraints="NO" id="6OZ-bi-MkT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconLogoMenor" translatesAutoresizingMaskIntoConstraints="NO" id="6OZ-bi-MkT">
                                 <rect key="frame" x="49" y="78" width="222" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -70,7 +70,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo 1 com nome 3" width="1366" height="1230"/>
+        <image name="IconLogoMenor" width="1366" height="1230"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
