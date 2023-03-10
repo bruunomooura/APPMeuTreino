@@ -17,6 +17,34 @@
 		3F6448D529BA61F300BDE579 /* APPMeuTreinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448D429BA61F300BDE579 /* APPMeuTreinoTests.swift */; };
 		3F6448DF29BA61F300BDE579 /* APPMeuTreinoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448DE29BA61F300BDE579 /* APPMeuTreinoUITests.swift */; };
 		3F6448E129BA61F300BDE579 /* APPMeuTreinoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448E029BA61F300BDE579 /* APPMeuTreinoUITestsLaunchTests.swift */; };
+		3F64490729BA70E600BDE579 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64490629BA70E600BDE579 /* LoginViewController.swift */; };
+		3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64490829BA70F600BDE579 /* LoginViewController.storyboard */; };
+		3F64490B29BA710A00BDE579 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64490A29BA710A00BDE579 /* ForgotPasswordViewController.swift */; };
+		3F64490D29BA711B00BDE579 /* ForgotPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64490C29BA711B00BDE579 /* ForgotPasswordViewController.storyboard */; };
+		3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64490E29BA714400BDE579 /* RegisterViewController.swift */; };
+		3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64491029BA714D00BDE579 /* RegisterViewController.storyboard */; };
+		3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64491229BA715B00BDE579 /* HomeViewController.swift */; };
+		3F64491529BA717000BDE579 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64491429BA717000BDE579 /* HomeViewController.storyboard */; };
+		3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64491729BA71B400BDE579 /* CreateTrainingViewController.swift */; };
+		3F64491A29BA71C000BDE579 /* CreateTrainingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64491929BA71C000BDE579 /* CreateTrainingViewController.storyboard */; };
+		3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64491F29BA72F500BDE579 /* ExerciseSelectionViewController.swift */; };
+		3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64492129BA730800BDE579 /* ExerciseSelectionViewController.storyboard */; };
+		3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64492429BA732800BDE579 /* TrainingOverviewViewController.swift */; };
+		3F64492729BA733300BDE579 /* TrainingOverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64492629BA733300BDE579 /* TrainingOverviewViewController.storyboard */; };
+		3F64492929BA734200BDE579 /* ExecutionTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */; };
+		3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */; };
+		3F64492D29BA736500BDE579 /* DemonstrationExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64492C29BA736500BDE579 /* DemonstrationExerciseViewController.swift */; };
+		3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64492E29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard */; };
+		3F64493129BA737F00BDE579 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64493029BA737F00BDE579 /* CalendarViewController.swift */; };
+		3F64493329BA738800BDE579 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493229BA738800BDE579 /* CalendarViewController.storyboard */; };
+		3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64493429BA739500BDE579 /* SettingsViewController.swift */; };
+		3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493629BA739F00BDE579 /* SettingsViewController.storyboard */; };
+		3F64493929BA73B600BDE579 /* DataChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64493829BA73B600BDE579 /* DataChangeViewController.swift */; };
+		3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493A29BA73BE00BDE579 /* DataChangeViewController.storyboard */; };
+		3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64493C29BA73CD00BDE579 /* ChangePasswordViewController.swift */; };
+		3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */; };
+		3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */; };
+		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +79,34 @@
 		3F6448DA29BA61F300BDE579 /* APPMeuTreinoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APPMeuTreinoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6448DE29BA61F300BDE579 /* APPMeuTreinoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPMeuTreinoUITests.swift; sourceTree = "<group>"; };
 		3F6448E029BA61F300BDE579 /* APPMeuTreinoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPMeuTreinoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F64490629BA70E600BDE579 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F64490829BA70F600BDE579 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		3F64490A29BA710A00BDE579 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		3F64490C29BA711B00BDE579 /* ForgotPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordViewController.storyboard; sourceTree = "<group>"; };
+		3F64490E29BA714400BDE579 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3F64491029BA714D00BDE579 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
+		3F64491229BA715B00BDE579 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3F64491429BA717000BDE579 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		3F64491729BA71B400BDE579 /* CreateTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingViewController.swift; sourceTree = "<group>"; };
+		3F64491929BA71C000BDE579 /* CreateTrainingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTrainingViewController.storyboard; sourceTree = "<group>"; };
+		3F64491F29BA72F500BDE579 /* ExerciseSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionViewController.swift; sourceTree = "<group>"; };
+		3F64492129BA730800BDE579 /* ExerciseSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseSelectionViewController.storyboard; sourceTree = "<group>"; };
+		3F64492429BA732800BDE579 /* TrainingOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOverviewViewController.swift; sourceTree = "<group>"; };
+		3F64492629BA733300BDE579 /* TrainingOverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingOverviewViewController.storyboard; sourceTree = "<group>"; };
+		3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingViewController.swift; sourceTree = "<group>"; };
+		3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExecutionTrainingViewController.storyboard; sourceTree = "<group>"; };
+		3F64492C29BA736500BDE579 /* DemonstrationExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonstrationExerciseViewController.swift; sourceTree = "<group>"; };
+		3F64492E29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DemonstrationExerciseViewController.storyboard; sourceTree = "<group>"; };
+		3F64493029BA737F00BDE579 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3F64493229BA738800BDE579 /* CalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
+		3F64493429BA739500BDE579 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3F64493629BA739F00BDE579 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		3F64493829BA73B600BDE579 /* DataChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataChangeViewController.swift; sourceTree = "<group>"; };
+		3F64493A29BA73BE00BDE579 /* DataChangeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataChangeViewController.storyboard; sourceTree = "<group>"; };
+		3F64493C29BA73CD00BDE579 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
+		3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
+		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +159,21 @@
 			children = (
 				3F6448BA29BA61F100BDE579 /* AppDelegate.swift */,
 				3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */,
-				3F6448BE29BA61F100BDE579 /* ViewController.swift */,
-				3F6448C029BA61F100BDE579 /* Main.storyboard */,
+				3F6448ED29BA65AA00BDE579 /* Loading */,
+				3F6448F229BA681F00BDE579 /* Login */,
+				3F6448F329BA686200BDE579 /* ForgotPassword */,
+				3F6448F429BA68EC00BDE579 /* Register */,
+				3F6448F529BA690900BDE579 /* Home */,
+				3F6448F629BA692E00BDE579 /* CreateTraining */,
+				3F6448FB29BA6B8F00BDE579 /* ExerciseSelection */,
+				3F6448FC29BA6C2C00BDE579 /* TrainingOverview */,
+				3F6448FD29BA6E5C00BDE579 /* ExecutionTraining */,
+				3F6448FE29BA6EF700BDE579 /* DemonstrationExercise */,
+				3F6448FF29BA6F3500BDE579 /* Calendar */,
+				3F64490329BA6FAD00BDE579 /* Settings */,
+				3F64490429BA6FC500BDE579 /* DataChange */,
+				3F64490529BA708100BDE579 /* ChangePassword */,
+				3F64494129BA7C6000BDE579 /* TabBarController */,
 				3F6448C629BA61F300BDE579 /* Assets.xcassets */,
 				3F6448C829BA61F300BDE579 /* LaunchScreen.storyboard */,
 				3F6448CB29BA61F300BDE579 /* Info.plist */,
@@ -128,6 +197,141 @@
 				3F6448E029BA61F300BDE579 /* APPMeuTreinoUITestsLaunchTests.swift */,
 			);
 			path = APPMeuTreinoUITests;
+			sourceTree = "<group>";
+		};
+		3F6448ED29BA65AA00BDE579 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				3F6448BE29BA61F100BDE579 /* ViewController.swift */,
+				3F6448C029BA61F100BDE579 /* Main.storyboard */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		3F6448F229BA681F00BDE579 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F64490629BA70E600BDE579 /* LoginViewController.swift */,
+				3F64490829BA70F600BDE579 /* LoginViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3F6448F329BA686200BDE579 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				3F64490A29BA710A00BDE579 /* ForgotPasswordViewController.swift */,
+				3F64490C29BA711B00BDE579 /* ForgotPasswordViewController.storyboard */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		3F6448F429BA68EC00BDE579 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3F64490E29BA714400BDE579 /* RegisterViewController.swift */,
+				3F64491029BA714D00BDE579 /* RegisterViewController.storyboard */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		3F6448F529BA690900BDE579 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3F64491229BA715B00BDE579 /* HomeViewController.swift */,
+				3F64491429BA717000BDE579 /* HomeViewController.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3F6448F629BA692E00BDE579 /* CreateTraining */ = {
+			isa = PBXGroup;
+			children = (
+				3F64491729BA71B400BDE579 /* CreateTrainingViewController.swift */,
+				3F64491929BA71C000BDE579 /* CreateTrainingViewController.storyboard */,
+			);
+			path = CreateTraining;
+			sourceTree = "<group>";
+		};
+		3F6448FB29BA6B8F00BDE579 /* ExerciseSelection */ = {
+			isa = PBXGroup;
+			children = (
+				3F64491F29BA72F500BDE579 /* ExerciseSelectionViewController.swift */,
+				3F64492129BA730800BDE579 /* ExerciseSelectionViewController.storyboard */,
+			);
+			path = ExerciseSelection;
+			sourceTree = "<group>";
+		};
+		3F6448FC29BA6C2C00BDE579 /* TrainingOverview */ = {
+			isa = PBXGroup;
+			children = (
+				3F64492429BA732800BDE579 /* TrainingOverviewViewController.swift */,
+				3F64492629BA733300BDE579 /* TrainingOverviewViewController.storyboard */,
+			);
+			path = TrainingOverview;
+			sourceTree = "<group>";
+		};
+		3F6448FD29BA6E5C00BDE579 /* ExecutionTraining */ = {
+			isa = PBXGroup;
+			children = (
+				3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */,
+				3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */,
+			);
+			path = ExecutionTraining;
+			sourceTree = "<group>";
+		};
+		3F6448FE29BA6EF700BDE579 /* DemonstrationExercise */ = {
+			isa = PBXGroup;
+			children = (
+				3F64492C29BA736500BDE579 /* DemonstrationExerciseViewController.swift */,
+				3F64492E29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard */,
+			);
+			path = DemonstrationExercise;
+			sourceTree = "<group>";
+		};
+		3F6448FF29BA6F3500BDE579 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				3F64493029BA737F00BDE579 /* CalendarViewController.swift */,
+				3F64493229BA738800BDE579 /* CalendarViewController.storyboard */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		3F64490329BA6FAD00BDE579 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3F64493429BA739500BDE579 /* SettingsViewController.swift */,
+				3F64493629BA739F00BDE579 /* SettingsViewController.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3F64490429BA6FC500BDE579 /* DataChange */ = {
+			isa = PBXGroup;
+			children = (
+				3F64493829BA73B600BDE579 /* DataChangeViewController.swift */,
+				3F64493A29BA73BE00BDE579 /* DataChangeViewController.storyboard */,
+			);
+			path = DataChange;
+			sourceTree = "<group>";
+		};
+		3F64490529BA708100BDE579 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				3F64493C29BA73CD00BDE579 /* ChangePasswordViewController.swift */,
+				3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		3F64494129BA7C6000BDE579 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */,
+				3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +438,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */,
+				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
+				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
+				3F64491529BA717000BDE579 /* HomeViewController.storyboard in Resources */,
+				3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */,
+				3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */,
+				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
+				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
+				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
+				3F64490D29BA711B00BDE579 /* ForgotPasswordViewController.storyboard in Resources */,
+				3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */,
+				3F64492729BA733300BDE579 /* TrainingOverviewViewController.storyboard in Resources */,
+				3F64491A29BA71C000BDE579 /* CreateTrainingViewController.storyboard in Resources */,
+				3F64493329BA738800BDE579 /* CalendarViewController.storyboard in Resources */,
 				3F6448C729BA61F300BDE579 /* Assets.xcassets in Resources */,
 				3F6448C229BA61F100BDE579 /* Main.storyboard in Resources */,
 			);
@@ -261,9 +479,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F64493129BA737F00BDE579 /* CalendarViewController.swift in Sources */,
+				3F64492D29BA736500BDE579 /* DemonstrationExerciseViewController.swift in Sources */,
+				3F64493929BA73B600BDE579 /* DataChangeViewController.swift in Sources */,
+				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
+				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
+				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
+				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
+				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
+				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
+				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,
+				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,
+				3F64490B29BA710A00BDE579 /* ForgotPasswordViewController.swift in Sources */,
 				3F6448C529BA61F100BDE579 /* APPMeuTreino.xcdatamodeld in Sources */,
+				3F64490729BA70E600BDE579 /* LoginViewController.swift in Sources */,
+				3F64492929BA734200BDE579 /* ExecutionTrainingViewController.swift in Sources */,
 				3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

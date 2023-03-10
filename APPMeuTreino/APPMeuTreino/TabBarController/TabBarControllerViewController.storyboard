@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D5g-4W-193">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller View Controller-->
+        <scene sceneID="qAd-Ru-eXX">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarControllerViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D5g-4W-193" customClass="TabBarControllerViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="Fundo icone" id="mGx-Yc-Gip">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tDp-nf-WYP" kind="relationship" relationship="viewControllers" id="jqd-D6-Xqx"/>
+                        <segue destination="fdi-IV-03y" kind="relationship" relationship="viewControllers" id="wTB-V9-S7n"/>
+                        <segue destination="Qsa-yY-ER0" kind="relationship" relationship="viewControllers" id="ghF-2M-FJL"/>
+                        <segue destination="4J9-8R-GyO" kind="relationship" relationship="viewControllers" id="utt-eZ-sXQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Du-q3-Nqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="-430"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="tCu-W8-Vhu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeViewController" referencedIdentifier="HomeViewController" id="xz5-f4-uEA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ljt-xy-kKc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HtL-xI-8s4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="-945"/>
+        </scene>
+        <!--TrainingOverviewViewController-->
+        <scene sceneID="SwU-Ta-G8L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrainingOverviewViewController" referencedIdentifier="TrainingOverviewViewController" id="DyD-jm-647" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yOe-AV-NCC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HE-Xa-Ttz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="-242"/>
+        </scene>
+        <!--CalendarViewController-->
+        <scene sceneID="bfw-Z8-oEm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CalendarViewController" referencedIdentifier="CalendarViewController" id="6iC-0C-uU6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eSe-2u-ceD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7c-Ps-SDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="482"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="1dL-9q-5bO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingsViewController" referencedIdentifier="SettingsViewController" id="RT0-E7-S3v" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eLd-K8-MdD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQC-qC-8sy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="1300"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gQG-3x-qBp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tDp-nf-WYP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="casa-3" id="9qp-AR-Uoq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mOi-h4-96N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xz5-f4-uEA" kind="relationship" relationship="rootViewController" id="3FR-UI-q7U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGk-Jt-orT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="-945"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Drn-cu-A2W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fdi-IV-03y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="halteres-2" id="3Cb-kK-H44"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVZ-Bm-MX3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DyD-jm-647" kind="relationship" relationship="rootViewController" id="UPZ-Ld-I2y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gf-0e-BdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="-241"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oWc-8o-Chz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qsa-yY-ER0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="calendario-2" id="WDb-iQ-PLm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p8j-pS-BM5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6iC-0C-uU6" kind="relationship" relationship="rootViewController" id="mom-iO-5eX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hX-l0-Vkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="483"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PKi-Ql-vhB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4J9-8R-GyO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="configuracoes-cog-2" id="cHv-Ce-VK2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2eo-x4-Xza">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RT0-E7-S3v" kind="relationship" relationship="rootViewController" id="bXJ-Ff-HOm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6c-iv-DON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="1300"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fundo icone" width="47" height="47"/>
+        <image name="calendario-2" width="32" height="32"/>
+        <image name="casa-3" width="32" height="32"/>
+        <image name="configuracoes-cog-2" width="32" height="32"/>
+        <image name="halteres-2" width="32" height="32"/>
+    </resources>
+</document>
