@@ -78,6 +78,12 @@
                             <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="43" id="pyt-8r-99u"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundTextField1" destination="lTm-We-owY" id="ad7-NW-iii"/>
+                        <outlet property="backgroundTextField2" destination="YhM-rD-tc8" id="ait-FL-dvV"/>
+                        <outlet property="backgroundTextField3" destination="iHk-ZY-uMy" id="zNy-D7-sDY"/>
+                        <outlet property="imageProfile" destination="pwG-cv-ubI" id="jY0-wp-aVx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +91,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile" width="322" height="288"/>
+        <image name="profile" width="609" height="609"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
