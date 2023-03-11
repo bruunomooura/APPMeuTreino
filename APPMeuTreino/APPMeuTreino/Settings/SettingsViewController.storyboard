@@ -16,38 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
-                                <rect key="frame" x="45" y="64" width="109" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="2WO-eV-cqP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="790-jQ-zXf">
-                                <rect key="frame" x="31" y="221" width="313" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="uX9-4n-HTU"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Alterar dados pessoais" titleAlignment="center">
-                                    <fontDescription key="titleFontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKA-sc-LLG">
-                                <rect key="frame" x="31" y="270" width="313" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="ZDd-CH-jTi"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Alterar senha" titleAlignment="center">
-                                    <fontDescription key="titleFontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                </buttonConfiguration>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <nil key="tintColor"/>
-                                </variation>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-cv-ubI">
                                 <rect key="frame" x="263" y="43" width="80" height="80"/>
                                 <constraints>
@@ -55,46 +23,74 @@
                                     <constraint firstAttribute="height" constant="80" id="fR6-3v-NHT"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-Ti-Tea">
-                                <rect key="frame" x="31" y="319" width="313" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="mnx-ji-ENn"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-We-owY">
+                                <rect key="frame" x="30" y="152" width="315" height="37"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sair" titleAlignment="center">
-                                    <fontDescription key="titleFontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alterar dados pessoais">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhM-rD-tc8">
+                                <rect key="frame" x="30" y="212" width="313" height="37"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alterar senha">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHk-ZY-uMy">
+                                <rect key="frame" x="30" y="273" width="315" height="40.5"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sair">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
+                                <rect key="frame" x="30" y="85" width="109" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="2WO-eV-cqP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BKA-sc-LLG" secondAttribute="trailing" constant="31" id="0HN-TY-stT"/>
-                            <constraint firstItem="BKA-sc-LLG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="0Tv-Mc-dzY"/>
-                            <constraint firstItem="lmi-68-jUw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="Ff1-Q9-PHL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iHk-ZY-uMy" secondAttribute="trailing" constant="30" id="6AY-nW-cuI"/>
+                            <constraint firstItem="iHk-ZY-uMy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="F8M-Jf-ky4"/>
+                            <constraint firstItem="lmi-68-jUw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Ff1-Q9-PHL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pwG-cv-ubI" secondAttribute="trailing" constant="32" id="G4a-eT-SM3"/>
-                            <constraint firstItem="BKA-sc-LLG" firstAttribute="top" secondItem="790-jQ-zXf" secondAttribute="bottom" constant="21" id="G5H-qU-O5H"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fuq-Ti-Tea" secondAttribute="trailing" constant="31" id="M7o-c8-jCw"/>
-                            <constraint firstItem="790-jQ-zXf" firstAttribute="top" secondItem="pwG-cv-ubI" secondAttribute="bottom" constant="98" id="RsG-FE-yO5"/>
-                            <constraint firstItem="790-jQ-zXf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="Uu3-XU-EL3"/>
-                            <constraint firstItem="pwG-cv-ubI" firstAttribute="centerY" secondItem="lmi-68-jUw" secondAttribute="centerY" id="Xn7-60-Y61"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="790-jQ-zXf" secondAttribute="trailing" constant="31" id="b9O-lT-KJ7"/>
+                            <constraint firstItem="YhM-rD-tc8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="JLj-zB-X4C"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YhM-rD-tc8" secondAttribute="trailing" constant="32" id="OhA-fb-4Y2"/>
+                            <constraint firstItem="YhM-rD-tc8" firstAttribute="top" secondItem="lTm-We-owY" secondAttribute="bottom" constant="23" id="RSX-IE-YUb"/>
+                            <constraint firstItem="pwG-cv-ubI" firstAttribute="centerY" secondItem="lmi-68-jUw" secondAttribute="centerY" constant="-21" id="Xn7-60-Y61"/>
+                            <constraint firstItem="lTm-We-owY" firstAttribute="top" secondItem="pwG-cv-ubI" secondAttribute="bottom" constant="29" id="Ykf-cq-Mkr"/>
+                            <constraint firstItem="iHk-ZY-uMy" firstAttribute="top" secondItem="YhM-rD-tc8" secondAttribute="bottom" constant="24" id="bwP-RK-raH"/>
+                            <constraint firstItem="lTm-We-owY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="nPa-5h-nw3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lTm-We-owY" secondAttribute="trailing" constant="30" id="pZl-fm-mh3"/>
                             <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="43" id="pyt-8r-99u"/>
-                            <constraint firstItem="fuq-Ti-Tea" firstAttribute="top" secondItem="BKA-sc-LLG" secondAttribute="bottom" constant="21" id="sQU-71-29e"/>
-                            <constraint firstItem="fuq-Ti-Tea" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="td0-Jv-Zl2"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="-36.160714285714285"/>
+            <point key="canvasLocation" x="31.199999999999999" y="-36.206896551724142"/>
         </scene>
     </scenes>
     <resources>
         <image name="profile" width="322" height="288"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
