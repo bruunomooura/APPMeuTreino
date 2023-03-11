@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,88 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
+                                <rect key="frame" x="45" y="64" width="109" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="2WO-eV-cqP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="790-jQ-zXf">
+                                <rect key="frame" x="31" y="221" width="313" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="uX9-4n-HTU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Alterar dados pessoais" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKA-sc-LLG">
+                                <rect key="frame" x="31" y="270" width="313" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ZDd-CH-jTi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Alterar senha" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <nil key="tintColor"/>
+                                </variation>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-cv-ubI">
+                                <rect key="frame" x="263" y="43" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="MCx-Vi-Afp"/>
+                                    <constraint firstAttribute="height" constant="80" id="fR6-3v-NHT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-Ti-Tea">
+                                <rect key="frame" x="31" y="319" width="313" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="mnx-ji-ENn"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sair" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BKA-sc-LLG" secondAttribute="trailing" constant="31" id="0HN-TY-stT"/>
+                            <constraint firstItem="BKA-sc-LLG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="0Tv-Mc-dzY"/>
+                            <constraint firstItem="lmi-68-jUw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="Ff1-Q9-PHL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pwG-cv-ubI" secondAttribute="trailing" constant="32" id="G4a-eT-SM3"/>
+                            <constraint firstItem="BKA-sc-LLG" firstAttribute="top" secondItem="790-jQ-zXf" secondAttribute="bottom" constant="21" id="G5H-qU-O5H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fuq-Ti-Tea" secondAttribute="trailing" constant="31" id="M7o-c8-jCw"/>
+                            <constraint firstItem="790-jQ-zXf" firstAttribute="top" secondItem="pwG-cv-ubI" secondAttribute="bottom" constant="98" id="RsG-FE-yO5"/>
+                            <constraint firstItem="790-jQ-zXf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="Uu3-XU-EL3"/>
+                            <constraint firstItem="pwG-cv-ubI" firstAttribute="centerY" secondItem="lmi-68-jUw" secondAttribute="centerY" id="Xn7-60-Y61"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="790-jQ-zXf" secondAttribute="trailing" constant="31" id="b9O-lT-KJ7"/>
+                            <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="43" id="pyt-8r-99u"/>
+                            <constraint firstItem="fuq-Ti-Tea" firstAttribute="top" secondItem="BKA-sc-LLG" secondAttribute="bottom" constant="21" id="sQU-71-29e"/>
+                            <constraint firstItem="fuq-Ti-Tea" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="td0-Jv-Zl2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="-34"/>
+            <point key="canvasLocation" x="31.884057971014496" y="-36.160714285714285"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="profile" width="322" height="288"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
