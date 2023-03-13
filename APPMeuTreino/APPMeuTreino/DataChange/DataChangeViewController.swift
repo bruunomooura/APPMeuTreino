@@ -17,32 +17,33 @@ class DataChangeViewController: UIViewController {
     
     @IBOutlet weak var birthdayTextField: UITextField!
     
-    @IBOutlet weak var borderTextField3: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var borderButtonSave: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         imageProfile.layer.borderWidth = 1
-//        imageProfile.layer.masksToBounds = false
+        imageProfile.layer.masksToBounds = false
         imageProfile.layer.borderColor = UIColor.blue.cgColor
         imageProfile.layer.cornerRadius = imageProfile.frame.size.height/2
         imageProfile.clipsToBounds = true
         
-        fullnameTextField.layer.borderColor = UIColor.red.cgColor
+        saveButton.layer.cornerRadius = 8
         
-        borderButtonSave.layer.cornerRadius = 8
+        fullnameTextField.layer.borderColor = UIColor.orange.cgColor
+        fullnameTextField.layer.borderWidth = 1.0
         
+        birthdayTextField.layer.borderColor = UIColor.orange.cgColor
+        birthdayTextField.layer.borderWidth = 1.0
         
-        // Do any additional setup after loading the view.
+        emailTextField.layer.borderColor = UIColor.orange.cgColor
+        emailTextField.layer.borderWidth = 1.0
+        
     }
     
 
-    @IBAction func editarimagembutton(_ sender: UIButton) {
-        
-        imageProfile.image = UIImage(systemName: "heart")
-        alteracaodedadosLabel.text = "Barbara"
-    }
-    
+
     
 }
