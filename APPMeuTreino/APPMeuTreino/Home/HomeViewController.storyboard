@@ -24,7 +24,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsY-fP-vbc">
-                                <rect key="frame" x="104" y="548" width="167" height="32"/>
+                                <rect key="frame" x="104" y="605" width="167" height="32"/>
                                 <color key="backgroundColor" red="0.0" green="0.59215688710000003" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="PI2-si-FU0"/>
@@ -40,9 +40,12 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="94G-VA-GeC" kind="presentation" modalPresentationStyle="fullScreen" id="f3q-XV-boL"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Nx-n5o">
-                                <rect key="frame" x="20" y="227" width="335" height="300"/>
+                                <rect key="frame" x="20" y="227" width="335" height="357"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos começar?! Clique no botão abaixo para criar o seu primeiro treino." textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4C-gM-V9E">
                                         <rect key="frame" x="42.5" y="168" width="250" height="90"/>
@@ -180,6 +183,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="-34.632683658170919"/>
+        </scene>
+        <!--CreateTrainingViewController-->
+        <scene sceneID="uQm-e4-xL9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTrainingViewController" referencedIdentifier="CreateTrainingViewController" id="94G-VA-GeC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja0-PG-riV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="33"/>
         </scene>
     </scenes>
     <resources>

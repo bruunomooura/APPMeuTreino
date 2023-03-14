@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,245 +14,175 @@
             <objects>
                 <viewController storyboardIdentifier="CreateTrainingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CreateTrainingViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe3-OR-axy">
-                                <rect key="frame" x="0.0" y="13" width="56" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe3-OR-axy">
+                                <rect key="frame" x="2" y="13" width="56" height="49"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Voltar"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9id-2b-EAJ">
-                                <rect key="frame" x="219" y="19" width="88" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9id-2b-EAJ">
+                                <rect key="frame" x="274.5" y="19" width="87.5" height="34.5"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Concluir">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI3-sc-EGL">
-                                <rect key="frame" x="124" y="107" width="198" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercícios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frK-FN-2YK">
+                                <rect key="frame" x="62" y="20" width="120.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Aps-67-Ypo">
+                                <rect key="frame" x="16" y="92" width="343" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="REn-Xs-IEU"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI3-sc-EGL">
+                                <rect key="frame" x="122.5" y="61" width="252.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="5 Exercícios selecionados">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <color key="baseForegroundColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Buscar" translatesAutoresizingMaskIntoConstraints="NO" id="izc-dH-tYw">
-                                <rect key="frame" x="7" y="138" width="297" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="QYt-7z-JFV"/>
-                                </connections>
-                            </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercícios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frK-FN-2YK">
-                                <rect key="frame" x="60" y="20" width="121" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CU2-QD-0hq">
-                                <rect key="frame" x="10" y="182" width="124" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Abdominais" translatesAutoresizingMaskIntoConstraints="NO" id="cu7-mg-hLl">
-                                        <rect key="frame" x="-3" y="-7" width="127" height="108"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-jY-JtN">
-                                        <rect key="frame" x="-17" y="-7" width="133" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Abdominais">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.0023856471962606565" green="0.0053670767475280682" blue="0.0087200126262626521" alpha="0.70077090231788086" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxq-tI-5LB">
+                                <rect key="frame" x="10" y="154" width="174" height="120"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abb-ME-FMU">
-                                <rect key="frame" x="7" y="380" width="100" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ombros" translatesAutoresizingMaskIntoConstraints="NO" id="Rcn-Ux-rP9">
-                                        <rect key="frame" x="0.0" y="-60" width="120" height="189"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZm-HL-Q1n">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Ombros">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.0083057133838383423" green="0.0083057133838383423" blue="0.0083057133838383423" alpha="0.69779594370860931" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6s-f6-E9C">
-                                <rect key="frame" x="7" y="284" width="119" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bíceps" translatesAutoresizingMaskIntoConstraints="NO" id="QG1-r1-yh3">
-                                        <rect key="frame" x="-8" y="-3" width="135" height="91"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHF-iV-cUX">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Bíceps">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70351303807947019" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nri-h1-wVt">
-                                <rect key="frame" x="7" y="457" width="119" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Peito" translatesAutoresizingMaskIntoConstraints="NO" id="bZn-qf-DID">
-                                        <rect key="frame" x="-17" y="-3" width="153" height="94"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-AA-TQ2">
-                                        <rect key="frame" x="0.0" y="-3" width="59" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Peito">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.00071022727272729291" green="0.00071022727272729291" blue="0.00071022727272729291" alpha="0.70240066225165565" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-oj-xwe">
-                                <rect key="frame" x="152" y="182" width="143" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Aeróbicos" translatesAutoresizingMaskIntoConstraints="NO" id="0RT-Pi-72A">
-                                        <rect key="frame" x="0.0" y="-9" width="143" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgM-Iz-Ert">
-                                        <rect key="frame" x="-10" y="-9" width="92" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Aerobicos">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70421150662251653" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3d-Ie-dTC">
-                                <rect key="frame" x="155" y="275" width="136" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MembrosInferiores" translatesAutoresizingMaskIntoConstraints="NO" id="Q6H-5L-7gg">
-                                        <rect key="frame" x="-53" y="0.0" width="242" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-Pf-1Pj">
-                                        <rect key="frame" x="-27" y="8" width="117" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Membros inferiores">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69932222682119205" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPf-Zh-nUh">
-                                <rect key="frame" x="155" y="439" width="149" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tríceps" translatesAutoresizingMaskIntoConstraints="NO" id="cj8-wa-fUo">
-                                        <rect key="frame" x="39" y="0.0" width="110" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p11-A2-SYW">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Tríceps">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69598509933774833" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89411771299999998" green="0.89411771299999998" blue="0.89411771299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Abdominais">
+                                    <color key="baseForegroundColor" systemColor="linkColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Aa-jT-Zg3">
+                                <rect key="frame" x="10" y="278" width="174" height="120"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Gel-YN-4Kr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="Z3h-SO-C0o"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Biceps"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Lr-ce1">
+                                <rect key="frame" x="10" y="402" width="174" height="120"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="2Hs-bu-tC9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="4Z2-4l-rtd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="OmbrosCostas"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgp-KH-Drs">
+                                <rect key="frame" x="10" y="525" width="174" height="120"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Peito"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCz-Ji-We5">
+                                <rect key="frame" x="191" y="307" width="174" height="191"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="MembrosInferiores"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGY-kN-8AN">
+                                <rect key="frame" x="191" y="506" width="174" height="139"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Triceps"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8s-D7-FCr">
+                                <rect key="frame" x="191" y="154" width="174" height="144"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Aerobico"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="frK-FN-2YK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="0Ha-qJ-gxe"/>
+                            <constraint firstItem="rGY-kN-8AN" firstAttribute="top" secondItem="mCz-Ji-We5" secondAttribute="bottom" constant="8" symbolic="YES" id="2l2-On-Lgi"/>
+                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="height" secondItem="Zxq-tI-5LB" secondAttribute="height" id="4ih-sc-12R"/>
+                            <constraint firstItem="Zxq-tI-5LB" firstAttribute="top" secondItem="Aps-67-Ypo" secondAttribute="bottom" constant="6" id="6Ca-zQ-pJY"/>
+                            <constraint firstItem="o8s-D7-FCr" firstAttribute="top" secondItem="Aps-67-Ypo" secondAttribute="bottom" constant="6" id="6js-eI-wCs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mCz-Ji-We5" secondAttribute="trailing" constant="10" id="6lt-TL-676"/>
+                            <constraint firstItem="Xe3-OR-axy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="13" id="8cw-lM-m7V"/>
+                            <constraint firstItem="frK-FN-2YK" firstAttribute="leading" secondItem="Xe3-OR-axy" secondAttribute="trailing" constant="4" id="98B-zO-Tu5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rGY-kN-8AN" secondAttribute="trailing" constant="10" id="9o4-im-7Sm"/>
+                            <constraint firstItem="kgp-KH-Drs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="AMU-sP-tV1"/>
+                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="top" secondItem="Zxq-tI-5LB" secondAttribute="bottom" constant="4" id="Cxv-K9-gv6"/>
+                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="width" secondItem="Zxq-tI-5LB" secondAttribute="width" id="DNA-Gm-HRq"/>
+                            <constraint firstItem="Xe3-OR-axy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="2" id="DkC-ne-RNg"/>
+                            <constraint firstItem="o8s-D7-FCr" firstAttribute="height" secondItem="Zxq-tI-5LB" secondAttribute="height" multiplier="1.2" id="H94-oO-AEe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rGY-kN-8AN" secondAttribute="bottom" constant="20" id="OZP-Ld-iPY"/>
+                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="width" secondItem="Zxq-tI-5LB" secondAttribute="height" multiplier="29:20" id="OcQ-J1-miG"/>
+                            <constraint firstItem="mCz-Ji-We5" firstAttribute="top" secondItem="o8s-D7-FCr" secondAttribute="bottom" constant="9" id="QDZ-VT-DPR"/>
+                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="R5T-tD-1WP"/>
+                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="width" secondItem="mCz-Ji-We5" secondAttribute="width" id="RxV-Mn-1fv"/>
+                            <constraint firstItem="ZI3-sc-EGL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TK4-UX-qip"/>
+                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="width" secondItem="7Aa-jT-Zg3" secondAttribute="width" id="Tcq-pL-gfR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="o8s-D7-FCr" secondAttribute="trailing" constant="10" id="TpP-1K-0nr"/>
+                            <constraint firstItem="9id-2b-EAJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="19" id="VgZ-Ww-hOW"/>
+                            <constraint firstItem="kgp-KH-Drs" firstAttribute="height" secondItem="fnq-Lr-ce1" secondAttribute="height" id="X7Y-Ma-I8t"/>
+                            <constraint firstItem="rGY-kN-8AN" firstAttribute="leading" secondItem="kgp-KH-Drs" secondAttribute="trailing" constant="7" id="Y8x-Cd-dUi"/>
+                            <constraint firstItem="kgp-KH-Drs" firstAttribute="width" secondItem="fnq-Lr-ce1" secondAttribute="height" multiplier="29:20" id="YX2-JU-Vdg"/>
+                            <constraint firstItem="o8s-D7-FCr" firstAttribute="leading" secondItem="Zxq-tI-5LB" secondAttribute="trailing" constant="7" id="a94-4Z-vK5"/>
+                            <constraint firstItem="ZI3-sc-EGL" firstAttribute="top" secondItem="9id-2b-EAJ" secondAttribute="bottom" constant="7.5" id="aBS-To-Js6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kgp-KH-Drs" secondAttribute="bottom" constant="20" id="aDF-ZX-9se"/>
+                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="cvx-ew-04c"/>
+                            <constraint firstItem="ZI3-sc-EGL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="122.5" id="d7V-Ry-Ugt"/>
+                            <constraint firstItem="Zxq-tI-5LB" firstAttribute="width" secondItem="o8s-D7-FCr" secondAttribute="width" id="dX7-e8-J81"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9id-2b-EAJ" secondAttribute="trailing" constant="13" id="dan-Nz-nL3"/>
+                            <constraint firstItem="kgp-KH-Drs" firstAttribute="bottom" secondItem="rGY-kN-8AN" secondAttribute="bottom" id="dsG-zz-q9H"/>
+                            <constraint firstItem="kgp-KH-Drs" firstAttribute="width" secondItem="rGY-kN-8AN" secondAttribute="width" id="dxe-OJ-Jvw"/>
+                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="width" secondItem="7Aa-jT-Zg3" secondAttribute="height" multiplier="29:20" id="gLQ-wP-JxJ"/>
+                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="height" secondItem="7Aa-jT-Zg3" secondAttribute="height" id="hvb-FO-4sj"/>
+                            <constraint firstItem="kgp-KH-Drs" firstAttribute="top" secondItem="fnq-Lr-ce1" secondAttribute="bottom" constant="3" id="ki6-fN-4cU"/>
+                            <constraint firstItem="Aps-67-Ypo" firstAttribute="top" secondItem="Xe3-OR-axy" secondAttribute="bottom" constant="30" id="l0t-PV-2zw"/>
+                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="top" secondItem="7Aa-jT-Zg3" secondAttribute="bottom" constant="4" id="lse-QQ-mgq"/>
+                            <constraint firstItem="Aps-67-Ypo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="mpI-Ox-DG5"/>
+                            <constraint firstItem="mCz-Ji-We5" firstAttribute="leading" secondItem="fnq-Lr-ce1" secondAttribute="trailing" constant="7" id="qR1-cY-uSv"/>
+                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="leading" secondItem="fnq-Lr-ce1" secondAttribute="leading" id="qeN-Ug-Abf"/>
+                            <constraint firstItem="kgp-KH-Drs" firstAttribute="width" secondItem="fnq-Lr-ce1" secondAttribute="width" id="r24-Ug-KUx"/>
+                            <constraint firstItem="Zxq-tI-5LB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="vM8-VK-dMH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Aps-67-Ypo" secondAttribute="trailing" constant="16" id="z2n-vW-kl4"/>
+                            <constraint firstItem="mCz-Ji-We5" firstAttribute="leading" secondItem="7Aa-jT-Zg3" secondAttribute="trailing" constant="7" id="zUt-Sc-IeI"/>
+                            <constraint firstItem="Aps-67-Ypo" firstAttribute="top" secondItem="ZI3-sc-EGL" secondAttribute="bottom" id="zsT-cE-9jM"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="qeB-iA-aE4" id="usf-o7-RGt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="qeB-iA-aE4">
-                    <connections>
-                        <outlet property="delegate" destination="Y6W-OH-hqX" id="Jxy-Sy-xc4"/>
-                        <outlet property="searchBar" destination="izc-dH-tYw" id="03m-55-TkR"/>
-                        <outlet property="searchContentsController" destination="Y6W-OH-hqX" id="y4W-LF-aNp"/>
-                        <outlet property="searchResultsDataSource" destination="Y6W-OH-hqX" id="jDZ-BY-giM"/>
-                        <outlet property="searchResultsDelegate" destination="Y6W-OH-hqX" id="4Ao-EE-OT0"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="129.375" y="-27.464788732394368"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2lN-cv-HZn">
-            <objects>
-                <viewController id="vxZ-jg-lYK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ain-bg-LSY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ZqW-FP-ZbI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oa9-B7-3oA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="781.875" y="12.67605633802817"/>
+            <point key="canvasLocation" x="128.80000000000001" y="-28.335832083958024"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Abdominais" width="105" height="80"/>
-        <image name="Aeróbicos" width="120" height="60"/>
-        <image name="Bíceps" width="105" height="80"/>
-        <image name="MembrosInferiores" width="95" height="100"/>
-        <image name="Ombros" width="130" height="80"/>
-        <image name="Peito" width="95" height="75"/>
-        <image name="Tríceps" width="90" height="100"/>
+        <image name="Abdominais" width="150" height="106"/>
+        <image name="Aerobico" width="150" height="130"/>
+        <image name="Biceps" width="150" height="106"/>
+        <image name="MembrosInferiores" width="150" height="177"/>
+        <image name="OmbrosCostas" width="150" height="106"/>
+        <image name="Peito" width="150" height="106"/>
+        <image name="Triceps" width="150" height="130"/>
         <image name="Voltar" width="32" height="32"/>
         <namedColor name="BlueMeuTreino">
             <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
