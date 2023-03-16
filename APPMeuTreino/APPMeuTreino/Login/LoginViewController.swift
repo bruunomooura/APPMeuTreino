@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
