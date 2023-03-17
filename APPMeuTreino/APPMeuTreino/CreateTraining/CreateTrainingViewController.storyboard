@@ -21,6 +21,9 @@
                                 <rect key="frame" x="2" y="13" width="56" height="49"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Voltar"/>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lvB-75-530"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9id-2b-EAJ">
                                 <rect key="frame" x="274.5" y="19" width="87.5" height="34.5"/>
@@ -51,112 +54,43 @@
                                     <color key="baseForegroundColor" red="0.92549026010000002" green="0.41176474089999998" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxq-tI-5LB">
-                                <rect key="frame" x="10" y="154" width="174" height="120"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Abdominais">
-                                    <color key="baseForegroundColor" systemColor="linkColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Aa-jT-Zg3">
-                                <rect key="frame" x="10" y="278" width="174" height="120"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Gel-YN-4Kr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="Z3h-SO-C0o"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Biceps"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Lr-ce1">
-                                <rect key="frame" x="10" y="402" width="174" height="120"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="2Hs-bu-tC9"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="4Z2-4l-rtd"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="OmbrosCostas"/>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgp-KH-Drs">
-                                <rect key="frame" x="10" y="525" width="174" height="120"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Peito"/>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCz-Ji-We5">
-                                <rect key="frame" x="191" y="307" width="174" height="191"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="MembrosInferiores"/>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGY-kN-8AN">
-                                <rect key="frame" x="191" y="506" width="174" height="139"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Triceps"/>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8s-D7-FCr">
-                                <rect key="frame" x="191" y="154" width="174" height="144"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Aerobico"/>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EOe-bn-v1I">
+                                <rect key="frame" x="0.0" y="158" width="375" height="509"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6eI-uO-DGi">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="frK-FN-2YK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="0Ha-qJ-gxe"/>
-                            <constraint firstItem="rGY-kN-8AN" firstAttribute="top" secondItem="mCz-Ji-We5" secondAttribute="bottom" constant="8" symbolic="YES" id="2l2-On-Lgi"/>
-                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="height" secondItem="Zxq-tI-5LB" secondAttribute="height" id="4ih-sc-12R"/>
-                            <constraint firstItem="Zxq-tI-5LB" firstAttribute="top" secondItem="Aps-67-Ypo" secondAttribute="bottom" constant="6" id="6Ca-zQ-pJY"/>
-                            <constraint firstItem="o8s-D7-FCr" firstAttribute="top" secondItem="Aps-67-Ypo" secondAttribute="bottom" constant="6" id="6js-eI-wCs"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mCz-Ji-We5" secondAttribute="trailing" constant="10" id="6lt-TL-676"/>
+                            <constraint firstItem="EOe-bn-v1I" firstAttribute="top" secondItem="Aps-67-Ypo" secondAttribute="bottom" constant="10" id="89J-Vc-34Z"/>
                             <constraint firstItem="Xe3-OR-axy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="13" id="8cw-lM-m7V"/>
                             <constraint firstItem="frK-FN-2YK" firstAttribute="leading" secondItem="Xe3-OR-axy" secondAttribute="trailing" constant="4" id="98B-zO-Tu5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rGY-kN-8AN" secondAttribute="trailing" constant="10" id="9o4-im-7Sm"/>
-                            <constraint firstItem="kgp-KH-Drs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="AMU-sP-tV1"/>
-                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="top" secondItem="Zxq-tI-5LB" secondAttribute="bottom" constant="4" id="Cxv-K9-gv6"/>
-                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="width" secondItem="Zxq-tI-5LB" secondAttribute="width" id="DNA-Gm-HRq"/>
                             <constraint firstItem="Xe3-OR-axy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="2" id="DkC-ne-RNg"/>
-                            <constraint firstItem="o8s-D7-FCr" firstAttribute="height" secondItem="Zxq-tI-5LB" secondAttribute="height" multiplier="1.2" id="H94-oO-AEe"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rGY-kN-8AN" secondAttribute="bottom" constant="20" id="OZP-Ld-iPY"/>
-                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="width" secondItem="Zxq-tI-5LB" secondAttribute="height" multiplier="29:20" id="OcQ-J1-miG"/>
-                            <constraint firstItem="mCz-Ji-We5" firstAttribute="top" secondItem="o8s-D7-FCr" secondAttribute="bottom" constant="9" id="QDZ-VT-DPR"/>
-                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="R5T-tD-1WP"/>
-                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="width" secondItem="mCz-Ji-We5" secondAttribute="width" id="RxV-Mn-1fv"/>
                             <constraint firstItem="ZI3-sc-EGL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TK4-UX-qip"/>
-                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="width" secondItem="7Aa-jT-Zg3" secondAttribute="width" id="Tcq-pL-gfR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="o8s-D7-FCr" secondAttribute="trailing" constant="10" id="TpP-1K-0nr"/>
                             <constraint firstItem="9id-2b-EAJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="19" id="VgZ-Ww-hOW"/>
-                            <constraint firstItem="kgp-KH-Drs" firstAttribute="height" secondItem="fnq-Lr-ce1" secondAttribute="height" id="X7Y-Ma-I8t"/>
-                            <constraint firstItem="rGY-kN-8AN" firstAttribute="leading" secondItem="kgp-KH-Drs" secondAttribute="trailing" constant="7" id="Y8x-Cd-dUi"/>
-                            <constraint firstItem="kgp-KH-Drs" firstAttribute="width" secondItem="fnq-Lr-ce1" secondAttribute="height" multiplier="29:20" id="YX2-JU-Vdg"/>
-                            <constraint firstItem="o8s-D7-FCr" firstAttribute="leading" secondItem="Zxq-tI-5LB" secondAttribute="trailing" constant="7" id="a94-4Z-vK5"/>
+                            <constraint firstItem="EOe-bn-v1I" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="a7a-Gc-UiE"/>
                             <constraint firstItem="ZI3-sc-EGL" firstAttribute="top" secondItem="9id-2b-EAJ" secondAttribute="bottom" constant="7.5" id="aBS-To-Js6"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kgp-KH-Drs" secondAttribute="bottom" constant="20" id="aDF-ZX-9se"/>
-                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="cvx-ew-04c"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="EOe-bn-v1I" secondAttribute="bottom" id="bno-LD-kJU"/>
                             <constraint firstItem="ZI3-sc-EGL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="122.5" id="d7V-Ry-Ugt"/>
-                            <constraint firstItem="Zxq-tI-5LB" firstAttribute="width" secondItem="o8s-D7-FCr" secondAttribute="width" id="dX7-e8-J81"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9id-2b-EAJ" secondAttribute="trailing" constant="13" id="dan-Nz-nL3"/>
-                            <constraint firstItem="kgp-KH-Drs" firstAttribute="bottom" secondItem="rGY-kN-8AN" secondAttribute="bottom" id="dsG-zz-q9H"/>
-                            <constraint firstItem="kgp-KH-Drs" firstAttribute="width" secondItem="rGY-kN-8AN" secondAttribute="width" id="dxe-OJ-Jvw"/>
-                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="width" secondItem="7Aa-jT-Zg3" secondAttribute="height" multiplier="29:20" id="gLQ-wP-JxJ"/>
-                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="height" secondItem="7Aa-jT-Zg3" secondAttribute="height" id="hvb-FO-4sj"/>
-                            <constraint firstItem="kgp-KH-Drs" firstAttribute="top" secondItem="fnq-Lr-ce1" secondAttribute="bottom" constant="3" id="ki6-fN-4cU"/>
                             <constraint firstItem="Aps-67-Ypo" firstAttribute="top" secondItem="Xe3-OR-axy" secondAttribute="bottom" constant="30" id="l0t-PV-2zw"/>
-                            <constraint firstItem="fnq-Lr-ce1" firstAttribute="top" secondItem="7Aa-jT-Zg3" secondAttribute="bottom" constant="4" id="lse-QQ-mgq"/>
                             <constraint firstItem="Aps-67-Ypo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="mpI-Ox-DG5"/>
-                            <constraint firstItem="mCz-Ji-We5" firstAttribute="leading" secondItem="fnq-Lr-ce1" secondAttribute="trailing" constant="7" id="qR1-cY-uSv"/>
-                            <constraint firstItem="7Aa-jT-Zg3" firstAttribute="leading" secondItem="fnq-Lr-ce1" secondAttribute="leading" id="qeN-Ug-Abf"/>
-                            <constraint firstItem="kgp-KH-Drs" firstAttribute="width" secondItem="fnq-Lr-ce1" secondAttribute="width" id="r24-Ug-KUx"/>
-                            <constraint firstItem="Zxq-tI-5LB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="vM8-VK-dMH"/>
+                            <constraint firstItem="EOe-bn-v1I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sZ8-zN-8ZM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Aps-67-Ypo" secondAttribute="trailing" constant="16" id="z2n-vW-kl4"/>
-                            <constraint firstItem="mCz-Ji-We5" firstAttribute="leading" secondItem="7Aa-jT-Zg3" secondAttribute="trailing" constant="7" id="zUt-Sc-IeI"/>
                             <constraint firstItem="Aps-67-Ypo" firstAttribute="top" secondItem="ZI3-sc-EGL" secondAttribute="bottom" id="zsT-cE-9jM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="createTrainingCollectionView" destination="EOe-bn-v1I" id="bHM-ZY-nKS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,25 +98,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Abdominais" width="150" height="106"/>
-        <image name="Aerobico" width="150" height="130"/>
-        <image name="Biceps" width="150" height="106"/>
-        <image name="MembrosInferiores" width="150" height="177"/>
-        <image name="OmbrosCostas" width="150" height="106"/>
-        <image name="Peito" width="150" height="106"/>
-        <image name="Triceps" width="150" height="130"/>
         <image name="Voltar" width="32" height="32"/>
         <namedColor name="BlueMeuTreino">
             <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

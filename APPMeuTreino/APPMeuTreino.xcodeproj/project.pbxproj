@@ -45,6 +45,8 @@
 		3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */; };
 		3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */; };
 		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
+		CBFABDEF29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFABDED29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift */; };
+		CBFABDF029C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFABDEE29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
+		CBFABDED29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCreateTrainingCollectionViewCell.swift; sourceTree = "<group>"; };
+		CBFABDEE29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			children = (
 				3F6448BA29BA61F100BDE579 /* AppDelegate.swift */,
 				3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */,
+				CBFABDEC29C4F50700CFA0BE /* Cell */,
 				3F6448ED29BA65AA00BDE579 /* Loading */,
 				3F6448F229BA681F00BDE579 /* Login */,
 				3F6448F329BA686200BDE579 /* ForgotPassword */,
@@ -334,6 +339,15 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
+		CBFABDEC29C4F50700CFA0BE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CBFABDED29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift */,
+				CBFABDEE29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +459,7 @@
 				3F64491529BA717000BDE579 /* HomeViewController.storyboard in Resources */,
 				3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */,
 				3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */,
+				CBFABDF029C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib in Resources */,
 				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
 				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
 				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
@@ -489,6 +504,7 @@
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
 				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
+				CBFABDEF29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift in Sources */,
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,
 				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,
