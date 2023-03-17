@@ -8,10 +8,29 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    
+    @IBOutlet weak var imageProfile: UIImageView!
+    
+    @IBOutlet weak var backgroundTextField1: UIButton!
+    
+    @IBOutlet weak var backgroundTextField2: UIButton!
+    
+    @IBOutlet weak var backgroundTextField3: UIButton!
+    
+    override func viewDidLoad() {        super.viewDidLoad()
+        imageProfile.layer.borderWidth = 1
+        imageProfile.layer.masksToBounds = false
+        imageProfile.layer.borderColor = UIColor.blue.cgColor
+        imageProfile.layer.cornerRadius = imageProfile.frame.height/2
+        imageProfile.clipsToBounds = true
+        
+        backgroundTextField1.layer.cornerRadius = 8
+        backgroundTextField2.layer.cornerRadius = 8
+        backgroundTextField3.layer.cornerRadius = 8
+        
     }
+
 }
+
+
