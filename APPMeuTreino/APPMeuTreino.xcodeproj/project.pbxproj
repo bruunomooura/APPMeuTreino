@@ -159,8 +159,8 @@
 			children = (
 				3F6448BA29BA61F100BDE579 /* AppDelegate.swift */,
 				3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */,
-				3F6448ED29BA65AA00BDE579 /* Loading */,
-				3F6448F229BA681F00BDE579 /* Login */,
+				3F6448ED29BA65AA00BDE579 /* Login */,
+				3F6448F229BA681F00BDE579 /* Desativado (Login) */,
 				3F6448F329BA686200BDE579 /* ForgotPassword */,
 				3F6448F429BA68EC00BDE579 /* Register */,
 				3F6448F529BA690900BDE579 /* Home */,
@@ -199,22 +199,22 @@
 			path = APPMeuTreinoUITests;
 			sourceTree = "<group>";
 		};
-		3F6448ED29BA65AA00BDE579 /* Loading */ = {
+		3F6448ED29BA65AA00BDE579 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				3F6448BE29BA61F100BDE579 /* ViewController.swift */,
 				3F6448C029BA61F100BDE579 /* Main.storyboard */,
 			);
-			path = Loading;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		3F6448F229BA681F00BDE579 /* Login */ = {
+		3F6448F229BA681F00BDE579 /* Desativado (Login) */ = {
 			isa = PBXGroup;
 			children = (
 				3F64490629BA70E600BDE579 /* LoginViewController.swift */,
 				3F64490829BA70F600BDE579 /* LoginViewController.storyboard */,
 			);
-			path = Login;
+			path = "Desativado (Login)";
 			sourceTree = "<group>";
 		};
 		3F6448F329BA686200BDE579 /* ForgotPassword */ = {
@@ -673,6 +673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -700,6 +701,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
