@@ -7,12 +7,28 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
-
+class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
+    @IBOutlet weak var changePasswordButton: UIButton!
+    
+    @IBOutlet weak var backgroundDetailImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        emailTextField.layer.cornerRadius = 10
+        emailTextField.layer.borderWidth = 2
+        emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        
+        changePasswordButton.layer.cornerRadius = 10
+        
+        self.emailTextField.delegate = self
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.emailTextField.resignFirstResponder()
+        return true
+    }
 }
