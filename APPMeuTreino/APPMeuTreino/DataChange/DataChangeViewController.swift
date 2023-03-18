@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DataChangeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DataChangeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var alteracaodedadosLabel: UILabel!
     
@@ -47,24 +47,40 @@ class DataChangeViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageProfile.layer.borderWidth = 1
+        imageProfile.layer.borderWidth = 2
         imageProfile.layer.masksToBounds = false
-        imageProfile.layer.borderColor = UIColor.blue.cgColor
+        imageProfile.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
         imageProfile.layer.cornerRadius = imageProfile.frame.size.height/2
         imageProfile.clipsToBounds = true
         
-        saveButton.layer.cornerRadius = 8
+        saveButton.layer.cornerRadius = 10
         
-        fullnameTextField.layer.borderColor = UIColor.orange.cgColor
-        fullnameTextField.layer.borderWidth = 1.0
+        fullnameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        fullnameTextField.layer.borderWidth = 2
+        fullnameTextField.layer.cornerRadius = 10
         
-        birthdayTextField.layer.borderColor = UIColor.orange.cgColor
-        birthdayTextField.layer.borderWidth = 1.0
+        birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        birthdayTextField.layer.borderWidth = 2
+        birthdayTextField.layer.cornerRadius = 10
         
-        emailTextField.layer.borderColor = UIColor.orange.cgColor
-        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        emailTextField.layer.borderWidth = 2
+        emailTextField.layer.cornerRadius = 10
         
+        self.fullnameTextField.delegate = self
+        self.birthdayTextField.delegate = self
+        self.emailTextField.delegate = self
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == fullnameTextField{
+            birthdayTextField.becomeFirstResponder()
+        }else if textField == birthdayTextField{
+            emailTextField.becomeFirstResponder()
+        }else if textField == emailTextField{
+            emailTextField.resignFirstResponder()
+        }
+        return true
+    }
 }
 

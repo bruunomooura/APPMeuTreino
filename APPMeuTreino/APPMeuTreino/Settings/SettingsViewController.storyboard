@@ -3,8 +3,8 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,38 +24,53 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-We-owY">
-                                <rect key="frame" x="30" y="152" width="315" height="37"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <rect key="frame" x="30" y="152" width="315" height="40"/>
+                                <color key="backgroundColor" name="BlueMeuTreino"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IHr-Jd-qeX"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Alterar dados pessoais">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alterar Dados Pessoais">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="8mB-qg-t3E" kind="presentation" id="aUp-PM-auL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhM-rD-tc8">
-                                <rect key="frame" x="30" y="212" width="313" height="37"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <rect key="frame" x="30" y="217" width="313" height="40"/>
+                                <color key="backgroundColor" name="BlueMeuTreino"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wjM-9h-P1Q"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Alterar senha">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Alterar Senha">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="cmC-g8-i3d" kind="presentation" id="l5Q-u7-nlj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHk-ZY-uMy">
-                                <rect key="frame" x="30" y="273" width="315" height="40.5"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <rect key="frame" x="30" y="282" width="315" height="40"/>
+                                <color key="backgroundColor" red="0.92128556966781616" green="0.32791789781849018" blue="0.30138117812881016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Der-KW-ZJt"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sair">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
-                                <rect key="frame" x="30" y="85" width="109" height="38"/>
+                                <rect key="frame" x="30" y="86" width="109" height="36.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="2WO-eV-cqP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -69,10 +84,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pwG-cv-ubI" secondAttribute="trailing" constant="32" id="G4a-eT-SM3"/>
                             <constraint firstItem="YhM-rD-tc8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="JLj-zB-X4C"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YhM-rD-tc8" secondAttribute="trailing" constant="32" id="OhA-fb-4Y2"/>
-                            <constraint firstItem="YhM-rD-tc8" firstAttribute="top" secondItem="lTm-We-owY" secondAttribute="bottom" constant="23" id="RSX-IE-YUb"/>
+                            <constraint firstItem="YhM-rD-tc8" firstAttribute="top" secondItem="lTm-We-owY" secondAttribute="bottom" constant="25" id="RSX-IE-YUb"/>
                             <constraint firstItem="pwG-cv-ubI" firstAttribute="centerY" secondItem="lmi-68-jUw" secondAttribute="centerY" constant="-21" id="Xn7-60-Y61"/>
                             <constraint firstItem="lTm-We-owY" firstAttribute="top" secondItem="pwG-cv-ubI" secondAttribute="bottom" constant="29" id="Ykf-cq-Mkr"/>
-                            <constraint firstItem="iHk-ZY-uMy" firstAttribute="top" secondItem="YhM-rD-tc8" secondAttribute="bottom" constant="24" id="bwP-RK-raH"/>
+                            <constraint firstItem="iHk-ZY-uMy" firstAttribute="top" secondItem="YhM-rD-tc8" secondAttribute="bottom" constant="25" id="bwP-RK-raH"/>
                             <constraint firstItem="lTm-We-owY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="nPa-5h-nw3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lTm-We-owY" secondAttribute="trailing" constant="30" id="pZl-fm-mh3"/>
                             <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="43" id="pyt-8r-99u"/>
@@ -89,14 +104,27 @@
             </objects>
             <point key="canvasLocation" x="31.199999999999999" y="-36.206896551724142"/>
         </scene>
+        <!--DataChangeViewController-->
+        <scene sceneID="hEd-Vz-ZHo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DataChangeViewController" referencedIdentifier="DataChangeViewController" id="8mB-qg-t3E" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NtO-0M-qJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="-263"/>
+        </scene>
+        <!--ChangePasswordViewController-->
+        <scene sceneID="Uuf-iD-oMU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChangePasswordViewController" referencedIdentifier="ChangePasswordViewController" id="cmC-g8-i3d" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfL-dM-kdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="-28"/>
+        </scene>
     </scenes>
     <resources>
         <image name="profile" width="609" height="609"/>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="BlueMeuTreino">
+            <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

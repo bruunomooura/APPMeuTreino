@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, UITextFieldDelegate {
+class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var editPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,6 +21,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmPasswordLabel: UILabel!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signUpConfirmButton: UIButton!
+    @IBOutlet weak var editPhotoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 
         signUpConfirmButton.layer.cornerRadius = 10
         
+        editPhotoImageView.layer.borderWidth = 2
+        editPhotoImageView.layer.cornerRadius = editPhotoImageView.frame.size.height/2
+        editPhotoImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        //editPhotoImageView.layer.masksToBounds = false
+        //editPhotoImageView.clipsToBounds = true
+        
         self.nameTextField.delegate = self
         self.birthdayTextField.delegate = self
         self.emailTextField.delegate = self
@@ -68,5 +75,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-
+    
+    @IBAction func tappedEditImageButton(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage{
+            editPhotoImageView.image = editedImage
+        }else if let originalImage = info[.originalImage] as? UIImage {
+            editPhotoImageView.image = originalImage
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
 }

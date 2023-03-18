@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChangePasswordViewController: UIViewController {
+class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -19,16 +19,34 @@ class ChangePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    passwordTextField.layer.borderColor = UIColor.orange.cgColor
-    passwordTextField.layer.borderWidth = 1.0
-    newpasswordTextField.layer.borderColor = UIColor.orange.cgColor
-    newpasswordTextField.layer.borderWidth = 1.0
-    repeatpasswordTextField.layer.borderColor = UIColor.orange.cgColor
-    repeatpasswordTextField.layer.borderWidth = 1.0
-    saveButton.layer.cornerRadius = 8
+        passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        passwordTextField.layer.borderWidth = 2
+        passwordTextField.layer.cornerRadius = 10
+    
+        newpasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        newpasswordTextField.layer.borderWidth = 2
+        newpasswordTextField.layer.cornerRadius = 10
         
-        // Do any additional setup after loading the view.
+        repeatpasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        repeatpasswordTextField.layer.borderWidth = 2
+        repeatpasswordTextField.layer.cornerRadius = 10
+        
+        saveButton.layer.cornerRadius = 10
+        
+        self.repeatpasswordTextField.delegate = self
+        self.newpasswordTextField.delegate = self
+        self.passwordTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == passwordTextField{
+            newpasswordTextField.becomeFirstResponder()
+        }else if textField == newpasswordTextField{
+            repeatpasswordTextField.becomeFirstResponder()
+        }else if textField == repeatpasswordTextField{
+            repeatpasswordTextField.resignFirstResponder()
+        }
+        return true
     }
    
 }

@@ -19,9 +19,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var backgroundTextField3: UIButton!
     
     override func viewDidLoad() {        super.viewDidLoad()
-        imageProfile.layer.borderWidth = 1
+        imageProfile.layer.borderWidth = 2
         imageProfile.layer.masksToBounds = false
-        imageProfile.layer.borderColor = UIColor.blue.cgColor
+        imageProfile.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
         imageProfile.layer.cornerRadius = imageProfile.frame.height/2
         imageProfile.clipsToBounds = true
         
