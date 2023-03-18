@@ -43,22 +43,22 @@
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-Fu-yQq">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-Fu-yQq">
                                 <rect key="frame" x="21" y="392" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8BQ-b7-11M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R57-8W-HzH">
-                                <rect key="frame" x="98" y="474.5" width="179" height="33"/>
+                                <rect key="frame" x="87.5" y="474.5" width="200" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="179" id="Uk5-RY-YLo"/>
-                                    <constraint firstAttribute="height" constant="33" id="hPT-Do-4eo"/>
+                                    <constraint firstAttribute="width" constant="200" id="Uk5-RY-YLo"/>
+                                    <constraint firstAttribute="height" constant="40" id="hPT-Do-4eo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Entrar">
@@ -70,11 +70,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5as-40-9xC">
-                                <rect key="frame" x="98" y="515.5" width="179" height="33"/>
+                                <rect key="frame" x="87.5" y="529.5" width="200" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="179" id="Yv6-D9-cfK"/>
-                                    <constraint firstAttribute="height" constant="33" id="ivd-Td-8vm"/>
+                                    <constraint firstAttribute="width" constant="200" id="Yv6-D9-cfK"/>
+                                    <constraint firstAttribute="height" constant="40" id="ivd-Td-8vm"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Primeiro Acesso">
@@ -82,7 +82,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="hht-it-qiQ" kind="presentation" modalPresentationStyle="fullScreen" id="3Z8-84-w37"/>
+                                    <segue destination="hht-it-qiQ" kind="presentation" modalPresentationStyle="pageSheet" id="3Z8-84-w37"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysO-Cg-VHM">
@@ -131,7 +131,7 @@
                             <constraint firstItem="unn-RW-uV6" firstAttribute="top" secondItem="a8M-ti-WDY" secondAttribute="bottom" constant="60" id="bAI-Wu-G8j"/>
                             <constraint firstItem="QVn-Fu-yQq" firstAttribute="top" secondItem="ufv-Qe-cbg" secondAttribute="bottom" constant="10" id="f0g-zx-37B"/>
                             <constraint firstItem="QVn-Fu-yQq" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="hNP-2Z-BAx"/>
-                            <constraint firstItem="5as-40-9xC" firstAttribute="top" secondItem="R57-8W-HzH" secondAttribute="bottom" constant="8" id="iDq-IE-8eH"/>
+                            <constraint firstItem="5as-40-9xC" firstAttribute="top" secondItem="R57-8W-HzH" secondAttribute="bottom" constant="15" id="iDq-IE-8eH"/>
                             <constraint firstItem="5as-40-9xC" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="iVc-Zu-OAR"/>
                             <constraint firstItem="ufv-Qe-cbg" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="ug3-43-N5A"/>
                             <constraint firstAttribute="trailing" secondItem="hr0-cu-CAc" secondAttribute="trailing" id="xZb-sy-xbu"/>
