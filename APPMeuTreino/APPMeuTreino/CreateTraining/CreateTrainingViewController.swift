@@ -58,7 +58,7 @@ extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionVi
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "ExerciseSelectionViewController", bundle: nil).instantiateViewController(withIdentifier: "ExerciseSelectionViewController") as? ExerciseSelectionViewController {
-            //vc.modalPresentationStyle = .fullScreen
+            vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
         }
         //print(names[indexPath.row])

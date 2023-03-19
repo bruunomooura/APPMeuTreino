@@ -30,7 +30,7 @@
             </constraints>
             <size key="customSize" width="256" height="244"/>
             <connections>
-                <outlet property="exerciseTypeImageView" destination="gQy-gX-FNr" id="j2M-ch-MOZ"/>
+                <outlet property="groupMuscleTypeImageView" destination="gQy-gX-FNr" id="j2M-ch-MOZ"/>
             </connections>
             <point key="canvasLocation" x="287.02290076335879" y="55.633802816901408"/>
         </collectionViewCell>

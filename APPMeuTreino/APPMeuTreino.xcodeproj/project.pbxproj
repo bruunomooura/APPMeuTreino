@@ -47,6 +47,8 @@
 		3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */; };
 		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */; };
+		3FE59D2329C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE59D2129C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift */; };
+		3FE59D2429C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D2229C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib */; };
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
+		3FE59D2129C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExerciseSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FE59D2229C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExerciseSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,8 +147,8 @@
 		3F056A0A29C74BD400BF1B41 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */,
 				3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */,
+				3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -273,6 +277,7 @@
 		3F6448FB29BA6B8F00BDE579 /* ExerciseSelection */ = {
 			isa = PBXGroup;
 			children = (
+				3FE59D1E29C7A824008F8632 /* Cell */,
 				3F64491F29BA72F500BDE579 /* ExerciseSelectionViewController.swift */,
 				3F64492129BA730800BDE579 /* ExerciseSelectionViewController.storyboard */,
 			);
@@ -349,6 +354,15 @@
 				3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		3FE59D1E29C7A824008F8632 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FE59D2129C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift */,
+				3FE59D2229C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +471,7 @@
 			files = (
 				3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */,
 				3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */,
+				3FE59D2429C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib in Resources */,
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
@@ -516,6 +531,7 @@
 				3F6448C529BA61F100BDE579 /* APPMeuTreino.xcdatamodeld in Sources */,
 				3F64490729BA70E600BDE579 /* LoginViewController.swift in Sources */,
 				3F64492929BA734200BDE579 /* ExecutionTrainingViewController.swift in Sources */,
+				3FE59D2329C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */,
 				3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
