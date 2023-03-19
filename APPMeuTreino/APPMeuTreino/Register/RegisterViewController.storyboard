@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="futur2.ttf">
+            <string>Futura-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Register View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -33,7 +38,7 @@
                                     <constraint firstAttribute="height" constant="35" id="gIV-dm-rrq"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="0.0"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartQuotesType="no" textContentType="name"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Y3u-gs-MCv">
@@ -49,7 +54,7 @@
                                     <constraint firstAttribute="width" constant="56" id="I0H-af-KHN"/>
                                     <constraint firstAttribute="height" constant="22" id="U0N-KN-V12"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -59,7 +64,7 @@
                                     <constraint firstAttribute="height" constant="35" id="c5w-Lf-TKv"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="0.0"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" smartDashesType="no" smartQuotesType="no" textContentType="date-time"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data de Nascimento:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pz-ou-mtA">
@@ -68,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="22" id="W5L-kn-3jG"/>
                                     <constraint firstAttribute="width" constant="174" id="rp1-Tp-gOo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -78,7 +83,7 @@
                                     <constraint firstAttribute="height" constant="35" id="afJ-g9-3cW"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="0.0"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartQuotesType="no" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkZ-2i-N4S">
@@ -87,7 +92,7 @@
                                     <constraint firstAttribute="height" constant="22" id="562-36-f9W"/>
                                     <constraint firstAttribute="width" constant="50" id="HSi-ym-HZl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -97,7 +102,7 @@
                                     <constraint firstAttribute="height" constant="22" id="OJf-Aa-l7V"/>
                                     <constraint firstAttribute="width" constant="57" id="iO4-BF-bjO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -107,7 +112,7 @@
                                     <constraint firstAttribute="width" constant="144" id="9TZ-MP-DEF"/>
                                     <constraint firstAttribute="height" constant="22" id="x9k-FN-zzF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -120,7 +125,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Confirmar Cadastro">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
@@ -129,7 +134,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="xGM-s5-zca"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite novamente a senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIJ-la-xCw">
@@ -137,15 +142,19 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Scy-24-LXd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDg-H5-4k1">
-                                <rect key="frame" x="141" y="131" width="93" height="37.5"/>
+                                <rect key="frame" x="137.5" y="140" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ReQ-gP-e9B"/>
+                                    <constraint firstAttribute="height" constant="30" id="n1m-C3-5Yk"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Editar">
                                     <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="medium"/>
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                    <fontDescription key="titleFontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                     <color key="baseForegroundColor" name="BlueMeuTreino"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -181,7 +190,7 @@
                             <constraint firstItem="C1w-77-qMm" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="5" id="fG5-F8-oq1"/>
                             <constraint firstItem="9Pz-ou-mtA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="5" id="fKy-9q-Sya"/>
                             <constraint firstItem="KkZ-2i-N4S" firstAttribute="top" secondItem="IbV-Yr-SRN" secondAttribute="bottom" constant="8" id="lbX-Oy-6dF"/>
-                            <constraint firstItem="qDg-H5-4k1" firstAttribute="top" secondItem="Y3u-gs-MCv" secondAttribute="bottom" constant="-5" id="m3o-EG-Xrl"/>
+                            <constraint firstItem="qDg-H5-4k1" firstAttribute="top" secondItem="Y3u-gs-MCv" secondAttribute="bottom" constant="4" id="m3o-EG-Xrl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aIJ-la-xCw" secondAttribute="trailing" constant="5" id="mkO-eh-ikX"/>
                             <constraint firstItem="DDZ-AL-t7f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qeW-1n-rI7"/>
                             <constraint firstItem="eBX-qF-Q5n" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="5" id="tKA-EK-bJa"/>
