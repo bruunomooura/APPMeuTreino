@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F056A0729C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */; };
 		3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BA29BA61F100BDE579 /* AppDelegate.swift */; };
 		3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */; };
 		3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BE29BA61F100BDE579 /* ViewController.swift */; };
@@ -45,8 +46,8 @@
 		3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */; };
 		3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */; };
 		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
-		CBFABDEF29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFABDED29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift */; };
-		CBFABDF029C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFABDEE29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib */; };
+		3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */; };
+		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCreateTrainingCollectionViewCell.swift; path = APPMeuTreino/CreateTraining/Cell/CustomCreateTrainingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3F6448B729BA61F100BDE579 /* APPMeuTreino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPMeuTreino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6448BA29BA61F100BDE579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +111,8 @@
 		3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
-		CBFABDED29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCreateTrainingCollectionViewCell.swift; sourceTree = "<group>"; };
-		CBFABDEE29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
+		3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
+		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F056A0A29C74BD400BF1B41 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */,
+				3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3F6448AE29BA61F100BDE579 = {
 			isa = PBXGroup;
 			children = (
@@ -161,11 +172,11 @@
 		3F6448B929BA61F100BDE579 /* APPMeuTreino */ = {
 			isa = PBXGroup;
 			children = (
+				B1086BF629C747E400EB8271 /* futur2.ttf */,
 				3F6448BA29BA61F100BDE579 /* AppDelegate.swift */,
 				3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */,
-				CBFABDEC29C4F50700CFA0BE /* Cell */,
-				3F6448ED29BA65AA00BDE579 /* Loading */,
-				3F6448F229BA681F00BDE579 /* Login */,
+				3F6448ED29BA65AA00BDE579 /* Login */,
+				3F6448F229BA681F00BDE579 /* Desativado (Login) */,
 				3F6448F329BA686200BDE579 /* ForgotPassword */,
 				3F6448F429BA68EC00BDE579 /* Register */,
 				3F6448F529BA690900BDE579 /* Home */,
@@ -204,22 +215,22 @@
 			path = APPMeuTreinoUITests;
 			sourceTree = "<group>";
 		};
-		3F6448ED29BA65AA00BDE579 /* Loading */ = {
+		3F6448ED29BA65AA00BDE579 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				3F6448BE29BA61F100BDE579 /* ViewController.swift */,
 				3F6448C029BA61F100BDE579 /* Main.storyboard */,
 			);
-			path = Loading;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		3F6448F229BA681F00BDE579 /* Login */ = {
+		3F6448F229BA681F00BDE579 /* Desativado (Login) */ = {
 			isa = PBXGroup;
 			children = (
 				3F64490629BA70E600BDE579 /* LoginViewController.swift */,
 				3F64490829BA70F600BDE579 /* LoginViewController.storyboard */,
 			);
-			path = Login;
+			path = "Desativado (Login)";
 			sourceTree = "<group>";
 		};
 		3F6448F329BA686200BDE579 /* ForgotPassword */ = {
@@ -252,6 +263,7 @@
 		3F6448F629BA692E00BDE579 /* CreateTraining */ = {
 			isa = PBXGroup;
 			children = (
+				3F056A0A29C74BD400BF1B41 /* Cell */,
 				3F64491729BA71B400BDE579 /* CreateTrainingViewController.swift */,
 				3F64491929BA71C000BDE579 /* CreateTrainingViewController.storyboard */,
 			);
@@ -337,15 +349,6 @@
 				3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */,
 			);
 			path = TabBarController;
-			sourceTree = "<group>";
-		};
-		CBFABDEC29C4F50700CFA0BE /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				CBFABDED29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift */,
-				CBFABDEE29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,14 +455,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */,
 				3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */,
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
+				B1086BF729C747E400EB8271 /* futur2.ttf in Resources */,
 				3F64491529BA717000BDE579 /* HomeViewController.storyboard in Resources */,
 				3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */,
 				3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */,
-				CBFABDF029C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.xib in Resources */,
 				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
 				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
 				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
@@ -504,7 +508,7 @@
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
 				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
-				CBFABDEF29C4F58500CFA0BE /* CustomCreateTrainingCollectionViewCell.swift in Sources */,
+				3F056A0729C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift in Sources */,
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,
 				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,
@@ -689,6 +693,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -716,6 +721,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

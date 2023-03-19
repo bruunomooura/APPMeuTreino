@@ -1,30 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="futur2.ttf">
+            <string>Futura-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Data Change View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="DataChangeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DataChangeViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alteração de Dados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDj-Sl-GiA">
+                                <rect key="frame" x="73" y="40" width="229.5" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229.5" id="SPH-zG-bTF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="r4s-R7-Iad">
+                                <rect key="frame" x="112.5" y="97.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2Uk-mS-J3u"/>
+                                    <constraint firstAttribute="height" constant="150" id="MIR-Gs-0Tc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX9-L5-YP4">
+                                <rect key="frame" x="30" y="287.5" width="56" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="hC3-Ji-Nc9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Maria da Silva" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-IO-y84">
+                                <rect key="frame" x="30" y="310.5" width="315" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IpK-PW-FB7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartQuotesType="no" textContentType="name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data de Nascimento:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baI-i1-lf1">
+                                <rect key="frame" x="30" y="355.5" width="174" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="aMp-Qd-fZ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 10/10/1990" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDd-tD-rAB">
+                                <rect key="frame" x="30" y="378.5" width="315" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kqI-at-rxt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="date-time"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXp-XO-eiM">
+                                <rect key="frame" x="30" y="423.5" width="54" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="OGh-DM-Vfk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" maria@gmail.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-4Y-Csx">
+                                <rect key="frame" x="30" y="446.5" width="315" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="i8r-bZ-EUL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartQuotesType="no" textContentType="email"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfe-ow-DKH">
+                                <rect key="frame" x="87.5" y="501.5" width="200" height="40"/>
+                                <color key="backgroundColor" name="BlueMeuTreino"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bSJ-4S-hZq"/>
+                                    <constraint firstAttribute="width" constant="200" id="x5z-Kc-Gi4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Salvar">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMQ-NB-sMG">
+                                <rect key="frame" x="137.5" y="251.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ox1-Mi-FZO"/>
+                                    <constraint firstAttribute="width" constant="100" id="iMs-s5-N14"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.pencil" catalog="system" title="Editar">
+                                    <fontDescription key="titleFontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                    <color key="baseForegroundColor" name="BlueMeuTreino"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editimageButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0YP-iQ-fIA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nXp-XO-eiM" firstAttribute="top" secondItem="FDd-tD-rAB" secondAttribute="bottom" constant="10" id="0sD-nZ-7zj"/>
+                            <constraint firstItem="bfu-IO-y84" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="7uT-3L-NuP"/>
+                            <constraint firstItem="CX9-L5-YP4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="9wm-Md-wtS"/>
+                            <constraint firstItem="bfu-IO-y84" firstAttribute="top" secondItem="CX9-L5-YP4" secondAttribute="bottom" constant="5" id="CpW-ep-14A"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sXm-4Y-Csx" secondAttribute="trailing" constant="30" id="EYW-ZL-kDV"/>
+                            <constraint firstItem="CX9-L5-YP4" firstAttribute="top" secondItem="r4s-R7-Iad" secondAttribute="bottom" constant="40" id="Ix5-Dy-PG8"/>
+                            <constraint firstItem="aMQ-NB-sMG" firstAttribute="top" secondItem="r4s-R7-Iad" secondAttribute="bottom" constant="4" id="LSr-MK-Kq3"/>
+                            <constraint firstItem="Zfe-ow-DKH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mlm-gY-Sxo"/>
+                            <constraint firstItem="r4s-R7-Iad" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UXo-20-iNZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FDd-tD-rAB" secondAttribute="trailing" constant="30" id="b6P-7A-Q4k"/>
+                            <constraint firstItem="sXm-4Y-Csx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="blp-wK-4yX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bfu-IO-y84" secondAttribute="trailing" constant="30" id="cS5-tN-5as"/>
+                            <constraint firstItem="FDd-tD-rAB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ckf-ba-Y5d"/>
+                            <constraint firstItem="FDd-tD-rAB" firstAttribute="top" secondItem="baI-i1-lf1" secondAttribute="bottom" constant="5" id="cvB-WO-FPF"/>
+                            <constraint firstItem="Zfe-ow-DKH" firstAttribute="top" secondItem="sXm-4Y-Csx" secondAttribute="bottom" constant="20" id="flo-eB-bsn"/>
+                            <constraint firstItem="aMQ-NB-sMG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gFP-vk-9FJ"/>
+                            <constraint firstItem="baI-i1-lf1" firstAttribute="top" secondItem="bfu-IO-y84" secondAttribute="bottom" constant="10" id="iTM-e3-Vju"/>
+                            <constraint firstItem="sXm-4Y-Csx" firstAttribute="top" secondItem="nXp-XO-eiM" secondAttribute="bottom" constant="5" id="kd5-2w-nyr"/>
+                            <constraint firstItem="nXp-XO-eiM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="oND-mx-8Cc"/>
+                            <constraint firstItem="baI-i1-lf1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="t2A-ug-eQM"/>
+                            <constraint firstItem="PDj-Sl-GiA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tpI-lM-opI"/>
+                            <constraint firstItem="r4s-R7-Iad" firstAttribute="top" secondItem="PDj-Sl-GiA" secondAttribute="bottom" constant="25" id="voW-7J-Xwa"/>
+                            <constraint firstItem="PDj-Sl-GiA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="ycy-H5-f85"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alteracaodedadosLabel" destination="PDj-Sl-GiA" id="0YI-pr-ahB"/>
+                        <outlet property="birthdayTextField" destination="FDd-tD-rAB" id="VQ6-gk-0Nm"/>
+                        <outlet property="emailTextField" destination="sXm-4Y-Csx" id="otd-jK-qKQ"/>
+                        <outlet property="fullnameTextField" destination="bfu-IO-y84" id="ZIg-v8-HsA"/>
+                        <outlet property="imageProfile" destination="r4s-R7-Iad" id="HYg-JT-CEo"/>
+                        <outlet property="saveButton" destination="Zfe-ow-DKH" id="5y7-6G-dfd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-27"/>
+            <point key="canvasLocation" x="128.80000000000001" y="-28.335832083958024"/>
         </scene>
     </scenes>
     <resources>
+        <image name="profile" width="609" height="609"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="BlueMeuTreino">
+            <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
