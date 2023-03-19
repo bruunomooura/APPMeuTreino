@@ -45,8 +45,7 @@
 		3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */; };
 		3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */; };
 		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
-		B1DF97B429C6B863000B1861 /* Futura Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1DF97B329C6B863000B1861 /* Futura Light.otf */; };
-		B1DF97B829C6BEB3000B1861 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1DF97B729C6BEB3000B1861 /* futur2.ttf */; };
+		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,8 +108,7 @@
 		3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
-		B1DF97B329C6B863000B1861 /* Futura Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Futura Light.otf"; path = "../../Downloads/Futura Light/Futura Light.otf"; sourceTree = "<group>"; };
-		B1DF97B729C6BEB3000B1861 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = futur2.ttf; path = "../../Downloads/futura-book/futur2.ttf"; sourceTree = "<group>"; };
+		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +139,6 @@
 		3F6448AE29BA61F100BDE579 = {
 			isa = PBXGroup;
 			children = (
-				B1DF97B329C6B863000B1861 /* Futura Light.otf */,
-				B1DF97B729C6BEB3000B1861 /* futur2.ttf */,
 				3F6448B929BA61F100BDE579 /* APPMeuTreino */,
 				3F6448D329BA61F300BDE579 /* APPMeuTreinoTests */,
 				3F6448DD29BA61F300BDE579 /* APPMeuTreinoUITests */,
@@ -163,6 +159,7 @@
 		3F6448B929BA61F100BDE579 /* APPMeuTreino */ = {
 			isa = PBXGroup;
 			children = (
+				B1086BF629C747E400EB8271 /* futur2.ttf */,
 				3F6448BA29BA61F100BDE579 /* AppDelegate.swift */,
 				3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */,
 				3F6448ED29BA65AA00BDE579 /* Login */,
@@ -448,12 +445,11 @@
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
+				B1086BF729C747E400EB8271 /* futur2.ttf in Resources */,
 				3F64491529BA717000BDE579 /* HomeViewController.storyboard in Resources */,
 				3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */,
 				3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */,
 				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
-				B1DF97B429C6B863000B1861 /* Futura Light.otf in Resources */,
-				B1DF97B829C6BEB3000B1861 /* futur2.ttf in Resources */,
 				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
 				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
 				3F64490D29BA711B00BDE579 /* ForgotPasswordViewController.storyboard in Resources */,
