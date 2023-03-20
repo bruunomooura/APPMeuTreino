@@ -8,11 +8,20 @@
 import UIKit
 
 class ExecutionTrainingViewController: UIViewController {
-
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBOutlet weak var trainingLabel: UILabel!
+    
+    @IBOutlet weak var finishTrainingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        finishTrainingButton.layer.cornerRadius = 10
 
-        // Do any additional setup after loading the view.
     }
+    
+    
 
 }
