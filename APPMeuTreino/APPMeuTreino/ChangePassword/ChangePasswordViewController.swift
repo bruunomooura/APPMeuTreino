@@ -17,6 +17,8 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var saveButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
@@ -49,4 +51,12 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         return true
     }
    
+    @IBAction func tappedSaveButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 }

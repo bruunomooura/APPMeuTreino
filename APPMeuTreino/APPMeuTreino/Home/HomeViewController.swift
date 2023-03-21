@@ -53,6 +53,7 @@ class HomeViewController: UIViewController {
         
         BorderHomeUIView.layer.borderWidth = 2
         BorderHomeUIView.layer.borderColor = borderHome?.cgColor
+        BorderHomeUIView.layer.backgroundColor = borderHome?.cgColor
         
         BorderHomeUIView.clipsToBounds = true
         BorderHomeUIView.layer.cornerRadius = 8

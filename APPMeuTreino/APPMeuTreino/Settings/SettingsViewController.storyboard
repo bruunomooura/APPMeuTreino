@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-cv-ubI">
-                                <rect key="frame" x="263" y="43" width="80" height="80"/>
+                                <rect key="frame" x="263" y="10" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="MCx-Vi-Afp"/>
                                     <constraint firstAttribute="height" constant="80" id="fR6-3v-NHT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-We-owY">
-                                <rect key="frame" x="30" y="152" width="315" height="40"/>
+                                <rect key="frame" x="30" y="119" width="315" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IHr-Jd-qeX"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhM-rD-tc8">
-                                <rect key="frame" x="30" y="217" width="313" height="40"/>
+                                <rect key="frame" x="30" y="184" width="313" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wjM-9h-P1Q"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHk-ZY-uMy">
-                                <rect key="frame" x="30" y="282" width="315" height="40"/>
+                                <rect key="frame" x="30" y="249" width="315" height="40"/>
                                 <color key="backgroundColor" red="0.92128556966781616" green="0.32791789781849018" blue="0.30138117812881016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Der-KW-ZJt"/>
@@ -64,9 +64,12 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedExitButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DPK-1h-wx7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
-                                <rect key="frame" x="30" y="83.5" width="109" height="41"/>
+                                <rect key="frame" x="30" y="50.5" width="109" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="2WO-eV-cqP"/>
                                 </constraints>
@@ -90,7 +93,7 @@
                             <constraint firstItem="iHk-ZY-uMy" firstAttribute="top" secondItem="YhM-rD-tc8" secondAttribute="bottom" constant="25" id="bwP-RK-raH"/>
                             <constraint firstItem="lTm-We-owY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="nPa-5h-nw3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lTm-We-owY" secondAttribute="trailing" constant="30" id="pZl-fm-mh3"/>
-                            <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="43" id="pyt-8r-99u"/>
+                            <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="pyt-8r-99u"/>
                         </constraints>
                     </view>
                     <connections>
@@ -102,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="-36.206896551724142"/>
+            <point key="canvasLocation" x="31.199999999999999" y="-36.431784107946029"/>
         </scene>
         <!--DataChangeViewController-->
         <scene sceneID="hEd-Vz-ZHo">

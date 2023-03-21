@@ -128,6 +128,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedConfirmSignUpButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="L7I-y4-9tU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite uma senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wkk-GC-Qss">
                                 <rect key="frame" x="21" y="387" width="333" height="35"/>
@@ -161,6 +164,25 @@
                                     <action selector="tappedEditImageButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="O3w-7n-ymm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyI-0z-JtE">
+                                <rect key="frame" x="26" y="44" width="33" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="48Y-8U-uGJ"/>
+                                    <constraint firstAttribute="width" constant="33" id="VZU-Zj-DZY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aV1-9D-3bg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackArrow" translatesAutoresizingMaskIntoConstraints="NO" id="ZUq-yG-AOP">
+                                <rect key="frame" x="26" y="44" width="33" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="DKt-Le-hvC"/>
+                                    <constraint firstAttribute="width" constant="33" id="DXX-8q-emc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -189,10 +211,14 @@
                             <constraint firstItem="6eP-28-7vI" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="5" id="cVF-M9-U4w"/>
                             <constraint firstItem="C1w-77-qMm" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="5" id="fG5-F8-oq1"/>
                             <constraint firstItem="9Pz-ou-mtA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="5" id="fKy-9q-Sya"/>
+                            <constraint firstItem="ZUq-yG-AOP" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="10" id="hdM-3u-X8h"/>
                             <constraint firstItem="KkZ-2i-N4S" firstAttribute="top" secondItem="IbV-Yr-SRN" secondAttribute="bottom" constant="8" id="lbX-Oy-6dF"/>
                             <constraint firstItem="qDg-H5-4k1" firstAttribute="top" secondItem="Y3u-gs-MCv" secondAttribute="bottom" constant="4" id="m3o-EG-Xrl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aIJ-la-xCw" secondAttribute="trailing" constant="5" id="mkO-eh-ikX"/>
+                            <constraint firstItem="ZUq-yG-AOP" firstAttribute="top" secondItem="FZg-7B-0lU" secondAttribute="bottom" constant="44" id="oBv-oq-y3x"/>
+                            <constraint firstItem="HyI-0z-JtE" firstAttribute="top" secondItem="FZg-7B-0lU" secondAttribute="bottom" constant="44" id="pjh-td-ZAz"/>
                             <constraint firstItem="DDZ-AL-t7f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qeW-1n-rI7"/>
+                            <constraint firstItem="HyI-0z-JtE" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="10" id="r7S-0S-LwX"/>
                             <constraint firstItem="eBX-qF-Q5n" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="5" id="tKA-EK-bJa"/>
                             <constraint firstItem="Y3u-gs-MCv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="u1l-sW-ZRk"/>
                             <constraint firstItem="IbV-Yr-SRN" firstAttribute="top" secondItem="9Pz-ou-mtA" secondAttribute="bottom" constant="5" id="wPt-Yv-ORi"/>
@@ -202,6 +228,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="HyI-0z-JtE" id="6Ok-99-6ZK"/>
                         <outlet property="birthdayLabel" destination="9Pz-ou-mtA" id="z3s-WT-Th8"/>
                         <outlet property="birthdayTextField" destination="IbV-Yr-SRN" id="tUq-gi-mZF"/>
                         <outlet property="confirmPasswordLabel" destination="TzH-L3-G7S" id="Zo5-fV-HmF"/>
@@ -223,6 +250,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackArrow" width="868" height="674"/>
         <image name="BackgroundDetails" width="1769" height="610"/>
         <image name="profile" width="609" height="609"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>

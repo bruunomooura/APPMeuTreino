@@ -15,6 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgz-vA-6XD">
+                                <rect key="frame" x="126" y="358" width="110" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="nQo-f7-4AK" kind="presentation" modalPresentationStyle="fullScreen" id="RM6-xo-SWt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
@@ -22,6 +35,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34" y="-34"/>
+        </scene>
+        <!--ExecutionTrainingViewController-->
+        <scene sceneID="ssy-l6-KWy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExecutionTrainingViewController" referencedIdentifier="ExecutionTrainingViewController" id="nQo-f7-4AK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yh0-wa-oXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="-262"/>
         </scene>
     </scenes>
     <resources>

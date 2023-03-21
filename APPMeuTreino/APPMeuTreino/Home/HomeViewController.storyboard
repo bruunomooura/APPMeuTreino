@@ -66,7 +66,7 @@
                                             <constraint firstAttribute="height" constant="25" id="p5e-i1-fuB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
-                                        <color key="textColor" name="OrangeMeuTreino"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique no botão abaixo para criar o seu primeiro treino." textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4C-gM-V9E">
@@ -76,7 +76,7 @@
                                             <constraint firstAttribute="height" constant="60" id="xAC-xB-HTk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="20"/>
-                                        <color key="textColor" name="OrangeMeuTreino"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -103,21 +103,20 @@
                                 <rect key="frame" x="20" y="80.5" width="335" height="74"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-EL-9Qc">
-                                        <rect key="frame" x="8" y="37" width="319" height="4"/>
+                                        <rect key="frame" x="15" y="37" width="305" height="4"/>
                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="P6w-GY-RVb"/>
-                                            <constraint firstAttribute="width" constant="319" id="WUL-cy-eEs"/>
                                         </constraints>
                                         <color key="progressTintColor" name="OrangeMeuTreino"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progresso da Semana:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps0-Xl-YAq">
-                                        <rect key="frame" x="5" y="3" width="179" height="28"/>
+                                        <rect key="frame" x="15" y="3" width="195" height="28"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="Nik-KG-Lvr"/>
                                             <constraint firstAttribute="height" constant="28" id="V83-15-baI"/>
-                                            <constraint firstAttribute="width" constant="179" id="tc3-kb-lJK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -139,17 +138,19 @@
                                     <constraint firstItem="Ps0-Xl-YAq" firstAttribute="top" secondItem="CNh-OB-wi0" secondAttribute="top" constant="3" id="RJy-gS-ayu"/>
                                     <constraint firstAttribute="bottom" secondItem="TZI-dZ-A3h" secondAttribute="bottom" constant="5" id="Xlb-XC-i0a"/>
                                     <constraint firstAttribute="trailing" secondItem="TZI-dZ-A3h" secondAttribute="trailing" constant="8" id="hx3-BQ-PZo"/>
-                                    <constraint firstItem="Ps0-Xl-YAq" firstAttribute="leading" secondItem="CNh-OB-wi0" secondAttribute="leading" constant="5" id="l7L-Xf-qKD"/>
+                                    <constraint firstItem="JJq-EL-9Qc" firstAttribute="leading" secondItem="CNh-OB-wi0" secondAttribute="leading" constant="15" id="kCB-3l-uS3"/>
+                                    <constraint firstItem="Ps0-Xl-YAq" firstAttribute="leading" secondItem="CNh-OB-wi0" secondAttribute="leading" constant="15" id="l7L-Xf-qKD"/>
+                                    <constraint firstAttribute="trailing" secondItem="JJq-EL-9Qc" secondAttribute="trailing" constant="15" id="q3O-Oq-alW"/>
                                     <constraint firstItem="TZI-dZ-A3h" firstAttribute="top" secondItem="JJq-EL-9Qc" secondAttribute="bottom" constant="13" id="wqF-tU-4tl"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seg, 13/02/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P82-he-Ijh">
-                                <rect key="frame" x="204.5" y="49.5" width="150.5" height="21"/>
+                                <rect key="frame" x="222" y="49.5" width="133" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150.5" id="MKF-ew-mGY"/>
+                                    <constraint firstAttribute="width" constant="133" id="cd5-aK-uLY"/>
                                     <constraint firstAttribute="height" constant="21" id="sTI-mK-aCo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

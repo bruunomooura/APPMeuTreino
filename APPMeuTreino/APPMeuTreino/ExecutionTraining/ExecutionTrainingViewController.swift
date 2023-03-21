@@ -9,7 +9,7 @@ import UIKit
 
 class ExecutionTrainingViewController: UIViewController {
     
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var BackButton: UIButton!
     
     @IBOutlet weak var trainingLabel: UILabel!
     
@@ -19,9 +19,13 @@ class ExecutionTrainingViewController: UIViewController {
         super.viewDidLoad()
         
         finishTrainingButton.layer.cornerRadius = 10
-
+        
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
     
-
+    
 }

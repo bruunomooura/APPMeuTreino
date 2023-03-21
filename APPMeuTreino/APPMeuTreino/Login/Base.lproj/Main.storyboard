@@ -71,7 +71,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Tvr-Nu-hm7" kind="presentation" modalPresentationStyle="fullScreen" id="j9W-XD-6SP"/>
+                                    <segue destination="Tvr-Nu-hm7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="j9W-XD-6SP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5as-40-9xC">

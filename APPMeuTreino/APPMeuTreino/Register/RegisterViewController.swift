@@ -23,6 +23,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     @IBOutlet weak var signUpConfirmButton: UIButton!
     @IBOutlet weak var editPhotoButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,4 +94,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         picker.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func tappedConfirmSignUpButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 }
