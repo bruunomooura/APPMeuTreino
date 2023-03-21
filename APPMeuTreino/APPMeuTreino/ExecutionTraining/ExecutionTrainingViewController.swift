@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExecutionTrainingViewController: UIViewController, UITableViewDelegate {
+class ExecutionTrainingViewController: UIViewController {
     
     @IBOutlet weak var BackButton: UIButton!
     
@@ -25,8 +25,12 @@ class ExecutionTrainingViewController: UIViewController, UITableViewDelegate {
         
         finishTrainingButton.layer.cornerRadius = 10
         
-        tableView.dataSource = self
+        configTableView()
+    }
+    
+    private func configTableView(){
         tableView.delegate = self
+        tableView.dataSource = self
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -35,8 +39,9 @@ class ExecutionTrainingViewController: UIViewController, UITableViewDelegate {
     
 }
 
-extension ExecutionTrainingViewController: UITableViewDataSource{
+extension ExecutionTrainingViewController: UITableViewDataSource, UITableViewDelegate{
     
+    //Numero de sessão (Grupos de linhas, como está separado nas configuracoes do iphone) Por padrão o valor vem 1, entao se for só 1 nao precisa implementar essa funçao
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -48,12 +53,9 @@ extension ExecutionTrainingViewController: UITableViewDataSource{
     
     //Numero de células por linhas
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = exercisesArray[indexPath.row]
-        return cell
+        return CustomTableViewCell()
     }
     
-    //Numero de sessão (Grupos de linhas, como está separado nas configuracoes do iphone) Por padrão o valor vem 1, entao se for só 1 nao precisa implementar essa funçao
     
     //Se quiser permitir o usuario excluir celulas
 //    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
