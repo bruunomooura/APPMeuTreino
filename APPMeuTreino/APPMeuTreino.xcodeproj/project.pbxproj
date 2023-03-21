@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B8008B29C9586B005F35AF /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B8008929C9586B005F35AF /* TrainingCell.swift */; };
+		38B8008C29C9586B005F35AF /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B8008A29C9586B005F35AF /* TrainingCell.xib */; };
 		3F056A0729C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */; };
 		3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BA29BA61F100BDE579 /* AppDelegate.swift */; };
 		3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */; };
@@ -68,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38B8008929C9586B005F35AF /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
+		38B8008A29C9586B005F35AF /* TrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
 		3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCreateTrainingCollectionViewCell.swift; path = APPMeuTreino/CreateTraining/Cell/CustomCreateTrainingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3F6448B729BA61F100BDE579 /* APPMeuTreino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPMeuTreino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6448BA29BA61F100BDE579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38B8008429C9430E005F35AF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38B8008929C9586B005F35AF /* TrainingCell.swift */,
+				38B8008A29C9586B005F35AF /* TrainingCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3F056A0A29C74BD400BF1B41 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +295,7 @@
 		3F6448FC29BA6C2C00BDE579 /* TrainingOverview */ = {
 			isa = PBXGroup;
 			children = (
+				38B8008429C9430E005F35AF /* Cells */,
 				3F64492429BA732800BDE579 /* TrainingOverviewViewController.swift */,
 				3F64492629BA733300BDE579 /* TrainingOverviewViewController.storyboard */,
 			);
@@ -464,6 +478,7 @@
 				3F64491529BA717000BDE579 /* HomeViewController.storyboard in Resources */,
 				3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */,
 				3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */,
+				38B8008C29C9586B005F35AF /* TrainingCell.xib in Resources */,
 				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
 				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
 				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
@@ -499,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F64493129BA737F00BDE579 /* CalendarViewController.swift in Sources */,
+				38B8008B29C9586B005F35AF /* TrainingCell.swift in Sources */,
 				3F64492D29BA736500BDE579 /* DemonstrationExerciseViewController.swift in Sources */,
 				3F64493929BA73B600BDE579 /* DataChangeViewController.swift in Sources */,
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,

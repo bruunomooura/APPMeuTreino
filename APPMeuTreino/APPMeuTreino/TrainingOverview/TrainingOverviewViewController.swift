@@ -8,11 +8,46 @@
 import UIKit
 
 class TrainingOverviewViewController: UIViewController {
-
+    
+    @IBOutlet weak var trainingTableView: UITableView!
+    
+    @IBOutlet weak var addTrainingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureTrainingTableView()
+        addTrainingButton.layer.cornerRadius = 8
         // Do any additional setup after loading the view.
     }
+    
+    func configureTrainingTableView(){
+        trainingTableView.delegate = self
+        trainingTableView.dataSource = self
+        trainingTableView.register(TrainingCell.nib(), forCellReuseIdentifier: TrainingCell.identifier)
+    }
+    }
+    
+    extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSource{
+        
+        //configuracao de cada uma das celulas
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            if let cell = trainingTableView.dequeueReusableCell(withIdentifier: "TrainingCell", for: indexPath) as? TrainingCell{
+                cell.configureCell()
+                return cell
+            }
+            return UITableViewCell()
+        }
+        
+        //quantidade de linhas da celula
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 5
+        }
+        
+        //altura das linhas da celula
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 100
+        }
+        
+    }
+    
 
-}

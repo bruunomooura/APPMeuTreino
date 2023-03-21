@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TrainingCell" selectionStyle="default" indentationWidth="10" rowHeight="49" id="KGk-i7-Jjw" customClass="TrainingCell" customModule="APPMeuTreino" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Im-6O-Ze1">
+                        <rect key="frame" x="5" y="5" width="310" height="90"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzp-vt-iH3">
+                                <rect key="frame" x="204" y="43" width="54" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Editar">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-hp-3Ug">
+                                <rect key="frame" x="245" y="45" width="40" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Lixeira"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREINO 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faI-La-6rW">
+                                <rect key="frame" x="35" y="19" width="123" height="35"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(5 exercícios)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-hl-DNe">
+                                <rect key="frame" x="56" y="56" width="80" height="18"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZj-Dz-A6U">
+                                <rect key="frame" x="204" y="10" width="81" height="33.666666666666664"/>
+                                <color key="backgroundColor" name="BlueMeuTreino"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33.666666666666664" id="prB-yy-WYz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="INICIAR">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="OrangeMeuTreino"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mzp-vt-iH3" secondAttribute="bottom" constant="3" id="7s6-N9-rBs"/>
+                            <constraint firstItem="faI-La-6rW" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="19" id="AoY-e1-FvY"/>
+                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="leading" secondItem="mzp-vt-iH3" secondAttribute="leading" id="EOA-e2-ARf"/>
+                            <constraint firstItem="faI-La-6rW" firstAttribute="leading" secondItem="3Im-6O-Ze1" secondAttribute="leading" constant="35" id="FDR-fg-8Cp"/>
+                            <constraint firstItem="ylR-hp-3Ug" firstAttribute="top" secondItem="qZj-Dz-A6U" secondAttribute="bottom" constant="1.3333333333333357" id="IVc-WM-fjq"/>
+                            <constraint firstItem="mzp-vt-iH3" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="43" id="Iee-Mn-bbH"/>
+                            <constraint firstAttribute="bottom" secondItem="icu-hl-DNe" secondAttribute="bottom" constant="16" id="Jff-7D-6sH"/>
+                            <constraint firstItem="icu-hl-DNe" firstAttribute="top" secondItem="faI-La-6rW" secondAttribute="bottom" constant="2" id="LTi-Wh-x1g"/>
+                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="10" id="Z6e-TG-gXe"/>
+                            <constraint firstItem="icu-hl-DNe" firstAttribute="leading" secondItem="3Im-6O-Ze1" secondAttribute="leading" constant="56" id="bKR-A4-gxq"/>
+                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="leading" secondItem="faI-La-6rW" secondAttribute="trailing" constant="46" id="fwZ-si-OvP"/>
+                            <constraint firstItem="mzp-vt-iH3" firstAttribute="centerY" secondItem="icu-hl-DNe" secondAttribute="centerY" id="gLf-nG-VIY"/>
+                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="trailing" secondItem="ylR-hp-3Ug" secondAttribute="trailing" id="mHe-Kr-nfQ"/>
+                            <constraint firstItem="mzp-vt-iH3" firstAttribute="bottom" secondItem="ylR-hp-3Ug" secondAttribute="bottom" id="w8p-PK-04B"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="3Im-6O-Ze1" secondAttribute="bottom" constant="5" id="1ug-IE-kDJ"/>
+                    <constraint firstItem="3Im-6O-Ze1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="6tf-mR-vtr"/>
+                    <constraint firstItem="3Im-6O-Ze1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="nhB-aB-tTT"/>
+                    <constraint firstAttribute="trailing" secondItem="3Im-6O-Ze1" secondAttribute="trailing" constant="5" id="z7V-6g-4MK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="startButton" destination="qZj-Dz-A6U" id="l4B-UV-D79"/>
+                <outlet property="trainingCellView" destination="H2p-sc-9uM" id="aUv-cG-SXQ"/>
+            </connections>
+            <point key="canvasLocation" x="16.793893129770993" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Editar" width="30" height="30"/>
+        <image name="Lixeira" width="30" height="30"/>
+        <namedColor name="BlueMeuTreino">
+            <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="OrangeMeuTreino">
+            <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
