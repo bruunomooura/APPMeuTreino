@@ -48,8 +48,8 @@
 		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */; };
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
-		B159329F29CA2D4D005C7678 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B159329D29CA2D4D005C7678 /* CustomTableViewCell.swift */; };
-		B15932A029CA2D4D005C7678 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B159329E29CA2D4D005C7678 /* CustomTableViewCell.xib */; };
+		B1DDC69C29CCD1A500D8A136 /* ExecutionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC69A29CCD1A500D8A136 /* ExecutionTableViewCell.swift */; };
+		B1DDC69D29CCD1A500D8A136 /* ExecutionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1DDC69B29CCD1A500D8A136 /* ExecutionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +115,8 @@
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
-		B159329D29CA2D4D005C7678 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		B159329E29CA2D4D005C7678 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		B1DDC69A29CCD1A500D8A136 /* ExecutionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTableViewCell.swift; sourceTree = "<group>"; };
+		B1DDC69B29CCD1A500D8A136 /* ExecutionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExecutionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +295,7 @@
 		3F6448FD29BA6E5C00BDE579 /* ExecutionTraining */ = {
 			isa = PBXGroup;
 			children = (
-				B159329C29CA2CCD005C7678 /* TableViewCell */,
+				B1DDC69929CCD16C00D8A136 /* Cell */,
 				3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */,
 				3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */,
 			);
@@ -356,13 +356,13 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
-		B159329C29CA2CCD005C7678 /* TableViewCell */ = {
+		B1DDC69929CCD16C00D8A136 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				B159329D29CA2D4D005C7678 /* CustomTableViewCell.swift */,
-				B159329E29CA2D4D005C7678 /* CustomTableViewCell.xib */,
+				B1DDC69A29CCD1A500D8A136 /* ExecutionTableViewCell.swift */,
+				B1DDC69B29CCD1A500D8A136 /* ExecutionTableViewCell.xib */,
 			);
-			path = TableViewCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +471,7 @@
 			files = (
 				3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */,
 				3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */,
+				B1DDC69D29CCD1A500D8A136 /* ExecutionTableViewCell.xib in Resources */,
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
@@ -487,7 +488,6 @@
 				3F64491A29BA71C000BDE579 /* CreateTrainingViewController.storyboard in Resources */,
 				3F64493329BA738800BDE579 /* CalendarViewController.storyboard in Resources */,
 				3F6448C729BA61F300BDE579 /* Assets.xcassets in Resources */,
-				B15932A029CA2D4D005C7678 /* CustomTableViewCell.xib in Resources */,
 				3F6448C229BA61F100BDE579 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,7 +519,7 @@
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
 				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
-				B159329F29CA2D4D005C7678 /* CustomTableViewCell.swift in Sources */,
+				B1DDC69C29CCD1A500D8A136 /* ExecutionTableViewCell.swift in Sources */,
 				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,

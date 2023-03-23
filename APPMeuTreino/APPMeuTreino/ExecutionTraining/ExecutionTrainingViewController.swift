@@ -14,23 +14,33 @@ class ExecutionTrainingViewController: UIViewController {
     @IBOutlet weak var trainingLabel: UILabel!
     
     @IBOutlet weak var finishTrainingButton: UIButton!
-    
-    //Delegate DataSource
+      
     @IBOutlet weak var tableView: UITableView!
+    
     
     let exercisesArray: Array = ["Exercício 1", "Exercício 2", "Exercício 3", "Exercício 4", "Exercício 5"]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finishTrainingButton.layer.cornerRadius = 10
-        
-        configTableView()
+    struct Exercise {
+        let title: String
+        let imageName: String
     }
     
-    private func configTableView(){
+    let exercise: [Exercise] = [
+        Exercise(title: "Abdominal em V", imageName: "Exercicio1"),
+        Exercise(title: "Cabo de Guerra - Ondas Alternadas", imageName: "Exercicio2"),
+        Exercise(title: "Bíceps alternado com máquina", imageName: "Exercicio3"),
+        Exercise(title: "Agachamento com halteres", imageName: "Exercicio4"),
+        Exercise(title: "Desenvolvimento com halteres", imageName: "Exercicio5")
+    ]
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        finishTrainingButton.layer.cornerRadius = 10
+        
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(ExecutionTableViewCell.nib(), forCellReuseIdentifier: ExecutionTableViewCell.identifier)
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -39,30 +49,26 @@ class ExecutionTrainingViewController: UIViewController {
     
 }
 
-extension ExecutionTrainingViewController: UITableViewDataSource, UITableViewDelegate{
+extension ExecutionTrainingViewController: UITableViewDelegate, UITableViewDataSource{
     
-    //Numero de sessão (Grupos de linhas, como está separado nas configuracoes do iphone) Por padrão o valor vem 1, entao se for só 1 nao precisa implementar essa funçao
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped on row: \(indexPath.row)!")
     }
     
-    //Numero de linha nas sessões
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercisesArray.count
+        exercise.count
     }
     
-    //Numero de células por linhas
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return CustomTableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ExecutionTableViewCell", for: indexPath) as? ExecutionTableViewCell{
+            cell.configureCell(exerciseName: exercise[indexPath.row].title)
+            return cell
+        }
+        return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        140
+    }
     
-    //Se quiser permitir o usuario excluir celulas
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath ){
-//
-//    }
 }
