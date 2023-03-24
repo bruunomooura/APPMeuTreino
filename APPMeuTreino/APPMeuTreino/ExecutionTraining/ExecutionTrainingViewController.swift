@@ -17,9 +17,6 @@ class ExecutionTrainingViewController: UIViewController {
       
     @IBOutlet weak var tableView: UITableView!
     
-    
-    let exercisesArray: Array = ["Exercício 1", "Exercício 2", "Exercício 3", "Exercício 4", "Exercício 5"]
-    
     struct Exercise {
         let title: String
         let imageName: String
@@ -61,14 +58,14 @@ extension ExecutionTrainingViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ExecutionTableViewCell", for: indexPath) as? ExecutionTableViewCell{
-            cell.configureCell(exerciseName: exercise[indexPath.row].title)
+            cell.configureCell(exerciseName: exercise[indexPath.row].title, exerciseImage: exercise[indexPath.row].imageName)
             return cell
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        140
+        120
     }
     
 }
