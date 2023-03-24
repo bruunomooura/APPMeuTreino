@@ -10,8 +10,10 @@ import UIKit
 class ExerciseSelectionViewController: UIViewController {
     
     @IBOutlet weak var exerciseSelectionCollectionView: UICollectionView!
-    var dataWorkouts: [String] = ["AbdominalAlpinista", "AbdominalDeclinado", "AbdominalEmBancoDeclinado", "AbdominalEmV", "AbdominalNaBola"]
-    
+    private var dataWorkouts: [String] = ["AbdominalAlpinista", "AbdominalDeclinado", "AbdominalEmBancoDeclinado", "AbdominalEmV", "AbdominalNaBola"]
+    private var exerciseName: [String] = ["Abdominal Alpinista", "Abdominal Declinado", "Abdominal Em Banco Declinado", "Abdominal Em V", "Abdominal Na Bola"]
+
+    var itemSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,21 +54,55 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomExerciseSelectionCollectionViewCell.identifier, for: indexPath) as? CustomExerciseSelectionCollectionViewCell
-        cell?.setupCell(nameImage: dataWorkouts[indexPath.row])
+        cell?.delegate(delegate: self)
+        cell?.setupCell(nameImage: dataWorkouts[indexPath.row], exerciseName: exerciseName[indexPath.row])
         return cell ?? UICollectionViewCell()
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:view.frame.width, height: view.frame.width)
+        print(view.frame.width)
+        return CGSize(width:view.frame.width, height: view.frame.width/3)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: "CreateTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateTrainingViewController") as? CreateTrainingViewController {
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
+        
+        if itemSelected{
+            collectionView.cellForItem(at: indexPath)?.backgroundColor = .white
+            itemSelected = true
+        } else {
+            collectionView.cellForItem(at: indexPath)?.backgroundColor = UIColor(named: "OrangeMeuTreino")
+            itemSelected = false
         }
+    
+        
+        //assinar o delegate do protocolo igual a self
+//        if let vc = UIStoryboard(name: "CreateTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateTrainingViewController") as? CreateTrainingViewController {
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true)
+     //   }
         //print(names[indexPath.row])
     }
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        collectionView.cellForItem(at: indexPath)?.backgroundColor = .orange
+//    }
     
     
     
+}
+//criar extension com assinatura do protocolo e método
+//dentro do método criar uma vc e mostrala
+
+extension ExerciseSelectionViewController: CustomExerciseSelectionCollectionViewCellProtocol{
+    func addExerciseInformations(name: String) {
+        if let vc = UIStoryboard(name: "DataExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DataExerciseViewController") as? DataExerciseViewController{
+            vc.name = name
+            if name == "Séries" {
+                vc.placeholder = "Nº de Séries"
+            } else if name == "Reps"{
+                vc.placeholder = "Nº de Repetições"
+            } else {
+                vc.placeholder = "Carga em Kg"            }
+            present(vc, animated: true)
+        }
+        
+    }
 }

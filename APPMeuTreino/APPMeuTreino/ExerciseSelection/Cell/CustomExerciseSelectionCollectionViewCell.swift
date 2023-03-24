@@ -2,14 +2,36 @@
 //  CustomExerciseSelectionCollectionViewCell.swift
 //  APPMeuTreino
 //
-//  Created by Bruno Moura on 19/03/23.
+//  Created by Bruno Moura on 24/03/23.
 //
 
 import UIKit
-
+//criar protocolo com 1 método customexercisecollectionviewcellprotocol metodo addexerciseinformations
+protocol CustomExerciseSelectionCollectionViewCellProtocol: AnyObject {
+    func addExerciseInformations(name: String)
+}
 class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
 
+  
+    @IBOutlet weak var weightSelectionPickerView: UIButton!
+    
+    
+    @IBOutlet weak var numberSeriesSelectionPickerView: UIButton!
+    
+    
+    @IBOutlet weak var numberRepetitionsSelectionPickerView: UIButton!
+    
+    
+    @IBOutlet weak var nameExercise: UILabel!
+    
+    
     @IBOutlet weak var exerciseSelecionImageView: UIImageView!
+    
+    private var delegate:CustomExerciseSelectionCollectionViewCellProtocol?
+    func delegate(delegate:CustomExerciseSelectionCollectionViewCellProtocol){
+        self.delegate = delegate
+    }
+    
     static let identifier: String = "CustomExerciseSelectionCollectionViewCell"
     
     static func nib() -> UINib {
@@ -19,7 +41,16 @@ class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         exerciseSelecionImageView.contentMode = .scaleAspectFill
     }
-    func setupCell(nameImage: String) {
+    func setupCell(nameImage: String, exerciseName: String) {
         exerciseSelecionImageView.image = UIImage(named: nameImage)
+        nameExercise.text = exerciseName
+    }
+
+    @IBAction func tappedWeigthSelectionButton(_ sender: UIButton) {
+    //chamar o protocolo
+        delegate?.addExerciseInformations(name: sender.titleLabel?.text ?? "")
+        
     }
 }
+
+

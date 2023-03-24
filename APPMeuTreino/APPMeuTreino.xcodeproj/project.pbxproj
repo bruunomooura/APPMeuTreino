@@ -46,9 +46,11 @@
 		3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */; };
 		3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */; };
 		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
+		3FAFD71829CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAFD71629CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.swift */; };
+		3FAFD71929CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAFD71729CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib */; };
+		3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */; };
+		3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */; };
-		3FE59D2329C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE59D2129C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift */; };
-		3FE59D2429C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D2229C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib */; };
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
 /* End PBXBuildFile section */
 
@@ -113,9 +115,11 @@
 		3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
+		3FAFD71629CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExerciseSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FAFD71729CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExerciseSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExerciseViewController.swift; sourceTree = "<group>"; };
+		3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataExerciseViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
-		3FE59D2129C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExerciseSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
-		3FE59D2229C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExerciseSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,6 +281,7 @@
 		3F6448FB29BA6B8F00BDE579 /* ExerciseSelection */ = {
 			isa = PBXGroup;
 			children = (
+				3FB6EEBA29CC77D100CE272A /* DataExerciseCollection */,
 				3FE59D1E29C7A824008F8632 /* Cell */,
 				3F64491F29BA72F500BDE579 /* ExerciseSelectionViewController.swift */,
 				3F64492129BA730800BDE579 /* ExerciseSelectionViewController.storyboard */,
@@ -356,11 +361,20 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
+		3FB6EEBA29CC77D100CE272A /* DataExerciseCollection */ = {
+			isa = PBXGroup;
+			children = (
+				3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */,
+				3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */,
+			);
+			name = DataExerciseCollection;
+			sourceTree = "<group>";
+		};
 		3FE59D1E29C7A824008F8632 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3FE59D2129C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift */,
-				3FE59D2229C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib */,
+				3FAFD71629CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.swift */,
+				3FAFD71729CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -471,8 +485,8 @@
 			files = (
 				3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */,
 				3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */,
-				3FE59D2429C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.xib in Resources */,
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
+				3FAFD71929CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
 				B1086BF729C747E400EB8271 /* futur2.ttf in Resources */,
@@ -481,6 +495,7 @@
 				3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */,
 				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
 				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
+				3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */,
 				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
 				3F64490D29BA711B00BDE579 /* ForgotPasswordViewController.storyboard in Resources */,
 				3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */,
@@ -520,8 +535,10 @@
 				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
 				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,
+				3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */,
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
+				3FAFD71829CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */,
 				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
 				3F056A0729C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift in Sources */,
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
@@ -531,7 +548,6 @@
 				3F6448C529BA61F100BDE579 /* APPMeuTreino.xcdatamodeld in Sources */,
 				3F64490729BA70E600BDE579 /* LoginViewController.swift in Sources */,
 				3F64492929BA734200BDE579 /* ExecutionTrainingViewController.swift in Sources */,
-				3FE59D2329C7A8BF008F8632 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */,
 				3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
