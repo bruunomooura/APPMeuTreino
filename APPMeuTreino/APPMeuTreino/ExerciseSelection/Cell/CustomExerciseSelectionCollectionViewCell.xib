@@ -21,13 +21,13 @@
                         <rect key="frame" x="8" y="8" width="359" height="96"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="513-mR-Ivz">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="96"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="96"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H36-dO-zXY">
-                                <rect key="frame" x="158" y="0.0" width="201" height="96"/>
+                                <rect key="frame" x="158.66666666666663" y="0.0" width="200.33333333333337" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDm-ep-8oS">
-                                        <rect key="frame" x="0.66666666666665719" y="0.0" width="200" height="66"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="UKy-YG-V5O"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="mwX-4F-F3p"/>
@@ -37,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7qL-es-iqM">
-                                        <rect key="frame" x="9" y="66" width="183" height="30"/>
+                                        <rect key="frame" x="8.6666666666666856" y="66" width="183" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRu-UM-f4l">
                                                 <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="30"/>
@@ -67,7 +67,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhL-DB-rJu">
-                                                <rect key="frame" x="127.33333333333333" y="0.0" width="55.666666666666643" height="30"/>
+                                                <rect key="frame" x="127.33333333333336" y="0.0" width="55.666666666666643" height="30"/>
                                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Reps">
@@ -98,9 +98,9 @@
             <connections>
                 <outlet property="exerciseSelecionImageView" destination="513-mR-Ivz" id="8SP-YM-hSS"/>
                 <outlet property="nameExercise" destination="IDm-ep-8oS" id="qvg-rx-cVO"/>
-                <outlet property="numberRepetitionsSelectionPickerView" destination="AhL-DB-rJu" id="h7N-zT-qQf"/>
-                <outlet property="numberSeriesSelectionPickerView" destination="nde-9e-xzl" id="jbH-tU-dKA"/>
-                <outlet property="weightSelectionPickerView" destination="hRu-UM-f4l" id="w7t-wT-9aC"/>
+                <outlet property="numberRepetitionsSelectionButton" destination="AhL-DB-rJu" id="h7N-zT-qQf"/>
+                <outlet property="numberSeriesSelectionButton" destination="nde-9e-xzl" id="jbH-tU-dKA"/>
+                <outlet property="weightSelectionButton" destination="hRu-UM-f4l" id="w7t-wT-9aC"/>
             </connections>
             <point key="canvasLocation" x="165.64885496183206" y="-4.9295774647887329"/>
         </collectionViewCell>

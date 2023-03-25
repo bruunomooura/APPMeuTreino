@@ -13,13 +13,13 @@ protocol CustomExerciseSelectionCollectionViewCellProtocol: AnyObject {
 class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
 
   
-    @IBOutlet weak var weightSelectionPickerView: UIButton!
+    @IBOutlet weak var weightSelectionButton: UIButton!
     
     
-    @IBOutlet weak var numberSeriesSelectionPickerView: UIButton!
+    @IBOutlet weak var numberSeriesSelectionButton: UIButton!
     
     
-    @IBOutlet weak var numberRepetitionsSelectionPickerView: UIButton!
+    @IBOutlet weak var numberRepetitionsSelectionButton: UIButton!
     
     
     @IBOutlet weak var nameExercise: UILabel!

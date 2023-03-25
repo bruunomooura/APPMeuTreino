@@ -17,6 +17,8 @@ class DataExerciseViewController: UIViewController {
     //nome do dados que o app está solicitando do usuário. Ex: Carga, Serie ou Repetições
     @IBOutlet weak var exerciseSettingsTextField: UITextField!
     
+    let customColorOrange = UIColor(named: "OrangeMeuTreino")
+
     var name: String = ""
     var placeholder: String = ""
     weak private var delegate:
@@ -32,6 +34,12 @@ class DataExerciseViewController: UIViewController {
         super.viewDidLoad()
      configTextField()
         configTitle()
+        exerciseSettingsTextField.keyboardType = UIKeyboardType.numberPad
+        exerciseSettingsTextField.layer.borderColor = customColorOrange?.cgColor
+        exerciseSettingsTextField.layer.borderWidth = 2
+        
+        confirmeSettingsButton.isEnabled = false
+        
     }
     func configTextField() {
         exerciseSettingsTextField.delegate = self
@@ -44,6 +52,7 @@ class DataExerciseViewController: UIViewController {
 
     
     @IBAction func tappedConfirmeSettingsButton(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
 
@@ -56,12 +65,19 @@ extension DataExerciseViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        delegate?.passExerciseSettingsData(value:
-                                            textField.text!)
+        delegate?.passExerciseSettingsData(value:textField.text!)
+        if exerciseSettingsTextField.hasText == true {
+            confirmeSettingsButton.isEnabled = true
+        } else {
+            confirmeSettingsButton.isEnabled = false
+        }
     }
     func DataExerciseProtocol(_ textField: UITextField) -> Bool {
         dismiss(animated: true)
         resignFirstResponder()
         return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

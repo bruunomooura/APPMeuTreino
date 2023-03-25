@@ -84,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="exerciseSelectionCollectionView" destination="YZC-wG-LAQ" id="BH1-Ie-0uf"/>
+                        <outlet property="selectedExercisesTypesButton" destination="JvB-7g-2RA" id="ASn-1K-4iv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
