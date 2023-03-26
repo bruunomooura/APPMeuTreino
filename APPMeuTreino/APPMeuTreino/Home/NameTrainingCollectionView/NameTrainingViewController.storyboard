@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Name Training View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NameTrainingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NameTrainingViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Hi-hD-4pe">
+                                <rect key="frame" x="8" y="169" width="359" height="348"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4nh-hv-9lV">
+                                        <rect key="frame" x="24.5" y="27.5" width="310" height="293.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME DO TREINO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-pl-NTs">
+                                                <rect key="frame" x="50.5" y="0.0" width="209.5" height="30.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30.5" id="dea-DT-6TH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cis-3v-iCP">
+                                                <rect key="frame" x="0.0" y="60.5" width="310" height="112"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insira o nome do treino:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyl-Wn-wFK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="sHP-TR-4xV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do treino" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-b2-Ue3">
+                                                        <rect key="frame" x="0.0" y="57" width="310" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="X1u-y4-WMv"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="c1T-Xz-ntT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rSW-KE-cfD">
+                                                <rect key="frame" x="102" y="202.5" width="106" height="91"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBu-Nb-ndF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="38"/>
+                                                        <color key="backgroundColor" name="BlueMeuTreino"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="106" id="OJS-6A-T6o"/>
+                                                            <constraint firstAttribute="height" constant="38" id="vhf-U0-blQ"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Salvar">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tappedSaveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YaT-P2-URP"/>
+                                                            <segue destination="f9q-eN-RDF" kind="presentation" modalPresentationStyle="fullScreen" id="G1c-5f-PN7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-Nu-z6N">
+                                                        <rect key="frame" x="0.0" y="53" width="106" height="38"/>
+                                                        <color key="backgroundColor" name="OrangeMeuTreino"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="anQ-y9-vW8"/>
+                                                            <constraint firstAttribute="height" constant="38" id="icl-Zg-dEi"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Cancelar">
+                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tappedCancelButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rxv-tE-YwJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4nh-hv-9lV" firstAttribute="centerY" secondItem="5Hi-hD-4pe" secondAttribute="centerY" id="aWL-by-jzz"/>
+                                    <constraint firstItem="4nh-hv-9lV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5Hi-hD-4pe" secondAttribute="top" constant="20" id="cjJ-kG-0hV"/>
+                                    <constraint firstItem="4nh-hv-9lV" firstAttribute="centerX" secondItem="5Hi-hD-4pe" secondAttribute="centerX" id="ksa-47-DLW"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4nh-hv-9lV" secondAttribute="bottom" constant="20" id="lGt-F7-9on"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5Hi-hD-4pe" secondAttribute="bottom" constant="150" id="Hae-Xj-yHJ"/>
+                            <constraint firstItem="5Hi-hD-4pe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="Y5S-2x-i8G"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Hi-hD-4pe" secondAttribute="trailing" constant="8" id="ZiA-Zu-q5K"/>
+                            <constraint firstItem="5Hi-hD-4pe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="169" id="jRx-y9-VwS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTrainingTextField" destination="iz5-b2-Ue3" id="giR-IH-Z4k"/>
+                        <outlet property="saveButton" destination="RBu-Nb-ndF" id="vw3-SE-wxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="-34.632683658170919"/>
+        </scene>
+        <!--CreateTrainingViewController-->
+        <scene sceneID="fUU-Mw-QUf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTrainingViewController" referencedIdentifier="CreateTrainingViewController" id="f9q-eN-RDF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81C-Vv-L6d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="16"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BlueMeuTreino">
+            <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="OrangeMeuTreino">
+            <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

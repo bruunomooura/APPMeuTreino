@@ -9,7 +9,7 @@ import UIKit
 
 class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var exerciseTypeImageView: UIImageView!
+    @IBOutlet weak var groupMuscleTypeImageView: UIImageView!
     
     static let identifier: String = "CustomCreateTrainingCollectionViewCell"
     static func nib() -> UINib {
@@ -21,7 +21,7 @@ class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     func setupCell(nameImage: String) {
-        exerciseTypeImageView.image = UIImage(named: nameImage)
+        groupMuscleTypeImageView.image = UIImage(named: nameImage)
     }
 
 }

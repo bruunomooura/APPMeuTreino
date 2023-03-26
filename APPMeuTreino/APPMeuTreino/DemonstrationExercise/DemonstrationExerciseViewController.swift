@@ -9,10 +9,22 @@ import UIKit
 
 class DemonstrationExerciseViewController: UIViewController {
 
+    @IBOutlet weak var BorderDemonstrationExercise: UIView!
+    @IBOutlet weak var concluidoButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let borderDemonstration = UIColor.lightGray
+        
+        BorderDemonstrationExercise.layer.cornerRadius = 8
+        BorderDemonstrationExercise.layer.shadowColor = borderDemonstration.cgColor
+        BorderDemonstrationExercise.layer.shadowOffset = CGSize.zero
+        BorderDemonstrationExercise.layer.shadowOpacity = 0.7
+        BorderDemonstrationExercise.layer.masksToBounds = false
+        BorderDemonstrationExercise.layer.shadowRadius = 3
+        
+        concluidoButton.layer.cornerRadius = 10
     }
 
 }
