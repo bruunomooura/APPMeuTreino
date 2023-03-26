@@ -52,6 +52,8 @@
 		3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */; };
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
+		CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */; };
+		CBE2F74629D0D54B0070A70F /* NameTrainingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataExerciseViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
+		CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTrainingViewController.swift; sourceTree = "<group>"; };
+		CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameTrainingViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,7 @@
 		3F6448F529BA690900BDE579 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CBD70DC829D0C52C00C5F1D2 /* NameTrainingCollectionView */,
 				3F64491229BA715B00BDE579 /* HomeViewController.swift */,
 				3F64491429BA717000BDE579 /* HomeViewController.storyboard */,
 			);
@@ -379,6 +384,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		CBD70DC829D0C52C00C5F1D2 /* NameTrainingCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */,
+				CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */,
+			);
+			path = NameTrainingCollectionView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,6 +503,7 @@
 				3FAFD71929CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
+				CBE2F74629D0D54B0070A70F /* NameTrainingViewController.storyboard in Resources */,
 				B1086BF729C747E400EB8271 /* futur2.ttf in Resources */,
 				3F64491529BA717000BDE579 /* HomeViewController.storyboard in Resources */,
 				3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */,
@@ -536,6 +551,7 @@
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
 				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,
 				3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */,
+				CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */,
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
 				3FAFD71829CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */,
