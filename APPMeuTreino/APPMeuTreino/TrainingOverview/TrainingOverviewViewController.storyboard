@@ -42,6 +42,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="j7a-uo-LHR" kind="modal" modalPresentationStyle="pageSheet" id="I9O-Sn-5uR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -71,11 +74,19 @@
             </objects>
             <point key="canvasLocation" x="33.75" y="-34.859154929577464"/>
         </scene>
+        <!--NameTrainingViewController-->
+        <scene sceneID="Pgs-f1-Am2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NameTrainingViewController" referencedIdentifier="NameTrainingViewController" id="j7a-uo-LHR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMs-Vi-jP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="-99"/>
+        </scene>
     </scenes>
     <resources>
         <image name="profile" width="609" height="609"/>
         <namedColor name="BlueMeuTreino">
-            <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
