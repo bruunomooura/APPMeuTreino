@@ -18,37 +18,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Im-6O-Ze1">
-                        <rect key="frame" x="5" y="5" width="310" height="90"/>
+                        <rect key="frame" x="12" y="8" width="296" height="87"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzp-vt-iH3">
-                                <rect key="frame" x="204" y="43" width="54" height="44"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Editar">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-hp-3Ug">
-                                <rect key="frame" x="245" y="45" width="40" height="40"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Lixeira"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREINO 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faI-La-6rW">
-                                <rect key="frame" x="35" y="19" width="123" height="35"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(5 exercícios)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-hl-DNe">
-                                <rect key="frame" x="56" y="56" width="80" height="18"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZj-Dz-A6U">
-                                <rect key="frame" x="204" y="10" width="81" height="33.666666666666664"/>
+                                <rect key="frame" x="181" y="8" width="95" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33.666666666666664" id="prB-yy-WYz"/>
+                                    <constraint firstAttribute="width" constant="95" id="5iC-XL-rSR"/>
+                                    <constraint firstAttribute="height" constant="40" id="D57-l5-o3v"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="INICIAR">
@@ -56,37 +33,74 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="oXa-hT-gnL">
+                                <rect key="frame" x="206" y="62" width="48" height="10"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzp-vt-iH3">
+                                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="dDd-Cl-IzB"/>
+                                            <constraint firstAttribute="width" constant="10" id="prW-kE-CpF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Editar">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-hp-3Ug">
+                                        <rect key="frame" x="38" y="0.0" width="10" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="bdz-V5-3uF"/>
+                                            <constraint firstAttribute="height" constant="10" id="eZb-DL-ekJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Lixeira"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="vnd-a6-vSK">
+                                <rect key="frame" x="16" y="14.000000000000004" width="136.33333333333334" height="56.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TREINO 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faI-La-6rW">
+                                        <rect key="frame" x="0.0" y="0.0" width="136.33333333333334" height="42.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(5 exercícios)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-hl-DNe">
+                                        <rect key="frame" x="28.333333333333336" y="39.333333333333336" width="79.666666666666657" height="17"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="OrangeMeuTreino"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="mzp-vt-iH3" secondAttribute="bottom" constant="3" id="7s6-N9-rBs"/>
-                            <constraint firstItem="faI-La-6rW" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="19" id="AoY-e1-FvY"/>
-                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="leading" secondItem="mzp-vt-iH3" secondAttribute="leading" id="EOA-e2-ARf"/>
-                            <constraint firstItem="faI-La-6rW" firstAttribute="leading" secondItem="3Im-6O-Ze1" secondAttribute="leading" constant="35" id="FDR-fg-8Cp"/>
-                            <constraint firstItem="ylR-hp-3Ug" firstAttribute="top" secondItem="qZj-Dz-A6U" secondAttribute="bottom" constant="1.3333333333333357" id="IVc-WM-fjq"/>
-                            <constraint firstItem="mzp-vt-iH3" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="43" id="Iee-Mn-bbH"/>
-                            <constraint firstAttribute="bottom" secondItem="icu-hl-DNe" secondAttribute="bottom" constant="16" id="Jff-7D-6sH"/>
-                            <constraint firstItem="icu-hl-DNe" firstAttribute="top" secondItem="faI-La-6rW" secondAttribute="bottom" constant="2" id="LTi-Wh-x1g"/>
-                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="10" id="Z6e-TG-gXe"/>
-                            <constraint firstItem="icu-hl-DNe" firstAttribute="leading" secondItem="3Im-6O-Ze1" secondAttribute="leading" constant="56" id="bKR-A4-gxq"/>
-                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="leading" secondItem="faI-La-6rW" secondAttribute="trailing" constant="46" id="fwZ-si-OvP"/>
-                            <constraint firstItem="mzp-vt-iH3" firstAttribute="centerY" secondItem="icu-hl-DNe" secondAttribute="centerY" id="gLf-nG-VIY"/>
-                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="trailing" secondItem="ylR-hp-3Ug" secondAttribute="trailing" id="mHe-Kr-nfQ"/>
-                            <constraint firstItem="mzp-vt-iH3" firstAttribute="bottom" secondItem="ylR-hp-3Ug" secondAttribute="bottom" id="w8p-PK-04B"/>
+                            <constraint firstAttribute="bottom" secondItem="oXa-hT-gnL" secondAttribute="bottom" constant="15" id="0Tg-as-ybM"/>
+                            <constraint firstItem="oXa-hT-gnL" firstAttribute="top" secondItem="qZj-Dz-A6U" secondAttribute="bottom" constant="14" id="EGn-KV-g2k"/>
+                            <constraint firstItem="vnd-a6-vSK" firstAttribute="leading" secondItem="3Im-6O-Ze1" secondAttribute="leading" constant="16" id="EHo-2I-LCq"/>
+                            <constraint firstItem="vnd-a6-vSK" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="14" id="FaX-x2-hSt"/>
+                            <constraint firstAttribute="trailing" secondItem="qZj-Dz-A6U" secondAttribute="trailing" constant="20" symbolic="YES" id="VAo-v0-6wS"/>
+                            <constraint firstAttribute="bottom" secondItem="vnd-a6-vSK" secondAttribute="bottom" constant="16.670000000000002" id="VqZ-Xu-WJL"/>
+                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="8" id="Wah-SQ-Xek"/>
+                            <constraint firstAttribute="trailing" secondItem="oXa-hT-gnL" secondAttribute="trailing" constant="42" id="i63-df-4io"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="3Im-6O-Ze1" secondAttribute="bottom" constant="5" id="1ug-IE-kDJ"/>
-                    <constraint firstItem="3Im-6O-Ze1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="6tf-mR-vtr"/>
-                    <constraint firstItem="3Im-6O-Ze1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="nhB-aB-tTT"/>
-                    <constraint firstAttribute="trailing" secondItem="3Im-6O-Ze1" secondAttribute="trailing" constant="5" id="z7V-6g-4MK"/>
+                    <constraint firstItem="3Im-6O-Ze1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="66u-6g-vFt"/>
+                    <constraint firstItem="3Im-6O-Ze1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="7zM-6m-eW1"/>
+                    <constraint firstAttribute="bottom" secondItem="3Im-6O-Ze1" secondAttribute="bottom" constant="8" id="jwI-Dq-hxs"/>
+                    <constraint firstAttribute="trailing" secondItem="3Im-6O-Ze1" secondAttribute="trailing" constant="12" id="mlI-xe-FZ4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="startButton" destination="qZj-Dz-A6U" id="l4B-UV-D79"/>
-                <outlet property="trainingCellView" destination="H2p-sc-9uM" id="aUv-cG-SXQ"/>
+                <outlet property="trainingCellView" destination="3Im-6O-Ze1" id="4qA-SW-bIa"/>
             </connections>
             <point key="canvasLocation" x="16.793893129770993" y="-11.267605633802818"/>
         </tableViewCell>

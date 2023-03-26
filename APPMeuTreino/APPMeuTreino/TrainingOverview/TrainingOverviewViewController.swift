@@ -13,17 +13,34 @@ class TrainingOverviewViewController: UIViewController {
     
     @IBOutlet weak var addTrainingButton: UIButton!
     
+    @IBOutlet weak var profileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTrainingTableView()
         addTrainingButton.layer.cornerRadius = 8
-        // Do any additional setup after loading the view.
+        trainingTableView.separatorStyle = .none
+        
+        
+    
+        
+        // Border PictureImageUser
+        
+        let borderPicture = UIColor(named: "BlueMeuTreino")
+        
+        profileImage.layer.borderWidth = 2
+                profileImage.layer.masksToBounds = false
+        profileImage.layer.borderColor = borderPicture?.cgColor
+                profileImage.layer.cornerRadius = profileImage.frame.height/2
+                profileImage.clipsToBounds = true
+        
     }
     
     func configureTrainingTableView(){
         trainingTableView.delegate = self
         trainingTableView.dataSource = self
         trainingTableView.register(TrainingCell.nib(), forCellReuseIdentifier: TrainingCell.identifier)
+        
     }
     }
     
@@ -40,12 +57,13 @@ class TrainingOverviewViewController: UIViewController {
         
         //quantidade de linhas da celula
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 5
+            return 1
         }
+        
         
         //altura das linhas da celula
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 100
+            return 105
         }
         
     }
