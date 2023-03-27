@@ -8,6 +8,9 @@
 import UIKit
 
 class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -31,4 +34,14 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         self.emailTextField.resignFirstResponder()
         return true
     }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func tappedChangePassword(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
 }

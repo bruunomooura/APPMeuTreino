@@ -13,6 +13,8 @@ protocol DataExerciseProtocol: AnyObject {
 
 class DataExerciseViewController: UIViewController {
 
+    @IBOutlet weak var dataExerciseView: UIView!
+    
     @IBOutlet weak var titleExerciseSettingsLabel: UILabel!
     //nome do dados que o app está solicitando do usuário. Ex: Carga, Serie ou Repetições
     @IBOutlet weak var exerciseSettingsTextField: UITextField!
@@ -37,8 +39,11 @@ class DataExerciseViewController: UIViewController {
         exerciseSettingsTextField.keyboardType = UIKeyboardType.numberPad
         exerciseSettingsTextField.layer.borderColor = customColorOrange?.cgColor
         exerciseSettingsTextField.layer.borderWidth = 2
+        exerciseSettingsTextField.layer.cornerRadius = 10
         
         confirmeSettingsButton.isEnabled = false
+        
+        dataExerciseView.layer.cornerRadius = 10
         
     }
     func configTextField() {
@@ -49,8 +54,6 @@ class DataExerciseViewController: UIViewController {
         exerciseSettingsTextField.placeholder = placeholder
     }
     
-
-    
     @IBAction func tappedConfirmeSettingsButton(_ sender: UIButton) {
         dismiss(animated: true)
     }
@@ -59,6 +62,10 @@ class DataExerciseViewController: UIViewController {
 }
 
 extension DataExerciseViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        exerciseSettingsTextField.resignFirstResponder()
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
@@ -80,4 +87,6 @@ extension DataExerciseViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    
 }

@@ -29,7 +29,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="INICIAR">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
@@ -109,7 +109,7 @@
         <image name="Editar" width="30" height="30"/>
         <image name="Lixeira" width="30" height="30"/>
         <namedColor name="BlueMeuTreino">
-            <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="OrangeMeuTreino">
             <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

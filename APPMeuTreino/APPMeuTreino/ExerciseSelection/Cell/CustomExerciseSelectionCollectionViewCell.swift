@@ -40,6 +40,9 @@ class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         exerciseSelecionImageView.contentMode = .scaleAspectFill
+        weightSelectionButton.layer.cornerRadius = 8
+        numberSeriesSelectionButton.layer.cornerRadius = 8
+        numberRepetitionsSelectionButton.layer.cornerRadius = 8
     }
     func setupCell(nameImage: String, exerciseName: String) {
         exerciseSelecionImageView.image = UIImage(named: nameImage)

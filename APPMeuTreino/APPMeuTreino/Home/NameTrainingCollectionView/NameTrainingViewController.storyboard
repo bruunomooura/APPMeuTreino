@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="futur2.ttf">
+            <string>Futura-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Name Training View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -18,56 +23,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Hi-hD-4pe">
-                                <rect key="frame" x="8" y="169" width="359" height="348"/>
+                                <rect key="frame" x="8" y="159.5" width="359" height="348"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4nh-hv-9lV">
-                                        <rect key="frame" x="24.5" y="27.5" width="310" height="293.5"/>
+                                        <rect key="frame" x="24.5" y="35.5" width="310" height="277.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME DO TREINO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-pl-NTs">
-                                                <rect key="frame" x="50.5" y="0.0" width="209.5" height="30.5"/>
+                                                <rect key="frame" x="44.5" y="0.0" width="221" height="30.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30.5" id="dea-DT-6TH"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cis-3v-iCP">
-                                                <rect key="frame" x="0.0" y="60.5" width="310" height="112"/>
+                                                <rect key="frame" x="0.0" y="60.5" width="310" height="92"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insira o nome do treino:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyl-Wn-wFK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="42"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="42"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="42" id="sHP-TR-4xV"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do treino" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-b2-Ue3">
-                                                        <rect key="frame" x="0.0" y="57" width="310" height="55"/>
+                                                        <rect key="frame" x="0.0" y="57" width="310" height="35"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="55" id="X1u-y4-WMv"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="c1T-Xz-ntT"/>
+                                                            <constraint firstAttribute="height" constant="35" id="X1u-y4-WMv"/>
+                                                            <constraint firstAttribute="width" constant="310" id="c1T-Xz-ntT"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rSW-KE-cfD">
-                                                <rect key="frame" x="102" y="202.5" width="106" height="91"/>
+                                                <rect key="frame" x="55" y="182.5" width="200" height="95"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBu-Nb-ndF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="38"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                                         <color key="backgroundColor" name="BlueMeuTreino"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="106" id="OJS-6A-T6o"/>
-                                                            <constraint firstAttribute="height" constant="38" id="vhf-U0-blQ"/>
+                                                            <constraint firstAttribute="width" constant="200" id="OJS-6A-T6o"/>
+                                                            <constraint firstAttribute="height" constant="40" id="vhf-U0-blQ"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Salvar">
-                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -76,15 +81,15 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-Nu-z6N">
-                                                        <rect key="frame" x="0.0" y="53" width="106" height="38"/>
+                                                        <rect key="frame" x="0.0" y="55" width="200" height="40"/>
                                                         <color key="backgroundColor" name="OrangeMeuTreino"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="anQ-y9-vW8"/>
-                                                            <constraint firstAttribute="height" constant="38" id="icl-Zg-dEi"/>
+                                                            <constraint firstAttribute="width" constant="200" id="IoZ-pQ-mbt"/>
+                                                            <constraint firstAttribute="height" constant="40" id="icl-Zg-dEi"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Cancelar">
-                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -94,27 +99,31 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="277.5" id="LYB-wk-HS4"/>
+                                            <constraint firstAttribute="width" constant="310" id="tWv-eP-S4k"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="348" id="BAd-5F-ADs"/>
                                     <constraint firstItem="4nh-hv-9lV" firstAttribute="centerY" secondItem="5Hi-hD-4pe" secondAttribute="centerY" id="aWL-by-jzz"/>
-                                    <constraint firstItem="4nh-hv-9lV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5Hi-hD-4pe" secondAttribute="top" constant="20" id="cjJ-kG-0hV"/>
                                     <constraint firstItem="4nh-hv-9lV" firstAttribute="centerX" secondItem="5Hi-hD-4pe" secondAttribute="centerX" id="ksa-47-DLW"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4nh-hv-9lV" secondAttribute="bottom" constant="20" id="lGt-F7-9on"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5Hi-hD-4pe" secondAttribute="bottom" constant="150" id="Hae-Xj-yHJ"/>
                             <constraint firstItem="5Hi-hD-4pe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="Y5S-2x-i8G"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Hi-hD-4pe" secondAttribute="trailing" constant="8" id="ZiA-Zu-q5K"/>
-                            <constraint firstItem="5Hi-hD-4pe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="169" id="jRx-y9-VwS"/>
+                            <constraint firstItem="5Hi-hD-4pe" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="qdA-Pq-40J"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="RTT-Nu-z6N" id="45j-tB-IPx"/>
                         <outlet property="nameTrainingTextField" destination="iz5-b2-Ue3" id="giR-IH-Z4k"/>
+                        <outlet property="newTrainingView" destination="5Hi-hD-4pe" id="yyY-y4-mEf"/>
                         <outlet property="saveButton" destination="RBu-Nb-ndF" id="vw3-SE-wxl"/>
                     </connections>
                 </viewController>

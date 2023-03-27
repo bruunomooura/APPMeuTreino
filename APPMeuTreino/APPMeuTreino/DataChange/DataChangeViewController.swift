@@ -21,6 +21,9 @@ class DataChangeViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var saveButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    
     
     @IBAction func editimageButton(_ sender: Any) {
         let imagePicker = UIImagePickerController()
@@ -81,6 +84,14 @@ class DataChangeViewController: UIViewController, UIImagePickerControllerDelegat
             emailTextField.resignFirstResponder()
         }
         return true
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func tappedSaveButton(_ sender: UIButton) {
+        dismiss(animated: true)
     }
 }
 

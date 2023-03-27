@@ -9,7 +9,9 @@ import UIKit
 
 class CreateTrainingViewController: UIViewController {
     
+    @IBOutlet weak var finishButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var createTrainingCollectionView: UICollectionView!
     var data: [String] = ["Abdominais", "Aeróbico", "Bíceps", "CostasOmbros", "MembrosInferiores", "Peito", "Triceps"]
@@ -34,13 +36,16 @@ class CreateTrainingViewController: UIViewController {
             layout.minimumInteritemSpacing = 10
             layout.minimumLineSpacing = 10
             layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            
+            finishButton.layer.cornerRadius = 10
         }
         createTrainingCollectionView.register(CustomCreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier)
     }
+    
+    @IBAction func tappedFinishButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
 }
-
-
 
 extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

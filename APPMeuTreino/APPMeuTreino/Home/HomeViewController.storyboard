@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageUser" translatesAutoresizingMaskIntoConstraints="NO" id="o8y-HO-kDY">
-                                <rect key="frame" x="20" y="-25" width="78" height="78"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="o8y-HO-kDY">
+                                <rect key="frame" x="16" y="-25" width="78" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="PW8-gp-WvA"/>
                                     <constraint firstAttribute="width" constant="78" id="f90-X0-lUM"/>
@@ -154,7 +154,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, Maria!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaD-kr-0aL">
-                                <rect key="frame" x="106" y="4" width="99" height="20.5"/>
+                                <rect key="frame" x="111" y="4" width="99" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="P09-oj-16n"/>
                                     <constraint firstAttribute="height" constant="20.5" id="U8e-BI-Jik"/>
@@ -167,12 +167,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="o8y-HO-kDY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="6ct-7i-ofU"/>
+                            <constraint firstItem="o8y-HO-kDY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6ct-7i-ofU"/>
                             <constraint firstItem="FsY-fP-vbc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Axw-3i-3BU"/>
                             <constraint firstItem="CNh-OB-wi0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Pic-UT-apJ"/>
                             <constraint firstItem="lMe-Nx-n5o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="WBf-p1-uOD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CNh-OB-wi0" secondAttribute="trailing" constant="20" id="Wea-CK-5Or"/>
-                            <constraint firstItem="YaD-kr-0aL" firstAttribute="leading" secondItem="o8y-HO-kDY" secondAttribute="trailing" constant="8" id="a9p-26-J50"/>
+                            <constraint firstItem="YaD-kr-0aL" firstAttribute="leading" secondItem="o8y-HO-kDY" secondAttribute="trailing" constant="17" id="a9p-26-J50"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P82-he-Ijh" secondAttribute="trailing" constant="20" id="cJ2-3a-DZR"/>
                             <constraint firstItem="YaD-kr-0aL" firstAttribute="centerY" secondItem="o8y-HO-kDY" secondAttribute="centerY" id="e2y-7a-gO1"/>
                             <constraint firstItem="P82-he-Ijh" firstAttribute="top" secondItem="YaD-kr-0aL" secondAttribute="bottom" constant="25" id="fhP-6B-M4r"/>
@@ -199,15 +199,15 @@
         <!--NameTrainingViewController-->
         <scene sceneID="per-9c-zzg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r8H-KJ-ffh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="NameTrainingViewController" referencedIdentifier="NameTrainingViewController" id="rbl-yv-cWC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8H-KJ-ffh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="631" y="-47"/>
         </scene>
     </scenes>
     <resources>
         <image name="IconLogo" width="1194" height="1194"/>
-        <image name="ImageUser" width="322" height="288"/>
+        <image name="profile" width="609" height="609"/>
         <namedColor name="OrangeMeuTreino">
             <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

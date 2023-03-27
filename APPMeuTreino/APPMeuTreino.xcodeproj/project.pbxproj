@@ -54,6 +54,8 @@
 		3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */; };
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
+		B1BC56B729D2159300E2013A /* CollectionExecutionTainingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC56B529D2159200E2013A /* CollectionExecutionTainingViewCell.swift */; };
+		B1BC56B829D2159300E2013A /* CollectionExecutionTainingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */; };
 		CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */; };
 		CBE2F74629D0D54B0070A70F /* NameTrainingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -127,6 +129,8 @@
 		3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataExerciseViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
+		B1BC56B529D2159200E2013A /* CollectionExecutionTainingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExecutionTainingViewCell.swift; sourceTree = "<group>"; };
+		B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionExecutionTainingViewCell.xib; sourceTree = "<group>"; };
 		CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTrainingViewController.swift; sourceTree = "<group>"; };
 		CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameTrainingViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -320,6 +324,7 @@
 		3F6448FD29BA6E5C00BDE579 /* ExecutionTraining */ = {
 			isa = PBXGroup;
 			children = (
+				B1BC56B429D2155600E2013A /* ExecutionTrainingCell */,
 				3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */,
 				3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */,
 			);
@@ -396,6 +401,15 @@
 				3FAFD71729CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B1BC56B429D2155600E2013A /* ExecutionTrainingCell */ = {
+			isa = PBXGroup;
+			children = (
+				B1BC56B529D2159200E2013A /* CollectionExecutionTainingViewCell.swift */,
+				B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */,
+			);
+			path = ExecutionTrainingCell;
 			sourceTree = "<group>";
 		};
 		CBD70DC829D0C52C00C5F1D2 /* NameTrainingCollectionView */ = {
@@ -523,6 +537,7 @@
 				3F64490929BA70F600BDE579 /* LoginViewController.storyboard in Resources */,
 				3F64492B29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard in Resources */,
 				38B8008C29C9586B005F35AF /* TrainingCell.xib in Resources */,
+				B1BC56B829D2159300E2013A /* CollectionExecutionTainingViewCell.xib in Resources */,
 				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
 				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
 				3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */,
@@ -558,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1BC56B729D2159300E2013A /* CollectionExecutionTainingViewCell.swift in Sources */,
 				3F64493129BA737F00BDE579 /* CalendarViewController.swift in Sources */,
 				38B8008B29C9586B005F35AF /* TrainingCell.swift in Sources */,
 				3F64492D29BA736500BDE579 /* DemonstrationExerciseViewController.swift in Sources */,
@@ -757,9 +773,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 738B22MJV3;
+				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Por favor, autorize o acesso à câmera para trocar a foto de perfil.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -770,7 +787,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BrunoMoura.APPMeuTreino;
+				PRODUCT_BUNDLE_IDENTIFIER = LeoLacerda.APPMeuTreino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -785,9 +802,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 738B22MJV3;
+				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Por favor, autorize o acesso à câmera para trocar a foto de perfil.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -798,7 +816,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = BrunoMoura.APPMeuTreino;
+				PRODUCT_BUNDLE_IDENTIFIER = LeoLacerda.APPMeuTreino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

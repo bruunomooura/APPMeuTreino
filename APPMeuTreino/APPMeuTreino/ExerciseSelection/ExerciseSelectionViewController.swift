@@ -9,13 +9,15 @@ import UIKit
 
 class ExerciseSelectionViewController: UIViewController {
     
+    
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var selectedExercisesTypesButton: UIButton!
     @IBOutlet weak var exerciseSelectionCollectionView: UICollectionView!
     private var dataWorkouts: [String] = ["AbdominalAlpinista", "AbdominalDeclinado", "AbdominalEmBancoDeclinado", "AbdominalEmV", "AbdominalNaBola"]
     private var exerciseName: [String] = ["Abdominal Alpinista", "Abdominal Declinado", "Abdominal Em Banco Declinado", "Abdominal Em V", "Abdominal Na Bola"]
     private var selectedExerciseCount = 0 {
         didSet {
-            let title = "\(selectedExerciseCount) Exercícios selecionados"
+            let title = "\(selectedExerciseCount) Exercício(s) selecionado(s)"
             selectedExercisesTypesButton.setTitle(title, for: .normal)
         }
     }
@@ -52,7 +54,7 @@ class ExerciseSelectionViewController: UIViewController {
             layout.minimumInteritemSpacing = 10
             layout.minimumLineSpacing = 10
             layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            
+            addButton.layer.cornerRadius = 10
         }
         exerciseSelectionCollectionView.register(CustomExerciseSelectionCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomExerciseSelectionCollectionViewCell.identifier)
     }

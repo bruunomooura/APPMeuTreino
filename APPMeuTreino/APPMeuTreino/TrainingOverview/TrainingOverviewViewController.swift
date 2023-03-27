@@ -15,12 +15,14 @@ class TrainingOverviewViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
+    @IBOutlet weak var beginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTrainingTableView()
-        addTrainingButton.layer.cornerRadius = 8
+        addTrainingButton.layer.cornerRadius = 10
         trainingTableView.separatorStyle = .none
-        
+        beginButton.layer.cornerRadius = 10
         
     
         

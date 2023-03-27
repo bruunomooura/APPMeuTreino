@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,65 +14,101 @@
             <objects>
                 <viewController storyboardIdentifier="TrainingOverviewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TrainingOverviewViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CXF-rs-Z0g">
-                                <rect key="frame" x="12" y="120" width="296" height="329"/>
+                                <rect key="frame" x="12" y="75" width="351" height="503"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="503" id="TDS-qa-YKq"/>
+                                </constraints>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-Q3-Qx5">
-                                <rect key="frame" x="16" y="20" width="78" height="78"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-Q3-Qx5">
+                                <rect key="frame" x="16" y="-25" width="78" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="LyB-SH-fcR"/>
                                     <constraint firstAttribute="width" constant="78" id="ykg-nX-LVq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, Maria!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y6-nO-aSj">
-                                <rect key="frame" x="111" y="48" width="99" height="23.5"/>
+                                <rect key="frame" x="111" y="4" width="99" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="KHe-0K-Wfx"/>
+                                    <constraint firstAttribute="width" constant="99" id="ajM-Yc-Tzb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSy-GU-ZBO">
-                                <rect key="frame" x="64" y="481" width="192.5" height="36.5"/>
+                                <rect key="frame" x="87.5" y="597" width="200" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1OO-lr-byR"/>
+                                    <constraint firstAttribute="height" constant="40" id="2FI-9F-cbX"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ADICIONAR TREINO">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Adicionar Treino">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="j7a-uo-LHR" kind="modal" modalPresentationStyle="pageSheet" id="I9O-Sn-5uR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m44-uq-ffE">
+                                <rect key="frame" x="296" y="600" width="68" height="37"/>
+                                <color key="backgroundColor" name="OrangeMeuTreino"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="LDr-JE-ACz"/>
+                                    <constraint firstAttribute="height" constant="37" id="MIm-aZ-7uo"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="qxq-yj-4Bx" kind="presentation" modalPresentationStyle="fullScreen" id="Gp9-01-2fE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Y6-nO-aSj" secondAttribute="trailing" constant="110" id="1wo-Fd-b8c"/>
                             <constraint firstItem="CXF-rs-Z0g" firstAttribute="top" secondItem="kOg-Q3-Qx5" secondAttribute="bottom" constant="22" id="4hr-ZN-YUh"/>
                             <constraint firstItem="kOg-Q3-Qx5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6vK-mC-P3S"/>
-                            <constraint firstItem="BSy-GU-ZBO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="PbO-Y4-X0y"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BSy-GU-ZBO" secondAttribute="bottom" constant="50.5" id="Qf8-vV-l5k"/>
-                            <constraint firstItem="kOg-Q3-Qx5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="c1w-wu-yMx"/>
+                            <constraint firstItem="BSy-GU-ZBO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="D2w-gp-Bez"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BSy-GU-ZBO" secondAttribute="bottom" constant="30" id="Qf8-vV-l5k"/>
+                            <constraint firstItem="5Y6-nO-aSj" firstAttribute="centerY" secondItem="kOg-Q3-Qx5" secondAttribute="centerY" id="U4a-j1-wUY"/>
+                            <constraint firstItem="CXF-rs-Z0g" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="b6o-JQ-9hV"/>
+                            <constraint firstItem="kOg-Q3-Qx5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-25" id="c1w-wu-yMx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="m44-uq-ffE" secondAttribute="bottom" constant="30" id="ghe-pc-CHB"/>
+                            <constraint firstItem="m44-uq-ffE" firstAttribute="leading" secondItem="BSy-GU-ZBO" secondAttribute="trailing" constant="8.5" id="gkr-X0-eTG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CXF-rs-Z0g" secondAttribute="trailing" constant="12" id="j0e-bf-lyw"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BSy-GU-ZBO" secondAttribute="trailing" constant="63.5" id="l1t-0V-l4K"/>
-                            <constraint firstItem="5Y6-nO-aSj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="oUU-g0-Xcy"/>
                             <constraint firstItem="5Y6-nO-aSj" firstAttribute="leading" secondItem="kOg-Q3-Qx5" secondAttribute="trailing" constant="17" id="rjE-qP-CJh"/>
                             <constraint firstItem="CXF-rs-Z0g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="sZT-n5-pu1"/>
-                            <constraint firstItem="BSy-GU-ZBO" firstAttribute="top" secondItem="CXF-rs-Z0g" secondAttribute="bottom" constant="32" id="thg-P1-mEP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addTrainingButton" destination="BSy-GU-ZBO" id="7nQ-2v-qoi"/>
+                        <outlet property="beginButton" destination="m44-uq-ffE" id="6e3-wm-61m"/>
                         <outlet property="profileImage" destination="kOg-Q3-Qx5" id="fOK-Ta-pxP"/>
                         <outlet property="trainingTableView" destination="CXF-rs-Z0g" id="8py-N1-AXq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33.75" y="-34.859154929577464"/>
+            <point key="canvasLocation" x="32.799999999999997" y="-35.532233883058474"/>
+        </scene>
+        <!--ExecutionTrainingViewController-->
+        <scene sceneID="V4C-NJ-5Ca">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExecutionTrainingViewController" referencedIdentifier="ExecutionTrainingViewController" id="qxq-yj-4Bx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUe-nz-v7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="5"/>
         </scene>
         <!--NameTrainingViewController-->
         <scene sceneID="Pgs-f1-Am2">
@@ -82,11 +118,22 @@
             </objects>
             <point key="canvasLocation" x="700" y="-99"/>
         </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="wyW-Ky-iFe">
+            <objects>
+                <viewControllerPlaceholder id="cCg-SW-ceU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLq-r0-4Fw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="309"/>
+        </scene>
     </scenes>
     <resources>
         <image name="profile" width="609" height="609"/>
         <namedColor name="BlueMeuTreino">
             <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="OrangeMeuTreino">
+            <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -101,6 +101,9 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedSaveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3B4-qP-W9x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMQ-NB-sMG">
                                 <rect key="frame" x="137.5" y="251.5" width="100" height="30"/>
@@ -117,6 +120,25 @@
                                     <action selector="editimageButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0YP-iQ-fIA"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackArrow" translatesAutoresizingMaskIntoConstraints="NO" id="rK9-pW-C8O">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0t4-u9-wN9"/>
+                                    <constraint firstAttribute="width" constant="30" id="zVI-Dc-h2e"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqG-SV-PoS">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HX2-0Y-VeG"/>
+                                    <constraint firstAttribute="width" constant="30" id="oz7-8U-ClQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uyH-0Y-1eb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,14 +149,18 @@
                             <constraint firstItem="bfu-IO-y84" firstAttribute="top" secondItem="CX9-L5-YP4" secondAttribute="bottom" constant="5" id="CpW-ep-14A"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sXm-4Y-Csx" secondAttribute="trailing" constant="30" id="EYW-ZL-kDV"/>
                             <constraint firstItem="CX9-L5-YP4" firstAttribute="top" secondItem="r4s-R7-Iad" secondAttribute="bottom" constant="40" id="Ix5-Dy-PG8"/>
+                            <constraint firstItem="BqG-SV-PoS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Jft-Bh-7UQ"/>
                             <constraint firstItem="aMQ-NB-sMG" firstAttribute="top" secondItem="r4s-R7-Iad" secondAttribute="bottom" constant="4" id="LSr-MK-Kq3"/>
                             <constraint firstItem="Zfe-ow-DKH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mlm-gY-Sxo"/>
                             <constraint firstItem="r4s-R7-Iad" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UXo-20-iNZ"/>
+                            <constraint firstItem="BqG-SV-PoS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Yez-R9-jBk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FDd-tD-rAB" secondAttribute="trailing" constant="30" id="b6P-7A-Q4k"/>
                             <constraint firstItem="sXm-4Y-Csx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="blp-wK-4yX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bfu-IO-y84" secondAttribute="trailing" constant="30" id="cS5-tN-5as"/>
                             <constraint firstItem="FDd-tD-rAB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ckf-ba-Y5d"/>
                             <constraint firstItem="FDd-tD-rAB" firstAttribute="top" secondItem="baI-i1-lf1" secondAttribute="bottom" constant="5" id="cvB-WO-FPF"/>
+                            <constraint firstItem="rK9-pW-C8O" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="dXN-pq-K2v"/>
+                            <constraint firstItem="rK9-pW-C8O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="e9I-t0-vhh"/>
                             <constraint firstItem="Zfe-ow-DKH" firstAttribute="top" secondItem="sXm-4Y-Csx" secondAttribute="bottom" constant="20" id="flo-eB-bsn"/>
                             <constraint firstItem="aMQ-NB-sMG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gFP-vk-9FJ"/>
                             <constraint firstItem="baI-i1-lf1" firstAttribute="top" secondItem="bfu-IO-y84" secondAttribute="bottom" constant="10" id="iTM-e3-Vju"/>
@@ -148,6 +174,7 @@
                     </view>
                     <connections>
                         <outlet property="alteracaodedadosLabel" destination="PDj-Sl-GiA" id="0YI-pr-ahB"/>
+                        <outlet property="backButton" destination="BqG-SV-PoS" id="UdP-dH-naa"/>
                         <outlet property="birthdayTextField" destination="FDd-tD-rAB" id="VQ6-gk-0Nm"/>
                         <outlet property="emailTextField" destination="sXm-4Y-Csx" id="otd-jK-qKQ"/>
                         <outlet property="fullnameTextField" destination="bfu-IO-y84" id="ZIg-v8-HsA"/>
@@ -161,10 +188,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackArrow" width="868" height="674"/>
         <image name="profile" width="609" height="609"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <namedColor name="BlueMeuTreino">
-            <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

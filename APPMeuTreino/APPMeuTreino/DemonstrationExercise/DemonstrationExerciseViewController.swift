@@ -26,5 +26,10 @@ class DemonstrationExerciseViewController: UIViewController {
         
         concluidoButton.layer.cornerRadius = 10
     }
-
+    
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
 }
