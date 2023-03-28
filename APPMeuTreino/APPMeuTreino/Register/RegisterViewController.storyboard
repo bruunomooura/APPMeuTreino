@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="105" id="kEG-4n-XtX"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aD9-Dr-xT6">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aD9-Dr-xT6">
                                 <rect key="frame" x="21" y="177" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="gIV-dm-rrq"/>
@@ -58,7 +58,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD/MM/AAAA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-Yr-SRN">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD/MM/AAAA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-Yr-SRN">
                                 <rect key="frame" x="21" y="247" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="c5w-Lf-TKv"/>
@@ -77,7 +77,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite seu e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eP-28-7vI">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eP-28-7vI">
                                 <rect key="frame" x="21" y="317" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="afJ-g9-3cW"/>
@@ -132,7 +132,7 @@
                                     <action selector="tappedSignUpConfirmButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Xfj-h0-xfq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite uma senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wkk-GC-Qss">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite uma senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wkk-GC-Qss">
                                 <rect key="frame" x="21" y="387" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="xGM-s5-zca"/>
@@ -140,7 +140,7 @@
                                 <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite novamente a senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIJ-la-xCw">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite novamente a senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIJ-la-xCw">
                                 <rect key="frame" x="21" y="457" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Scy-24-LXd"/>

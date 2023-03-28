@@ -32,23 +32,28 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         nameTextField.layer.cornerRadius = 10
         nameTextField.layer.borderWidth = 2
         nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        nameTextField.clipsToBounds = true
         
         birthdayTextField.layer.cornerRadius = 10
         birthdayTextField.layer.borderWidth = 2
         birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        
+        birthdayTextField.clipsToBounds = true
+
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        
+        emailTextField.clipsToBounds = true
+
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.layer.borderWidth = 2
         passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        
+        passwordTextField.clipsToBounds = true
+
         confirmPasswordTextField.layer.cornerRadius = 10
         confirmPasswordTextField.layer.borderWidth = 2
         confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-                
+        confirmPasswordTextField.clipsToBounds = true
+
         signUpConfirmButton.layer.cornerRadius = 10
         
         editPhotoImageView.layer.borderWidth = 2

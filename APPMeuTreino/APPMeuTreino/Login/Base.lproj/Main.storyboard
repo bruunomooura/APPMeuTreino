@@ -41,7 +41,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufv-Qe-cbg">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufv-Qe-cbg">
                                 <rect key="frame" x="21" y="352" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dc2-9f-pNP"/>
@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-Fu-yQq">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-Fu-yQq">
                                 <rect key="frame" x="21" y="402" width="333" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8BQ-b7-11M"/>
@@ -87,7 +87,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="hht-it-qiQ" kind="presentation" modalPresentationStyle="pageSheet" id="3Z8-84-w37"/>
+                                    <segue destination="hht-it-qiQ" kind="presentation" modalPresentationStyle="fullScreen" id="3Z8-84-w37"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysO-Cg-VHM">
@@ -101,7 +101,7 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Book" family="Futura-Book" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="2cf-bs-kDS" kind="presentation" modalPresentationStyle="pageSheet" id="fFw-h7-UZd"/>
+                                    <segue destination="2cf-bs-kDS" kind="presentation" modalPresentationStyle="fullScreen" id="fFw-h7-UZd"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundDetails" translatesAutoresizingMaskIntoConstraints="NO" id="hr0-cu-CAc">
@@ -184,7 +184,7 @@
         <image name="BackgroundDetails" width="1769" height="610"/>
         <image name="IconLogoSmall" width="1366" height="1230"/>
         <namedColor name="BlueMeuTreino">
-            <color red="0.2669999897480011" green="0.59600001573562622" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

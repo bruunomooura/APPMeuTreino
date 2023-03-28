@@ -24,6 +24,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        emailTextField.clipsToBounds = true
         
         changePasswordButton.layer.cornerRadius = 10
         

@@ -92,13 +92,17 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
         cell.numberSeriesSelectionButton.isEnabled = isCellSelected
         cell.numberRepetitionsSelectionButton.isEnabled = isCellSelected
         cell.weightSelectionButton.isEnabled = isCellSelected
-        
-        
+        cell.layer.cornerRadius = 10
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowRadius = 2
+        cell.layer.shadowOffset = CGSize.zero
+        cell.layer.shadowOpacity = 0.7
+        cell.layer.masksToBounds = false
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print(view.frame.width)
-        return CGSize(width:view.frame.width, height: view.frame.width/3)
+        return CGSize(width:view.frame.width - 20, height: view.frame.width/3)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

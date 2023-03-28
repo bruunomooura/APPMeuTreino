@@ -61,14 +61,20 @@ class DataChangeViewController: UIViewController, UIImagePickerControllerDelegat
         fullnameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         fullnameTextField.layer.borderWidth = 2
         fullnameTextField.layer.cornerRadius = 10
+        fullnameTextField.clipsToBounds = true
+
         
         birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         birthdayTextField.layer.borderWidth = 2
         birthdayTextField.layer.cornerRadius = 10
+        birthdayTextField.clipsToBounds = true
+
         
         emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.cornerRadius = 10
+        emailTextField.clipsToBounds = true
+
         
         self.fullnameTextField.delegate = self
         self.birthdayTextField.delegate = self

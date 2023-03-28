@@ -22,100 +22,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD7-5K-P8p">
-                                <rect key="frame" x="87.5" y="597" width="200" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abdominal em V" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn1-6h-3gT">
+                                <rect key="frame" x="92" y="50" width="191" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <color key="textColor" name="OrangeMeuTreino"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zT-kq-yyx">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="HRe-ao-XkZ"/>
-                                    <constraint firstAttribute="height" constant="40" id="JPh-LN-OQE"/>
+                                    <constraint firstAttribute="width" constant="30" id="1Ec-ak-fKu"/>
+                                    <constraint firstAttribute="height" constant="30" id="OUO-DM-0MV"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Concluído">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZyR-26-EVI"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bV-Tj-z7e">
-                                <rect key="frame" x="10" y="64" width="355" height="513"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abdominal em V" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn1-6h-3gT">
-                                        <rect key="frame" x="82" y="10" width="191" height="32.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                        <color key="textColor" name="OrangeMeuTreino"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AbdominalVplayer" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-Uv-TIh">
-                                        <rect key="frame" x="8" y="52.5" width="339" height="170"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="2iV-eo-cWY"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-M6-hFQ">
-                                        <rect key="frame" x="8" y="275" width="339" height="136"/>
-                                        <string key="text">Posição inicial: deite-se no chão com os braços esticados acima da cabeça. Mantenha as pernas juntas e esticadas. Enquanto expira, levante o tronco com os braço e pernas para cima numa posição perpendicular ao solo. As mãos devem tocar nos pés.
-Enquanto inspira, volte à posição inicial.</string>
-                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plg-PS-Ml7">
-                                        <rect key="frame" x="8" y="232.5" width="120" height="32.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackArrow" translatesAutoresizingMaskIntoConstraints="NO" id="8jM-VV-M15">
-                                        <rect key="frame" x="8" y="8" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="G6F-2r-gE8"/>
-                                            <constraint firstAttribute="width" constant="30" id="p4g-KJ-0De"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zT-kq-yyx">
-                                        <rect key="frame" x="8" y="8" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="1Ec-ak-fKu"/>
-                                            <constraint firstAttribute="height" constant="30" id="OUO-DM-0MV"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title=""/>
-                                        <connections>
-                                            <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZyR-26-EVI"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackArrow" translatesAutoresizingMaskIntoConstraints="NO" id="8jM-VV-M15">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstItem="Rn1-6h-3gT" firstAttribute="top" secondItem="7bV-Tj-z7e" secondAttribute="top" constant="10" id="8Gh-c3-0pw"/>
-                                    <constraint firstAttribute="trailing" secondItem="5ET-Uv-TIh" secondAttribute="trailing" constant="8" id="Fps-t4-bnK"/>
-                                    <constraint firstItem="5ET-Uv-TIh" firstAttribute="leading" secondItem="7bV-Tj-z7e" secondAttribute="leading" constant="8" id="HP8-UP-wHV"/>
-                                    <constraint firstItem="plg-PS-Ml7" firstAttribute="leading" secondItem="7bV-Tj-z7e" secondAttribute="leading" constant="8" id="IHC-ef-y6H"/>
-                                    <constraint firstAttribute="trailing" secondItem="6rN-M6-hFQ" secondAttribute="trailing" constant="8" id="Uop-Hm-VgZ"/>
-                                    <constraint firstItem="plg-PS-Ml7" firstAttribute="top" secondItem="5ET-Uv-TIh" secondAttribute="bottom" constant="10" id="Z7d-Qg-ICx"/>
-                                    <constraint firstItem="7zT-kq-yyx" firstAttribute="top" secondItem="7bV-Tj-z7e" secondAttribute="top" constant="8" id="b0L-6f-7Bi"/>
-                                    <constraint firstItem="Rn1-6h-3gT" firstAttribute="centerX" secondItem="7bV-Tj-z7e" secondAttribute="centerX" id="i5l-yH-8tq"/>
-                                    <constraint firstItem="7zT-kq-yyx" firstAttribute="leading" secondItem="7bV-Tj-z7e" secondAttribute="leading" constant="8" id="ijU-mn-NMC"/>
-                                    <constraint firstItem="8jM-VV-M15" firstAttribute="leading" secondItem="7bV-Tj-z7e" secondAttribute="leading" constant="8" id="nJw-dA-1Cz"/>
-                                    <constraint firstItem="5ET-Uv-TIh" firstAttribute="top" secondItem="Rn1-6h-3gT" secondAttribute="bottom" constant="10" id="oLC-vf-UTO"/>
-                                    <constraint firstItem="8jM-VV-M15" firstAttribute="top" secondItem="7bV-Tj-z7e" secondAttribute="top" constant="8" id="sAO-nI-cEQ"/>
-                                    <constraint firstItem="6rN-M6-hFQ" firstAttribute="leading" secondItem="7bV-Tj-z7e" secondAttribute="leading" constant="8" id="vBI-MT-60G"/>
-                                    <constraint firstItem="6rN-M6-hFQ" firstAttribute="top" secondItem="plg-PS-Ml7" secondAttribute="bottom" constant="10" id="vLh-EH-N9K"/>
+                                    <constraint firstAttribute="height" constant="30" id="G6F-2r-gE8"/>
+                                    <constraint firstAttribute="width" constant="30" id="p4g-KJ-0De"/>
                                 </constraints>
-                            </view>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AbdominalVplayer" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-Uv-TIh">
+                                <rect key="frame" x="20" y="90.5" width="335" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="CLm-tW-yjd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plg-PS-Ml7">
+                                <rect key="frame" x="20" y="279.5" width="120" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="IEi-Qe-Z4z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-M6-hFQ">
+                                <rect key="frame" x="20" y="320" width="335" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="154" id="v5T-mB-c1v"/>
+                                </constraints>
+                                <string key="text">Posição inicial: deite-se no chão com os braços esticados acima da cabeça. Mantenha as pernas juntas e esticadas. Enquanto expira, levante o tronco com os braço e pernas para cima numa posição perpendicular ao solo. As mãos devem tocar nos pés.
+Enquanto inspira, volte à posição inicial.</string>
+                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="OD7-5K-P8p" secondAttribute="bottom" constant="30" id="0BL-K4-hjt"/>
-                            <constraint firstItem="7bV-Tj-z7e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="C4x-FB-HZO"/>
-                            <constraint firstItem="7bV-Tj-z7e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="SQO-uY-nsD"/>
-                            <constraint firstItem="OD7-5K-P8p" firstAttribute="top" secondItem="7bV-Tj-z7e" secondAttribute="bottom" constant="20" id="SaA-ur-PXt"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7bV-Tj-z7e" secondAttribute="trailing" constant="10" id="puN-uN-utb"/>
-                            <constraint firstItem="OD7-5K-P8p" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wDs-Cq-VTe"/>
+                            <constraint firstItem="8jM-VV-M15" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2nr-ef-fVw"/>
+                            <constraint firstItem="plg-PS-Ml7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="8Oo-IK-zbt"/>
+                            <constraint firstItem="Rn1-6h-3gT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CfH-i9-jXT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6rN-M6-hFQ" secondAttribute="trailing" constant="20" id="HN9-HT-yh9"/>
+                            <constraint firstItem="5ET-Uv-TIh" firstAttribute="top" secondItem="Rn1-6h-3gT" secondAttribute="bottom" constant="8" id="HPG-6V-Fro"/>
+                            <constraint firstItem="plg-PS-Ml7" firstAttribute="top" secondItem="5ET-Uv-TIh" secondAttribute="bottom" constant="19" id="TlG-uJ-Uyt"/>
+                            <constraint firstItem="6rN-M6-hFQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="WV2-v8-tES"/>
+                            <constraint firstItem="7zT-kq-yyx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="f5I-hR-OLq"/>
+                            <constraint firstItem="Rn1-6h-3gT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="jmW-W4-GLo"/>
+                            <constraint firstItem="6rN-M6-hFQ" firstAttribute="top" secondItem="plg-PS-Ml7" secondAttribute="bottom" constant="8" id="ksa-mD-Aw0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5ET-Uv-TIh" secondAttribute="trailing" constant="20" id="mPc-1i-KGQ"/>
+                            <constraint firstItem="8jM-VV-M15" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="mb6-WM-Oto"/>
+                            <constraint firstItem="7zT-kq-yyx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="mbE-n3-Vdo"/>
+                            <constraint firstItem="5ET-Uv-TIh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="rYx-bN-mL5"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="BorderDemonstrationExercise" destination="7bV-Tj-z7e" id="cGA-aG-5XF"/>
-                        <outlet property="concluidoButton" destination="OD7-5K-P8p" id="NfT-26-frG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

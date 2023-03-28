@@ -33,7 +33,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Carga em KG" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58f-Ac-RI6">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Carga em KG" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58f-Ac-RI6">
                                                 <rect key="frame" x="50.5" y="60" width="138.5" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,6 +74,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmButton" destination="WS7-qU-1yY" id="KU7-p2-mml"/>
                         <outlet property="confirmeSettingsButton" destination="WS7-qU-1yY" id="5vF-FW-Oyb"/>
                         <outlet property="dataExerciseView" destination="LaV-ob-D5a" id="JcV-4n-gaM"/>
                         <outlet property="exerciseSettingsTextField" destination="58f-Ac-RI6" id="hKu-xa-gkM"/>

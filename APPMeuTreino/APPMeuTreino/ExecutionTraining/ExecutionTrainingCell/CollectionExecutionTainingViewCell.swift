@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CollectionExecutionTainingViewCellProtocol: AnyObject {
+    func addExerciseInformations(name: String)
+}
+
 class CollectionExecutionTainingViewCell: UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
@@ -20,6 +24,13 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
     @IBOutlet weak var seriesButton: UIButton!
     
     @IBOutlet weak var repsButton: UIButton!
+    
+    @IBOutlet weak var exerciseView: UIView!
+    
+    private var delegate:CollectionExecutionTainingViewCellProtocol?
+    func delegate(delegate:CollectionExecutionTainingViewCellProtocol){
+        self.delegate = delegate
+    }
     
     static let identifier: String = "CollectionExecutionTainingViewCell"
     
@@ -35,6 +46,15 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
         weightButton.layer.cornerRadius = 10
         seriesButton.layer.cornerRadius = 10
         repsButton.layer.cornerRadius = 10
+        exerciseView.layer.cornerRadius = 10
+        exerciseView.layer.shadowColor = UIColor.lightGray.cgColor
+        exerciseView.layer.shadowRadius = 2
+//        exerciseView.layer.borderWidth = 1
+//        exerciseView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        exerciseView.layer.shadowOffset = CGSize.zero
+        exerciseView.layer.shadowOpacity = 0.7
+        exerciseView.layer.masksToBounds = false
     }
     
     func configureCell(name: String, nameImage: String){
@@ -50,5 +70,9 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
             checkMarkButton.setImage(UIImage(named: "CheckBoxYes"), for: .normal)
             isButtonSelected = true
         }
+    }
+    
+    @IBAction func tappedWeightButton(_ sender: UIButton) {
+        delegate?.addExerciseInformations(name: sender.titleLabel?.text ?? "")
     }
 }

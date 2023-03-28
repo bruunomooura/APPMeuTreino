@@ -25,14 +25,20 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         passwordTextField.layer.borderWidth = 2
         passwordTextField.layer.cornerRadius = 10
+        passwordTextField.clipsToBounds = true
+
     
         newpasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         newpasswordTextField.layer.borderWidth = 2
         newpasswordTextField.layer.cornerRadius = 10
+        newpasswordTextField.clipsToBounds = true
+
         
         repeatpasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         repeatpasswordTextField.layer.borderWidth = 2
         repeatpasswordTextField.layer.cornerRadius = 10
+        repeatpasswordTextField.clipsToBounds = true
+
         
         saveButton.layer.cornerRadius = 10
         

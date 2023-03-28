@@ -13,6 +13,7 @@ class TrainingCell: UITableViewCell {
     
     @IBOutlet weak var startButton: UIButton!
     
+    
     static let identifier: String = "TrainingCell"
     
     static func nib() -> UINib {

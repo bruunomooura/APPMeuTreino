@@ -20,10 +20,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        emailTextField.clipsToBounds = true
         
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.layer.borderWidth = 2
         passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        passwordTextField.clipsToBounds = true
         
         registerButton.layer.cornerRadius = 10
         

@@ -19,6 +19,8 @@ class DataExerciseViewController: UIViewController {
     //nome do dados que o app está solicitando do usuário. Ex: Carga, Serie ou Repetições
     @IBOutlet weak var exerciseSettingsTextField: UITextField!
     
+    @IBOutlet weak var confirmButton: UIButton!
+    
     let customColorOrange = UIColor(named: "OrangeMeuTreino")
 
     var name: String = ""
@@ -36,14 +38,17 @@ class DataExerciseViewController: UIViewController {
         super.viewDidLoad()
      configTextField()
         configTitle()
-        exerciseSettingsTextField.keyboardType = UIKeyboardType.numberPad
+        exerciseSettingsTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
         exerciseSettingsTextField.layer.borderColor = customColorOrange?.cgColor
         exerciseSettingsTextField.layer.borderWidth = 2
         exerciseSettingsTextField.layer.cornerRadius = 10
+        exerciseSettingsTextField.clipsToBounds = true
         
         confirmeSettingsButton.isEnabled = false
         
         dataExerciseView.layer.cornerRadius = 10
+        
+        confirmButton.layer.cornerRadius = 10
         
     }
     func configTextField() {

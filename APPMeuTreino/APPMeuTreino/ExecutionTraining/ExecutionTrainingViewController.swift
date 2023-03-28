@@ -62,4 +62,18 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.width/3)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = UIStoryboard(name: "DemonstrationExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DemonstrationExerciseViewController") as? DemonstrationExerciseViewController{
+            vc.modalPresentationStyle = .fullScreen
+              present(vc, animated: true)
+           }
+    }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let vc = UIStoryboard(name: "ExecutionTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "ExecutionTrainingViewController") as? ExecutionTrainingViewController{
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true)
+//        }
+//    }
 }
