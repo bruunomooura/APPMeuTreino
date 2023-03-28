@@ -57,22 +57,6 @@
                                     <segue destination="j7a-uo-LHR" kind="modal" modalPresentationStyle="pageSheet" id="I9O-Sn-5uR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m44-uq-ffE">
-                                <rect key="frame" x="296" y="600" width="68" height="37"/>
-                                <color key="backgroundColor" name="OrangeMeuTreino"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="LDr-JE-ACz"/>
-                                    <constraint firstAttribute="height" constant="37" id="MIm-aZ-7uo"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Iniciar">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="qxq-yj-4Bx" kind="presentation" modalPresentationStyle="fullScreen" id="Gp9-01-2fE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,8 +68,6 @@
                             <constraint firstItem="5Y6-nO-aSj" firstAttribute="centerY" secondItem="kOg-Q3-Qx5" secondAttribute="centerY" id="U4a-j1-wUY"/>
                             <constraint firstItem="CXF-rs-Z0g" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="b6o-JQ-9hV"/>
                             <constraint firstItem="kOg-Q3-Qx5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-25" id="c1w-wu-yMx"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="m44-uq-ffE" secondAttribute="bottom" constant="30" id="ghe-pc-CHB"/>
-                            <constraint firstItem="m44-uq-ffE" firstAttribute="leading" secondItem="BSy-GU-ZBO" secondAttribute="trailing" constant="8.5" id="gkr-X0-eTG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CXF-rs-Z0g" secondAttribute="trailing" constant="12" id="j0e-bf-lyw"/>
                             <constraint firstItem="5Y6-nO-aSj" firstAttribute="leading" secondItem="kOg-Q3-Qx5" secondAttribute="trailing" constant="17" id="rjE-qP-CJh"/>
                             <constraint firstItem="CXF-rs-Z0g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="sZT-n5-pu1"/>
@@ -93,7 +75,6 @@
                     </view>
                     <connections>
                         <outlet property="addTrainingButton" destination="BSy-GU-ZBO" id="7nQ-2v-qoi"/>
-                        <outlet property="beginButton" destination="m44-uq-ffE" id="6e3-wm-61m"/>
                         <outlet property="profileImage" destination="kOg-Q3-Qx5" id="fOK-Ta-pxP"/>
                         <outlet property="trainingTableView" destination="CXF-rs-Z0g" id="8py-N1-AXq"/>
                     </connections>
@@ -101,14 +82,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="-35.532233883058474"/>
-        </scene>
-        <!--ExecutionTrainingViewController-->
-        <scene sceneID="V4C-NJ-5Ca">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ExecutionTrainingViewController" referencedIdentifier="ExecutionTrainingViewController" id="qxq-yj-4Bx" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HUe-nz-v7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="699" y="5"/>
         </scene>
         <!--NameTrainingViewController-->
         <scene sceneID="Pgs-f1-Am2">
@@ -118,22 +91,11 @@
             </objects>
             <point key="canvasLocation" x="700" y="-99"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="wyW-Ky-iFe">
-            <objects>
-                <viewControllerPlaceholder id="cCg-SW-ceU" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cLq-r0-4Fw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="106" y="309"/>
-        </scene>
     </scenes>
     <resources>
         <image name="profile" width="609" height="609"/>
         <namedColor name="BlueMeuTreino">
             <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="OrangeMeuTreino">
-            <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

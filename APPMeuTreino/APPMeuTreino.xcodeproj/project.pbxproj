@@ -776,6 +776,7 @@
 				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Meu Treino";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Por favor, autorize o acesso à câmera para trocar a foto de perfil.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -805,6 +806,7 @@
 				DEVELOPMENT_TEAM = ZJ6WN3W475;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Meu Treino";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Por favor, autorize o acesso à câmera para trocar a foto de perfil.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

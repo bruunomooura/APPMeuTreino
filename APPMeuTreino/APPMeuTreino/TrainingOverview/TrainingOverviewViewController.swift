@@ -15,14 +15,11 @@ class TrainingOverviewViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
-    @IBOutlet weak var beginButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTrainingTableView()
         addTrainingButton.layer.cornerRadius = 10
         trainingTableView.separatorStyle = .none
-        beginButton.layer.cornerRadius = 10
         
     
         
@@ -66,6 +63,13 @@ class TrainingOverviewViewController: UIViewController {
         //altura das linhas da celula
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 105
+        }
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            if let vc = UIStoryboard(name: "ExecutionTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "ExecutionTrainingViewController") as? ExecutionTrainingViewController{
+                vc.modalPresentationStyle = .fullScreen
+                present(vc, animated: true)
+            }
         }
         
     }

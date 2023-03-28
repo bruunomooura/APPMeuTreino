@@ -19,6 +19,7 @@ class ExerciseSelectionViewController: UIViewController {
         didSet {
             let title = "\(selectedExerciseCount) Exercício(s) selecionado(s)"
             selectedExercisesTypesButton.setTitle(title, for: .normal)
+            selectedExercisesTypesButton.titleLabel?.font = UIFont(name: "Didot", size: 18)
         }
     }
     private var selectedCells: [IndexPath] = []

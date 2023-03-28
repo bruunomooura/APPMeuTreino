@@ -27,6 +27,8 @@ class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var exerciseSelecionImageView: UIImageView!
     
+    
+    
     private var delegate:CustomExerciseSelectionCollectionViewCellProtocol?
     func delegate(delegate:CustomExerciseSelectionCollectionViewCellProtocol){
         self.delegate = delegate
