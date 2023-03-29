@@ -65,7 +65,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="tappedExitButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="N2t-1m-ZdX"/>
+                                    <segue destination="iBk-D2-ip8" kind="presentation" modalPresentationStyle="fullScreen" id="EF3-T9-V1A"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
@@ -122,6 +122,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfL-dM-kdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="663" y="-28"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="uU5-nK-cs1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="iBk-D2-ip8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWJ-3T-rF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="57"/>
         </scene>
     </scenes>
     <resources>

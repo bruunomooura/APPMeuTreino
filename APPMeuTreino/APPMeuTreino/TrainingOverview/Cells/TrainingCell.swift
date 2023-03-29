@@ -11,8 +11,6 @@ class TrainingCell: UITableViewCell {
 
     @IBOutlet weak var trainingCellView: UIView!
     
-    @IBOutlet weak var startButton: UIButton!
-    
     
     static let identifier: String = "TrainingCell"
     
@@ -26,7 +24,6 @@ class TrainingCell: UITableViewCell {
     }
 
     func configureCell(){
-        startButton.layer.cornerRadius = 8
         trainingCellView.layer.cornerRadius = 12
         
         //configuraçao da borda sombreada

@@ -18,57 +18,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Im-6O-Ze1">
-                        <rect key="frame" x="12" y="8" width="296" height="87"/>
+                        <rect key="frame" x="12" y="8" width="296" height="84"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZj-Dz-A6U">
-                                <rect key="frame" x="181" y="8" width="95" height="40"/>
-                                <color key="backgroundColor" name="BlueMeuTreino"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="95" id="5iC-XL-rSR"/>
-                                    <constraint firstAttribute="height" constant="40" id="D57-l5-o3v"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="INICIAR">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="oXa-hT-gnL">
-                                <rect key="frame" x="206" y="62" width="48" height="10"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzp-vt-iH3">
-                                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="10" id="dDd-Cl-IzB"/>
-                                            <constraint firstAttribute="width" constant="10" id="prW-kE-CpF"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Editar">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-hp-3Ug">
-                                        <rect key="frame" x="38" y="0.0" width="10" height="10"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="10" id="bdz-V5-3uF"/>
-                                            <constraint firstAttribute="height" constant="10" id="eZb-DL-ekJ"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Lixeira"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="vnd-a6-vSK">
-                                <rect key="frame" x="16" y="14.000000000000004" width="136.33333333333334" height="56.333333333333343"/>
+                                <rect key="frame" x="80.000000000000014" y="15.333333333333332" width="136.33333333333337" height="53.333333333333343"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TREINO 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faI-La-6rW">
-                                        <rect key="frame" x="0.0" y="0.0" width="136.33333333333334" height="42.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREINO 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faI-La-6rW">
+                                        <rect key="frame" x="0.0" y="0.0" width="136.33333333333334" height="39.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(5 exercícios)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-hl-DNe">
-                                        <rect key="frame" x="28.333333333333336" y="39.333333333333336" width="79.666666666666657" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(5 exercícios)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-hl-DNe">
+                                        <rect key="frame" x="28.333333333333321" y="36.333333333333329" width="79.666666666666686" height="17"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -78,14 +40,8 @@
                         </subviews>
                         <color key="backgroundColor" name="OrangeMeuTreino"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="oXa-hT-gnL" secondAttribute="bottom" constant="15" id="0Tg-as-ybM"/>
-                            <constraint firstItem="oXa-hT-gnL" firstAttribute="top" secondItem="qZj-Dz-A6U" secondAttribute="bottom" constant="14" id="EGn-KV-g2k"/>
-                            <constraint firstItem="vnd-a6-vSK" firstAttribute="leading" secondItem="3Im-6O-Ze1" secondAttribute="leading" constant="16" id="EHo-2I-LCq"/>
-                            <constraint firstItem="vnd-a6-vSK" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="14" id="FaX-x2-hSt"/>
-                            <constraint firstAttribute="trailing" secondItem="qZj-Dz-A6U" secondAttribute="trailing" constant="20" symbolic="YES" id="VAo-v0-6wS"/>
-                            <constraint firstAttribute="bottom" secondItem="vnd-a6-vSK" secondAttribute="bottom" constant="16.670000000000002" id="VqZ-Xu-WJL"/>
-                            <constraint firstItem="qZj-Dz-A6U" firstAttribute="top" secondItem="3Im-6O-Ze1" secondAttribute="top" constant="8" id="Wah-SQ-Xek"/>
-                            <constraint firstAttribute="trailing" secondItem="oXa-hT-gnL" secondAttribute="trailing" constant="42" id="i63-df-4io"/>
+                            <constraint firstItem="vnd-a6-vSK" firstAttribute="centerX" secondItem="3Im-6O-Ze1" secondAttribute="centerX" id="TmM-eI-vgh"/>
+                            <constraint firstItem="vnd-a6-vSK" firstAttribute="centerY" secondItem="3Im-6O-Ze1" secondAttribute="centerY" id="tg0-Qi-oqG"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -99,18 +55,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="startButton" destination="qZj-Dz-A6U" id="l4B-UV-D79"/>
                 <outlet property="trainingCellView" destination="3Im-6O-Ze1" id="4qA-SW-bIa"/>
             </connections>
             <point key="canvasLocation" x="16.793893129770993" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Editar" width="30" height="30"/>
-        <image name="Lixeira" width="30" height="30"/>
-        <namedColor name="BlueMeuTreino">
-            <color red="0.0" green="0.59200000762939453" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="OrangeMeuTreino">
             <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

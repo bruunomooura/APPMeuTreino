@@ -31,9 +31,6 @@ class SettingsViewController: UIViewController {
         
     }
     
-    @IBAction func tappedExitButton(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
     
 
 }
