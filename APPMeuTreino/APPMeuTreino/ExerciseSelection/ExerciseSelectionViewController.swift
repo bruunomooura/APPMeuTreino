@@ -22,13 +22,14 @@ class ExerciseSelectionViewController: UIViewController {
             selectedExercisesTypesButton.titleLabel?.font = UIFont(name: "Didot", size: 18)
         }
     }
-    private var selectedCells: [IndexPath] = []
+//    private var selectedCells: [IndexPath] = []
 
 
     var itemSelected = false
     
     private var isCellSelected = false
 
+    private var SelectedCells = Set<IndexPath>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +82,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomExerciseSelectionCollectionViewCell.identifier, for: indexPath) as! CustomExerciseSelectionCollectionViewCell
         cell.delegate(delegate: self)
         cell.setupCell(nameImage: dataWorkouts[indexPath.row], exerciseName: exerciseName[indexPath.row])
-        if selectedCells.contains(indexPath) {
+        if SelectedCells.contains(indexPath) {
             cell.backgroundColor = UIColor(named: "OrangeMeuTreino")
             isCellSelected = true
 
@@ -108,6 +109,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CustomExerciseSelectionCollectionViewCell{
             cell.backgroundColor =  UIColor(named: "OrangeMeuTreino")
+            SelectedCells.insert(indexPath)
             selectedExerciseCount += 1
             cell.numberSeriesSelectionButton.isEnabled = true
             cell.numberRepetitionsSelectionButton.isEnabled = true
@@ -118,6 +120,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CustomExerciseSelectionCollectionViewCell{
             cell.backgroundColor = .white
+            SelectedCells.remove(indexPath)
             selectedExerciseCount -= 1
             cell.numberSeriesSelectionButton.isEnabled = false
             cell.numberRepetitionsSelectionButton.isEnabled = false
