@@ -66,5 +66,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

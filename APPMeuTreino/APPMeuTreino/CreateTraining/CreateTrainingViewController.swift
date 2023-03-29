@@ -14,6 +14,10 @@ class CreateTrainingViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var createTrainingCollectionView: UICollectionView!
+    
+    @IBOutlet weak var searchExerciseSearchBar: UISearchBar!
+    
+    
     var data: [String] = ["Abdominais", "Aeróbico", "Bíceps", "CostasOmbros", "MembrosInferiores", "Peito", "Triceps"]
     var names: [String] = ["cat", "dog", "bark", "car", "chicken", "cow", "plane"]
     //var names = apenas exemplo
@@ -21,6 +25,9 @@ class CreateTrainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configCreateTrainingCollectionView()
+        searchExerciseSearchBar.delegate = self
+        
+        searchExerciseSearchBar.placeholder = "Buscar exercício"
     }
     // Do any additional setup after loading the view.
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -41,13 +48,16 @@ class CreateTrainingViewController: UIViewController {
         createTrainingCollectionView.register(CustomCreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier)
     }
     
-    @IBAction func tappedFinishButton(_ sender: UIButton) {
-        dismiss(animated: true)
+
+    @IBAction func tappedConclusionButton(_ sender: UIButton) {
+//        if let tabBarController = self.tabBarController {
+//            tabBarController.selectedIndex = 2
+//        }
     }
     
 }
 
-extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
@@ -68,6 +78,14 @@ extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionVi
         }
         //print(names[indexPath.row])
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchExerciseSearchBar.resignFirstResponder() //Esconde o teclado
+        searchExerciseSearchBar.isHidden = false //Oculta a SearchBar
+    }
+
 }
 
 
