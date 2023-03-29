@@ -29,9 +29,7 @@ class ExecutionTrainingViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    @IBAction func tappedFinishButton(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
+    
     
     func configureCollectionView(){
         collectionView.delegate = self

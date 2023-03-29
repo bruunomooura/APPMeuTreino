@@ -56,6 +56,8 @@
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
 		B1BC56B729D2159300E2013A /* CollectionExecutionTainingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC56B529D2159200E2013A /* CollectionExecutionTainingViewCell.swift */; };
 		B1BC56B829D2159300E2013A /* CollectionExecutionTainingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */; };
+		CB0158AD29D461C90083D418 /* TrainingConclusionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0158AC29D461C90083D418 /* TrainingConclusionViewController.swift */; };
+		CB0158AF29D461D90083D418 /* TrainingConclusionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0158AE29D461D90083D418 /* TrainingConclusionViewController.storyboard */; };
 		CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */; };
 		CBE2F74629D0D54B0070A70F /* NameTrainingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,8 @@
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
 		B1BC56B529D2159200E2013A /* CollectionExecutionTainingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExecutionTainingViewCell.swift; sourceTree = "<group>"; };
 		B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionExecutionTainingViewCell.xib; sourceTree = "<group>"; };
+		CB0158AC29D461C90083D418 /* TrainingConclusionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingConclusionViewController.swift; sourceTree = "<group>"; };
+		CB0158AE29D461D90083D418 /* TrainingConclusionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingConclusionViewController.storyboard; sourceTree = "<group>"; };
 		CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTrainingViewController.swift; sourceTree = "<group>"; };
 		CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameTrainingViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -324,6 +328,7 @@
 		3F6448FD29BA6E5C00BDE579 /* ExecutionTraining */ = {
 			isa = PBXGroup;
 			children = (
+				CB0158AB29D461900083D418 /* TrainingConclusion */,
 				B1BC56B429D2155600E2013A /* ExecutionTrainingCell */,
 				3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */,
 				3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */,
@@ -410,6 +415,15 @@
 				B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */,
 			);
 			path = ExecutionTrainingCell;
+			sourceTree = "<group>";
+		};
+		CB0158AB29D461900083D418 /* TrainingConclusion */ = {
+			isa = PBXGroup;
+			children = (
+				CB0158AC29D461C90083D418 /* TrainingConclusionViewController.swift */,
+				CB0158AE29D461D90083D418 /* TrainingConclusionViewController.storyboard */,
+			);
+			path = TrainingConclusion;
 			sourceTree = "<group>";
 		};
 		CBD70DC829D0C52C00C5F1D2 /* NameTrainingCollectionView */ = {
@@ -543,6 +557,7 @@
 				3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */,
 				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
 				3F64490D29BA711B00BDE579 /* ForgotPasswordViewController.storyboard in Resources */,
+				CB0158AF29D461D90083D418 /* TrainingConclusionViewController.storyboard in Resources */,
 				3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */,
 				3F64492729BA733300BDE579 /* TrainingOverviewViewController.storyboard in Resources */,
 				3F64491A29BA71C000BDE579 /* CreateTrainingViewController.storyboard in Resources */,
@@ -593,6 +608,7 @@
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,
 				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,
 				3F64490B29BA710A00BDE579 /* ForgotPasswordViewController.swift in Sources */,
+				CB0158AD29D461C90083D418 /* TrainingConclusionViewController.swift in Sources */,
 				3F6448C529BA61F100BDE579 /* APPMeuTreino.xcdatamodeld in Sources */,
 				3F64490729BA70E600BDE579 /* LoginViewController.swift in Sources */,
 				3F64492929BA734200BDE579 /* ExecutionTrainingViewController.swift in Sources */,

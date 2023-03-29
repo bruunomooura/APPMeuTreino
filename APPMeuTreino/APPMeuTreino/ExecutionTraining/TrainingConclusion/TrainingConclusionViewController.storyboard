@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="futur2.ttf">
+            <string>Futura-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Training Conclusion View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TrainingConclusionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TrainingConclusionViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gno-vG-vAh">
+                                <rect key="frame" x="8" y="71" width="359" height="525"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você concluiu seu treino do dia com sucesso!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HP-di-gBN">
+                                        <rect key="frame" x="29.5" y="232" width="300" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="oGR-8P-PyU"/>
+                                            <constraint firstAttribute="height" constant="52" id="tjH-uu-grx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você está a x dias consecutivos sem faltas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvN-pm-U3x">
+                                        <rect key="frame" x="29.5" y="287" width="300" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="UZb-OK-TKZ"/>
+                                            <constraint firstAttribute="width" constant="300" id="V3o-5I-mvn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compartilhar treino:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hw-hi-fp0">
+                                        <rect key="frame" x="87" y="406" width="185" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="N23-Ma-tE5"/>
+                                            <constraint firstAttribute="width" constant="185" id="Skr-cE-E4A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconYes" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-hR-KZI">
+                                        <rect key="frame" x="154.5" y="350" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="MQj-EP-xuO"/>
+                                            <constraint firstAttribute="height" constant="50" id="SdE-31-e3d"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns Maria!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFe-j2-fV6">
+                                        <rect key="frame" x="15" y="197" width="329" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="HEK-uJ-LFE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                        <color key="textColor" name="OrangeMeuTreino"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-iP-dWp">
+                                        <rect key="frame" x="37" y="449" width="285" height="55"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconFacebook" translatesAutoresizingMaskIntoConstraints="NO" id="zmg-7s-kh2">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="BfD-pr-ccZ"/>
+                                                    <constraint firstAttribute="height" constant="55" id="syu-Xi-z2l"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconWhatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="SOB-gu-OVJ">
+                                                <rect key="frame" x="115" y="0.0" width="55" height="55"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconInstagram" translatesAutoresizingMaskIntoConstraints="NO" id="SkU-lc-OwC">
+                                                <rect key="frame" x="230" y="0.0" width="55" height="55"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="iFI-qV-xH9">
+                                        <rect key="frame" x="104.5" y="37" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="BJI-iM-peJ"/>
+                                            <constraint firstAttribute="width" constant="150" id="OBw-Fa-aLJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconNo" translatesAutoresizingMaskIntoConstraints="NO" id="7aO-6R-zyW">
+                                        <rect key="frame" x="14" y="14" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="xTy-s4-0yC"/>
+                                            <constraint firstAttribute="height" constant="35" id="yUH-9n-ZRa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-vV-PFV">
+                                        <rect key="frame" x="14" y="14" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="cef-Fn-N9m"/>
+                                            <constraint firstAttribute="width" constant="35" id="pXF-oM-6yy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <segue destination="Y7z-Wy-Qgo" kind="presentation" modalPresentationStyle="fullScreen" id="1TV-zJ-5Sa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="lFe-j2-fV6" firstAttribute="top" secondItem="iFI-qV-xH9" secondAttribute="bottom" constant="10" id="2eU-WZ-4ur"/>
+                                    <constraint firstAttribute="height" constant="525" id="7Ia-v0-Yml"/>
+                                    <constraint firstItem="uMw-vV-PFV" firstAttribute="leading" secondItem="Gno-vG-vAh" secondAttribute="leading" constant="14" id="853-Kg-9VD"/>
+                                    <constraint firstItem="EvP-iP-dWp" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="BzY-LJ-30Z"/>
+                                    <constraint firstItem="OvN-pm-U3x" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="Ea1-rX-WK7"/>
+                                    <constraint firstItem="DgG-hR-KZI" firstAttribute="top" secondItem="OvN-pm-U3x" secondAttribute="bottom" constant="11" id="EqM-Kj-UoU"/>
+                                    <constraint firstItem="iFI-qV-xH9" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="FQT-E7-xAV"/>
+                                    <constraint firstItem="1Hw-hi-fp0" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="KE1-QI-Vmo"/>
+                                    <constraint firstItem="uMw-vV-PFV" firstAttribute="top" secondItem="Gno-vG-vAh" secondAttribute="top" constant="14" id="Lgb-yE-cFW"/>
+                                    <constraint firstItem="7aO-6R-zyW" firstAttribute="top" secondItem="Gno-vG-vAh" secondAttribute="top" constant="14" id="SrK-Nz-9BR"/>
+                                    <constraint firstItem="4HP-di-gBN" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="UQ8-kI-e71"/>
+                                    <constraint firstAttribute="trailing" secondItem="lFe-j2-fV6" secondAttribute="trailing" constant="15" id="VWv-pz-DWV"/>
+                                    <constraint firstItem="DgG-hR-KZI" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="cjR-Xn-7EI"/>
+                                    <constraint firstItem="7aO-6R-zyW" firstAttribute="leading" secondItem="Gno-vG-vAh" secondAttribute="leading" constant="14" id="dWn-7C-vt9"/>
+                                    <constraint firstItem="iFI-qV-xH9" firstAttribute="top" secondItem="Gno-vG-vAh" secondAttribute="top" constant="37" id="gIR-sv-XjC"/>
+                                    <constraint firstItem="1Hw-hi-fp0" firstAttribute="top" secondItem="DgG-hR-KZI" secondAttribute="bottom" constant="6" id="jUB-pV-qM9"/>
+                                    <constraint firstItem="OvN-pm-U3x" firstAttribute="top" secondItem="4HP-di-gBN" secondAttribute="bottom" constant="3" id="lfI-Wp-F7U"/>
+                                    <constraint firstItem="4HP-di-gBN" firstAttribute="top" secondItem="lFe-j2-fV6" secondAttribute="bottom" constant="10" id="q3q-lT-Ajc"/>
+                                    <constraint firstItem="EvP-iP-dWp" firstAttribute="top" secondItem="1Hw-hi-fp0" secondAttribute="bottom" constant="8" symbolic="YES" id="wr4-fi-pNQ"/>
+                                    <constraint firstItem="lFe-j2-fV6" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="zc1-lc-BSq"/>
+                                    <constraint firstItem="lFe-j2-fV6" firstAttribute="leading" secondItem="Gno-vG-vAh" secondAttribute="leading" constant="15" id="zum-Mu-lud"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="Gno-vG-vAh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="15S-iK-6mL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gno-vG-vAh" secondAttribute="trailing" constant="8" id="qm2-1w-Fwr"/>
+                            <constraint firstItem="Gno-vG-vAh" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="uzR-RR-Ffi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="uMw-vV-PFV" id="xyH-AE-Hxf"/>
+                        <outlet property="profileImageView" destination="iFI-qV-xH9" id="RJb-HF-RJ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="-28.335832083958024"/>
+        </scene>
+        <!--TabBarControllerViewController-->
+        <scene sceneID="8GZ-fi-UIN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBarControllerViewController" id="Y7z-Wy-Qgo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYW-Yo-8b0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="-56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IconFacebook" width="512" height="512"/>
+        <image name="IconInstagram" width="256" height="256"/>
+        <image name="IconNo" width="512" height="512"/>
+        <image name="IconWhatsapp" width="512" height="512"/>
+        <image name="IconYes" width="512" height="512"/>
+        <image name="profile" width="609" height="609"/>
+        <namedColor name="OrangeMeuTreino">
+            <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

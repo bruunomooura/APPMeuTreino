@@ -52,7 +52,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="tappedFinishButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="r2M-iq-XNd"/>
+                                    <segue destination="Cj9-hu-Dud" kind="presentation" identifier="TrainingConclusionViewController" id="maz-iy-MZO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treino 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4f-V5-Amh">
@@ -112,6 +112,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+        <!--TrainingConclusionViewController-->
+        <scene sceneID="0lU-zy-iAg">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TrainingConclusionViewController" storyboardName="TrainingConclusionViewController" id="Cj9-hu-Dud" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAb-na-3P9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="-28"/>
         </scene>
     </scenes>
     <resources>
