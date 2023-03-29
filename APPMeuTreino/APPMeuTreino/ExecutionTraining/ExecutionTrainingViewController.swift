@@ -50,6 +50,7 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionExecutionTainingViewCell.identifier, for: indexPath) as? CollectionExecutionTainingViewCell{
             cell.configureCell(name: namesArray[indexPath.row], nameImage: imagesArray[indexPath.row])
+            cell.delegate(delegate: self)
             return cell
         }
         return UICollectionViewCell()
@@ -65,15 +66,26 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "DemonstrationExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DemonstrationExerciseViewController") as? DemonstrationExerciseViewController{
-            vc.modalPresentationStyle = .fullScreen
-              present(vc, animated: true)
-           }
+            vc.modalPresentationStyle = .pageSheet
+            present(vc, animated: true)
+        }
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let vc = UIStoryboard(name: "ExecutionTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "ExecutionTrainingViewController") as? ExecutionTrainingViewController{
-//            vc.modalPresentationStyle = .fullScreen
-//            present(vc, animated: true)
-//        }
-//    }
+}
+
+extension ExecutionTrainingViewController: CollectionExecutionTainingViewCellProtocol{
+    func addExerciseInformation(name: String) {
+        if let vc = UIStoryboard(name: "DataExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DataExerciseViewController") as? DataExerciseViewController{
+            vc.name = name
+            if name == "Séries" {
+                vc.placeholder = "Nº de Séries"
+            } else if name == "Reps"{
+                vc.placeholder = "Nº de Repetições"
+            } else {
+                vc.placeholder = "Carga em Kg"
+            }
+            present(vc, animated: true)
+        }
+    }
+    
 }

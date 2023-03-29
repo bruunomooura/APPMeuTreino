@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CollectionExecutionTainingViewCellProtocol: AnyObject {
-    func addExerciseInformations(name: String)
+    func addExerciseInformation(name: String)
 }
 
 class CollectionExecutionTainingViewCell: UICollectionViewCell {
@@ -73,6 +73,6 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
     }
     
     @IBAction func tappedWeightButton(_ sender: UIButton) {
-        delegate?.addExerciseInformations(name: sender.titleLabel?.text ?? "")
+        delegate?.addExerciseInformation(name: sender.titleLabel?.text ?? "")
     }
 }

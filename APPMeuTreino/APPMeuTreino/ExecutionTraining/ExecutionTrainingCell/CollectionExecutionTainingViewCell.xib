@@ -84,6 +84,9 @@
                                                             <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tappedWeightButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="r9e-qf-bu5"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mls-d2-tED">
                                                         <rect key="frame" x="120" y="0.0" width="53" height="27"/>
@@ -96,6 +99,9 @@
                                                             <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tappedWeightButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BsP-Vo-csF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

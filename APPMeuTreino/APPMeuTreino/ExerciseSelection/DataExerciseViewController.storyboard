@@ -22,26 +22,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-ob-D5a" userLabel="ViewModal">
-                                <rect key="frame" x="8" y="227" width="359" height="213"/>
+                                <rect key="frame" x="60" y="227" width="255" height="213"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-Dd-D45">
-                                        <rect key="frame" x="60" y="25" width="239" height="163"/>
+                                        <rect key="frame" x="60" y="25" width="135" height="163"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl7-ib-HI6">
-                                                <rect key="frame" x="113.5" y="0.0" width="12.5" height="26"/>
+                                                <rect key="frame" x="61.5" y="0.0" width="12.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Carga em KG" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58f-Ac-RI6">
-                                                <rect key="frame" x="50.5" y="60" width="138.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="60" width="135" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS7-qU-1yY">
-                                                <rect key="frame" x="71" y="128" width="97" height="35"/>
+                                                <rect key="frame" x="19" y="128" width="97" height="35"/>
                                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Confirmar">
@@ -68,8 +68,8 @@
                         <color key="backgroundColor" red="0.66274511810000003" green="0.18039217590000001" blue="0.1725490093" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="LaV-ob-D5a" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7mC-FQ-yeA"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LaV-ob-D5a" secondAttribute="trailing" constant="8" id="DV2-7g-Y3F"/>
-                            <constraint firstItem="LaV-ob-D5a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="Tfn-oW-hOb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LaV-ob-D5a" secondAttribute="trailing" constant="60" id="DV2-7g-Y3F"/>
+                            <constraint firstItem="LaV-ob-D5a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="Tfn-oW-hOb"/>
                             <constraint firstItem="LaV-ob-D5a" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="YsT-7t-Fr5"/>
                         </constraints>
                     </view>
