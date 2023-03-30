@@ -27,7 +27,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="tappedConclusionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SbM-me-d6M"/>
-                                    <segue destination="QxC-kc-Zi4" kind="presentation" id="o6f-SI-wnm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercícios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frK-FN-2YK">
@@ -115,6 +114,7 @@
                     <connections>
                         <outlet property="backButton" destination="xEs-b1-eYF" id="1Mo-CF-oKy"/>
                         <outlet property="createTrainingCollectionView" destination="EOe-bn-v1I" id="bHM-ZY-nKS"/>
+                        <outlet property="exerciseCountButton" destination="ZI3-sc-EGL" id="VE9-Bm-8MJ"/>
                         <outlet property="finishButton" destination="9id-2b-EAJ" id="1rF-g3-6oF"/>
                         <outlet property="searchExerciseSearchBar" destination="Aps-67-Ypo" id="JjR-UM-3Ny"/>
                     </connections>
@@ -122,14 +122,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="-28.335832083958024"/>
-        </scene>
-        <!--TabBarControllerViewController-->
-        <scene sceneID="0fe-NM-46e">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TabBarControllerViewController" id="QxC-kc-Zi4" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4PO-G9-3I9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1177" y="-21"/>
         </scene>
     </scenes>
     <resources>

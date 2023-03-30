@@ -9,6 +9,9 @@ import UIKit
 
 class CreateTrainingViewController: UIViewController {
     
+    
+    @IBOutlet weak var exerciseCountButton: UIButton!
+    
     @IBOutlet weak var finishButton: UIButton!
     
     @IBOutlet weak var backButton: UIButton!
@@ -50,9 +53,10 @@ class CreateTrainingViewController: UIViewController {
     
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
-//        if let tabBarController = self.tabBarController {
-//            tabBarController.selectedIndex = 2
-//        }
+        if let tabBarController = UIStoryboard(name: "TabBarControllerViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarControllerViewController") as? TabBarControllerViewController {
+            tabBarController.selectedViewController = tabBarController.viewControllers?[1]
+            present(tabBarController, animated: true)
+        }
     }
     
 }
@@ -74,6 +78,7 @@ extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "ExerciseSelectionViewController", bundle: nil).instantiateViewController(withIdentifier: "ExerciseSelectionViewController") as? ExerciseSelectionViewController {
             vc.modalPresentationStyle = .fullScreen
+            vc.delegate(delegate: self)
             present(vc, animated: true)
         }
         //print(names[indexPath.row])
@@ -87,6 +92,12 @@ extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionVi
     }
 
 }
-
+extension CreateTrainingViewController:ExerciseSelectionViewControllerProtocol {
+    func transferExerciseSelected(quantity: Int) {
+        exerciseCountButton.setTitle("\(quantity) Exercicios selecionados", for: .normal)
+    }
+    
+    
+}
 
 

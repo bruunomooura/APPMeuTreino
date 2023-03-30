@@ -7,6 +7,13 @@
 
 import UIKit
 
+protocol ExerciseSelectionViewControllerProtocol: AnyObject {
+    func transferExerciseSelected (quantity: Int)
+        
+    
+}
+
+
 class ExerciseSelectionViewController: UIViewController {
     
     
@@ -23,6 +30,10 @@ class ExerciseSelectionViewController: UIViewController {
         }
     }
 //    private var selectedCells: [IndexPath] = []
+    private weak var delegate: ExerciseSelectionViewControllerProtocol?
+    public func delegate (delegate: ExerciseSelectionViewControllerProtocol?) {
+        self.delegate = delegate
+    }
 
 
     var itemSelected = false
@@ -43,6 +54,7 @@ class ExerciseSelectionViewController: UIViewController {
     }
     
     @IBAction func tappedAddExerciseButton(_ sender: UIButton) {
+        delegate?.transferExerciseSelected(quantity: selectedExerciseCount)
         dismiss(animated: true)
     }
     
