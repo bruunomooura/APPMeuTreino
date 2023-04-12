@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-cv-ubI">
-                                <rect key="frame" x="263" y="10" width="80" height="80"/>
+                                <rect key="frame" x="263" y="-10" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="MCx-Vi-Afp"/>
                                     <constraint firstAttribute="height" constant="80" id="fR6-3v-NHT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-We-owY">
-                                <rect key="frame" x="30" y="130" width="315" height="40"/>
+                                <rect key="frame" x="30" y="110" width="315" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IHr-Jd-qeX"/>
@@ -36,11 +35,11 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="8mB-qg-t3E" kind="presentation" modalPresentationStyle="fullScreen" id="aUp-PM-auL"/>
+                                    <action selector="tappedDataChangeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="s42-ai-abH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhM-rD-tc8">
-                                <rect key="frame" x="30" y="195" width="313" height="40"/>
+                                <rect key="frame" x="30" y="175" width="313" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wjM-9h-P1Q"/>
@@ -51,11 +50,11 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="cmC-g8-i3d" kind="presentation" modalPresentationStyle="fullScreen" id="l5Q-u7-nlj"/>
+                                    <action selector="tappedChangePasswordButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2FE-lp-7o8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHk-ZY-uMy">
-                                <rect key="frame" x="30" y="260" width="315" height="40"/>
+                                <rect key="frame" x="30" y="240" width="315" height="40"/>
                                 <color key="backgroundColor" red="0.92128556966781616" green="0.32791789781849018" blue="0.30138117812881016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Der-KW-ZJt"/>
@@ -70,7 +69,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
-                                <rect key="frame" x="30" y="39.5" width="109" height="41"/>
+                                <rect key="frame" x="30" y="19.5" width="109" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="2WO-eV-cqP"/>
                                 </constraints>
@@ -109,27 +108,11 @@
             </objects>
             <point key="canvasLocation" x="31.199999999999999" y="-36.206896551724142"/>
         </scene>
-        <!--DataChangeViewController-->
-        <scene sceneID="hEd-Vz-ZHo">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DataChangeViewController" referencedIdentifier="DataChangeViewController" id="8mB-qg-t3E" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NtO-0M-qJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="707" y="-263"/>
-        </scene>
-        <!--ChangePasswordViewController-->
-        <scene sceneID="Uuf-iD-oMU">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ChangePasswordViewController" referencedIdentifier="ChangePasswordViewController" id="cmC-g8-i3d" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KfL-dM-kdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="663" y="-28"/>
-        </scene>
         <!--Main-->
         <scene sceneID="uU5-nK-cs1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CWJ-3T-rF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Main" id="iBk-D2-ip8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWJ-3T-rF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="612" y="57"/>
         </scene>

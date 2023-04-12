@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    
+  
     
     @IBOutlet weak var imageProfile: UIImageView!
     
@@ -17,6 +17,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var backgroundTextField2: UIButton!
     
     @IBOutlet weak var backgroundTextField3: UIButton!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
     
     override func viewDidLoad() {        super.viewDidLoad()
         imageProfile.layer.borderWidth = 2
@@ -35,4 +39,18 @@ class SettingsViewController: UIViewController {
     @IBAction func tappedExitButton(_ sender: UIButton) {
         performSegue(withIdentifier: "Main", sender: nil)
     }
+    
+    
+    @IBAction func tappedDataChangeButton(_ sender: UIButton) {
+        let vc: DataChangeViewController? = UIStoryboard(name: "DataChangeViewController", bundle: nil).instantiateViewController(withIdentifier: "DataChangeViewController") as? DataChangeViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
+    
+    @IBAction func tappedChangePasswordButton(_ sender: UIButton) {
+        let vc: ChangePasswordViewController? = UIStoryboard(name: "ChangePasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "ChangePasswordViewController") as? ChangePasswordViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
+    
 }
