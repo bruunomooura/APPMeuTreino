@@ -64,4 +64,10 @@ class HomeViewController: UIViewController {
         
     }
     
+    @IBAction func tappedAddTrainingButton(_ sender: UIButton) {
+        let vc: NameTrainingViewController? = UIStoryboard(name: "NameTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "NameTrainingViewController") as? NameTrainingViewController
+        //vc?.modalPresentationStyle = .formSheet
+        present(vc ?? UIViewController(), animated: true)
+    }
+    
 }

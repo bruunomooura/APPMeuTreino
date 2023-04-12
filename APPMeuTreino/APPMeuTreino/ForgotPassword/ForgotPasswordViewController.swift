@@ -37,11 +37,11 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tappedChangePassword(_ sender: UIButton) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

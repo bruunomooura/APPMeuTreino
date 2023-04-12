@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GdA-dr-O38">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GdA-dr-O38">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
             <objects>
                 <navigationController id="GdA-dr-O38" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="05K-3h-Xz4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -32,7 +33,7 @@
         <!--View Controller-->
         <scene sceneID="2uA-dO-1Mf">
             <objects>
-                <viewController id="qiG-ac-oMv" customClass="ViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qiG-ac-oMv" customClass="ViewController" customModule="APPMeuTreino" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a8M-ti-WDY"/>
                         <viewControllerLayoutGuide type="bottom" id="SGi-g6-zXf"/>
@@ -71,7 +72,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Tvr-Nu-hm7" kind="presentation" modalPresentationStyle="fullScreen" id="j9W-XD-6SP"/>
+                                    <action selector="tappedLoginButton:" destination="qiG-ac-oMv" eventType="touchUpInside" id="IfV-qX-4j5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5as-40-9xC">
@@ -87,7 +88,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="hht-it-qiQ" kind="presentation" modalPresentationStyle="fullScreen" id="3Z8-84-w37"/>
+                                    <action selector="tappedSignupButton:" destination="qiG-ac-oMv" eventType="touchUpInside" id="WaM-hq-zSx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysO-Cg-VHM">
@@ -101,7 +102,7 @@
                                     <fontDescription key="titleFontDescription" name="Futura-Book" family="Futura-Book" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="2cf-bs-kDS" kind="presentation" modalPresentationStyle="fullScreen" id="fFw-h7-UZd"/>
+                                    <action selector="tappedForgotPasswordButton:" destination="qiG-ac-oMv" eventType="touchUpInside" id="igg-jc-hAj"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundDetails" translatesAutoresizingMaskIntoConstraints="NO" id="hr0-cu-CAc">
@@ -158,26 +159,26 @@
         <!--TabBarControllerViewController-->
         <scene sceneID="daX-mN-6Lp">
             <objects>
-                <viewControllerPlaceholder storyboardName="TabBarControllerViewController" referencedIdentifier="TabBarControllerViewController" id="Tvr-Nu-hm7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3R-SE-5BR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="TabBarControllerViewController" referencedIdentifier="TabBarControllerViewController" id="Tvr-Nu-hm7" sceneMemberID="viewController"/>
             </objects>
-            <point key="canvasLocation" x="2131" y="-121"/>
+            <point key="canvasLocation" x="2029" y="-121"/>
         </scene>
         <!--RegisterViewController-->
         <scene sceneID="wet-A5-bT0">
             <objects>
-                <viewControllerPlaceholder storyboardName="RegisterViewController" referencedIdentifier="RegisterViewController" id="hht-it-qiQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFn-Em-V3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="RegisterViewController" referencedIdentifier="RegisterViewController" id="hht-it-qiQ" sceneMemberID="viewController"/>
             </objects>
-            <point key="canvasLocation" x="2132" y="6"/>
+            <point key="canvasLocation" x="2031" y="5"/>
         </scene>
         <!--ForgotPasswordViewController-->
         <scene sceneID="EtN-K7-Zg7">
             <objects>
-                <viewControllerPlaceholder storyboardName="ForgotPasswordViewController" referencedIdentifier="ForgotPasswordViewController" id="2cf-bs-kDS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ai8-dK-iFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ForgotPasswordViewController" referencedIdentifier="ForgotPasswordViewController" id="2cf-bs-kDS" sceneMemberID="viewController"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="-164"/>
+            <point key="canvasLocation" x="2007" y="-166"/>
         </scene>
     </scenes>
     <resources>

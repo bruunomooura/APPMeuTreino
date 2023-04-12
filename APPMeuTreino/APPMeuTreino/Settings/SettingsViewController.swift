@@ -30,9 +30,9 @@ class SettingsViewController: UIViewController {
         backgroundTextField3.layer.cornerRadius = 8
         
     }
+ 
     
-    
-
+    @IBAction func tappedExitButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main", sender: nil)
+    }
 }
-
-

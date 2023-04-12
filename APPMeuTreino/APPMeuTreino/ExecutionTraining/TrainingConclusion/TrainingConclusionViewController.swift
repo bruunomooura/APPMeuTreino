@@ -24,6 +24,9 @@ class TrainingConclusionViewController: UIViewController {
     }
     
     @IBAction func tappedExitButton(_ sender: UIButton) {
+        let vc: TabBarControllerViewController? = UIStoryboard(name: "TabBarControllerViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarControllerViewController") as? TabBarControllerViewController
+        //vc?.modalPresentationStyle = .formSheet
+        present(vc ?? UIViewController(), animated: true)
     }
     
     /*

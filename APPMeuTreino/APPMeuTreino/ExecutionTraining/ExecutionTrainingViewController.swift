@@ -29,6 +29,11 @@ class ExecutionTrainingViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func tappedFinishTrainingButton(_ sender: UIButton) {
+        let vc: TrainingConclusionViewController? = UIStoryboard(name: "TrainingConclusionViewController", bundle: nil).instantiateViewController(withIdentifier: "TrainingConclusionViewController") as? TrainingConclusionViewController
+        //vc?.modalPresentationStyle = .formSheet
+        present(vc ?? UIViewController(), animated: true)
+    }
     
     
     func configureCollectionView(){

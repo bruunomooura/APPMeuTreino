@@ -42,6 +42,15 @@ class TrainingOverviewViewController: UIViewController {
         trainingTableView.register(TrainingCell.nib(), forCellReuseIdentifier: TrainingCell.identifier)
         
     }
+    
+    @IBAction func tappedAddTrainingButton(_ sender: UIButton) {
+        
+        let vc: NameTrainingViewController? = UIStoryboard(name: "NameTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "NameTrainingViewController") as? NameTrainingViewController
+        //vc?.modalPresentationStyle = .formSheet
+        present(vc ?? UIViewController(), animated: true)
+        
+    }
+    
     }
     
     extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSource{

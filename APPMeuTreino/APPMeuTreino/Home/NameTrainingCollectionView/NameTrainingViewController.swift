@@ -43,11 +43,14 @@ class NameTrainingViewController: UIViewController {
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
+        let vc: CreateTrainingViewController? = UIStoryboard(name: "CreateTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateTrainingViewController") as? CreateTrainingViewController
+        vc?.modalPresentationStyle = .fullScreen
+        present(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedCancelButton(_ sender: UIButton) {
         dismiss(animated: true)
-    }
+        }
     /*
     // MARK: - Navigation
 
