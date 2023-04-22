@@ -21,9 +21,8 @@ class CreateTrainingViewController: UIViewController {
     @IBOutlet weak var searchExerciseSearchBar: UISearchBar!
     
     
-    var data: [String] = ["Abdominais", "Aeróbico", "Bíceps", "CostasOmbros", "MembrosInferiores", "Peito", "Triceps"]
-    var names: [String] = ["cat", "dog", "bark", "car", "chicken", "cow", "plane"]
-    //var names = apenas exemplo
+    private let ViewModel: CreateTrainingViewModel = CreateTrainingViewModel()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,12 +62,12 @@ class CreateTrainingViewController: UIViewController {
 
 extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return ViewModel.arraySize
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier, for: indexPath) as? CustomCreateTrainingCollectionViewCell
-        cell?.setupCell(nameImage: data[indexPath.row])
+        cell?.setupCell(exercises: ViewModel.getExercise(index: indexPath.row))
         return cell ?? UICollectionViewCell()
         
     }

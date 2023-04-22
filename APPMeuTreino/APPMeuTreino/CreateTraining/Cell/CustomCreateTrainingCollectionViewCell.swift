@@ -20,8 +20,8 @@ class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setupCell(nameImage: String) {
-        groupMuscleTypeImageView.image = UIImage(named: nameImage)
+    func setupCell(exercises: Exercise) {
+        groupMuscleTypeImageView.image = UIImage(named: exercises.exercisaImage)
     }
 
 }
