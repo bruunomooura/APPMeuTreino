@@ -15,9 +15,8 @@ class ExecutionTrainingViewController: UIViewController {
     
     @IBOutlet weak var finishButton: UIButton!
     
-    var imagesArray: [String] = [ "Exercicio1","Exercicio2","Exercicio3","Exercicio4","Exercicio5"]
-    
-    var namesArray: [String] = ["Abdominal Em V","Cabo De Guerra - Ondas Alternadas","Biceps Alternado Com Máquina","Agachamento Com Halteres","Desenvolvimento Com Halteres" ]
+    private var vielModel: ExecutionTrainingVielModel = ExecutionTrainingVielModel()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +51,7 @@ class ExecutionTrainingViewController: UIViewController {
 extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionExecutionTainingViewCell.identifier, for: indexPath) as? CollectionExecutionTainingViewCell{
-            cell.configureCell(name: namesArray[indexPath.row], nameImage: imagesArray[indexPath.row])
+            cell.configureCell(exercise: vielModel.getExercise(index: indexPath.row))
             cell.delegate(delegate: self)
             return cell
         }
@@ -60,7 +59,7 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return namesArray.count
+        return vielModel.arraySize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

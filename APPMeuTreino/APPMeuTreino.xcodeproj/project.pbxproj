@@ -55,6 +55,7 @@
 		3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */; };
 		3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */; };
+		88289D6229F4703300CC4258 /* ExecutionTrainingVielModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88289D6129F4703300CC4258 /* ExecutionTrainingVielModel.swift */; };
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
 		B1BC56B729D2159300E2013A /* CollectionExecutionTainingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC56B529D2159200E2013A /* CollectionExecutionTainingViewCell.swift */; };
 		B1BC56B829D2159300E2013A /* CollectionExecutionTainingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */; };
@@ -135,6 +136,7 @@
 		3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExerciseViewController.swift; sourceTree = "<group>"; };
 		3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataExerciseViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CustomCreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
+		88289D6129F4703300CC4258 /* ExecutionTrainingVielModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingVielModel.swift; sourceTree = "<group>"; };
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
 		B1BC56B529D2159200E2013A /* CollectionExecutionTainingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExecutionTainingViewCell.swift; sourceTree = "<group>"; };
 		B1BC56B629D2159200E2013A /* CollectionExecutionTainingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionExecutionTainingViewCell.xib; sourceTree = "<group>"; };
@@ -335,10 +337,10 @@
 		3F6448FD29BA6E5C00BDE579 /* ExecutionTraining */ = {
 			isa = PBXGroup;
 			children = (
+				88289D5F29F46FA800CC4258 /* View */,
+				88289D6029F4700200CC4258 /* ExecutionTrainingVielModel */,
 				CB0158AB29D461900083D418 /* TrainingConclusion */,
 				B1BC56B429D2155600E2013A /* ExecutionTrainingCell */,
-				3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */,
-				3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */,
 			);
 			path = ExecutionTraining;
 			sourceTree = "<group>";
@@ -438,6 +440,23 @@
 				3FAFD71729CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		88289D5F29F46FA800CC4258 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */,
+				3F64492A29BA734F00BDE579 /* ExecutionTrainingViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88289D6029F4700200CC4258 /* ExecutionTrainingVielModel */ = {
+			isa = PBXGroup;
+			children = (
+				88289D6129F4703300CC4258 /* ExecutionTrainingVielModel.swift */,
+			);
+			path = ExecutionTrainingVielModel;
 			sourceTree = "<group>";
 		};
 		B1BC56B429D2155600E2013A /* ExecutionTrainingCell */ = {
@@ -644,6 +663,7 @@
 				3F64492D29BA736500BDE579 /* DemonstrationExerciseViewController.swift in Sources */,
 				3F64493929BA73B600BDE579 /* DataChangeViewController.swift in Sources */,
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
+				88289D6229F4703300CC4258 /* ExecutionTrainingVielModel.swift in Sources */,
 				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
 				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,

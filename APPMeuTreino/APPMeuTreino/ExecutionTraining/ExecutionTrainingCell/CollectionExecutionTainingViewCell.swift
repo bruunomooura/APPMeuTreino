@@ -57,9 +57,9 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
         exerciseView.layer.masksToBounds = false
     }
     
-    func configureCell(name: String, nameImage: String){
-        label.text = name
-        exerciseImageView.image = UIImage(named: nameImage)
+    func configureCell(exercise: Exercise){
+        label.text = exercise.exerciseName
+        exerciseImageView.image = UIImage(named: exercise.exercisaImage)
     }
     
     @IBAction func tappedCheckBoxButton(_ sender: UIButton) {
