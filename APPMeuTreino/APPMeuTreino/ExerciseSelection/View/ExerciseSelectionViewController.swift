@@ -20,8 +20,11 @@ class ExerciseSelectionViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var selectedExercisesTypesButton: UIButton!
     @IBOutlet weak var exerciseSelectionCollectionView: UICollectionView!
-    private var dataWorkouts: [String] = ["AbdominalAlpinista", "AbdominalDeclinado", "AbdominalEmBancoDeclinado", "AbdominalEmV", "AbdominalNaBola"]
-    private var exerciseName: [String] = ["Abdominal Alpinista", "Abdominal Declinado", "Abdominal Em Banco Declinado", "Abdominal Em V", "Abdominal Na Bola"]
+    
+    private var viewModel: ExerciseSelecionViewModel = ExerciseSelecionViewModel()
+    
+//    private var dataWorkouts: [String] = ["AbdominalAlpinista", "AbdominalDeclinado", "AbdominalEmBancoDeclinado", "AbdominalEmV", "AbdominalNaBola"]
+//    private var exerciseName: [String] = ["Abdominal Alpinista", "Abdominal Declinado", "Abdominal Em Banco Declinado", "Abdominal Em V", "Abdominal Na Bola"]
     private var selectedExerciseCount = 0 {
         didSet {
             let title = "\(selectedExerciseCount) Exercício(s) selecionado(s)"
@@ -78,7 +81,7 @@ class ExerciseSelectionViewController: UIViewController {
 
 extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataWorkouts.count
+        return viewModel.arraySize
     }
     
 //    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,7 +96,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomExerciseSelectionCollectionViewCell.identifier, for: indexPath) as! CustomExerciseSelectionCollectionViewCell
         cell.delegate(delegate: self)
-        cell.setupCell(nameImage: dataWorkouts[indexPath.row], exerciseName: exerciseName[indexPath.row])
+        cell.setupCell(exercise: viewModel.getExercise(index: indexPath.row))
         if SelectedCells.contains(indexPath) {
             cell.backgroundColor = UIColor(named: "OrangeMeuTreino")
             isCellSelected = true

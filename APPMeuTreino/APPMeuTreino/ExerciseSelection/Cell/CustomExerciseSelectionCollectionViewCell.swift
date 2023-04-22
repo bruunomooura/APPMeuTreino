@@ -46,9 +46,9 @@ class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
         numberSeriesSelectionButton.layer.cornerRadius = 8
         numberRepetitionsSelectionButton.layer.cornerRadius = 8
     }
-    func setupCell(nameImage: String, exerciseName: String) {
-        exerciseSelecionImageView.image = UIImage(named: nameImage)
-        nameExercise.text = exerciseName
+    func setupCell(exercise: Exercise) {
+        exerciseSelecionImageView.image = UIImage(named: exercise.exercisaImage)
+        nameExercise.text = exercise.exerciseName
     }
 
     @IBAction func tappedWeigthSelectionButton(_ sender: UIButton) {
