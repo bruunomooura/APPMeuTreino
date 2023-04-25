@@ -23,14 +23,11 @@ class TrainingCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func configureCell(){
         trainingCellView.layer.cornerRadius = 12
         
-        //configuraçao da borda sombreada
-
         trainingCellView.layer.masksToBounds = false
         trainingCellView.layer.shadowColor = UIColor.lightGray.cgColor
         trainingCellView.layer.shadowOffset = CGSize(width: 0, height: 1)

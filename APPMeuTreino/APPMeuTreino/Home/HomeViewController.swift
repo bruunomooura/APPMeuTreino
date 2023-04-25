@@ -9,64 +9,44 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var BorderHomeUIView: UIView!
-    @IBOutlet weak var ImageUser: UIImageView!
-    @IBOutlet weak var BorderProgressBar: UIView!
-    @IBOutlet weak var ProgressBar: UIProgressView!
+    @IBOutlet weak var borderHomeView: UIView!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var borderProgressBarView: UIView!
+    @IBOutlet weak var progressBarView: UIProgressView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var progressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configHomeView()
+    }
+    
+    func configHomeView(){
         
         addButton.layer.cornerRadius = 10
         
+        userImageView.layer.borderWidth = 2
+        userImageView.layer.masksToBounds = false
+        userImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        userImageView.layer.cornerRadius = userImageView.frame.height/2
+        userImageView.clipsToBounds = true
         
-        // Border PictureImageUser
+        borderProgressBarView.layer.cornerRadius = 8
+        borderProgressBarView.layer.shadowColor = UIColor.lightGray.cgColor
+        borderProgressBarView.layer.shadowOffset = CGSize.zero
+        borderProgressBarView.layer.shadowOpacity = 0.7
+        borderProgressBarView.layer.masksToBounds = false
+        borderProgressBarView.layer.shadowRadius = 3
         
-        let borderPicture = UIColor(named: "BlueMeuTreino")
+        borderHomeView.layer.borderWidth = 2
+        borderHomeView.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         
-        ImageUser.layer.borderWidth = 2
-                ImageUser.layer.masksToBounds = false
-        ImageUser.layer.borderColor = borderPicture?.cgColor
-                ImageUser.layer.cornerRadius = ImageUser.frame.height/2
-                ImageUser.clipsToBounds = true
-        
-        // Border Progress
-        let borderProgress = UIColor.lightGray
-        
-        //BorderProgressBar.layer.borderWidth = 2
-        //BorderProgressBar.layer.borderColor = borderProgress?.cgColor
-        
-        //BorderProgressBar.clipsToBounds = true
-        BorderProgressBar.layer.cornerRadius = 8
-        BorderProgressBar.layer.shadowColor = borderProgress.cgColor
-        BorderProgressBar.layer.shadowOffset = CGSize.zero
-        BorderProgressBar.layer.shadowOpacity = 0.7
-        BorderProgressBar.layer.masksToBounds = false
-        BorderProgressBar.layer.shadowRadius = 3
-        
-        
-        
-        // Border Home
-        let borderHome = UIColor(named: "OrangeMeuTreino")
-        
-        BorderHomeUIView.layer.borderWidth = 2
-        BorderHomeUIView.layer.borderColor = borderHome?.cgColor
-        
-        BorderHomeUIView.clipsToBounds = true
-        BorderHomeUIView.layer.cornerRadius = 8
-//        BorderHomeUIView.layer.shadowColor = UIColor.lightGray.cgColor
-//        BorderHomeUIView.layer.shadowOffset = CGSize.zero
-//        BorderHomeUIView.layer.shadowOpacity = 1
-//        BorderHomeUIView.layer.masksToBounds = false
-//        BorderHomeUIView.layer.shadowRadius = 3
-        
+        borderHomeView.clipsToBounds = true
+        borderHomeView.layer.cornerRadius = 8
     }
     
     @IBAction func tappedAddTrainingButton(_ sender: UIButton) {
         let vc: NameTrainingViewController? = UIStoryboard(name: "NameTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "NameTrainingViewController") as? NameTrainingViewController
-        //vc?.modalPresentationStyle = .formSheet
         present(vc ?? UIViewController(), animated: true)
     }
     

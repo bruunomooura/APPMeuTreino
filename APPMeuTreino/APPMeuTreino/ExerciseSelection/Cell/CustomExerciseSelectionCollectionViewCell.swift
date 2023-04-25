@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//criar protocolo com 1 método customexercisecollectionviewcellprotocol metodo addexerciseinformations
+
 protocol CustomExerciseSelectionCollectionViewCellProtocol: AnyObject {
     func addExerciseInformations(name: String)
 }

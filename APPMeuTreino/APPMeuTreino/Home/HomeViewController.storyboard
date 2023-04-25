@@ -185,12 +185,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BorderHomeUIView" destination="lMe-Nx-n5o" id="FAw-fk-JuL"/>
-                        <outlet property="BorderProgressBar" destination="CNh-OB-wi0" id="8Wv-n2-2q3"/>
-                        <outlet property="ImageUser" destination="o8y-HO-kDY" id="hF4-FP-rfY"/>
-                        <outlet property="ProgressBar" destination="JJq-EL-9Qc" id="45m-Tw-pxU"/>
                         <outlet property="addButton" destination="FsY-fP-vbc" id="Jko-FF-ht7"/>
+                        <outlet property="borderHomeView" destination="lMe-Nx-n5o" id="FAw-fk-JuL"/>
+                        <outlet property="borderProgressBarView" destination="CNh-OB-wi0" id="8Wv-n2-2q3"/>
+                        <outlet property="progressBarView" destination="JJq-EL-9Qc" id="45m-Tw-pxU"/>
                         <outlet property="progressLabel" destination="Ps0-Xl-YAq" id="mdg-zd-mFU"/>
+                        <outlet property="userImageView" destination="o8y-HO-kDY" id="hF4-FP-rfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

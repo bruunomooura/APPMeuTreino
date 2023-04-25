@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
+class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var backButton: UIButton!
     
@@ -20,6 +20,10 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backgroundDetailImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        configForgotPasswordView()
+    }
+    
+    func configForgotPasswordView(){
         
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.borderWidth = 2
@@ -27,13 +31,9 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         emailTextField.clipsToBounds = true
         
         changePasswordButton.layer.cornerRadius = 10
+        changePasswordButton.isEnabled = false
         
         self.emailTextField.delegate = self
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.emailTextField.resignFirstResponder()
-        return true
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -42,6 +42,26 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+   
+}
+
+extension ForgotPasswordViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.emailTextField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //delegate?.passExerciseSettingsData(value:textField.text!)
+        
+        if emailTextField.hasText{
+            textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            changePasswordButton.isEnabled = true
+        } else {
+            textField.layer.borderColor = UIColor.red.cgColor
+            changePasswordButton.isEnabled = false
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -156,30 +156,6 @@
             </objects>
             <point key="canvasLocation" x="1416.8" y="-81.409295352323838"/>
         </scene>
-        <!--TabBarControllerViewController-->
-        <scene sceneID="daX-mN-6Lp">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L3R-SE-5BR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="TabBarControllerViewController" referencedIdentifier="TabBarControllerViewController" id="Tvr-Nu-hm7" sceneMemberID="viewController"/>
-            </objects>
-            <point key="canvasLocation" x="2029" y="-121"/>
-        </scene>
-        <!--RegisterViewController-->
-        <scene sceneID="wet-A5-bT0">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oFn-Em-V3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="RegisterViewController" referencedIdentifier="RegisterViewController" id="hht-it-qiQ" sceneMemberID="viewController"/>
-            </objects>
-            <point key="canvasLocation" x="2031" y="5"/>
-        </scene>
-        <!--ForgotPasswordViewController-->
-        <scene sceneID="EtN-K7-Zg7">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ai8-dK-iFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="ForgotPasswordViewController" referencedIdentifier="ForgotPasswordViewController" id="2cf-bs-kDS" sceneMemberID="viewController"/>
-            </objects>
-            <point key="canvasLocation" x="2007" y="-166"/>
-        </scene>
     </scenes>
     <resources>
         <image name="BackgroundDetails" width="1769" height="610"/>

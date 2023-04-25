@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 class CreateTrainingViewModel {
     private var exercises: [Exercise] = [Exercise(exercisaImage: "Abdominais"), Exercise(exercisaImage: "Aeróbico"), Exercise(exercisaImage: "Bíceps"), Exercise(exercisaImage: "CostasOmbros"), Exercise(exercisaImage: "MembrosInferiores"), Exercise(exercisaImage: "Peito"), Exercise(exercisaImage: "Triceps")]
     

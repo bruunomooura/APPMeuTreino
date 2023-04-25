@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -21,7 +21,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configLoginView()
+    }
+    
+    func configLoginView(){
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
@@ -32,25 +35,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         passwordTextField.clipsToBounds = true
         
+        loginButton.layer.cornerRadius = 10
+        loginButton.isEnabled = false
+        
         registerButton.layer.cornerRadius = 10
         
-        loginButton.layer.cornerRadius = 10
-        
         self.emailTextField.delegate = self
-        
         self.passwordTextField.delegate = self
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == self.emailTextField{
-            self.passwordTextField.becomeFirstResponder()
-        }else{
-            self.passwordTextField.resignFirstResponder()
-        }
-        return true
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
@@ -72,3 +63,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+extension ViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.emailTextField{
+            self.passwordTextField.becomeFirstResponder()
+        }else{
+            self.passwordTextField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //delegate?.passExerciseSettingsData(value:textField.text!)
+        
+        if emailTextField.hasText && passwordTextField.hasText {
+            loginButton.isEnabled = true
+            
+            emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        } else{
+            loginButton.isEnabled = false
+            if textField.hasText == false{
+                textField.layer.borderColor = UIColor.red.cgColor
+            }else{
+                textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            }
+        }
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}

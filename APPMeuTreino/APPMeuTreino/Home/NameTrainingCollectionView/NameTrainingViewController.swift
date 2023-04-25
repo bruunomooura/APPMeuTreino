@@ -9,11 +9,7 @@ import UIKit
 
 class NameTrainingViewController: UIViewController {
 
-    
     @IBOutlet weak var nameTrainingTextField: UITextField!
-    
-    let customColorOrange = UIColor(named: "OrangeMeuTreino")
-    
     
     @IBOutlet weak var saveButton: UIButton!
     
@@ -21,15 +17,18 @@ class NameTrainingViewController: UIViewController {
     
     @IBOutlet weak var newTrainingView: UIView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configNameTrainingView()
+    }
+    
+    func configNameTrainingView(){
+        
         nameTrainingTextField.delegate = self
-        saveButton.isEnabled = false 
+        saveButton.isEnabled = false
         
         
-        nameTrainingTextField.layer.borderColor = customColorOrange?.cgColor
+        nameTrainingTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         nameTrainingTextField.layer.borderWidth = 2
         nameTrainingTextField.clipsToBounds = true
         nameTrainingTextField.layer.cornerRadius = 10
@@ -37,9 +36,7 @@ class NameTrainingViewController: UIViewController {
         saveButton.layer.cornerRadius = 10
         
         newTrainingView.layer.cornerRadius = 10
-        
     }
-    
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
@@ -51,35 +48,19 @@ class NameTrainingViewController: UIViewController {
     @IBAction func tappedCancelButton(_ sender: UIButton) {
         dismiss(animated: true)
         }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
 extension NameTrainingViewController: UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-    }
- 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTrainingTextField.hasText == true {
+        if textField.hasText == true {
+            textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             saveButton.isEnabled = true
         } else {
+            textField.layer.borderColor = UIColor.red.cgColor
             saveButton.isEnabled = false
         }
     }
-//    func DataExerciseProtocol(_ textField: UITextField) -> Bool {
-//        dismiss(animated: true)
-//        resignFirstResponder()
-//        return true
-    //}
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

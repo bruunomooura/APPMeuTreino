@@ -9,7 +9,6 @@ import UIKit
 
 class CreateTrainingViewController: UIViewController {
     
-    
     @IBOutlet weak var exerciseCountButton: UIButton!
     
     @IBOutlet weak var finishButton: UIButton!
@@ -20,24 +19,27 @@ class CreateTrainingViewController: UIViewController {
     
     @IBOutlet weak var searchExerciseSearchBar: UISearchBar!
     
-    
     private let ViewModel: CreateTrainingViewModel = CreateTrainingViewModel()
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configCreateTrainingCollectionView()
+        configSearchBar()
+    }
+    
+    func configSearchBar(){
         searchExerciseSearchBar.delegate = self
-        
         searchExerciseSearchBar.placeholder = "Buscar exercício"
     }
-    // Do any additional setup after loading the view.
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
+    
     func configCreateTrainingCollectionView() {
+        
         createTrainingCollectionView.delegate = self
         createTrainingCollectionView.dataSource = self
+        createTrainingCollectionView.register(CustomCreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier)
+        
+        finishButton.isEnabled = false
+        
         if let layout = createTrainingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
             layout.estimatedItemSize = .zero
@@ -47,9 +49,11 @@ class CreateTrainingViewController: UIViewController {
             layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             finishButton.layer.cornerRadius = 10
         }
-        createTrainingCollectionView.register(CustomCreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier)
     }
     
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
         if let tabBarController = UIStoryboard(name: "TabBarControllerViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarControllerViewController") as? TabBarControllerViewController {
@@ -57,10 +61,10 @@ class CreateTrainingViewController: UIViewController {
             present(tabBarController, animated: true)
         }
     }
-    
 }
 
-extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+extension CreateTrainingViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ViewModel.arraySize
     }
@@ -71,31 +75,40 @@ extension CreateTrainingViewController: UICollectionViewDelegate, UICollectionVi
         return cell ?? UICollectionViewCell()
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:(view.frame.size.width - 30)/2, height: (view.frame.size.width - 30)/2)
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: "ExerciseSelectionViewController", bundle: nil).instantiateViewController(withIdentifier: "ExerciseSelectionViewController") as? ExerciseSelectionViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.delegate(delegate: self)
             present(vc, animated: true)
         }
-        //print(names[indexPath.row])
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchExerciseSearchBar.resignFirstResponder() //Esconde o teclado
         searchExerciseSearchBar.isHidden = false //Oculta a SearchBar
     }
-
 }
-extension CreateTrainingViewController:ExerciseSelectionViewControllerProtocol {
-    func transferExerciseSelected(quantity: Int) {
-        exerciseCountButton.setTitle("\(quantity) Exercicios selecionados", for: .normal)
-    }
+
+extension CreateTrainingViewController : ExerciseSelectionViewControllerProtocol {
     
+    func transferExerciseSelected(quantity: Int) {
+        
+        if quantity == 0{
+            finishButton.isEnabled = false
+        }else{
+            finishButton.isEnabled = true
+        }
+        exerciseCountButton.setTitle("\(quantity) Exercício(s) selecionado(s)", for: .normal)
+    }
     
 }
 

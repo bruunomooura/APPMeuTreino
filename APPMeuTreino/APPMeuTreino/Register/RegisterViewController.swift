@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegisterViewController: UIViewController {
 
     @IBOutlet weak var editPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,12 +22,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signUpConfirmButton: UIButton!
     @IBOutlet weak var editPhotoButton: UIButton!
-    
     @IBOutlet weak var backButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configRegisterView()
+    }
+    
+    func configRegisterView(){
         
         nameTextField.layer.cornerRadius = 10
         nameTextField.layer.borderWidth = 2
@@ -55,6 +57,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         confirmPasswordTextField.clipsToBounds = true
 
         signUpConfirmButton.layer.cornerRadius = 10
+        signUpConfirmButton.isEnabled = false
         
         editPhotoImageView.layer.borderWidth = 2
         editPhotoImageView.layer.cornerRadius = editPhotoImageView.frame.size.height/2
@@ -68,6 +71,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         self.passwordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
     }
+    
+    @IBAction func tappedEditImageButton(_ sender: Any) {
+        configureImagePicker()
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+extension RegisterViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.nameTextField{
@@ -84,7 +103,36 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         return true
     }
     
-    @IBAction func tappedEditImageButton(_ sender: Any) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //delegate?.passExerciseSettingsData(value:textField.text!)
+        
+        if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText && passwordTextField.hasText && confirmPasswordTextField.hasText && confirmPasswordTextField.hasText {
+            signUpConfirmButton.isEnabled = true
+            
+            nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        } else{
+            signUpConfirmButton.isEnabled = false
+            if textField.hasText == false{
+                textField.layer.borderColor = UIColor.red.cgColor
+            }else{
+                textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            }
+        }
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
+
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func configureImagePicker(){
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
@@ -99,16 +147,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         }
         picker.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+
 }
