@@ -15,16 +15,28 @@ class TrainingOverviewViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
+    private var viewModel: TrainingOverviewViewModel = TrainingOverviewViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTrainingTableView()
+        configCell()
+        
+    }
+    
+    func configureTrainingTableView(){
+        trainingTableView.delegate = self
+        trainingTableView.dataSource = self
+        trainingTableView.register(TrainingCell.nib(), forCellReuseIdentifier: TrainingCell.identifier)
+        
+    }
+    
+    func configCell(){
         addTrainingButton.layer.cornerRadius = 10
         trainingTableView.separatorStyle = .none
         trainingTableView.isEditing = false
         trainingTableView.allowsSelectionDuringEditing = true
     
-        
-        // Border PictureImageUser
         
         let borderPicture = UIColor(named: "BlueMeuTreino")
         
@@ -33,13 +45,6 @@ class TrainingOverviewViewController: UIViewController {
         profileImage.layer.borderColor = borderPicture?.cgColor
                 profileImage.layer.cornerRadius = profileImage.frame.height/2
                 profileImage.clipsToBounds = true
-        
-    }
-    
-    func configureTrainingTableView(){
-        trainingTableView.delegate = self
-        trainingTableView.dataSource = self
-        trainingTableView.register(TrainingCell.nib(), forCellReuseIdentifier: TrainingCell.identifier)
         
     }
     
@@ -55,22 +60,20 @@ class TrainingOverviewViewController: UIViewController {
     
     extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSource{
         
-        //configuracao de cada uma das celulas
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             if let cell = trainingTableView.dequeueReusableCell(withIdentifier: "TrainingCell", for: indexPath) as? TrainingCell{
                 cell.configureCell()
+                cell.setupCell(training: viewModel.getTraining(index: indexPath.row))
                 return cell
             }
             return UITableViewCell()
         }
         
-        //quantidade de linhas da celula
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 1
+            return viewModel.arraySize
         }
         
         
-        //altura das linhas da celula
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 105
         }
@@ -93,9 +96,6 @@ class TrainingOverviewViewController: UIViewController {
         
         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete {
-                // Remova a célula do seu array de dados e da table view
-                // Exemplo: dataSource.remove(at: indexPath.row)
-                //           tableView.deleteRows(at: [indexPath], with: .automatic)
             }
         }
         
@@ -103,13 +103,15 @@ class TrainingOverviewViewController: UIViewController {
         func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
             let deleteAction = UIContextualAction(style: .destructive, title: "Deletar") { _, _, completionHandler in
                 completionHandler(true)
+                self.viewModel.deleteTraining(index: indexPath.row)
+                self.trainingTableView.reloadData()
             }
-            //deleteAction.image = UIImage(systemName: "trash")
-            //deleteAction.backgroundColor = .red
             
             let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
             configuration.performsFirstActionWithFullSwipe = false
             return configuration
+            
+
         }
         
         

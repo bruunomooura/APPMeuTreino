@@ -11,6 +11,9 @@ class TrainingCell: UITableViewCell {
 
     @IBOutlet weak var trainingCellView: UIView!
     
+    @IBOutlet weak var nameTrainingLabel: UILabel!
+    
+    @IBOutlet weak var numberOfExerciseLabel: UILabel!
     
     static let identifier: String = "TrainingCell"
     
@@ -28,14 +31,19 @@ class TrainingCell: UITableViewCell {
         
         //configuraçao da borda sombreada
 
-        trainingCellView.layer.masksToBounds = false //Isso permite que a sombra seja exibida fora da borda da view. Se essa propriedade estiver definida como true, a sombra será cortada na borda da view.
-        trainingCellView.layer.shadowColor = UIColor.lightGray.cgColor //cor da sombra
-        trainingCellView.layer.shadowOffset = CGSize(width: 0, height: 1) //direcao e deslocamento da sombra
-        trainingCellView.layer.shadowOpacity = 1 // opacidade
-        trainingCellView.layer.shadowRadius = 4 // raio da sombra
-        trainingCellView.layer.borderWidth = 0.2// largura da borda view
-        trainingCellView.layer.borderColor = UIColor.gray.cgColor //cor da borda da view
+        trainingCellView.layer.masksToBounds = false
+        trainingCellView.layer.shadowColor = UIColor.lightGray.cgColor
+        trainingCellView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        trainingCellView.layer.shadowOpacity = 1
+        trainingCellView.layer.shadowRadius = 4
+        trainingCellView.layer.borderWidth = 0.2
+        trainingCellView.layer.borderColor = UIColor.gray.cgColor
         
+    }
+    
+    func setupCell(training: Training){
+        nameTrainingLabel.text = training.nameTraining
+        numberOfExerciseLabel.text = "\(training.numberOfExercise) exercícios"
     }
     
 }

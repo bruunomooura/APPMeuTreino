@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		38B8008B29C9586B005F35AF /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B8008929C9586B005F35AF /* TrainingCell.swift */; };
 		38B8008C29C9586B005F35AF /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B8008A29C9586B005F35AF /* TrainingCell.xib */; };
+		38C672F829F84CE8008F8DA3 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C672F729F84CE8008F8DA3 /* Training.swift */; };
+		38C672FC29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C672FB29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift */; };
 		3F056A0729C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */; };
 		3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BA29BA61F100BDE579 /* AppDelegate.swift */; };
 		3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */; };
@@ -86,6 +88,8 @@
 /* Begin PBXFileReference section */
 		38B8008929C9586B005F35AF /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
 		38B8008A29C9586B005F35AF /* TrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
+		38C672F729F84CE8008F8DA3 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		38C672FB29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOverviewViewModel.swift; sourceTree = "<group>"; };
 		3F056A0629C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCreateTrainingCollectionViewCell.swift; path = APPMeuTreino/CreateTraining/Cell/CustomCreateTrainingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3F6448B729BA61F100BDE579 /* APPMeuTreino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPMeuTreino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6448BA29BA61F100BDE579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +183,23 @@
 				38B8008A29C9586B005F35AF /* TrainingCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		38C672F929F84D95008F8DA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F64492429BA732800BDE579 /* TrainingOverviewViewController.swift */,
+				3F64492629BA733300BDE579 /* TrainingOverviewViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38C672FA29F84DC7008F8DA3 /* TrainingOverviewViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38C672FB29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift */,
+			);
+			path = TrainingOverviewViewModel;
 			sourceTree = "<group>";
 		};
 		3F056A0A29C74BD400BF1B41 /* Cell */ = {
@@ -327,9 +348,9 @@
 		3F6448FC29BA6C2C00BDE579 /* TrainingOverview */ = {
 			isa = PBXGroup;
 			children = (
+				38C672FA29F84DC7008F8DA3 /* TrainingOverviewViewModel */,
 				38B8008429C9430E005F35AF /* Cells */,
-				3F64492429BA732800BDE579 /* TrainingOverviewViewController.swift */,
-				3F64492629BA733300BDE579 /* TrainingOverviewViewController.storyboard */,
+				38C672F929F84D95008F8DA3 /* View */,
 			);
 			path = TrainingOverview;
 			sourceTree = "<group>";
@@ -403,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA053FA29F452780097BA6E /* Exercise.swift */,
+				38C672F729F84CE8008F8DA3 /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -665,6 +687,7 @@
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
 				88289D6229F4703300CC4258 /* ExecutionTrainingVielModel.swift in Sources */,
 				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
+				38C672FC29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift in Sources */,
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
 				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,
 				3FA053FB29F452780097BA6E /* Exercise.swift in Sources */,
@@ -675,6 +698,7 @@
 				3FAFD71829CE188B002D9563 /* CustomExerciseSelectionCollectionViewCell.swift in Sources */,
 				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
 				3FA053FE29F453D80097BA6E /* ExerciseSelectionViewModel.swift in Sources */,
+				38C672F829F84CE8008F8DA3 /* Training.swift in Sources */,
 				3F056A0729C74A8000BF1B41 /* CustomCreateTrainingCollectionViewCell.swift in Sources */,
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,

@@ -21,17 +21,17 @@
                         <rect key="frame" x="12" y="8" width="296" height="84"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="vnd-a6-vSK">
-                                <rect key="frame" x="80.000000000000014" y="15.333333333333332" width="136.33333333333337" height="53.333333333333343"/>
+                                <rect key="frame" x="68.666666666666686" y="6.3333333333333357" width="159" height="71.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREINO 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faI-La-6rW">
-                                        <rect key="frame" x="0.0" y="0.0" width="136.33333333333334" height="39.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="45.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(5 exercícios)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-hl-DNe">
-                                        <rect key="frame" x="28.333333333333321" y="36.333333333333329" width="79.666666666666686" height="17"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                        <rect key="frame" x="12" y="42.666666666666664" width="134.66666666666663" height="28.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -55,6 +55,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="nameTrainingLabel" destination="faI-La-6rW" id="Zji-fX-Ua8"/>
+                <outlet property="numberOfExerciseLabel" destination="icu-hl-DNe" id="shz-Np-30E"/>
                 <outlet property="trainingCellView" destination="3Im-6O-Ze1" id="4qA-SW-bIa"/>
             </connections>
             <point key="canvasLocation" x="16.793893129770993" y="-11.267605633802818"/>
