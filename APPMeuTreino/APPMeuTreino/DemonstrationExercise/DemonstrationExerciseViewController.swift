@@ -13,9 +13,7 @@ class DemonstrationExerciseViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func tappedBackButton(_ sender: UIButton) {
         dismiss(animated: true)
-    }
-    
+    }    
 }

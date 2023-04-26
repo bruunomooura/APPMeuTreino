@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol CollectionExecutionTainingViewCellProtocol: AnyObject {
+protocol ExecutionTainingCollectionViewCellProtocol: AnyObject {
     func addExerciseInformation(name: String)
 }
 
-class CollectionExecutionTainingViewCell: UICollectionViewCell {
+class ExecutionTainingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var exerciseImageView: UIImageView!
@@ -21,12 +21,12 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
     @IBOutlet weak var repsButton: UIButton!
     @IBOutlet weak var exerciseView: UIView!
     
-    private var delegate:CollectionExecutionTainingViewCellProtocol?
-    func delegate(delegate:CollectionExecutionTainingViewCellProtocol){
+    private var delegate:ExecutionTainingCollectionViewCellProtocol?
+    func delegate(delegate:ExecutionTainingCollectionViewCellProtocol){
         self.delegate = delegate
     }
     
-    static let identifier: String = String(describing: CollectionExecutionTainingViewCell.self)
+    static let identifier: String = String(describing: ExecutionTainingCollectionViewCell.self)
     
     var isButtonSelected: Bool = false
     
@@ -36,6 +36,11 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configExecutionTainingView()
+        
+    }
+    
+    func configExecutionTainingView() {
         exerciseImageView.contentMode = .scaleAspectFill
         
         weightButton.layer.cornerRadius = 10
@@ -52,7 +57,7 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
         exerciseView.layer.masksToBounds = false
     }
     
-    func configureCell(exercise: Exercise){
+    func configureCell(exercise: Exercise) {
         label.text = exercise.exerciseName
         exerciseImageView.image = UIImage(named: exercise.exerciseImage)
     }

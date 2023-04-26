@@ -15,7 +15,10 @@ class TrainingConclusionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configTrainingConclusionView()
+    }
+    
+    func configTrainingConclusionView() {
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.masksToBounds = false
         profileImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
@@ -25,7 +28,6 @@ class TrainingConclusionViewController: UIViewController {
     
     @IBAction func tappedExitButton(_ sender: UIButton) {
         let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
-        //vc?.modalPresentationStyle = .formSheet
         present(vc ?? UIViewController(), animated: true)
     }
 }

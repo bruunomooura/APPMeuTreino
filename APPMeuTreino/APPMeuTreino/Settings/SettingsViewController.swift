@@ -9,7 +9,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
   
-    
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var backgroundTextField1: UIButton!
     @IBOutlet weak var backgroundTextField2: UIButton!
@@ -19,7 +18,12 @@ class SettingsViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewDidLoad() {        super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configSettingsView()
+    }
+    
+    func configSettingsView() {
         imageProfile.layer.borderWidth = 2
         imageProfile.layer.masksToBounds = false
         imageProfile.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
@@ -29,7 +33,6 @@ class SettingsViewController: UIViewController {
         backgroundTextField1.layer.cornerRadius = 8
         backgroundTextField2.layer.cornerRadius = 8
         backgroundTextField3.layer.cornerRadius = 8
-        
     }
  
     @IBAction func tappedExitButton(_ sender: UIButton) {
@@ -45,6 +48,4 @@ class SettingsViewController: UIViewController {
         let vc: ChangePasswordViewController? = UIStoryboard(name: String(describing: ChangePasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ChangePasswordViewController.self)) as? ChangePasswordViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
-    
-    
 }

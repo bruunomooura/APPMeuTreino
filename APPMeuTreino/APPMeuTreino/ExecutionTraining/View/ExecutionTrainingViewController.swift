@@ -15,10 +15,20 @@ class ExecutionTrainingViewController: UIViewController {
     
     private var vielModel: ExecutionTrainingVielModel = ExecutionTrainingVielModel()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+    }
+    
+    func configureCollectionView(){
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(ExecutionTainingCollectionViewCell.nib(), forCellWithReuseIdentifier: ExecutionTainingCollectionViewCell.identifier)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.estimatedItemSize = .zero
+        collectionView.collectionViewLayout = layout
+        
         finishButton.layer.cornerRadius = 10
     }
     
@@ -30,22 +40,11 @@ class ExecutionTrainingViewController: UIViewController {
         let vc: TrainingConclusionViewController? = UIStoryboard(name: String(describing: TrainingConclusionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TrainingConclusionViewController.self)) as? TrainingConclusionViewController
         present(vc ?? UIViewController(), animated: true)
     }
-    
-    
-    func configureCollectionView(){
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(CollectionExecutionTainingViewCell.nib(), forCellWithReuseIdentifier: CollectionExecutionTainingViewCell.identifier)
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.estimatedItemSize = .zero
-        collectionView.collectionViewLayout = layout
-    }
 }
 
 extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionExecutionTainingViewCell.identifier, for: indexPath) as? CollectionExecutionTainingViewCell{
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExecutionTainingCollectionViewCell.identifier, for: indexPath) as? ExecutionTainingCollectionViewCell{
             cell.configureCell(exercise: vielModel.getExercise(index: indexPath.row))
             cell.delegate(delegate: self)
             return cell
@@ -67,10 +66,9 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
             present(vc, animated: true)
         }
     }
-    
 }
 
-extension ExecutionTrainingViewController: CollectionExecutionTainingViewCellProtocol{
+extension ExecutionTrainingViewController: ExecutionTainingCollectionViewCellProtocol{
     func addExerciseInformation(name: String) {
         if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController{
             vc.name = name
@@ -83,6 +81,5 @@ extension ExecutionTrainingViewController: CollectionExecutionTainingViewCellPro
             }
             present(vc, animated: true)
         }
-    }
-    
+    }    
 }

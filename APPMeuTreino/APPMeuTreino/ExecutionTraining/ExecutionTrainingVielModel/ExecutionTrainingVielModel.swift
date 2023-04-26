@@ -22,6 +22,4 @@ class ExecutionTrainingVielModel{
     var arraySize: Int {
         return exerciseList.count
     }
-    
-
 }
