@@ -11,7 +11,7 @@ class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var groupMuscleTypeImageView: UIImageView!
     
-    static let identifier: String = "CustomCreateTrainingCollectionViewCell"
+    static let identifier: String = String(describing: CustomCreateTrainingCollectionViewCell.self)
     
     static func nib() -> UINib {
         return UINib(nibName: self.identifier, bundle: nil)
@@ -24,5 +24,4 @@ class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
     func setupCell(workout: Workout) {
         groupMuscleTypeImageView.image = UIImage(named: workout.exerciseImage)
     }
-
 }

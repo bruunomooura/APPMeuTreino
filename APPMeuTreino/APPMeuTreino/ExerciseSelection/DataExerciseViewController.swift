@@ -14,12 +14,11 @@ protocol DataExerciseProtocol: AnyObject {
 class DataExerciseViewController: UIViewController {
 
     @IBOutlet weak var dataExerciseView: UIView!
-    
     @IBOutlet weak var titleExerciseSettingsLabel: UILabel!
     //nome do dados que o app está solicitando do usuário. Ex: Carga, Serie ou Repetições
     @IBOutlet weak var exerciseSettingsTextField: UITextField!
-    
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var confirmeSettingsButton: UIButton!
     
     let customColorOrange = UIColor(named: "OrangeMeuTreino")
 
@@ -33,16 +32,19 @@ class DataExerciseViewController: UIViewController {
         self.delegate = delegate
     }
     
-    @IBOutlet weak var confirmeSettingsButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-     configTextField()
-        configTitle()
+        configDataExerciseView()
+    }
+    
+    func configDataExerciseView() {
         exerciseSettingsTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
         exerciseSettingsTextField.layer.borderColor = customColorOrange?.cgColor
         exerciseSettingsTextField.layer.borderWidth = 2
         exerciseSettingsTextField.layer.cornerRadius = 10
         exerciseSettingsTextField.clipsToBounds = true
+        exerciseSettingsTextField.delegate = self
+        exerciseSettingsTextField.placeholder = placeholder
         
         confirmeSettingsButton.isEnabled = false
         
@@ -50,30 +52,18 @@ class DataExerciseViewController: UIViewController {
         
         confirmButton.layer.cornerRadius = 10
         
-    }
-    func configTextField() {
-        exerciseSettingsTextField.delegate = self
-    }
-    func configTitle(){
         titleExerciseSettingsLabel.text = "\(name):"
-        exerciseSettingsTextField.placeholder = placeholder
     }
     
     @IBAction func tappedConfirmeSettingsButton(_ sender: UIButton) {
         dismiss(animated: true)
     }
-    
-
 }
 
 extension DataExerciseViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         exerciseSettingsTextField.resignFirstResponder()
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -84,6 +74,7 @@ extension DataExerciseViewController: UITextFieldDelegate {
             confirmeSettingsButton.isEnabled = false
         }
     }
+    
     func DataExerciseProtocol(_ textField: UITextField) -> Bool {
         dismiss(animated: true)
         resignFirstResponder()
@@ -92,6 +83,4 @@ extension DataExerciseViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
 }

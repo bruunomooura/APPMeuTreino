@@ -10,9 +10,7 @@ import UIKit
 class ExecutionTrainingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var backButton: UIButton!
-    
     @IBOutlet weak var finishButton: UIButton!
     
     private var vielModel: ExecutionTrainingVielModel = ExecutionTrainingVielModel()
@@ -29,8 +27,7 @@ class ExecutionTrainingViewController: UIViewController {
     }
     
     @IBAction func tappedFinishTrainingButton(_ sender: UIButton) {
-        let vc: TrainingConclusionViewController? = UIStoryboard(name: "TrainingConclusionViewController", bundle: nil).instantiateViewController(withIdentifier: "TrainingConclusionViewController") as? TrainingConclusionViewController
-        //vc?.modalPresentationStyle = .formSheet
+        let vc: TrainingConclusionViewController? = UIStoryboard(name: String(describing: TrainingConclusionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TrainingConclusionViewController.self)) as? TrainingConclusionViewController
         present(vc ?? UIViewController(), animated: true)
     }
     
@@ -44,8 +41,6 @@ class ExecutionTrainingViewController: UIViewController {
         layout.estimatedItemSize = .zero
         collectionView.collectionViewLayout = layout
     }
-    
-    
 }
 
 extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -67,7 +62,7 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: "DemonstrationExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DemonstrationExerciseViewController") as? DemonstrationExerciseViewController{
+        if let vc = UIStoryboard(name: String(describing: DemonstrationExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DemonstrationExerciseViewController.self)) as? DemonstrationExerciseViewController{
             vc.modalPresentationStyle = .pageSheet
             present(vc, animated: true)
         }
@@ -77,7 +72,7 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
 
 extension ExecutionTrainingViewController: CollectionExecutionTainingViewCellProtocol{
     func addExerciseInformation(name: String) {
-        if let vc = UIStoryboard(name: "DataExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DataExerciseViewController") as? DataExerciseViewController{
+        if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController{
             vc.name = name
             if name == "Séries" {
                 vc.placeholder = "Nº de Séries"

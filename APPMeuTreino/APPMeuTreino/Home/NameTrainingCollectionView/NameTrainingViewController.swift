@@ -37,7 +37,7 @@ class NameTrainingViewController: UIViewController {
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        let vc: CreateTrainingViewController? = UIStoryboard(name: "CreateTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "CreateTrainingViewController") as? CreateTrainingViewController
+        let vc: CreateTrainingViewController? = UIStoryboard(name: String(describing: CreateTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: CreateTrainingViewController.self)) as? CreateTrainingViewController
         vc?.modalPresentationStyle = .fullScreen
         present(vc ?? UIViewController(), animated: true)
     }

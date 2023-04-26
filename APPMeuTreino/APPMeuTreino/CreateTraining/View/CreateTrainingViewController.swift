@@ -19,21 +19,15 @@ class CreateTrainingViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configFinishButton()
-        configCreateTrainingCollectionView()
-        configSearchBar()
+        configCreateTrainingView()
     }
     
-    func configFinishButton(){
+    func configCreateTrainingView(){
         finishButton.isEnabled = false
-    }
     
-    func configSearchBar(){
         searchExerciseSearchBar.delegate = self
         searchExerciseSearchBar.placeholder = "Buscar exercício"
-    }
-    
-    func configCreateTrainingCollectionView() {
+
         createTrainingCollectionView.delegate = self
         createTrainingCollectionView.dataSource = self
         createTrainingCollectionView.register(CustomCreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier)
@@ -54,7 +48,7 @@ class CreateTrainingViewController: UIViewController {
     }
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
-        if let tabBarController = UIStoryboard(name: "TabBarControllerViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarControllerViewController") as? TabBarControllerViewController {
+        if let tabBarController = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController {
             tabBarController.selectedViewController = tabBarController.viewControllers?[1]
             present(tabBarController, animated: true)
         }
@@ -71,7 +65,6 @@ extension CreateTrainingViewController: UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier, for: indexPath) as? CustomCreateTrainingCollectionViewCell
         cell?.setupCell(workout: ViewModel.getWorkout(index: indexPath.row))
         return cell ?? UICollectionViewCell()
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -79,7 +72,7 @@ extension CreateTrainingViewController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: "ExerciseSelectionViewController", bundle: nil).instantiateViewController(withIdentifier: "ExerciseSelectionViewController") as? ExerciseSelectionViewController {
+        if let vc = UIStoryboard(name: String(describing: ExerciseSelectionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ExerciseSelectionViewController.self)) as? ExerciseSelectionViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.delegate(delegate: self)
             present(vc, animated: true)
@@ -101,12 +94,11 @@ extension CreateTrainingViewController : ExerciseSelectionViewControllerProtocol
     func transferExerciseSelected(quantity: Int) {
         if quantity == 0{
             finishButton.isEnabled = false
-        }else{
+        } else {
             finishButton.isEnabled = true
         }
         exerciseCountButton.setTitle("\(quantity) Exercício(s) selecionado(s)", for: .normal)
     }
-    
 }
 
 

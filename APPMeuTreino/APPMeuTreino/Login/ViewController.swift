@@ -45,17 +45,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        let vc: TabBarControllerViewController? = UIStoryboard(name: "TabBarControllerViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarControllerViewController") as? TabBarControllerViewController
+        let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedSignupButton(_ sender: UIButton) {
-        let vc: RegisterViewController? = UIStoryboard(name: "RegisterViewController", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
+        let vc: RegisterViewController? = UIStoryboard(name: String(describing: RegisterViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: RegisterViewController.self)) as? RegisterViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedForgotPasswordButton(_ sender: UIButton) {
-        let vc: ForgotPasswordViewController? = UIStoryboard(name: "ForgotPasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController
+        let vc: ForgotPasswordViewController? = UIStoryboard(name: String(describing: ForgotPasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ForgotPasswordViewController.self)) as? ForgotPasswordViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 }
@@ -65,7 +65,7 @@ extension ViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.emailTextField{
             self.passwordTextField.becomeFirstResponder()
-        }else{
+        } else {
             self.passwordTextField.resignFirstResponder()
         }
         return true
@@ -77,7 +77,7 @@ extension ViewController: UITextFieldDelegate{
             
             emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        } else{
+        } else {
             loginButton.isEnabled = false
             if textField.hasText == false{
                 textField.layer.borderColor = UIColor.red.cgColor

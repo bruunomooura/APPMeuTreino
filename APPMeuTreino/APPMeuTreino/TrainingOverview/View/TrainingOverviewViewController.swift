@@ -10,9 +10,7 @@ import UIKit
 class TrainingOverviewViewController: UIViewController {
     
     @IBOutlet weak var trainingTableView: UITableView!
-    
     @IBOutlet weak var addTrainingButton: UIButton!
-    
     @IBOutlet weak var profileImage: UIImageView!
     
     private var viewModel: TrainingOverviewViewModel = TrainingOverviewViewModel()
@@ -110,12 +108,7 @@ class TrainingOverviewViewController: UIViewController {
             let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
             configuration.performsFirstActionWithFullSwipe = false
             return configuration
-            
-
         }
-        
-        
-        
     }
     
 

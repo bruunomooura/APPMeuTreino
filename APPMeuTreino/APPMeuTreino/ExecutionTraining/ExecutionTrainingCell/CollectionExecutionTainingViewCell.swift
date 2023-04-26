@@ -14,17 +14,11 @@ protocol CollectionExecutionTainingViewCellProtocol: AnyObject {
 class CollectionExecutionTainingViewCell: UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
-    
     @IBOutlet weak var exerciseImageView: UIImageView!
-    
     @IBOutlet weak var checkMarkButton: UIButton!
-    
     @IBOutlet weak var weightButton: UIButton!
-    
     @IBOutlet weak var seriesButton: UIButton!
-    
     @IBOutlet weak var repsButton: UIButton!
-    
     @IBOutlet weak var exerciseView: UIView!
     
     private var delegate:CollectionExecutionTainingViewCellProtocol?
@@ -32,7 +26,7 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
         self.delegate = delegate
     }
     
-    static let identifier: String = "CollectionExecutionTainingViewCell"
+    static let identifier: String = String(describing: CollectionExecutionTainingViewCell.self)
     
     var isButtonSelected: Bool = false
     
@@ -43,15 +37,16 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         exerciseImageView.contentMode = .scaleAspectFill
+        
         weightButton.layer.cornerRadius = 10
+        
         seriesButton.layer.cornerRadius = 10
+        
         repsButton.layer.cornerRadius = 10
+        
         exerciseView.layer.cornerRadius = 10
         exerciseView.layer.shadowColor = UIColor.lightGray.cgColor
         exerciseView.layer.shadowRadius = 2
-//        exerciseView.layer.borderWidth = 1
-//        exerciseView.layer.borderColor = UIColor.lightGray.cgColor
-        
         exerciseView.layer.shadowOffset = CGSize.zero
         exerciseView.layer.shadowOpacity = 0.7
         exerciseView.layer.masksToBounds = false

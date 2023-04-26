@@ -40,13 +40,12 @@ class HomeViewController: UIViewController {
         
         borderHomeView.layer.borderWidth = 2
         borderHomeView.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        
         borderHomeView.clipsToBounds = true
         borderHomeView.layer.cornerRadius = 8
     }
     
     @IBAction func tappedAddTrainingButton(_ sender: UIButton) {
-        let vc: NameTrainingViewController? = UIStoryboard(name: "NameTrainingViewController", bundle: nil).instantiateViewController(withIdentifier: "NameTrainingViewController") as? NameTrainingViewController
+        let vc: NameTrainingViewController? = UIStoryboard(name: String(describing: NameTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: NameTrainingViewController.self)) as? NameTrainingViewController
         present(vc ?? UIViewController(), animated: true)
     }
     

@@ -11,11 +11,8 @@ class SettingsViewController: UIViewController {
   
     
     @IBOutlet weak var imageProfile: UIImageView!
-    
     @IBOutlet weak var backgroundTextField1: UIButton!
-    
     @IBOutlet weak var backgroundTextField2: UIButton!
-    
     @IBOutlet weak var backgroundTextField3: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,20 +32,17 @@ class SettingsViewController: UIViewController {
         
     }
  
-    
     @IBAction func tappedExitButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main", sender: nil)
+        tabBarController?.navigationController?.popToRootViewController(animated: true)
     }
     
-    
     @IBAction func tappedDataChangeButton(_ sender: UIButton) {
-        let vc: DataChangeViewController? = UIStoryboard(name: "DataChangeViewController", bundle: nil).instantiateViewController(withIdentifier: "DataChangeViewController") as? DataChangeViewController
+        let vc: DataChangeViewController? = UIStoryboard(name: String(describing: DataChangeViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataChangeViewController.self)) as? DataChangeViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
-    
     @IBAction func tappedChangePasswordButton(_ sender: UIButton) {
-        let vc: ChangePasswordViewController? = UIStoryboard(name: "ChangePasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "ChangePasswordViewController") as? ChangePasswordViewController
+        let vc: ChangePasswordViewController? = UIStoryboard(name: String(describing: ChangePasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ChangePasswordViewController.self)) as? ChangePasswordViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     

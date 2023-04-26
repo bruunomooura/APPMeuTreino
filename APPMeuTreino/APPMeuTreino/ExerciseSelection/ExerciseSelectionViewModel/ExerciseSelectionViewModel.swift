@@ -22,6 +22,5 @@ class ExerciseSelecionViewModel {
     
     var arraySize: Int {
         return dataWorkouts.count
-    }
-    
+    }    
 }

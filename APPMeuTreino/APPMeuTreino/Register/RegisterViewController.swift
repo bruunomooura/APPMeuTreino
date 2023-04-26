@@ -92,11 +92,11 @@ extension RegisterViewController: UITextFieldDelegate{
             emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        } else{
+        } else {
             signUpConfirmButton.isEnabled = false
             if textField.hasText == false{
                 textField.layer.borderColor = UIColor.red.cgColor
-            }else{
+            } else {
                 textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             }
         }

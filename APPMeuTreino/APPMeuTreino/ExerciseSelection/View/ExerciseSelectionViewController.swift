@@ -9,13 +9,9 @@ import UIKit
 
 protocol ExerciseSelectionViewControllerProtocol: AnyObject {
     func transferExerciseSelected (quantity: Int)
-        
-    
 }
 
-
 class ExerciseSelectionViewController: UIViewController {
-    
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var selectedExercisesTypesButton: UIButton!
@@ -30,10 +26,10 @@ class ExerciseSelectionViewController: UIViewController {
             selectedExercisesTypesButton.setTitle(title, for: .normal)
             selectedExercisesTypesButton.titleLabel?.font = UIFont(name: "Didot", size: 18)
         }
-        
     }
     
     private weak var delegate: ExerciseSelectionViewControllerProtocol?
+    
     public func delegate (delegate: ExerciseSelectionViewControllerProtocol?) {
         self.delegate = delegate
     }
@@ -52,10 +48,9 @@ class ExerciseSelectionViewController: UIViewController {
     func configExerciseSelectionCollectionView() {
         
         exerciseSelectionCollectionView.allowsMultipleSelection = true
-        
         exerciseSelectionCollectionView.delegate = self
         exerciseSelectionCollectionView.dataSource = self
-        exerciseSelectionCollectionView.register(CustomExerciseSelectionCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomExerciseSelectionCollectionViewCell.identifier)
+        exerciseSelectionCollectionView.register(ExerciseSelectionCollectionViewCell.nib(), forCellWithReuseIdentifier: ExerciseSelectionCollectionViewCell.identifier)
         
         addButton.layer.cornerRadius = 10
         addButton.isEnabled = false
@@ -88,7 +83,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomExerciseSelectionCollectionViewCell.identifier, for: indexPath) as! CustomExerciseSelectionCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExerciseSelectionCollectionViewCell.identifier, for: indexPath) as! ExerciseSelectionCollectionViewCell
         cell.delegate(delegate: self)
         cell.setupCell(exercise: viewModel.getExercise(index: indexPath.row))
         if SelectedCells.contains(indexPath) {
@@ -99,6 +94,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
             cell.backgroundColor = .white
             isCellSelected = false
         }
+        
         cell.numberSeriesSelectionButton.isEnabled = isCellSelected
         cell.numberRepetitionsSelectionButton.isEnabled = isCellSelected
         cell.weightSelectionButton.isEnabled = isCellSelected
@@ -117,7 +113,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? CustomExerciseSelectionCollectionViewCell{
+        if let cell = collectionView.cellForItem(at: indexPath) as? ExerciseSelectionCollectionViewCell{
             cell.backgroundColor =  UIColor(named: "OrangeMeuTreino")
             SelectedCells.insert(indexPath)
             selectedExerciseCount += 1
@@ -127,13 +123,13 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
         }
         if selectedExerciseCount == 0{
             addButton.isEnabled = false
-        }else{
+        } else {
             addButton.isEnabled = true
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? CustomExerciseSelectionCollectionViewCell{
+        if let cell = collectionView.cellForItem(at: indexPath) as? ExerciseSelectionCollectionViewCell{
             cell.backgroundColor = .white
             SelectedCells.remove(indexPath)
             selectedExerciseCount -= 1
@@ -144,22 +140,15 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
         
         if selectedExerciseCount == 0{
             addButton.isEnabled = false
-        }else{
+        } else {
             addButton.isEnabled = true
         }
-        
     }
-    
-//        func updateSelectionCount() {
-//            let count = exerciseSelectionCollectionView.indexPathsForSelectedItems?.count ?? 0
-//            print("Number of selected items: \(count)")
-//        }
-        
-    }
+}
 
-extension ExerciseSelectionViewController: CustomExerciseSelectionCollectionViewCellProtocol{
+extension ExerciseSelectionViewController: ExerciseSelectionCollectionViewCellProtocol{
     func addExerciseInformations(name: String) {
-        if let vc = UIStoryboard(name: "DataExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DataExerciseViewController") as? DataExerciseViewController{
+        if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController{
             vc.name = name
             if name == "Séries" {
                 vc.placeholder = "Nº de Séries"
@@ -169,6 +158,5 @@ extension ExerciseSelectionViewController: CustomExerciseSelectionCollectionView
                 vc.placeholder = "Carga em Kg"            }
             present(vc, animated: true)
         }
-        
     }
 }

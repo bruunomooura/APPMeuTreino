@@ -10,12 +10,10 @@ import UIKit
 class TrainingCell: UITableViewCell {
 
     @IBOutlet weak var trainingCellView: UIView!
-    
     @IBOutlet weak var nameTrainingLabel: UILabel!
-    
     @IBOutlet weak var numberOfExerciseLabel: UILabel!
     
-    static let identifier: String = "TrainingCell"
+    static let identifier: String = String(describing: TrainingCell.self)
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)

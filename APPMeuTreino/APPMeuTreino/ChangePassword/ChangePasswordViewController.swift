@@ -10,13 +10,9 @@ import UIKit
 class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var newpasswordTextField: UITextField!
-    
     @IBOutlet weak var repeatpasswordTextField: UITextField!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var backButton: UIButton!
     
     

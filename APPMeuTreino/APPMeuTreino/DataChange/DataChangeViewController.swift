@@ -10,42 +10,12 @@ import UIKit
 class DataChangeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var alteracaodedadosLabel: UILabel!
-    
     @IBOutlet weak var imageProfile: UIImageView!
-    
     @IBOutlet weak var fullnameTextField: UITextField!
-    
     @IBOutlet weak var birthdayTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var backButton: UIButton!
-    
-    
-    
-    @IBAction func editimageButton(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-            present(imagePicker, animated: true, completion: nil)
-        
-    }
-   
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let editedImage = info[.editedImage] as? UIImage {
-            // Define a imagem selecionada na sua ImageView
-            imageProfile.image = editedImage
-        } else if let originalImage = info[.originalImage] as? UIImage {
-            // Define a imagem original na sua ImageView (caso o usuário não tenha editado a imagem)
-            imageProfile.image = originalImage
-        }
-        // Fecha o ImagePickerController
-        picker.dismiss(animated: true, completion: nil)
-    }
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +50,20 @@ class DataChangeViewController: UIViewController, UIImagePickerControllerDelegat
         self.birthdayTextField.delegate = self
         self.emailTextField.delegate = self
     }
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            // Define a imagem selecionada na sua ImageView
+            imageProfile.image = editedImage
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            // Define a imagem original na sua ImageView (caso o usuário não tenha editado a imagem)
+            imageProfile.image = originalImage
+        }
+        // Fecha o ImagePickerController
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == fullnameTextField{
@@ -90,6 +74,13 @@ class DataChangeViewController: UIViewController, UIImagePickerControllerDelegat
             emailTextField.resignFirstResponder()
         }
         return true
+    }
+    
+    @IBAction func editimageButton(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+            present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {

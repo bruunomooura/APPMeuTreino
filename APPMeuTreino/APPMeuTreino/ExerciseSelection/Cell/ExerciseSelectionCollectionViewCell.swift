@@ -7,54 +7,48 @@
 
 import UIKit
 
-protocol CustomExerciseSelectionCollectionViewCellProtocol: AnyObject {
+protocol ExerciseSelectionCollectionViewCellProtocol: AnyObject {
     func addExerciseInformations(name: String)
 }
-class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
 
+class ExerciseSelectionCollectionViewCell: UICollectionViewCell {
   
     @IBOutlet weak var weightSelectionButton: UIButton!
-    
-    
     @IBOutlet weak var numberSeriesSelectionButton: UIButton!
-    
-    
     @IBOutlet weak var numberRepetitionsSelectionButton: UIButton!
-    
-    
     @IBOutlet weak var nameExercise: UILabel!
-    
-    
     @IBOutlet weak var exerciseSelecionImageView: UIImageView!
-    
-    
-    
-    private var delegate:CustomExerciseSelectionCollectionViewCellProtocol?
-    func delegate(delegate:CustomExerciseSelectionCollectionViewCellProtocol){
+           
+    private var delegate:ExerciseSelectionCollectionViewCellProtocol?
+    func delegate(delegate:ExerciseSelectionCollectionViewCellProtocol){
         self.delegate = delegate
     }
     
-    static let identifier: String = "CustomExerciseSelectionCollectionViewCell"
+    static let identifier: String = String(describing: ExerciseSelectionCollectionViewCell.self)
     
     static func nib() -> UINib {
         return UINib(nibName: self.identifier, bundle: nil)
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        configExerciseSelectionView()
+    }
+    
+    func configExerciseSelectionView() {
         exerciseSelecionImageView.contentMode = .scaleAspectFill
         weightSelectionButton.layer.cornerRadius = 8
         numberSeriesSelectionButton.layer.cornerRadius = 8
         numberRepetitionsSelectionButton.layer.cornerRadius = 8
     }
+    
     func setupCell(exercise: Exercise) {
         exerciseSelecionImageView.image = UIImage(named: exercise.exerciseImage)
         nameExercise.text = exercise.exerciseName
     }
 
     @IBAction func tappedWeigthSelectionButton(_ sender: UIButton) {
-    //chamar o protocolo
         delegate?.addExerciseInformations(name: sender.titleLabel?.text ?? "")
-        
     }
 }
 
