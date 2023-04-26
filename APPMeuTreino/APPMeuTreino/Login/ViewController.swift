@@ -15,13 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configLoginView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     func configLoginView(){
@@ -46,19 +46,16 @@ class ViewController: UIViewController {
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         let vc: TabBarControllerViewController? = UIStoryboard(name: "TabBarControllerViewController", bundle: nil).instantiateViewController(withIdentifier: "TabBarControllerViewController") as? TabBarControllerViewController
-        //vc?.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedSignupButton(_ sender: UIButton) {
         let vc: RegisterViewController? = UIStoryboard(name: "RegisterViewController", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController
-        //vc?.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedForgotPasswordButton(_ sender: UIButton) {
         let vc: ForgotPasswordViewController? = UIStoryboard(name: "ForgotPasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController
-        //vc?.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
 }
@@ -75,8 +72,6 @@ extension ViewController: UITextFieldDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //delegate?.passExerciseSettingsData(value:textField.text!)
-        
         if emailTextField.hasText && passwordTextField.hasText {
             loginButton.isEnabled = true
             
@@ -90,7 +85,6 @@ extension ViewController: UITextFieldDelegate{
                 textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             }
         }
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

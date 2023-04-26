@@ -29,32 +29,21 @@ class RegisterViewController: UIViewController {
         configRegisterView()
     }
     
+    func configTextField(textField: UITextField){
+        textField.layer.cornerRadius = 10
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        textField.clipsToBounds = true
+        
+        textField.delegate = self
+    }
+    
     func configRegisterView(){
-        
-        nameTextField.layer.cornerRadius = 10
-        nameTextField.layer.borderWidth = 2
-        nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        nameTextField.clipsToBounds = true
-        
-        birthdayTextField.layer.cornerRadius = 10
-        birthdayTextField.layer.borderWidth = 2
-        birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        birthdayTextField.clipsToBounds = true
-
-        emailTextField.layer.cornerRadius = 10
-        emailTextField.layer.borderWidth = 2
-        emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        emailTextField.clipsToBounds = true
-
-        passwordTextField.layer.cornerRadius = 10
-        passwordTextField.layer.borderWidth = 2
-        passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        passwordTextField.clipsToBounds = true
-
-        confirmPasswordTextField.layer.cornerRadius = 10
-        confirmPasswordTextField.layer.borderWidth = 2
-        confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        confirmPasswordTextField.clipsToBounds = true
+        configTextField(textField: nameTextField)
+        configTextField(textField: birthdayTextField)
+        configTextField(textField: emailTextField)
+        configTextField(textField: passwordTextField)
+        configTextField(textField: confirmPasswordTextField)
 
         signUpConfirmButton.layer.cornerRadius = 10
         signUpConfirmButton.isEnabled = false
@@ -62,14 +51,6 @@ class RegisterViewController: UIViewController {
         editPhotoImageView.layer.borderWidth = 2
         editPhotoImageView.layer.cornerRadius = editPhotoImageView.frame.size.height/2
         editPhotoImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
-        //editPhotoImageView.layer.masksToBounds = false
-        //editPhotoImageView.clipsToBounds = true
-        
-        self.nameTextField.delegate = self
-        self.birthdayTextField.delegate = self
-        self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
-        self.confirmPasswordTextField.delegate = self
     }
     
     @IBAction func tappedEditImageButton(_ sender: Any) {
@@ -83,7 +64,6 @@ class RegisterViewController: UIViewController {
     @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
 }
 
 extension RegisterViewController: UITextFieldDelegate{
@@ -104,11 +84,9 @@ extension RegisterViewController: UITextFieldDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //delegate?.passExerciseSettingsData(value:textField.text!)
         
         if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText && passwordTextField.hasText && confirmPasswordTextField.hasText && confirmPasswordTextField.hasText {
             signUpConfirmButton.isEnabled = true
-            
             nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
@@ -122,7 +100,6 @@ extension RegisterViewController: UITextFieldDelegate{
                 textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             }
         }
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -147,5 +124,4 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         }
         picker.dismiss(animated: true, completion: nil)
     }
-
 }

@@ -10,11 +10,8 @@ import UIKit
 class NameTrainingViewController: UIViewController {
 
     @IBOutlet weak var nameTrainingTextField: UITextField!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var cancelButton: UIButton!
-    
     @IBOutlet weak var newTrainingView: UIView!
     
     override func viewDidLoad() {
@@ -23,17 +20,17 @@ class NameTrainingViewController: UIViewController {
     }
     
     func configNameTrainingView(){
-        
         nameTrainingTextField.delegate = self
-        saveButton.isEnabled = false
-        
-        
+
         nameTrainingTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         nameTrainingTextField.layer.borderWidth = 2
         nameTrainingTextField.clipsToBounds = true
         nameTrainingTextField.layer.cornerRadius = 10
+        
         cancelButton.layer.cornerRadius = 10
+        
         saveButton.layer.cornerRadius = 10
+        saveButton.isEnabled = false
         
         newTrainingView.layer.cornerRadius = 10
     }
@@ -61,9 +58,11 @@ extension NameTrainingViewController: UITextFieldDelegate {
             saveButton.isEnabled = false
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTrainingTextField.resignFirstResponder()
     }

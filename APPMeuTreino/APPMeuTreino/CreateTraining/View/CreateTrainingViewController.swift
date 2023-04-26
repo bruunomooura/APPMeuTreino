@@ -10,21 +10,22 @@ import UIKit
 class CreateTrainingViewController: UIViewController {
     
     @IBOutlet weak var exerciseCountButton: UIButton!
-    
     @IBOutlet weak var finishButton: UIButton!
-    
     @IBOutlet weak var backButton: UIButton!
-    
     @IBOutlet weak var createTrainingCollectionView: UICollectionView!
-    
     @IBOutlet weak var searchExerciseSearchBar: UISearchBar!
     
     private let ViewModel: CreateTrainingViewModel = CreateTrainingViewModel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configFinishButton()
         configCreateTrainingCollectionView()
         configSearchBar()
+    }
+    
+    func configFinishButton(){
+        finishButton.isEnabled = false
     }
     
     func configSearchBar(){
@@ -33,12 +34,9 @@ class CreateTrainingViewController: UIViewController {
     }
     
     func configCreateTrainingCollectionView() {
-        
         createTrainingCollectionView.delegate = self
         createTrainingCollectionView.dataSource = self
         createTrainingCollectionView.register(CustomCreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier)
-        
-        finishButton.isEnabled = false
         
         if let layout = createTrainingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
@@ -71,7 +69,7 @@ extension CreateTrainingViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier, for: indexPath) as? CustomCreateTrainingCollectionViewCell
-        cell?.setupCell(exercises: ViewModel.getExercise(index: indexPath.row))
+        cell?.setupCell(workout: ViewModel.getWorkout(index: indexPath.row))
         return cell ?? UICollectionViewCell()
         
     }
@@ -101,7 +99,6 @@ extension CreateTrainingViewController: UICollectionViewDataSource, UICollection
 extension CreateTrainingViewController : ExerciseSelectionViewControllerProtocol {
     
     func transferExerciseSelected(quantity: Int) {
-        
         if quantity == 0{
             finishButton.isEnabled = false
         }else{

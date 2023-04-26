@@ -21,8 +21,8 @@ class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupCell(exercises: Exercise) {
-        groupMuscleTypeImageView.image = UIImage(named: exercises.exercisaImage)
+    func setupCell(workout: Workout) {
+        groupMuscleTypeImageView.image = UIImage(named: workout.exerciseImage)
     }
 
 }

@@ -9,12 +9,13 @@ import Foundation
 
 class ExerciseSelecionViewModel {
     private var dataWorkouts : [Exercise] = [
-        Exercise(exerciseName: "Abdominal Alpinista", exercisaImage: "AbdominalAlpinista"),
-        Exercise(exerciseName: "Abdominal Declinado", exercisaImage: "AbdominalDeclinado"),
-        Exercise(exerciseName: "Abdominal Em Banco Declinado", exercisaImage: "AbdominalEmBancoDeclinado"),
-        Exercise(exerciseName: "Abdominal Em V", exercisaImage: "AbdominalEmV"),
-        Exercise(exerciseName: "Abdominal Na Bola", exercisaImage: "AbdominalNaBola")
+        Exercise(exerciseName: "Abdominal Alpinista", exerciseImage: "AbdominalAlpinista"),
+        Exercise(exerciseName: "Abdominal Declinado", exerciseImage: "AbdominalDeclinado"),
+        Exercise(exerciseName: "Abdominal Em Banco Declinado", exerciseImage: "AbdominalEmBancoDeclinado"),
+        Exercise(exerciseName: "Abdominal Em V", exerciseImage: "AbdominalEmV"),
+        Exercise(exerciseName: "Abdominal Na Bola", exerciseImage: "AbdominalNaBola")
     ]
+    
     func getExercise(index: Int) -> Exercise {
         return dataWorkouts[index]
     }

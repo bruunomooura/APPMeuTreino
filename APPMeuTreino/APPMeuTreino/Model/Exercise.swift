@@ -8,7 +8,7 @@
 import Foundation
 
 struct Exercise {
-    var exerciseName: String = ""
-    var exercisaImage: String = ""
+    var exerciseName: String
+    var exerciseImage: String
     
 }

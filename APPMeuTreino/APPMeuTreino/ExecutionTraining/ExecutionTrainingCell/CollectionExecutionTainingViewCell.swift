@@ -59,7 +59,7 @@ class CollectionExecutionTainingViewCell: UICollectionViewCell {
     
     func configureCell(exercise: Exercise){
         label.text = exercise.exerciseName
-        exerciseImageView.image = UIImage(named: exercise.exercisaImage)
+        exerciseImageView.image = UIImage(named: exercise.exerciseImage)
     }
     
     @IBAction func tappedCheckBoxButton(_ sender: UIButton) {

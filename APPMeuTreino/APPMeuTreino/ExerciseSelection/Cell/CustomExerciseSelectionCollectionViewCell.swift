@@ -47,7 +47,7 @@ class CustomExerciseSelectionCollectionViewCell: UICollectionViewCell {
         numberRepetitionsSelectionButton.layer.cornerRadius = 8
     }
     func setupCell(exercise: Exercise) {
-        exerciseSelecionImageView.image = UIImage(named: exercise.exercisaImage)
+        exerciseSelecionImageView.image = UIImage(named: exercise.exerciseImage)
         nameExercise.text = exercise.exerciseName
     }
 
