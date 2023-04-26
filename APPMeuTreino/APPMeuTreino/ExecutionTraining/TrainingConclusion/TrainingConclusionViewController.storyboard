@@ -151,8 +151,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="checkImageView" destination="DgG-hR-KZI" id="cmT-DT-Dth"/>
+                        <outlet property="congratulationsLabel" destination="lFe-j2-fV6" id="Gps-WQ-3yJ"/>
                         <outlet property="exitButton" destination="uMw-vV-PFV" id="xyH-AE-Hxf"/>
+                        <outlet property="facebookImageView" destination="zmg-7s-kh2" id="UsF-Tk-3nT"/>
+                        <outlet property="instagramImageView" destination="SkU-lc-OwC" id="uTh-dx-4NG"/>
                         <outlet property="profileImageView" destination="iFI-qV-xH9" id="RJb-HF-RJ3"/>
+                        <outlet property="shareTrainingLabel" destination="1Hw-hi-fp0" id="z6a-S0-05c"/>
+                        <outlet property="text1Label" destination="4HP-di-gBN" id="iPA-Gg-vYV"/>
+                        <outlet property="text2Label" destination="OvN-pm-U3x" id="krz-Qb-fAf"/>
+                        <outlet property="whatsappImageView" destination="SOB-gu-OVJ" id="amL-O3-kLI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

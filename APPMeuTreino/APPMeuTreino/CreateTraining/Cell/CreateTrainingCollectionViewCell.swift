@@ -1,5 +1,5 @@
 //
-//  CustomCreateTrainingCollectionViewCell.swift
+//  CreateTrainingCollectionViewCell.swift
 //  APPMeuTreino
 //
 //  Created by Bernardo Aguiar Guimarães on 17/03/23.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
+class CreateTrainingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var groupMuscleTypeImageView: UIImageView!
     
-    static let identifier: String = String(describing: CustomCreateTrainingCollectionViewCell.self)
+    static let identifier: String = String(describing: CreateTrainingCollectionViewCell.self)
     
     static func nib() -> UINib {
         return UINib(nibName: self.identifier, bundle: nil)
@@ -21,7 +21,7 @@ class CustomCreateTrainingCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupCell(workout: Workout) {
-        groupMuscleTypeImageView.image = UIImage(named: workout.exerciseImage)
+    func setupCell(exerciseType: ExerciseType) {
+        groupMuscleTypeImageView.image = UIImage(named: exerciseType.exerciseTypeImage)
     }
 }

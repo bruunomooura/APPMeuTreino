@@ -104,7 +104,10 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="NGq-zq-PwT" id="Wo5-ii-TZa"/>
+                        <outlet property="backButton" destination="NDl-QO-nh5" id="npU-D7-hpe"/>
+                        <outlet property="backButtonImageView" destination="XCm-Vu-fSR" id="ztI-he-r6d"/>
                         <outlet property="exerciseSelectionCollectionView" destination="YZC-wG-LAQ" id="BH1-Ie-0uf"/>
+                        <outlet property="exerciseTypeLabel" destination="Mol-bK-shr" id="p6T-n7-VEQ"/>
                         <outlet property="selectedExercisesTypesButton" destination="JvB-7g-2RA" id="ASn-1K-4iv"/>
                     </connections>
                 </viewController>

@@ -26,10 +26,10 @@ class ForgotPasswordViewController: UIViewController {
         emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
         emailTextField.clipsToBounds = true
         
+        self.emailTextField.delegate = self
+        
         changePasswordButton.layer.cornerRadius = 10
         changePasswordButton.isEnabled = false
-        
-        self.emailTextField.delegate = self
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -39,7 +39,6 @@ class ForgotPasswordViewController: UIViewController {
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-   
 }
 
 extension ForgotPasswordViewController: UITextFieldDelegate{

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionExecutionTainingViewCell" id="gTV-IL-0wX" customClass="ExecutionTainingCollectionViewCell" customModule="APPMeuTreino" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExecutionTrainingCollectionViewCell" id="gTV-IL-0wX" customClass="ExecutionTrainingCollectionViewCell" customModule="APPMeuTreino" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -131,13 +133,13 @@
             <connections>
                 <outlet property="checkMarkButton" destination="yFq-hH-aY4" id="dxS-8J-mDD"/>
                 <outlet property="exerciseImageView" destination="o4U-dx-Bjp" id="4JM-UD-nlj"/>
+                <outlet property="exerciseLabel" destination="qWP-Zo-zlI" id="IfT-jq-XLc"/>
                 <outlet property="exerciseView" destination="hJL-wJ-wCv" id="P3w-ub-zMs"/>
-                <outlet property="label" destination="qWP-Zo-zlI" id="IfT-jq-XLc"/>
                 <outlet property="repsButton" destination="mls-d2-tED" id="8SE-2u-vyF"/>
                 <outlet property="seriesButton" destination="K6q-uD-gnh" id="S6K-3B-FS6"/>
                 <outlet property="weightButton" destination="ayT-ew-XY5" id="9ba-YU-o9v"/>
             </connections>
-            <point key="canvasLocation" x="-2.3999999999999999" y="17.991004497751124"/>
+            <point key="canvasLocation" x="-3.8167938931297707" y="17.605633802816904"/>
         </collectionViewCell>
     </objects>
     <resources>

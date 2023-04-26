@@ -74,7 +74,8 @@
                     </view>
                     <connections>
                         <outlet property="addTrainingButton" destination="BSy-GU-ZBO" id="7nQ-2v-qoi"/>
-                        <outlet property="profileImage" destination="kOg-Q3-Qx5" id="fOK-Ta-pxP"/>
+                        <outlet property="greetingLabel" destination="5Y6-nO-aSj" id="ozI-a1-QKk"/>
+                        <outlet property="profileImageView" destination="kOg-Q3-Qx5" id="fOK-Ta-pxP"/>
                         <outlet property="trainingTableView" destination="CXF-rs-Z0g" id="8py-N1-AXq"/>
                     </connections>
                 </viewController>

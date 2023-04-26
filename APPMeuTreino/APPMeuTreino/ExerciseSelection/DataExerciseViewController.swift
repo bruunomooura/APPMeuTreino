@@ -15,7 +15,6 @@ class DataExerciseViewController: UIViewController {
 
     @IBOutlet weak var dataExerciseView: UIView!
     @IBOutlet weak var titleExerciseSettingsLabel: UILabel!
-    //nome do dados que o app está solicitando do usuário. Ex: Carga, Serie ou Repetições
     @IBOutlet weak var exerciseSettingsTextField: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var confirmeSettingsButton: UIButton!

@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="profile" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-cv-ubI">
-                                <rect key="frame" x="263" y="10" width="80" height="80"/>
+                                <rect key="frame" x="263" y="40" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="MCx-Vi-Afp"/>
                                     <constraint firstAttribute="height" constant="80" id="fR6-3v-NHT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-We-owY">
-                                <rect key="frame" x="30" y="130" width="315" height="40"/>
+                                <rect key="frame" x="30" y="160" width="315" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IHr-Jd-qeX"/>
@@ -36,11 +36,11 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="tappedDataChangeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="s42-ai-abH"/>
+                                    <action selector="tappedChangeDataButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="s42-ai-abH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhM-rD-tc8">
-                                <rect key="frame" x="30" y="195" width="313" height="40"/>
+                                <rect key="frame" x="30" y="225" width="313" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wjM-9h-P1Q"/>
@@ -55,7 +55,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHk-ZY-uMy">
-                                <rect key="frame" x="30" y="260" width="315" height="40"/>
+                                <rect key="frame" x="30" y="290" width="315" height="40"/>
                                 <color key="backgroundColor" red="0.92128556966781616" green="0.32791789781849018" blue="0.30138117812881016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Der-KW-ZJt"/>
@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmi-68-jUw">
-                                <rect key="frame" x="30" y="39.5" width="109" height="41"/>
+                                <rect key="frame" x="30" y="49.5" width="109" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="2WO-eV-cqP"/>
                                 </constraints>
@@ -89,19 +89,19 @@
                             <constraint firstItem="YhM-rD-tc8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="JLj-zB-X4C"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YhM-rD-tc8" secondAttribute="trailing" constant="32" id="OhA-fb-4Y2"/>
                             <constraint firstItem="YhM-rD-tc8" firstAttribute="top" secondItem="lTm-We-owY" secondAttribute="bottom" constant="25" id="RSX-IE-YUb"/>
-                            <constraint firstItem="pwG-cv-ubI" firstAttribute="centerY" secondItem="lmi-68-jUw" secondAttribute="centerY" constant="-10" id="Xn7-60-Y61"/>
+                            <constraint firstItem="pwG-cv-ubI" firstAttribute="centerY" secondItem="lmi-68-jUw" secondAttribute="centerY" constant="10" id="Xn7-60-Y61"/>
                             <constraint firstItem="lTm-We-owY" firstAttribute="top" secondItem="pwG-cv-ubI" secondAttribute="bottom" constant="40" id="Ykf-cq-Mkr"/>
                             <constraint firstItem="iHk-ZY-uMy" firstAttribute="top" secondItem="YhM-rD-tc8" secondAttribute="bottom" constant="25" id="bwP-RK-raH"/>
                             <constraint firstItem="lTm-We-owY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="nPa-5h-nw3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lTm-We-owY" secondAttribute="trailing" constant="30" id="pZl-fm-mh3"/>
-                            <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-10" id="pyt-8r-99u"/>
+                            <constraint firstItem="pwG-cv-ubI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="pyt-8r-99u"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundTextField1" destination="lTm-We-owY" id="ad7-NW-iii"/>
-                        <outlet property="backgroundTextField2" destination="YhM-rD-tc8" id="ait-FL-dvV"/>
-                        <outlet property="backgroundTextField3" destination="iHk-ZY-uMy" id="zNy-D7-sDY"/>
-                        <outlet property="imageProfile" destination="pwG-cv-ubI" id="jY0-wp-aVx"/>
+                        <outlet property="changeDataButton" destination="lTm-We-owY" id="ad7-NW-iii"/>
+                        <outlet property="changePasswordButton" destination="YhM-rD-tc8" id="ait-FL-dvV"/>
+                        <outlet property="exitButton" destination="iHk-ZY-uMy" id="zNy-D7-sDY"/>
+                        <outlet property="profileImageView" destination="pwG-cv-ubI" id="jY0-wp-aVx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

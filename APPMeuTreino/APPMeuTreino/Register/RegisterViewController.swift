@@ -53,7 +53,14 @@ class RegisterViewController: UIViewController {
         editPhotoImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
     }
     
-    @IBAction func tappedEditImageButton(_ sender: Any) {
+    func configureImagePicker(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func tappedEditImageButton(_ sender: UIButton) {
         configureImagePicker()
     }
     
@@ -108,13 +115,6 @@ extension RegisterViewController: UITextFieldDelegate{
 }
 
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
-    func configureImagePicker(){
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
-    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[.editedImage] as? UIImage{

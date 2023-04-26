@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomExerciseSelectionCollectionViewCell" id="gTV-IL-0wX" customClass="ExerciseSelectionCollectionViewCell" customModule="APPMeuTreino" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExerciseSelectionCollectionViewCell" id="gTV-IL-0wX" customClass="ExerciseSelectionCollectionViewCell" customModule="APPMeuTreino" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -52,7 +52,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="tappedWeigthSelectionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Lee-z7-kCT"/>
+                                                    <action selector="tappedSelectionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Lee-z7-kCT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nde-9e-xzl">
@@ -64,7 +64,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="tappedWeigthSelectionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="fZG-Wr-k86"/>
+                                                    <action selector="tappedSelectionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="fZG-Wr-k86"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhL-DB-rJu">
@@ -76,7 +76,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="tappedWeigthSelectionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4DJ-pq-Bbt"/>
+                                                    <action selector="tappedSelectionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4DJ-pq-Bbt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -97,8 +97,8 @@
             </constraints>
             <size key="customSize" width="269" height="82"/>
             <connections>
+                <outlet property="exerciseLabel" destination="IDm-ep-8oS" id="qvg-rx-cVO"/>
                 <outlet property="exerciseSelecionImageView" destination="513-mR-Ivz" id="8SP-YM-hSS"/>
-                <outlet property="nameExercise" destination="IDm-ep-8oS" id="qvg-rx-cVO"/>
                 <outlet property="numberRepetitionsSelectionButton" destination="AhL-DB-rJu" id="h7N-zT-qQf"/>
                 <outlet property="numberSeriesSelectionButton" destination="nde-9e-xzl" id="jbH-tU-dKA"/>
                 <outlet property="weightSelectionButton" destination="hRu-UM-f4l" id="w7t-wT-9aC"/>

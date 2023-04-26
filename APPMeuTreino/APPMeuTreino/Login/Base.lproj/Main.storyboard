@@ -42,28 +42,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufv-Qe-cbg">
-                                <rect key="frame" x="21" y="352" width="333" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="dc2-9f-pNP"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="0.0"/>
-                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="email"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-Fu-yQq">
-                                <rect key="frame" x="21" y="402" width="333" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="8BQ-b7-11M"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="password"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0A4-WL-UiQ">
+                                <rect key="frame" x="21" y="352" width="333" height="85"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufv-Qe-cbg">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dc2-9f-pNP"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="0.0"/>
+                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-Fu-yQq">
+                                        <rect key="frame" x="0.0" y="50" width="333" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="8BQ-b7-11M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R57-8W-HzH">
                                 <rect key="frame" x="87.5" y="482" width="200" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Uk5-RY-YLo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Uk5-RY-YLo"/>
                                     <constraint firstAttribute="height" constant="40" id="hPT-Do-4eo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -79,7 +84,7 @@
                                 <rect key="frame" x="87.5" y="537" width="200" height="40"/>
                                 <color key="backgroundColor" name="BlueMeuTreino"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Yv6-D9-cfK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Yv6-D9-cfK"/>
                                     <constraint firstAttribute="height" constant="40" id="ivd-Td-8vm"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -92,11 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysO-Cg-VHM">
-                                <rect key="frame" x="171" y="447" width="194" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="Urx-TO-BCQ"/>
-                                    <constraint firstAttribute="height" constant="15" id="dKV-7b-Im6"/>
-                                </constraints>
+                                <rect key="frame" x="186" y="447" width="179" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Esqueci minha senha">
                                     <fontDescription key="titleFontDescription" name="Futura-Book" family="Futura-Book" pointSize="17"/>
@@ -124,28 +125,25 @@
                             <constraint firstItem="R57-8W-HzH" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="2ly-rO-nhK"/>
                             <constraint firstItem="hr0-cu-CAc" firstAttribute="leading" secondItem="HEH-8n-NM6" secondAttribute="leading" id="33S-J7-j3G"/>
                             <constraint firstItem="hr0-cu-CAc" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="3jS-i9-738"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ufv-Qe-cbg" secondAttribute="trailing" constant="5" id="Crd-sD-6gL"/>
-                            <constraint firstItem="ufv-Qe-cbg" firstAttribute="top" secondItem="unn-RW-uV6" secondAttribute="bottom" constant="5" id="Jfv-pT-Jc7"/>
-                            <constraint firstItem="ysO-Cg-VHM" firstAttribute="top" secondItem="QVn-Fu-yQq" secondAttribute="bottom" constant="10" id="N4a-5V-0iU"/>
-                            <constraint firstAttribute="trailing" secondItem="ysO-Cg-VHM" secondAttribute="trailing" constant="10" id="OIM-ef-xuN"/>
-                            <constraint firstItem="R57-8W-HzH" firstAttribute="top" secondItem="ysO-Cg-VHM" secondAttribute="bottom" constant="20" id="RHI-8W-qGE"/>
-                            <constraint firstItem="QVn-Fu-yQq" firstAttribute="leading" secondItem="HEH-8n-NM6" secondAttribute="leadingMargin" constant="5" id="USB-iw-CJa"/>
+                            <constraint firstItem="R57-8W-HzH" firstAttribute="top" secondItem="ysO-Cg-VHM" secondAttribute="bottom" constant="4" id="AtS-el-Z7f"/>
+                            <constraint firstItem="ysO-Cg-VHM" firstAttribute="top" secondItem="0A4-WL-UiQ" secondAttribute="bottom" constant="10" id="Bpg-uR-70p"/>
+                            <constraint firstItem="0A4-WL-UiQ" firstAttribute="top" secondItem="unn-RW-uV6" secondAttribute="bottom" constant="5" id="Pgp-iE-hVX"/>
                             <constraint firstAttribute="bottom" secondItem="hr0-cu-CAc" secondAttribute="bottom" id="XY4-xG-8jm"/>
                             <constraint firstItem="unn-RW-uV6" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="ZwF-m0-iHi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QVn-Fu-yQq" secondAttribute="trailing" constant="5" id="aDX-7t-f4N"/>
-                            <constraint firstItem="ufv-Qe-cbg" firstAttribute="leading" secondItem="HEH-8n-NM6" secondAttribute="leadingMargin" constant="5" id="aGw-z3-8XA"/>
-                            <constraint firstItem="QVn-Fu-yQq" firstAttribute="top" secondItem="ufv-Qe-cbg" secondAttribute="bottom" constant="15" id="f0g-zx-37B"/>
-                            <constraint firstItem="QVn-Fu-yQq" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="hNP-2Z-BAx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0A4-WL-UiQ" secondAttribute="trailing" constant="5" id="bYA-l2-fLa"/>
+                            <constraint firstAttribute="trailing" secondItem="ysO-Cg-VHM" secondAttribute="trailing" constant="10" id="dVk-gB-pFe"/>
                             <constraint firstItem="5as-40-9xC" firstAttribute="top" secondItem="R57-8W-HzH" secondAttribute="bottom" constant="15" id="iDq-IE-8eH"/>
                             <constraint firstItem="unn-RW-uV6" firstAttribute="top" secondItem="HEH-8n-NM6" secondAttribute="top" constant="109" id="iOS-WD-CBH"/>
                             <constraint firstItem="5as-40-9xC" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="iVc-Zu-OAR"/>
-                            <constraint firstItem="ufv-Qe-cbg" firstAttribute="centerX" secondItem="HEH-8n-NM6" secondAttribute="centerX" id="ug3-43-N5A"/>
+                            <constraint firstItem="ysO-Cg-VHM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HEH-8n-NM6" secondAttribute="leading" constant="186" id="n9C-1v-QC3"/>
+                            <constraint firstItem="0A4-WL-UiQ" firstAttribute="leading" secondItem="HEH-8n-NM6" secondAttribute="leadingMargin" constant="5" id="sRb-zd-uIY"/>
                             <constraint firstAttribute="trailing" secondItem="hr0-cu-CAc" secondAttribute="trailing" id="xZb-sy-xbu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hQg-6P-G6s"/>
                     <connections>
                         <outlet property="emailTextField" destination="ufv-Qe-cbg" id="mh6-38-2YM"/>
+                        <outlet property="forgotPasswordButton" destination="ysO-Cg-VHM" id="vif-sG-u4V"/>
                         <outlet property="loginButton" destination="R57-8W-HzH" id="a2g-Gq-m35"/>
                         <outlet property="logoImageView" destination="unn-RW-uV6" id="454-L8-TIy"/>
                         <outlet property="passwordTextField" destination="QVn-Fu-yQq" id="YZV-at-446"/>

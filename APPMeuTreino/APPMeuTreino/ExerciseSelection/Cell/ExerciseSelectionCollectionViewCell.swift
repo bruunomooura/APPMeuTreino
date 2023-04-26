@@ -1,5 +1,5 @@
 //
-//  CustomExerciseSelectionCollectionViewCell.swift
+//  ExerciseSelectionCollectionViewCell.swift
 //  APPMeuTreino
 //
 //  Created by Bruno Moura on 24/03/23.
@@ -16,10 +16,12 @@ class ExerciseSelectionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var weightSelectionButton: UIButton!
     @IBOutlet weak var numberSeriesSelectionButton: UIButton!
     @IBOutlet weak var numberRepetitionsSelectionButton: UIButton!
-    @IBOutlet weak var nameExercise: UILabel!
+    @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var exerciseSelecionImageView: UIImageView!
+    
            
-    private var delegate:ExerciseSelectionCollectionViewCellProtocol?
+    private var delegate: ExerciseSelectionCollectionViewCellProtocol?
+    
     func delegate(delegate:ExerciseSelectionCollectionViewCellProtocol){
         self.delegate = delegate
     }
@@ -44,12 +46,10 @@ class ExerciseSelectionCollectionViewCell: UICollectionViewCell {
     
     func setupCell(exercise: Exercise) {
         exerciseSelecionImageView.image = UIImage(named: exercise.exerciseImage)
-        nameExercise.text = exercise.exerciseName
+        exerciseLabel.text = exercise.exerciseName
     }
 
-    @IBAction func tappedWeigthSelectionButton(_ sender: UIButton) {
+    @IBAction func tappedSelectionButton(_ sender: UIButton) {
         delegate?.addExerciseInformations(name: sender.titleLabel?.text ?? "")
     }
 }
-
-

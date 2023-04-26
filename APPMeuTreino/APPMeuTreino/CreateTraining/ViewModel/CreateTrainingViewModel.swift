@@ -9,14 +9,22 @@ import Foundation
 
 class CreateTrainingViewModel {
     
-    private var workoutList: [Workout] = [Workout(exerciseImage: "Abdominais"), Workout(exerciseImage: "Aeróbico"), Workout(exerciseImage: "Bíceps"), Workout(exerciseImage: "CostasOmbros"), Workout(exerciseImage: "MembrosInferiores"), Workout(exerciseImage: "Peito"), Workout(exerciseImage: "Triceps")]
+    private var exerciseTypeList: [ExerciseType] = [
+        ExerciseType(exerciseTypeImage: "Abdominais"),
+        ExerciseType(exerciseTypeImage: "Aeróbico"),
+        ExerciseType(exerciseTypeImage: "Bíceps"),
+        ExerciseType(exerciseTypeImage: "CostasOmbros"),
+        ExerciseType(exerciseTypeImage: "MembrosInferiores"),
+        ExerciseType(exerciseTypeImage: "Peito"),
+        ExerciseType(exerciseTypeImage: "Triceps")
+    ]
     
-    func getWorkout(index: Int) -> Workout {
-        return workoutList[index]
+    func getExerciseType(index: Int) -> ExerciseType {
+        return exerciseTypeList[index]
     }
     
     var arraySize: Int {
-        return workoutList.count
+        return exerciseTypeList.count
     }
 }
 

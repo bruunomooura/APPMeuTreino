@@ -13,16 +13,23 @@ protocol ExerciseSelectionViewControllerProtocol: AnyObject {
 
 class ExerciseSelectionViewController: UIViewController {
     
+    @IBOutlet weak var exerciseTypeLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var selectedExercisesTypesButton: UIButton!
     @IBOutlet weak var exerciseSelectionCollectionView: UICollectionView!
+    @IBOutlet weak var backButtonImageView: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
     
     private var viewModel: ExerciseSelecionViewModel = ExerciseSelecionViewModel()
 
     private var selectedExerciseCount = 0 {
-        
         didSet {
-            let title = "\(selectedExerciseCount) Exercício(s) selecionado(s)"
+            var title = ""
+            if selectedExerciseCount == 0{
+                title = ""
+            }else{
+                title = "\(selectedExerciseCount) Exercício(s) selecionado(s)"
+            }
             selectedExercisesTypesButton.setTitle(title, for: .normal)
             selectedExercisesTypesButton.titleLabel?.font = UIFont(name: "Didot", size: 18)
         }
@@ -42,18 +49,17 @@ class ExerciseSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configExerciseSelectionCollectionView()
+        configExerciseSelectionView()
     }
     
-    func configExerciseSelectionCollectionView() {
+    func configExerciseSelectionView() {
+        addButton.layer.cornerRadius = 10
+        addButton.isEnabled = false
         
         exerciseSelectionCollectionView.allowsMultipleSelection = true
         exerciseSelectionCollectionView.delegate = self
         exerciseSelectionCollectionView.dataSource = self
         exerciseSelectionCollectionView.register(ExerciseSelectionCollectionViewCell.nib(), forCellWithReuseIdentifier: ExerciseSelectionCollectionViewCell.identifier)
-        
-        addButton.layer.cornerRadius = 10
-        addButton.isEnabled = false
         
         if let layout = exerciseSelectionCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
@@ -73,10 +79,9 @@ class ExerciseSelectionViewController: UIViewController {
         delegate?.transferExerciseSelected(quantity: selectedExerciseCount)
         dismiss(animated: true)
     }
-    
 }
 
-extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.arraySize
@@ -84,17 +89,15 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExerciseSelectionCollectionViewCell.identifier, for: indexPath) as! ExerciseSelectionCollectionViewCell
-        cell.delegate(delegate: self)
         cell.setupCell(exercise: viewModel.getExercise(index: indexPath.row))
+        cell.delegate(delegate: self)
         if SelectedCells.contains(indexPath) {
             cell.backgroundColor = UIColor(named: "OrangeMeuTreino")
             isCellSelected = true
-
         } else {
             cell.backgroundColor = .white
             isCellSelected = false
         }
-        
         cell.numberSeriesSelectionButton.isEnabled = isCellSelected
         cell.numberRepetitionsSelectionButton.isEnabled = isCellSelected
         cell.weightSelectionButton.isEnabled = isCellSelected
@@ -105,11 +108,6 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
         cell.layer.shadowOpacity = 0.7
         cell.layer.masksToBounds = false
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(view.frame.width)
-        return CGSize(width:view.frame.width - 20, height: view.frame.width/3)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -143,6 +141,13 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
         } else {
             addButton.isEnabled = true
         }
+    }
+}
+
+extension ExerciseSelectionViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        print(view.frame.width)
+        return CGSize(width:view.frame.width - 20, height: view.frame.width/3)
     }
 }
 

@@ -9,6 +9,7 @@ import UIKit
 
 class ExecutionTrainingViewController: UIViewController {
     
+    @IBOutlet weak var trainingLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var finishButton: UIButton!
@@ -17,47 +18,44 @@ class ExecutionTrainingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCollectionView()
+        configureExecutionTrainingView()
     }
     
-    func configureCollectionView(){
+    func configureExecutionTrainingView(){
+        finishButton.layer.cornerRadius = 10
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(ExecutionTainingCollectionViewCell.nib(), forCellWithReuseIdentifier: ExecutionTainingCollectionViewCell.identifier)
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.estimatedItemSize = .zero
-        collectionView.collectionViewLayout = layout
+        collectionView.register(ExecutionTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: ExecutionTrainingCollectionViewCell.identifier)
         
-        finishButton.layer.cornerRadius = 10
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .vertical
+            layout.estimatedItemSize = .zero
+        }
+  
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
         dismiss(animated: true)
     }
     
-    @IBAction func tappedFinishTrainingButton(_ sender: UIButton) {
+    @IBAction func tappedFinishButton(_ sender: UIButton) {
         let vc: TrainingConclusionViewController? = UIStoryboard(name: String(describing: TrainingConclusionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TrainingConclusionViewController.self)) as? TrainingConclusionViewController
         present(vc ?? UIViewController(), animated: true)
     }
 }
 
-extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExecutionTainingCollectionViewCell.identifier, for: indexPath) as? ExecutionTainingCollectionViewCell{
-            cell.configureCell(exercise: vielModel.getExercise(index: indexPath.row))
-            cell.delegate(delegate: self)
-            return cell
-        }
-        return UICollectionViewCell()
-    }
+extension ExecutionTrainingViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return vielModel.arraySize
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.width/3)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExecutionTrainingCollectionViewCell.identifier, for: indexPath) as? ExecutionTrainingCollectionViewCell
+        cell?.setupCell(exercise: vielModel.getExercise(index: indexPath.row))
+        cell?.delegate(delegate: self)
+            return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -68,7 +66,15 @@ extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectio
     }
 }
 
-extension ExecutionTrainingViewController: ExecutionTainingCollectionViewCellProtocol{
+extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: view.frame.width/3)
+    }
+
+}
+
+extension ExecutionTrainingViewController: ExecutionTrainingCollectionViewCellProtocol{
+    
     func addExerciseInformation(name: String) {
         if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController{
             vc.name = name

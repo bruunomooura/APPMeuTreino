@@ -9,37 +9,33 @@ import UIKit
 
 class SettingsViewController: UIViewController {
   
-    @IBOutlet weak var imageProfile: UIImageView!
-    @IBOutlet weak var backgroundTextField1: UIButton!
-    @IBOutlet weak var backgroundTextField2: UIButton!
-    @IBOutlet weak var backgroundTextField3: UIButton!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
-    }
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var changeDataButton: UIButton!
+    @IBOutlet weak var changePasswordButton: UIButton!
+    @IBOutlet weak var exitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configSettingsView()
     }
     
-    func configSettingsView() {
-        imageProfile.layer.borderWidth = 2
-        imageProfile.layer.masksToBounds = false
-        imageProfile.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
-        imageProfile.layer.cornerRadius = imageProfile.frame.height/2
-        imageProfile.clipsToBounds = true
-        
-        backgroundTextField1.layer.cornerRadius = 8
-        backgroundTextField2.layer.cornerRadius = 8
-        backgroundTextField3.layer.cornerRadius = 8
-    }
- 
-    @IBAction func tappedExitButton(_ sender: UIButton) {
-        tabBarController?.navigationController?.popToRootViewController(animated: true)
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
-    @IBAction func tappedDataChangeButton(_ sender: UIButton) {
+    func configSettingsView() {
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.clipsToBounds = true
+        
+        changeDataButton.layer.cornerRadius = 8
+        changePasswordButton.layer.cornerRadius = 8
+        exitButton.layer.cornerRadius = 8
+    }
+ 
+    @IBAction func tappedChangeDataButton(_ sender: UIButton) {
         let vc: DataChangeViewController? = UIStoryboard(name: String(describing: DataChangeViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataChangeViewController.self)) as? DataChangeViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
@@ -47,5 +43,9 @@ class SettingsViewController: UIViewController {
     @IBAction func tappedChangePasswordButton(_ sender: UIButton) {
         let vc: ChangePasswordViewController? = UIStoryboard(name: String(describing: ChangePasswordViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ChangePasswordViewController.self)) as? ChangePasswordViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+   
+    @IBAction func tappedExitButton(_ sender: UIButton) {
+        tabBarController?.navigationController?.popToRootViewController(animated: true)
     }
 }

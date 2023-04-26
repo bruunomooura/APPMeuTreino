@@ -1,5 +1,5 @@
 //
-//  CollectionExecutionTainingViewCell.swift
+//  CollectionExecutionTrainingViewCell.swift
 //  APPMeuTreino
 //
 //  Created by Leonardo Lacerda on 27/03/23.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol ExecutionTainingCollectionViewCellProtocol: AnyObject {
+protocol ExecutionTrainingCollectionViewCellProtocol: AnyObject {
     func addExerciseInformation(name: String)
 }
 
-class ExecutionTainingCollectionViewCell: UICollectionViewCell {
+class ExecutionTrainingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var exerciseImageView: UIImageView!
     @IBOutlet weak var checkMarkButton: UIButton!
     @IBOutlet weak var weightButton: UIButton!
@@ -21,14 +21,15 @@ class ExecutionTainingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var repsButton: UIButton!
     @IBOutlet weak var exerciseView: UIView!
     
-    private var delegate:ExecutionTainingCollectionViewCellProtocol?
-    func delegate(delegate:ExecutionTainingCollectionViewCellProtocol){
+    var isButtonSelected: Bool = false
+    
+    private var delegate: ExecutionTrainingCollectionViewCellProtocol?
+    
+    func delegate(delegate:ExecutionTrainingCollectionViewCellProtocol){
         self.delegate = delegate
     }
     
-    static let identifier: String = String(describing: ExecutionTainingCollectionViewCell.self)
-    
-    var isButtonSelected: Bool = false
+    static let identifier: String = String(describing: ExecutionTrainingCollectionViewCell.self)
     
     static func nib()-> UINib{
         return UINib(nibName: identifier, bundle: nil)
@@ -36,11 +37,10 @@ class ExecutionTainingCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configExecutionTainingView()
-        
+        configExecutionTrainingView()
     }
     
-    func configExecutionTainingView() {
+    func configExecutionTrainingView() {
         exerciseImageView.contentMode = .scaleAspectFill
         
         weightButton.layer.cornerRadius = 10
@@ -57,8 +57,8 @@ class ExecutionTainingCollectionViewCell: UICollectionViewCell {
         exerciseView.layer.masksToBounds = false
     }
     
-    func configureCell(exercise: Exercise) {
-        label.text = exercise.exerciseName
+    func setupCell(exercise: Exercise) {
+        exerciseLabel.text = exercise.exerciseName
         exerciseImageView.image = UIImage(named: exercise.exerciseImage)
     }
     

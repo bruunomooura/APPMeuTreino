@@ -49,6 +49,10 @@ class NameTrainingViewController: UIViewController {
 
 extension NameTrainingViewController: UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTrainingTextField.resignFirstResponder()
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.hasText == true {
             textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
@@ -61,9 +65,5 @@ extension NameTrainingViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        nameTrainingTextField.resignFirstResponder()
     }
 }

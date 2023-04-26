@@ -9,9 +9,10 @@ import UIKit
 
 class DataChangeViewController: UIViewController {
 
-    @IBOutlet weak var alteracaodedadosLabel: UILabel!
-    @IBOutlet weak var imageProfile: UIImageView!
-    @IBOutlet weak var fullnameTextField: UITextField!
+    @IBOutlet weak var dataChangeLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
@@ -20,45 +21,44 @@ class DataChangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configDataChangeView()
-        self.fullnameTextField.delegate = self
-        self.birthdayTextField.delegate = self
-        self.emailTextField.delegate = self
+    }
+    
+    func configTextField(textField: UITextField){
+        textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        textField.layer.borderWidth = 2
+        textField.layer.cornerRadius = 10
+        textField.clipsToBounds = true
+        textField.delegate = self
     }
     
     func configDataChangeView() {
-        imageProfile.layer.borderWidth = 2
-        imageProfile.layer.masksToBounds = false
-        imageProfile.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
-        imageProfile.layer.cornerRadius = imageProfile.frame.size.height/2
-        imageProfile.clipsToBounds = true
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
+        profileImageView.clipsToBounds = true
         
         saveButton.layer.cornerRadius = 10
+        saveButton.isEnabled = false
         
-        fullnameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        fullnameTextField.layer.borderWidth = 2
-        fullnameTextField.layer.cornerRadius = 10
-        fullnameTextField.clipsToBounds = true
-
-        birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        birthdayTextField.layer.borderWidth = 2
-        birthdayTextField.layer.cornerRadius = 10
-        birthdayTextField.clipsToBounds = true
-        
-        emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        emailTextField.layer.borderWidth = 2
-        emailTextField.layer.cornerRadius = 10
-        emailTextField.clipsToBounds = true
+        configTextField(textField: nameTextField)
+        configTextField(textField: birthdayTextField)
+        configTextField(textField: emailTextField)
     }
-   
-    @IBAction func editimageButton(_ sender: Any) {
+    
+    func configureImagePicker(){
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
-            present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil)
     }
-    
+   
     @IBAction func tappedBackButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func tappedEditButton(_ sender: UIButton) {
+        configureImagePicker()
     }
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
@@ -66,22 +66,10 @@ class DataChangeViewController: UIViewController {
     }
 }
 
-extension DataChangeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let editedImage = info[.editedImage] as? UIImage {
-        // Define a imagem selecionada na sua ImageView
-            imageProfile.image = editedImage
-        } else if let originalImage = info[.originalImage] as? UIImage {
-        // Define a imagem original na sua ImageView (caso o usuário não tenha editado a imagem)
-            imageProfile.image = originalImage
-        }
-        // Fecha o ImagePickerController
-        picker.dismiss(animated: true, completion: nil)
-    }
-
+extension DataChangeViewController: UITextFieldDelegate{
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == fullnameTextField{
+        if textField == nameTextField{
             birthdayTextField.becomeFirstResponder()
         }else if textField == birthdayTextField{
             emailTextField.becomeFirstResponder()
@@ -91,7 +79,36 @@ extension DataChangeViewController: UIImagePickerControllerDelegate, UINavigatio
         return true
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText{
+            nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            saveButton.isEnabled = true
+        }else{
+            saveButton.isEnabled = false
+            if textField.hasText{
+                textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            }else{
+                textField.layer.borderColor = UIColor.red.cgColor
+            }
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+}
+
+extension DataChangeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            profileImageView.image = editedImage
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            profileImageView.image = originalImage
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
 }

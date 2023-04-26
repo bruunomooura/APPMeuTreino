@@ -15,7 +15,7 @@ class CreateTrainingViewController: UIViewController {
     @IBOutlet weak var createTrainingCollectionView: UICollectionView!
     @IBOutlet weak var searchExerciseSearchBar: UISearchBar!
     
-    private let ViewModel: CreateTrainingViewModel = CreateTrainingViewModel()
+    private let viewModel: CreateTrainingViewModel = CreateTrainingViewModel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class CreateTrainingViewController: UIViewController {
     }
     
     func configCreateTrainingView(){
+        finishButton.layer.cornerRadius = 10
         finishButton.isEnabled = false
     
         searchExerciseSearchBar.delegate = self
@@ -30,7 +31,7 @@ class CreateTrainingViewController: UIViewController {
 
         createTrainingCollectionView.delegate = self
         createTrainingCollectionView.dataSource = self
-        createTrainingCollectionView.register(CustomCreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier)
+        createTrainingCollectionView.register(CreateTrainingCollectionViewCell.nib(), forCellWithReuseIdentifier: CreateTrainingCollectionViewCell.identifier)
         
         if let layout = createTrainingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .vertical
@@ -39,7 +40,6 @@ class CreateTrainingViewController: UIViewController {
             layout.minimumInteritemSpacing = 10
             layout.minimumLineSpacing = 10
             layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            finishButton.layer.cornerRadius = 10
         }
     }
     
@@ -55,20 +55,28 @@ class CreateTrainingViewController: UIViewController {
     }
 }
 
-extension CreateTrainingViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+extension CreateTrainingViewController: UISearchBarDelegate{
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchExerciseSearchBar.resignFirstResponder()
+        searchExerciseSearchBar.isHidden = false
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
+
+extension CreateTrainingViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ViewModel.arraySize
+        return viewModel.arraySize
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCreateTrainingCollectionViewCell.identifier, for: indexPath) as? CustomCreateTrainingCollectionViewCell
-        cell?.setupCell(workout: ViewModel.getWorkout(index: indexPath.row))
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTrainingCollectionViewCell.identifier, for: indexPath) as? CreateTrainingCollectionViewCell
+        cell?.setupCell(exerciseType: viewModel.getExerciseType(index: indexPath.row))
         return cell ?? UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:(view.frame.size.width - 30)/2, height: (view.frame.size.width - 30)/2)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -78,14 +86,12 @@ extension CreateTrainingViewController: UICollectionViewDataSource, UICollection
             present(vc, animated: true)
         }
     }
+}
+
+extension CreateTrainingViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchExerciseSearchBar.resignFirstResponder() //Esconde o teclado
-        searchExerciseSearchBar.isHidden = false //Oculta a SearchBar
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width:(view.frame.size.width - 30)/2, height: (view.frame.size.width - 30)/2)
     }
 }
 

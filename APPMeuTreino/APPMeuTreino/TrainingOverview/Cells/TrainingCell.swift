@@ -37,7 +37,6 @@ class TrainingCell: UITableViewCell {
     
     func setupCell(training: Training){
         nameTrainingLabel.text = training.nameTraining
-        numberOfExerciseLabel.text = "\(training.numberOfExercise) exercícios"
+        numberOfExerciseLabel.text = "(\(training.numberOfExercise) exercícios)"
     }
-    
 }
