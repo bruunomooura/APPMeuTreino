@@ -66,18 +66,24 @@ extension ChangePasswordViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if passwordTextField.hasText && newPasswordTextField.hasText && confirmPasswordTextField.hasText{
-            passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            newPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            saveButton.isEnabled = true
-        }else{
-            saveButton.isEnabled = false
-            if textField.hasText{
-                textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        if newPasswordTextField.text == confirmPasswordTextField.text {
+        passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        newPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        saveButton.isEnabled = true
+            } else {
+        saveButton.isEnabled = false
+        newPasswordTextField.layer.borderColor = UIColor.red.cgColor
+        confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
+                }
+            } else{
+        saveButton.isEnabled = false
+        if textField.hasText{
+            textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             }else{
-                textField.layer.borderColor = UIColor.red.cgColor
+            textField.layer.borderColor = UIColor.red.cgColor
+                }
             }
-        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
