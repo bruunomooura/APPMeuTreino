@@ -44,6 +44,7 @@ class DataChangeViewController: UIViewController {
         configTextField(textField: nameTextField)
         configTextField(textField: birthdayTextField)
         configTextField(textField: emailTextField)
+        
     }
     
     func configureImagePicker(){
@@ -59,6 +60,7 @@ class DataChangeViewController: UIViewController {
     
     @IBAction func tappedEditButton(_ sender: UIButton) {
         configureImagePicker()
+        saveButton.isEnabled = true
     }
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
@@ -80,20 +82,23 @@ extension DataChangeViewController: UITextFieldDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText{
+        if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText {
             nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
             saveButton.isEnabled = true
-        }else{
+        } else if editButton.isHighlighted {
+            saveButton.isEnabled = true
+        } else {
             saveButton.isEnabled = false
             if textField.hasText{
                 textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            }else{
+            } else {
                 textField.layer.borderColor = UIColor.red.cgColor
             }
         }
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
