@@ -40,8 +40,6 @@ class ExerciseSelectionViewController: UIViewController {
     public func delegate (delegate: ExerciseSelectionViewControllerProtocol?) {
         self.delegate = delegate
     }
-
-    var itemSelected = false
     
     private var isCellSelected = false
 
