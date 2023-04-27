@@ -325,7 +325,7 @@
 		3F6448FB29BA6B8F00BDE579 /* ExerciseSelection */ = {
 			isa = PBXGroup;
 			children = (
-				3FB6EEBA29CC77D100CE272A /* DataExerciseCollection */,
+				3FB6EEBA29CC77D100CE272A /* DataExerciseViewModal */,
 				3FE59D1E29C7A824008F8632 /* Cell */,
 				3FA053FF29F457CE0097BA6E /* View */,
 				3FA053FC29F4537F0097BA6E /* ExerciseSelectionViewModel */,
@@ -435,13 +435,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3FB6EEBA29CC77D100CE272A /* DataExerciseCollection */ = {
+		3FB6EEBA29CC77D100CE272A /* DataExerciseViewModal */ = {
 			isa = PBXGroup;
 			children = (
 				3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */,
 				3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */,
 			);
-			name = DataExerciseCollection;
+			name = DataExerciseViewModal;
 			sourceTree = "<group>";
 		};
 		3FE59D1E29C7A824008F8632 /* Cell */ = {
