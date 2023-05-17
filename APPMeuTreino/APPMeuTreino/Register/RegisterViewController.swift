@@ -8,6 +8,10 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    private var viewModel: RegisterViewModel = RegisterViewModel()
+    //private weak var delegate: RegisterViewModelProtocol
+    
 
     @IBOutlet weak var editPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -27,6 +31,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configRegisterView()
+        //RegisterViewModel.delegate(delegate: self)
     }
     
     func configTextField(textField: UITextField){
@@ -69,7 +74,8 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+//        navigationController?.popViewController(animated: true)
+        viewModel.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
 }
 
@@ -125,3 +131,14 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
 }
+//extension RegisterViewController: RegisterViewModelProtocol {
+//    func sucessRegister() {
+//        <#code#>
+//    }
+//
+//    func errorRegister(errorMessage: String) {
+//        <#code#>
+//    }
+//
+//
+//}

@@ -63,6 +63,12 @@
 		CB0158AD29D461C90083D418 /* TrainingConclusionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0158AC29D461C90083D418 /* TrainingConclusionViewController.swift */; };
 		CB0158AF29D461D90083D418 /* TrainingConclusionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0158AE29D461D90083D418 /* TrainingConclusionViewController.storyboard */; };
 		CB154A8E29F45F90007FC081 /* CreateTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB154A8D29F45F90007FC081 /* CreateTrainingViewModel.swift */; };
+		CB1654C02A15547F00E091D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB1654BF2A15547F00E091D6 /* GoogleService-Info.plist */; };
+		CB1654C32A1555CC00E091D6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CB1654C22A1555CC00E091D6 /* FirebaseAuth */; };
+		CB1654C52A1555CC00E091D6 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CB1654C42A1555CC00E091D6 /* FirebaseCrashlytics */; };
+		CB1654C82A15590A00E091D6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1654C72A15590A00E091D6 /* LoginViewModel.swift */; };
+		CB1654CB2A15639F00E091D6 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1654CA2A15639F00E091D6 /* Alert.swift */; };
+		CB1654CE2A15671700E091D6 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1654CD2A15671700E091D6 /* RegisterViewModel.swift */; };
 		CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */; };
 		CBE2F74629D0D54B0070A70F /* NameTrainingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -145,6 +151,10 @@
 		CB0158AC29D461C90083D418 /* TrainingConclusionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingConclusionViewController.swift; sourceTree = "<group>"; };
 		CB0158AE29D461D90083D418 /* TrainingConclusionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingConclusionViewController.storyboard; sourceTree = "<group>"; };
 		CB154A8D29F45F90007FC081 /* CreateTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingViewModel.swift; sourceTree = "<group>"; };
+		CB1654BF2A15547F00E091D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB1654C72A15590A00E091D6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CB1654CA2A15639F00E091D6 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CB1654CD2A15671700E091D6 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CBE2F74329D0D53A0070A70F /* NameTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTrainingViewController.swift; sourceTree = "<group>"; };
 		CBE2F74529D0D54B0070A70F /* NameTrainingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameTrainingViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +164,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1654C32A1555CC00E091D6 /* FirebaseAuth in Frameworks */,
+				CB1654C52A1555CC00E091D6 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +244,7 @@
 		3F6448B929BA61F100BDE579 /* APPMeuTreino */ = {
 			isa = PBXGroup;
 			children = (
+				CB1654C92A15638600E091D6 /* Alert */,
 				3FA053F929F4524F0097BA6E /* Model */,
 				3F6448ED29BA65AA00BDE579 /* Login */,
 				3F6448F329BA686200BDE579 /* ForgotPassword */,
@@ -254,6 +267,7 @@
 				3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */,
 				3F6448CB29BA61F300BDE579 /* Info.plist */,
 				3F6448C329BA61F100BDE579 /* APPMeuTreino.xcdatamodeld */,
+				CB1654BF2A15547F00E091D6 /* GoogleService-Info.plist */,
 			);
 			path = APPMeuTreino;
 			sourceTree = "<group>";
@@ -278,6 +292,7 @@
 		3F6448ED29BA65AA00BDE579 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CB1654C62A1558DF00E091D6 /* ViewModel */,
 				3F6448BE29BA61F100BDE579 /* ViewController.swift */,
 				3F6448C029BA61F100BDE579 /* Main.storyboard */,
 			);
@@ -296,6 +311,7 @@
 		3F6448F429BA68EC00BDE579 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				CB1654CC2A15670000E091D6 /* ViewModel */,
 				3F64490E29BA714400BDE579 /* RegisterViewController.swift */,
 				3F64491029BA714D00BDE579 /* RegisterViewController.storyboard */,
 			);
@@ -505,6 +521,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CB1654C62A1558DF00E091D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB1654C72A15590A00E091D6 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB1654C92A15638600E091D6 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				CB1654CA2A15639F00E091D6 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		CB1654CC2A15670000E091D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB1654CD2A15671700E091D6 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CBD70DC829D0C52C00C5F1D2 /* NameTrainingViewModal */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +570,10 @@
 			dependencies = (
 			);
 			name = APPMeuTreino;
+			packageProductDependencies = (
+				CB1654C22A1555CC00E091D6 /* FirebaseAuth */,
+				CB1654C42A1555CC00E091D6 /* FirebaseCrashlytics */,
+			);
 			productName = APPMeuTreino;
 			productReference = 3F6448B729BA61F100BDE579 /* APPMeuTreino.app */;
 			productType = "com.apple.product-type.application";
@@ -602,6 +646,9 @@
 				Base,
 			);
 			mainGroup = 3F6448AE29BA61F100BDE579;
+			packageReferences = (
+				CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3F6448B829BA61F100BDE579 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -620,6 +667,7 @@
 			files = (
 				3FE59D1D29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib in Resources */,
 				3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */,
+				CB1654C02A15547F00E091D6 /* GoogleService-Info.plist in Resources */,
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
 				3FAFD71929CE188B002D9563 /* ExerciseSelectionCollectionViewCell.xib in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
@@ -675,6 +723,7 @@
 				3F64493929BA73B600BDE579 /* DataChangeViewController.swift in Sources */,
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
 				88289D6229F4703300CC4258 /* ExecutionTrainingVielModel.swift in Sources */,
+				CB1654CE2A15671700E091D6 /* RegisterViewModel.swift in Sources */,
 				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
 				38C672FC29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift in Sources */,
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
@@ -686,6 +735,7 @@
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
 				3FAFD71829CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift in Sources */,
 				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
+				CB1654C82A15590A00E091D6 /* LoginViewModel.swift in Sources */,
 				3FA053FE29F453D80097BA6E /* ExerciseSelectionViewModel.swift in Sources */,
 				38C672F829F84CE8008F8DA3 /* Training.swift in Sources */,
 				3F056A0729C74A8000BF1B41 /* CreateTrainingCollectionViewCell.swift in Sources */,
@@ -695,6 +745,7 @@
 				3F64490B29BA710A00BDE579 /* ForgotPasswordViewController.swift in Sources */,
 				CB0158AD29D461C90083D418 /* TrainingConclusionViewController.swift in Sources */,
 				3F6448C529BA61F100BDE579 /* APPMeuTreino.xcdatamodeld in Sources */,
+				CB1654CB2A15639F00E091D6 /* Alert.swift in Sources */,
 				3F64492929BA734200BDE579 /* ExecutionTrainingViewController.swift in Sources */,
 				3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */,
 			);
@@ -873,7 +924,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZJ6WN3W475;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Meu Treino";
@@ -888,7 +939,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LeoLacerda.APPMeuTreino;
+				PRODUCT_BUNDLE_IDENTIFIER = APPMeuTreino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -903,7 +954,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZJ6WN3W475;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = APPMeuTreino/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Meu Treino";
@@ -918,7 +969,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LeoLacerda.APPMeuTreino;
+				PRODUCT_BUNDLE_IDENTIFIER = APPMeuTreino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1038,6 +1089,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB1654C22A1555CC00E091D6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CB1654C42A1555CC00E091D6 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3F6448C329BA61F100BDE579 /* APPMeuTreino.xcdatamodeld */ = {

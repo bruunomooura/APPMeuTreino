@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private var viewModel: LoginViewModel = LoginViewModel()
+    
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
@@ -19,6 +21,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configLoginView()
+        viewModel.delegate(delegate: self)
+        emailTextField.text = "bernardoguimaraes621@gmail.com"
+        passwordTextField.text = "123456"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,8 +51,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        print("Chegou na VC")
+        
+//        let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
+//        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        viewModel.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     
     @IBAction func tappedSignupButton(_ sender: UIButton) {
@@ -91,4 +99,16 @@ extension ViewController: UITextFieldDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+}
+extension ViewController: LoginViewModelProtocol {
+    func sucessLogin() {
+        let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
+                navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
+    func errorLogin(errorMessage: String) {
+        Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+    }
+    
+    
 }
