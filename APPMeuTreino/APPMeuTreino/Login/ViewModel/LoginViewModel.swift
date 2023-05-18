@@ -26,10 +26,8 @@ class LoginViewModel {
     public func login(email: String, password: String) {
         auth.signIn(withEmail: email, password: password) { authResult, error in
             if error == nil {
-                print("Sucesso login")
                 self.delegate?.sucessLogin()
             }else {
-                print("Error login, error: \(error?.localizedDescription ?? "")")
                 self.delegate?.errorLogin(errorMessage: error?.localizedDescription ?? "")
             }
         }

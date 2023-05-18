@@ -10,9 +10,7 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     private var viewModel: RegisterViewModel = RegisterViewModel()
-    //private weak var delegate: RegisterViewModelProtocol
     
-
     @IBOutlet weak var editPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -31,7 +29,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configRegisterView()
-        //RegisterViewModel.delegate(delegate: self)
+        viewModel.delegate(delegate: self)
+        
     }
     
     func configTextField(textField: UITextField){
@@ -49,7 +48,7 @@ class RegisterViewController: UIViewController {
         configTextField(textField: emailTextField)
         configTextField(textField: passwordTextField)
         configTextField(textField: confirmPasswordTextField)
-
+        
         signUpConfirmButton.layer.cornerRadius = 10
         signUpConfirmButton.isEnabled = false
         
@@ -74,7 +73,6 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
-//        navigationController?.popViewController(animated: true)
         viewModel.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
 }
@@ -131,14 +129,14 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
 }
-//extension RegisterViewController: RegisterViewModelProtocol {
-//    func sucessRegister() {
-//        <#code#>
-//    }
-//
-//    func errorRegister(errorMessage: String) {
-//        <#code#>
-//    }
-//
-//
-//}
+
+extension RegisterViewController: RegisterViewModelProtocol {
+    func sucessRegister() {
+        let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
+    func errorRegister(errorMessage: String) {
+        Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+    }
+}

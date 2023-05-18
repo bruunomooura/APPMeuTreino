@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configLoginView()
         viewModel.delegate(delegate: self)
-        emailTextField.text = "bernardoguimaraes621@gmail.com"
-        passwordTextField.text = "123456"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,10 +49,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        print("Chegou na VC")
-        
-//        let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
-//        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
         viewModel.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     
