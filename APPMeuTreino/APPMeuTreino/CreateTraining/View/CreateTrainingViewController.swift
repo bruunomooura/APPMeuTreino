@@ -20,6 +20,7 @@ class CreateTrainingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configCreateTrainingView()
+        viewModel.fetchAllRequest()
     }
     
     func configCreateTrainingView(){

@@ -45,7 +45,7 @@ class ExerciseSelectionCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCell(exercise: Exercise) {
-        exerciseSelecionImageView.image = UIImage(named: exercise.exerciseImage)
+        exerciseSelecionImageView.image = UIImage(named: exercise.exerciseImage ?? "")
         exerciseLabel.text = exercise.exerciseName
     }
 

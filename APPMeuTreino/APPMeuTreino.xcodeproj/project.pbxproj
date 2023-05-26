@@ -55,7 +55,16 @@
 		3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */; };
 		3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */; };
-		88289D6229F4703300CC4258 /* ExecutionTrainingVielModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88289D6129F4703300CC4258 /* ExecutionTrainingVielModel.swift */; };
+		88289D6229F4703300CC4258 /* ExecutionTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */; };
+		88BDAB222A213AE60035B125 /* ExecutionTrainingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */; };
+		88BDAB232A213AE60035B125 /* ExerciseSelectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */; };
+		88BDAB242A213AE60035B125 /* CreateTrainingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB212A213AE50035B125 /* CreateTrainingService.swift */; };
+		88BDAB292A213B0C0035B125 /* ExerciseSelectionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 88BDAB262A213B0C0035B125 /* ExerciseSelectionData.json */; };
+		88BDAB2A2A213B0C0035B125 /* ExecutionTrainingData.json in Resources */ = {isa = PBXBuildFile; fileRef = 88BDAB272A213B0C0035B125 /* ExecutionTrainingData.json */; };
+		88BDAB2B2A213B0C0035B125 /* CreateTrainingData.json in Resources */ = {isa = PBXBuildFile; fileRef = 88BDAB282A213B0C0035B125 /* CreateTrainingData.json */; };
+		88BDAB2F2A213B340035B125 /* ExecutionTrainingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB2C2A213B340035B125 /* ExecutionTrainingData.swift */; };
+		88BDAB302A213B340035B125 /* ExerciseSelectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB2D2A213B340035B125 /* ExerciseSelectionData.swift */; };
+		88BDAB312A213B340035B125 /* CreateTrainingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB2E2A213B340035B125 /* CreateTrainingData.swift */; };
 		B1086BF729C747E400EB8271 /* futur2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1086BF629C747E400EB8271 /* futur2.ttf */; };
 		B14A7B8629F8A7530047FA1B /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7B8529F8A7530047FA1B /* ExerciseType.swift */; };
 		B1BC56B729D2159300E2013A /* ExecutionTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC56B529D2159200E2013A /* ExecutionTrainingCollectionViewCell.swift */; };
@@ -143,7 +152,16 @@
 		3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExerciseViewController.swift; sourceTree = "<group>"; };
 		3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataExerciseViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
-		88289D6129F4703300CC4258 /* ExecutionTrainingVielModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingVielModel.swift; sourceTree = "<group>"; };
+		88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingViewModel.swift; sourceTree = "<group>"; };
+		88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingService.swift; sourceTree = "<group>"; };
+		88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionService.swift; sourceTree = "<group>"; };
+		88BDAB212A213AE50035B125 /* CreateTrainingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrainingService.swift; sourceTree = "<group>"; };
+		88BDAB262A213B0C0035B125 /* ExerciseSelectionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExerciseSelectionData.json; sourceTree = "<group>"; };
+		88BDAB272A213B0C0035B125 /* ExecutionTrainingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExecutionTrainingData.json; sourceTree = "<group>"; };
+		88BDAB282A213B0C0035B125 /* CreateTrainingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CreateTrainingData.json; sourceTree = "<group>"; };
+		88BDAB2C2A213B340035B125 /* ExecutionTrainingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingData.swift; sourceTree = "<group>"; };
+		88BDAB2D2A213B340035B125 /* ExerciseSelectionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionData.swift; sourceTree = "<group>"; };
+		88BDAB2E2A213B340035B125 /* CreateTrainingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrainingData.swift; sourceTree = "<group>"; };
 		B1086BF629C747E400EB8271 /* futur2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futur2.ttf; sourceTree = "<group>"; };
 		B14A7B8529F8A7530047FA1B /* ExerciseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		B1BC56B529D2159200E2013A /* ExecutionTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -244,6 +262,8 @@
 		3F6448B929BA61F100BDE579 /* APPMeuTreino */ = {
 			isa = PBXGroup;
 			children = (
+				88BDAB252A213B0C0035B125 /* Mock */,
+				88BDAB1E2A213AE50035B125 /* Service */,
 				CB1654C92A15638600E091D6 /* Alert */,
 				3FA053F929F4524F0097BA6E /* Model */,
 				3F6448ED29BA65AA00BDE579 /* Login */,
@@ -365,7 +385,7 @@
 				B1BC56B429D2155600E2013A /* ExecutionTrainingCell */,
 				CB0158AB29D461900083D418 /* TrainingConclusion */,
 				88289D5F29F46FA800CC4258 /* View */,
-				88289D6029F4700200CC4258 /* ExecutionTrainingVielModel */,
+				88289D6029F4700200CC4258 /* ExecutionTrainingViewModel */,
 			);
 			path = ExecutionTraining;
 			sourceTree = "<group>";
@@ -430,6 +450,9 @@
 				3FA053FA29F452780097BA6E /* Exercise.swift */,
 				38C672F729F84CE8008F8DA3 /* Training.swift */,
 				B14A7B8529F8A7530047FA1B /* ExerciseType.swift */,
+				88BDAB2E2A213B340035B125 /* CreateTrainingData.swift */,
+				88BDAB2C2A213B340035B125 /* ExecutionTrainingData.swift */,
+				88BDAB2D2A213B340035B125 /* ExerciseSelectionData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,12 +501,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		88289D6029F4700200CC4258 /* ExecutionTrainingVielModel */ = {
+		88289D6029F4700200CC4258 /* ExecutionTrainingViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				88289D6129F4703300CC4258 /* ExecutionTrainingVielModel.swift */,
+				88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */,
 			);
-			path = ExecutionTrainingVielModel;
+			path = ExecutionTrainingViewModel;
+			sourceTree = "<group>";
+		};
+		88BDAB1E2A213AE50035B125 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */,
+				88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */,
+				88BDAB212A213AE50035B125 /* CreateTrainingService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		88BDAB252A213B0C0035B125 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				88BDAB262A213B0C0035B125 /* ExerciseSelectionData.json */,
+				88BDAB272A213B0C0035B125 /* ExecutionTrainingData.json */,
+				88BDAB282A213B0C0035B125 /* CreateTrainingData.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		B1BC56B429D2155600E2013A /* ExecutionTrainingCell */ = {
@@ -671,6 +714,7 @@
 				CB1654C02A15547F00E091D6 /* GoogleService-Info.plist in Resources */,
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
 				3FAFD71929CE188B002D9563 /* ExerciseSelectionCollectionViewCell.xib in Resources */,
+				88BDAB2B2A213B0C0035B125 /* CreateTrainingData.json in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
 				CBE2F74629D0D54B0070A70F /* NameTrainingViewController.storyboard in Resources */,
@@ -682,9 +726,11 @@
 				3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */,
 				3F64492229BA730800BDE579 /* ExerciseSelectionViewController.storyboard in Resources */,
 				3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */,
+				88BDAB292A213B0C0035B125 /* ExerciseSelectionData.json in Resources */,
 				3F64493729BA739F00BDE579 /* SettingsViewController.storyboard in Resources */,
 				3F64490D29BA711B00BDE579 /* ForgotPasswordViewController.storyboard in Resources */,
 				CB0158AF29D461D90083D418 /* TrainingConclusionViewController.storyboard in Resources */,
+				88BDAB2A2A213B0C0035B125 /* ExecutionTrainingData.json in Resources */,
 				3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */,
 				3F64492729BA733300BDE579 /* TrainingOverviewViewController.storyboard in Resources */,
 				3F64491A29BA71C000BDE579 /* CreateTrainingViewController.storyboard in Resources */,
@@ -743,9 +789,10 @@
 				B14A7B8629F8A7530047FA1B /* ExerciseType.swift in Sources */,
 				38B8008B29C9586B005F35AF /* TrainingCell.swift in Sources */,
 				3F64492D29BA736500BDE579 /* DemonstrationExerciseViewController.swift in Sources */,
+				88BDAB242A213AE60035B125 /* CreateTrainingService.swift in Sources */,
 				3F64493929BA73B600BDE579 /* DataChangeViewController.swift in Sources */,
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
-				88289D6229F4703300CC4258 /* ExecutionTrainingVielModel.swift in Sources */,
+				88289D6229F4703300CC4258 /* ExecutionTrainingViewModel.swift in Sources */,
 				CB1654CE2A15671700E091D6 /* RegisterViewModel.swift in Sources */,
 				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
 				38C672FC29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift in Sources */,
@@ -753,14 +800,19 @@
 				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,
 				3FA053FB29F452780097BA6E /* Exercise.swift in Sources */,
 				3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */,
+				88BDAB302A213B340035B125 /* ExerciseSelectionData.swift in Sources */,
 				CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */,
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
+				88BDAB2F2A213B340035B125 /* ExecutionTrainingData.swift in Sources */,
 				3FAFD71829CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift in Sources */,
 				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
 				CB1654C82A15590A00E091D6 /* LoginViewModel.swift in Sources */,
+				88BDAB222A213AE60035B125 /* ExecutionTrainingService.swift in Sources */,
 				3FA053FE29F453D80097BA6E /* ExerciseSelectionViewModel.swift in Sources */,
+				88BDAB232A213AE60035B125 /* ExerciseSelectionService.swift in Sources */,
 				38C672F829F84CE8008F8DA3 /* Training.swift in Sources */,
+				88BDAB312A213B340035B125 /* CreateTrainingData.swift in Sources */,
 				3F056A0729C74A8000BF1B41 /* CreateTrainingCollectionViewCell.swift in Sources */,
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,

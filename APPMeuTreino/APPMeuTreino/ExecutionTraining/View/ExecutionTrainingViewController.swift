@@ -14,11 +14,12 @@ class ExecutionTrainingViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var finishButton: UIButton!
     
-    private var vielModel: ExecutionTrainingVielModel = ExecutionTrainingVielModel()
+    private var viewModel: ExecutionTrainingViewModel = ExecutionTrainingViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureExecutionTrainingView()
+        viewModel.fetchAllRequest()
     }
     
     func configureExecutionTrainingView(){
@@ -48,12 +49,12 @@ class ExecutionTrainingViewController: UIViewController {
 extension ExecutionTrainingViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vielModel.arraySize
+        return viewModel.arraySize
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExecutionTrainingCollectionViewCell.identifier, for: indexPath) as? ExecutionTrainingCollectionViewCell
-        cell?.setupCell(exercise: vielModel.getExercise(index: indexPath.row))
+        cell?.setupCell(exercise: viewModel.getExercise(index: indexPath.row))
         cell?.delegate(delegate: self)
             return cell ?? UICollectionViewCell()
     }

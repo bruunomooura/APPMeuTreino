@@ -1,0 +1,28 @@
+{
+    "exercise": [
+        {
+            "exerciseName": "Abdominal Alpinista",
+            "exerciseImage": "AbdominalAlpinista"
+        },
+        {
+            "exerciseName": "Abdominal Declinado",
+            "exerciseImage": "AbdominalDeclinado"
+        },
+        {
+            "exerciseName": "Abdominal Em Banco Declinado",
+            "exerciseImage": "AbdominalEmBancoDeclinado"
+        },
+        {
+            "exerciseName": "Abdominal Em V",
+            "exerciseImage": "AbdominalEmV"
+        },
+        {
+            "exerciseName": "Abdominal Na Bola",
+            "exerciseImage": "AbdominalNaBola"
+        }
+        
+    ]
+}
+
+    
+

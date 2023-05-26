@@ -9,22 +9,24 @@ import Foundation
 
 class CreateTrainingViewModel {
     
-    private var exerciseTypeList: [ExerciseType] = [
-        ExerciseType(exerciseTypeImage: "Abdominais"),
-        ExerciseType(exerciseTypeImage: "Aeróbico"),
-        ExerciseType(exerciseTypeImage: "Bíceps"),
-        ExerciseType(exerciseTypeImage: "CostasOmbros"),
-        ExerciseType(exerciseTypeImage: "MembrosInferiores"),
-        ExerciseType(exerciseTypeImage: "Peito"),
-        ExerciseType(exerciseTypeImage: "Triceps")
-    ]
+    private var service: CreateTrainingService = CreateTrainingService()
+    private var exerciseType = [ExerciseType]()
     
     func getExerciseType(index: Int) -> ExerciseType {
-        return exerciseTypeList[index]
+        return exerciseType[index]
     }
     
     var arraySize: Int {
-        return exerciseTypeList.count
+        return exerciseType.count
+    }
+    
+    public func fetchAllRequest() {
+        service.getCreateTrainingDataJson { creatTrainingData, error in
+            if error == nil {
+                self.exerciseType = creatTrainingData?.exerciseType ?? []
+            }
+        }
+        
     }
 }
 

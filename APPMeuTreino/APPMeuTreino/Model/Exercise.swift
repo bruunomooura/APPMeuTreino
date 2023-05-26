@@ -7,8 +7,6 @@
 
 import Foundation
 
-struct Exercise {
-    var exerciseName: String
-    var exerciseImage: String
-    
+struct Exercise: Codable {
+    var exerciseName, exerciseImage: String?
 }

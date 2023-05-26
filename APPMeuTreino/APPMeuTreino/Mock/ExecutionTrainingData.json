@@ -1,0 +1,24 @@
+{
+    "exercise": [
+        {
+            "exerciseName": "Abdominal Em V",
+            "exerciseImage": "Exercicio1"
+        },
+        {
+            "exerciseName": "Cabo De Guerra - Ondas Alternadas",
+            "exerciseImage": "Exercicio2"
+        },
+        {
+            "exerciseName": "Biceps Alternado Com Máquina",
+            "exerciseImage": "Exercicio3"
+        },
+        {
+            "exerciseName": "Agachamento Com Halteres",
+            "exerciseImage": "Exercicio4"
+        },
+        {
+            "exerciseName": "Desenvolvimento Com Halteres",
+            "exerciseImage": "Exercicio5"
+        }
+    ]
+}

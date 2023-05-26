@@ -48,6 +48,7 @@ class ExerciseSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configExerciseSelectionView()
+        viewModel.fetchAllRequest()
     }
     
     func configExerciseSelectionView() {

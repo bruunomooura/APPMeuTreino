@@ -1,0 +1,26 @@
+
+{
+    "exerciseType": [
+        {
+            "exerciseTypeImage": "Abdominais"
+        },
+        {
+            "exerciseTypeImage": "Aeróbico"
+        },
+        {
+            "exerciseTypeImage": "Bíceps"
+        },
+        {
+            "exerciseTypeImage": "CostasOmbros"
+        },
+        {
+            "exerciseTypeImage": "MembrosInferiores"
+        },
+        {
+            "exerciseTypeImage": "Peito"
+        },
+        {
+            "exerciseTypeImage": "Triceps"
+        }
+    ]
+}

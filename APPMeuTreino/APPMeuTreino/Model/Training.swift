@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Training{
+struct Training: Codable {
     var nameTraining: String
     var numberOfExercise: Int
 }

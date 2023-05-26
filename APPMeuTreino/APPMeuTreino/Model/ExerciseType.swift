@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ExerciseType{
+struct ExerciseType: Codable {
     var exerciseTypeImage: String
 }
