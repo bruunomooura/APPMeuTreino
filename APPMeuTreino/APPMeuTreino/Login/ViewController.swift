@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private var viewModel: LoginViewModel = LoginViewModel()
+    private var loadingViewController: LoadingViewController?
     
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -46,10 +47,24 @@ class ViewController: UIViewController {
         
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
+        
+        emailTextField.text = "leandro.bruno81@gmail.com"
+        passwordTextField.text = "123456"
+    }
+    
+    private func showLoadingScreen() {
+        loadingViewController = LoadingViewController()
+        present(loadingViewController!, animated: true, completion: nil)
+    }
+    
+    private func hideLoadingScreen() {
+        loadingViewController?.dismiss(animated: true, completion: nil)
+        loadingViewController = nil
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         viewModel.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        showLoadingScreen()
     }
     
     @IBAction func tappedSignupButton(_ sender: UIButton) {
@@ -95,14 +110,14 @@ extension ViewController: UITextFieldDelegate{
     }
 }
 extension ViewController: LoginViewModelProtocol {
-    func sucessLogin() {
+    func successLogin() {
+        hideLoadingScreen()
         let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
-                navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     func errorLogin(errorMessage: String) {
+        hideLoadingScreen()
         Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
     }
-    
-    
 }

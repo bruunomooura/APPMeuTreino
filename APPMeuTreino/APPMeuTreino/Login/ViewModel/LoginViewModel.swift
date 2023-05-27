@@ -9,10 +9,8 @@ import UIKit
 import Firebase
 
 protocol LoginViewModelProtocol: AnyObject {
-    func sucessLogin()
+    func successLogin()
     func errorLogin(errorMessage: String)
-        
-    
 }
 
 class LoginViewModel {
@@ -26,7 +24,7 @@ class LoginViewModel {
     public func login(email: String, password: String) {
         auth.signIn(withEmail: email, password: password) { authResult, error in
             if error == nil {
-                self.delegate?.sucessLogin()
+                self.delegate?.successLogin()
             }else {
                 self.delegate?.errorLogin(errorMessage: error?.localizedDescription ?? "")
             }

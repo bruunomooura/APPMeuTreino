@@ -48,6 +48,9 @@
 		3F64493F29BA73D500BDE579 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */; };
 		3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */; };
 		3F64494529BA7CA800BDE579 /* TabBarControllerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */; };
+		3F6DF7482A227D27005BC0C2 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DF7472A227D27005BC0C2 /* loading.json */; };
+		3F6DF74B2A227D5C005BC0C2 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DF74A2A227D5C005BC0C2 /* LoadingViewController.swift */; };
+		3F6DF74E2A227EAD005BC0C2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3F6DF74D2A227EAD005BC0C2 /* Lottie */; };
 		3FA053FB29F452780097BA6E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA053FA29F452780097BA6E /* Exercise.swift */; };
 		3FA053FE29F453D80097BA6E /* ExerciseSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA053FD29F453D80097BA6E /* ExerciseSelectionViewModel.swift */; };
 		3FAFD71829CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAFD71629CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift */; };
@@ -145,6 +148,8 @@
 		3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		3F64494229BA7C9C00BDE579 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
+		3F6DF7472A227D27005BC0C2 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		3F6DF74A2A227D5C005BC0C2 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		3FA053FA29F452780097BA6E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		3FA053FD29F453D80097BA6E /* ExerciseSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionViewModel.swift; sourceTree = "<group>"; };
 		3FAFD71629CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 			files = (
 				CB1654C32A1555CC00E091D6 /* FirebaseAuth in Frameworks */,
 				CB1654C52A1555CC00E091D6 /* FirebaseCrashlytics in Frameworks */,
+				3F6DF74E2A227EAD005BC0C2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +268,7 @@
 		3F6448B929BA61F100BDE579 /* APPMeuTreino */ = {
 			isa = PBXGroup;
 			children = (
+				3F6DF7492A227D5C005BC0C2 /* Loading */,
 				88BDAB252A213B0C0035B125 /* Mock */,
 				88BDAB1E2A213AE50035B125 /* Service */,
 				CB1654C92A15638600E091D6 /* Alert */,
@@ -280,8 +287,7 @@
 				3F64490429BA6FC500BDE579 /* DataChange */,
 				3F64490529BA708100BDE579 /* ChangePassword */,
 				3F64494129BA7C6000BDE579 /* TabBarController */,
-				3F6448C629BA61F300BDE579 /* Assets.xcassets */,
-				B1086BF629C747E400EB8271 /* futur2.ttf */,
+				3F6DF7462A227D18005BC0C2 /* Assets */,
 				3F6448C829BA61F300BDE579 /* LaunchScreen.storyboard */,
 				3F6448BA29BA61F100BDE579 /* AppDelegate.swift */,
 				3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */,
@@ -442,6 +448,24 @@
 				3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		3F6DF7462A227D18005BC0C2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3F6448C629BA61F300BDE579 /* Assets.xcassets */,
+				B1086BF629C747E400EB8271 /* futur2.ttf */,
+				3F6DF7472A227D27005BC0C2 /* loading.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3F6DF7492A227D5C005BC0C2 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				3F6DF74A2A227D5C005BC0C2 /* LoadingViewController.swift */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		3FA053F929F4524F0097BA6E /* Model */ = {
@@ -617,6 +641,7 @@
 			packageProductDependencies = (
 				CB1654C22A1555CC00E091D6 /* FirebaseAuth */,
 				CB1654C42A1555CC00E091D6 /* FirebaseCrashlytics */,
+				3F6DF74D2A227EAD005BC0C2 /* Lottie */,
 			);
 			productName = APPMeuTreino;
 			productReference = 3F6448B729BA61F100BDE579 /* APPMeuTreino.app */;
@@ -692,6 +717,7 @@
 			mainGroup = 3F6448AE29BA61F100BDE579;
 			packageReferences = (
 				CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 3F6448B829BA61F100BDE579 /* Products */;
 			projectDirPath = "";
@@ -715,6 +741,7 @@
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
 				3FAFD71929CE188B002D9563 /* ExerciseSelectionCollectionViewCell.xib in Resources */,
 				88BDAB2B2A213B0C0035B125 /* CreateTrainingData.json in Resources */,
+				3F6DF7482A227D27005BC0C2 /* loading.json in Resources */,
 				3F64492F29BA736F00BDE579 /* DemonstrationExerciseViewController.storyboard in Resources */,
 				3F6448CA29BA61F300BDE579 /* LaunchScreen.storyboard in Resources */,
 				CBE2F74629D0D54B0070A70F /* NameTrainingViewController.storyboard in Resources */,
@@ -817,6 +844,7 @@
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,
 				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,
+				3F6DF74B2A227D5C005BC0C2 /* LoadingViewController.swift in Sources */,
 				3F64490B29BA710A00BDE579 /* ForgotPasswordViewController.swift in Sources */,
 				CB0158AD29D461C90083D418 /* TrainingConclusionViewController.swift in Sources */,
 				3F6448C529BA61F100BDE579 /* APPMeuTreino.xcdatamodeld in Sources */,
@@ -1167,6 +1195,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1178,6 +1214,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F6DF74D2A227EAD005BC0C2 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		CB1654C22A1555CC00E091D6 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

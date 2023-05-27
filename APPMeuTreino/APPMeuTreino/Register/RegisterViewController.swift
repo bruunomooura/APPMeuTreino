@@ -10,6 +10,7 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     private var viewModel: RegisterViewModel = RegisterViewModel()
+    private var loadingViewController: LoadingViewController?
     
     @IBOutlet weak var editPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -32,6 +33,7 @@ class RegisterViewController: UIViewController {
         viewModel.delegate(delegate: self)
         
     }
+    
     
     func configTextField(textField: UITextField){
         textField.layer.cornerRadius = 10
@@ -64,6 +66,16 @@ class RegisterViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    private func showLoadingScreen() {
+        loadingViewController = LoadingViewController()
+        present(loadingViewController!, animated: true, completion: nil)
+    }
+    
+    private func hideLoadingScreen() {
+        loadingViewController?.dismiss(animated: true, completion: nil)
+        loadingViewController = nil
+    }
+    
     @IBAction func tappedEditImageButton(_ sender: UIButton) {
         configureImagePicker()
     }
@@ -74,6 +86,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
         viewModel.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        showLoadingScreen()
     }
 }
 
@@ -132,11 +145,13 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
 
 extension RegisterViewController: RegisterViewModelProtocol {
     func sucessRegister() {
+        hideLoadingScreen()
         let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     func errorRegister(errorMessage: String) {
+        hideLoadingScreen()
         Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
     }
 }
