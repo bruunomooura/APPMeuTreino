@@ -51,6 +51,7 @@
 		3F6DF7482A227D27005BC0C2 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F6DF7472A227D27005BC0C2 /* loading.json */; };
 		3F6DF74B2A227D5C005BC0C2 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DF74A2A227D5C005BC0C2 /* LoadingViewController.swift */; };
 		3F6DF74E2A227EAD005BC0C2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3F6DF74D2A227EAD005BC0C2 /* Lottie */; };
+		3F6DF7532A2288B1005BC0C2 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6DF7522A2288B1005BC0C2 /* ForgotPasswordViewModel.swift */; };
 		3FA053FB29F452780097BA6E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA053FA29F452780097BA6E /* Exercise.swift */; };
 		3FA053FE29F453D80097BA6E /* ExerciseSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA053FD29F453D80097BA6E /* ExerciseSelectionViewModel.swift */; };
 		3FAFD71829CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAFD71629CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift */; };
@@ -150,6 +151,7 @@
 		3F64494429BA7CA800BDE579 /* TabBarControllerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarControllerViewController.storyboard; sourceTree = "<group>"; };
 		3F6DF7472A227D27005BC0C2 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		3F6DF74A2A227D5C005BC0C2 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		3F6DF7522A2288B1005BC0C2 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		3FA053FA29F452780097BA6E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		3FA053FD29F453D80097BA6E /* ExerciseSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionViewModel.swift; sourceTree = "<group>"; };
 		3FAFD71629CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 		3F6448F329BA686200BDE579 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				3F6DF7512A2288B1005BC0C2 /* ViewModel */,
 				3F64490A29BA710A00BDE579 /* ForgotPasswordViewController.swift */,
 				3F64490C29BA711B00BDE579 /* ForgotPasswordViewController.storyboard */,
 			);
@@ -466,6 +469,14 @@
 				3F6DF74A2A227D5C005BC0C2 /* LoadingViewController.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		3F6DF7512A2288B1005BC0C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F6DF7522A2288B1005BC0C2 /* ForgotPasswordViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3FA053F929F4524F0097BA6E /* Model */ = {
@@ -834,6 +845,7 @@
 				88BDAB2F2A213B340035B125 /* ExecutionTrainingData.swift in Sources */,
 				3FAFD71829CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift in Sources */,
 				3F64493529BA739500BDE579 /* SettingsViewController.swift in Sources */,
+				3F6DF7532A2288B1005BC0C2 /* ForgotPasswordViewModel.swift in Sources */,
 				CB1654C82A15590A00E091D6 /* LoginViewModel.swift in Sources */,
 				88BDAB222A213AE60035B125 /* ExecutionTrainingService.swift in Sources */,
 				3FA053FE29F453D80097BA6E /* ExerciseSelectionViewModel.swift in Sources */,

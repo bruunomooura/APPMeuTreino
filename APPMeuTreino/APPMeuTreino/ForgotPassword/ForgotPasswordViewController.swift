@@ -9,6 +9,9 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
     
+    private var viewModel: ForgotPasswordViewModel = ForgotPasswordViewModel()
+    private var loadingViewController: LoadingViewController?
+    
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var logoImageView: UIImageView!
@@ -18,6 +21,7 @@ class ForgotPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configForgotPasswordView()
+        viewModel.delegate(delegate: self)
     }
     
     func configForgotPasswordView(){
@@ -30,6 +34,17 @@ class ForgotPasswordViewController: UIViewController {
         
         changePasswordButton.layer.cornerRadius = 10
         changePasswordButton.isEnabled = false
+        emailTextField.text = "leandro.bruno81@gmail.com"
+    }
+    
+    private func showLoadingScreen() {
+        loadingViewController = LoadingViewController()
+        present(loadingViewController!, animated: true, completion: nil)
+    }
+
+    private func hideLoadingScreen() {
+        loadingViewController?.dismiss(animated: true, completion: nil)
+        loadingViewController = nil
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -37,7 +52,8 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     @IBAction func tappedChangePassword(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        viewModel.sendPasswordResetEmail(email: emailTextField.text ?? "")
+        showLoadingScreen()
     }
 }
 
@@ -60,5 +76,19 @@ extension ForgotPasswordViewController: UITextFieldDelegate{
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+}
+
+extension ForgotPasswordViewController: ForgotPasswordViewModelProtocol{
+    func successSendEmail() {
+        hideLoadingScreen()
+        Alert(controller: self).alertInformation(title: "Tudo certo!", message: "Te enviamos um e-mail com instruções de redefinição de senha. Verifique a sua caixa de entrada e SPAM para concluir o processo.") {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    func errorSendEmail(errorMessage: String) {
+        hideLoadingScreen()
+        Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
     }
 }
