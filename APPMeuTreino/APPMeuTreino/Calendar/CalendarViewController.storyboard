@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendário de Treinos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIm-Fd-zsr">
-                                <rect key="frame" x="52" y="-10" width="271" height="35.5"/>
+                                <rect key="frame" x="52" y="10" width="271" height="35.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35.5" id="JEq-rP-5c0"/>
                                     <constraint firstAttribute="width" constant="271" id="aQ4-43-mmO"/>
@@ -26,23 +27,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="BfU-xX-FBd">
-                                <rect key="frame" x="16" y="65.5" width="343" height="312"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qr-0N-Zb4">
+                                <rect key="frame" x="17.5" y="85.5" width="340" height="340"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="312" id="bFu-Ak-j96"/>
-                                    <constraint firstAttribute="width" constant="343" id="nyh-s6-Nq4"/>
+                                    <constraint firstAttribute="height" constant="340" id="Hvo-Ef-yyX"/>
+                                    <constraint firstAttribute="width" constant="340" id="hJc-Ro-Wea"/>
                                 </constraints>
-                            </imageView>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRW-0X-nYZ">
+                                <rect key="frame" x="32" y="489" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xIm-Fd-zsr" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0oL-7P-qpd"/>
+                            <constraint firstItem="5Qr-0N-Zb4" firstAttribute="top" secondItem="xIm-Fd-zsr" secondAttribute="bottom" constant="40" id="MBt-0V-OyJ"/>
                             <constraint firstItem="xIm-Fd-zsr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-10" id="MVP-0t-77G"/>
-                            <constraint firstItem="BfU-xX-FBd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tlm-22-6S1"/>
-                            <constraint firstItem="BfU-xX-FBd" firstAttribute="top" secondItem="xIm-Fd-zsr" secondAttribute="bottom" constant="40" id="zGL-gd-aKq"/>
+                            <constraint firstItem="5Qr-0N-Zb4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mnp-Np-be1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="5Qr-0N-Zb4" id="cZJ-VF-H3o"/>
+                        <outlet property="messageLabel" destination="mRW-0X-nYZ" id="RH6-z7-PsJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,9 +63,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Calendar" width="1236" height="1122"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
