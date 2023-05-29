@@ -1,14 +1,11 @@
-//
-//  TrainingConclusionViewController.swift
-//  APPMeuTreino
-//
-//  Created by Bernardo Aguiar Guimarães on 29/03/23.
-//
-
 import UIKit
 
+protocol TrainingConclusionViewControllerProtocol: AnyObject {
+    func configureTabBarIndex()
+}
+
 class TrainingConclusionViewController: UIViewController {
-    
+
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var congratulationsLabel: UILabel!
@@ -19,12 +16,17 @@ class TrainingConclusionViewController: UIViewController {
     @IBOutlet weak var facebookImageView: UIImageView!
     @IBOutlet weak var whatsappImageView: UIImageView!
     @IBOutlet weak var instagramImageView: UIImageView!
-    
+
+    private weak var delegate: TrainingConclusionViewControllerProtocol?
+    public func delegate(delegate: TrainingConclusionViewControllerProtocol?) {
+        self.delegate = delegate
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configTrainingConclusionView()
     }
-    
+
     func configTrainingConclusionView() {
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.masksToBounds = false
@@ -32,9 +34,13 @@ class TrainingConclusionViewController: UIViewController {
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
         profileImageView.clipsToBounds = true
     }
-    
+
     @IBAction func tappedExitButton(_ sender: UIButton) {
-        let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
-        present(vc ?? UIViewController(), animated: true)
+        delegate?.configureTabBarIndex()
+        var presentingViewController = self.presentingViewController
+        while presentingViewController?.presentingViewController != nil {
+            presentingViewController = presentingViewController?.presentingViewController
+        }
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

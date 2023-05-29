@@ -1,11 +1,8 @@
-//
-//  ExecutionTrainingViewController.swift
-//  APPMeuTreino
-//
-//  Created by Bruno Moura on 09/03/23.
-//
-
 import UIKit
+
+protocol ExecutionTrainingViewControllerProtocol: AnyObject {
+    func configureTabBarIndex()
+}
 
 class ExecutionTrainingViewController: UIViewController {
     
@@ -15,7 +12,11 @@ class ExecutionTrainingViewController: UIViewController {
     @IBOutlet weak var finishButton: UIButton!
     
     private var viewModel: ExecutionTrainingViewModel = ExecutionTrainingViewModel()
-
+    private weak var delegate: ExecutionTrainingViewControllerProtocol?
+    public func delegate(delegate: ExecutionTrainingViewControllerProtocol?) {
+        self.delegate = delegate
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureExecutionTrainingView()
@@ -42,6 +43,7 @@ class ExecutionTrainingViewController: UIViewController {
     
     @IBAction func tappedFinishButton(_ sender: UIButton) {
         let vc: TrainingConclusionViewController? = UIStoryboard(name: String(describing: TrainingConclusionViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TrainingConclusionViewController.self)) as? TrainingConclusionViewController
+        vc?.delegate(delegate: self)
         present(vc ?? UIViewController(), animated: true)
     }
 }
@@ -88,5 +90,11 @@ extension ExecutionTrainingViewController: ExecutionTrainingCollectionViewCellPr
             }
             present(vc, animated: true)
         }
-    }    
+    }
+}
+
+extension ExecutionTrainingViewController: TrainingConclusionViewControllerProtocol{
+    func configureTabBarIndex() {
+        delegate?.configureTabBarIndex()
+    }
 }
