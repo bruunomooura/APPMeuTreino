@@ -49,10 +49,15 @@ class CreateTrainingViewController: UIViewController {
     }
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
-        if let tabBarController = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController {
-            tabBarController.selectedViewController = tabBarController.viewControllers?[1]
-            present(tabBarController, animated: true)
-        }
+//        if let tabBarController = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController {
+//            tabBarController.selectedViewController = tabBarController.viewControllers?[1]
+//            present(tabBarController, animated: true)
+//        }
+        var presentingViewController = self.presentingViewController
+                while presentingViewController?.presentingViewController != nil {
+                    presentingViewController = presentingViewController?.presentingViewController
+                }
+                presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
 

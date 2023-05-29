@@ -1,10 +1,3 @@
-//
-//  TrainingOverviewViewController.swift
-//  APPMeuTreino
-//
-//  Created by Bruno Moura on 09/03/23.
-//
-
 import UIKit
 
 class TrainingOverviewViewController: UIViewController {
@@ -74,6 +67,7 @@ extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = UIStoryboard(name: String(describing: ExecutionTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ExecutionTrainingViewController.self)) as? ExecutionTrainingViewController{
             vc.modalPresentationStyle = .fullScreen
+            vc.delegate(delegate: self)
             present(vc, animated: true)
         }
     }
@@ -98,5 +92,9 @@ extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSo
         return configuration
     }
 }
-    
 
+extension TrainingOverviewViewController: ExecutionTrainingViewControllerProtocol{
+    func configureTabBarIndex() {
+        tabBarController?.selectedIndex = 0
+    }
+}
