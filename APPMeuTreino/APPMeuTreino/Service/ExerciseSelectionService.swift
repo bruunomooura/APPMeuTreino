@@ -10,7 +10,7 @@ import UIKit
 class ExerciseSelectionService {
     
     func getExerciseSelectionDataJson(completion: @escaping (ExerciseSelectionData?, Error?) -> Void) {
-        if let url = Bundle.main.url(forResource: "ExerciseSelectionData", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: JSONFile.exerciseSelectionData.rawValue, withExtension: JSONFile.json.rawValue) {
             do {
                 let data = try Data(contentsOf: url)
                 let exerciseSelectionData: ExerciseSelectionData = try JSONDecoder().decode(ExerciseSelectionData.self, from: data)

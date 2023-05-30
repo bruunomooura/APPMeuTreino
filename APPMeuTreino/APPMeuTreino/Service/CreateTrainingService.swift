@@ -10,7 +10,7 @@ import UIKit
 class CreateTrainingService {
     
     func getCreateTrainingDataJson(completion: @escaping (CreateTrainingData?, Error?) -> Void) {
-        if let url = Bundle.main.url(forResource: "CreateTrainingData", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: JSONFile.createTrainingData.rawValue, withExtension: JSONFile.json.rawValue) {
             do {
                 let data = try Data(contentsOf: url)
                 let createTrainingData: CreateTrainingData = try JSONDecoder().decode(CreateTrainingData.self, from: data)

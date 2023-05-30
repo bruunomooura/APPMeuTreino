@@ -61,6 +61,7 @@
 		3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */; };
 		3FE59D1D29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */; };
 		88289D6229F4703300CC4258 /* ExecutionTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */; };
+		88A20CB52A268AB500A10407 /* EnumJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A20CB42A268AB500A10407 /* EnumJSON.swift */; };
 		88BDAB222A213AE60035B125 /* ExecutionTrainingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */; };
 		88BDAB232A213AE60035B125 /* ExerciseSelectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */; };
 		88BDAB242A213AE60035B125 /* CreateTrainingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB212A213AE50035B125 /* CreateTrainingService.swift */; };
@@ -162,6 +163,7 @@
 		3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataExerciseViewController.storyboard; sourceTree = "<group>"; };
 		3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
 		88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingViewModel.swift; sourceTree = "<group>"; };
+		88A20CB42A268AB500A10407 /* EnumJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumJSON.swift; sourceTree = "<group>"; };
 		88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingService.swift; sourceTree = "<group>"; };
 		88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionService.swift; sourceTree = "<group>"; };
 		88BDAB212A213AE50035B125 /* CreateTrainingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTrainingService.swift; sourceTree = "<group>"; };
@@ -561,6 +563,7 @@
 				88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */,
 				88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */,
 				88BDAB212A213AE50035B125 /* CreateTrainingService.swift */,
+				88A20CB42A268AB500A10407 /* EnumJSON.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -868,6 +871,7 @@
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,
 				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,
+				88A20CB52A268AB500A10407 /* EnumJSON.swift in Sources */,
 				3F6DF74B2A227D5C005BC0C2 /* LoadingViewController.swift in Sources */,
 				3F64490B29BA710A00BDE579 /* ForgotPasswordViewController.swift in Sources */,
 				CB0158AD29D461C90083D418 /* TrainingConclusionViewController.swift in Sources */,
