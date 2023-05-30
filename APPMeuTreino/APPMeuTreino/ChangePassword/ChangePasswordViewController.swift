@@ -26,7 +26,7 @@ class ChangePasswordViewController: UIViewController {
     }
     
     func configTextField(textField: UITextField){
-        textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         textField.layer.borderWidth = 2
         textField.layer.cornerRadius = 10
         textField.clipsToBounds = true
@@ -67,9 +67,9 @@ extension ChangePasswordViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if passwordTextField.hasText && newPasswordTextField.hasText && confirmPasswordTextField.hasText{
         if newPasswordTextField.text == confirmPasswordTextField.text {
-        passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        newPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-        confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        passwordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+        newPasswordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+        confirmPasswordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         saveButton.isEnabled = true
             } else {
         saveButton.isEnabled = false
@@ -79,7 +79,7 @@ extension ChangePasswordViewController: UITextFieldDelegate {
             } else{
         saveButton.isEnabled = false
         if textField.hasText{
-            textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
             }else{
             textField.layer.borderColor = UIColor.red.cgColor
                 }

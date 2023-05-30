@@ -91,7 +91,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
         cell.setupCell(exercise: viewModel.getExercise(index: indexPath.row))
         cell.delegate(delegate: self)
         if SelectedCells.contains(indexPath) {
-            cell.backgroundColor = UIColor(named: "OrangeMeuTreino")
+            cell.backgroundColor = .orangeMeuTreino
             isCellSelected = true
         } else {
             cell.backgroundColor = .white
@@ -111,7 +111,7 @@ extension ExerciseSelectionViewController: UICollectionViewDelegate, UICollectio
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? ExerciseSelectionCollectionViewCell{
-            cell.backgroundColor =  UIColor(named: "OrangeMeuTreino")
+            cell.backgroundColor = .orangeMeuTreino
             SelectedCells.insert(indexPath)
             selectedExerciseCount += 1
             cell.numberSeriesSelectionButton.isEnabled = true

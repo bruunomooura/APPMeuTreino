@@ -27,7 +27,7 @@ class ForgotPasswordViewController: UIViewController {
     func configForgotPasswordView(){
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.borderWidth = 2
-        emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        emailTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         emailTextField.clipsToBounds = true
         
         self.emailTextField.delegate = self
@@ -66,7 +66,7 @@ extension ForgotPasswordViewController: UITextFieldDelegate{
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if emailTextField.hasText{
-            textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
             changePasswordButton.isEnabled = true
         } else {
             textField.layer.borderColor = UIColor.red.cgColor

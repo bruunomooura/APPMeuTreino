@@ -30,7 +30,7 @@ class TrainingConclusionViewController: UIViewController {
     func configTrainingConclusionView() {
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.masksToBounds = false
-        profileImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        profileImageView.layer.borderColor = UIColor.blueMeuTreino.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
         profileImageView.clipsToBounds = true
     }

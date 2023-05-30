@@ -24,7 +24,7 @@ class DataChangeViewController: UIViewController {
     }
     
     func configTextField(textField: UITextField){
-        textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         textField.layer.borderWidth = 2
         textField.layer.cornerRadius = 10
         textField.clipsToBounds = true
@@ -34,7 +34,7 @@ class DataChangeViewController: UIViewController {
     func configDataChangeView() {
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.masksToBounds = false
-        profileImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        profileImageView.layer.borderColor = UIColor.blueMeuTreino.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
         profileImageView.clipsToBounds = true
         
@@ -83,16 +83,16 @@ extension DataChangeViewController: UITextFieldDelegate{
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText {
-            nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            nameTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            birthdayTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            emailTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
             saveButton.isEnabled = true
         } else if editButton.isHighlighted {
             saveButton.isEnabled = true
         } else {
             saveButton.isEnabled = false
             if textField.hasText{
-                textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+                textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
             } else {
                 textField.layer.borderColor = UIColor.red.cgColor
             }

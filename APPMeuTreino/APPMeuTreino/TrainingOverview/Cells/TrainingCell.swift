@@ -32,7 +32,7 @@ class TrainingCell: UITableViewCell {
         trainingCellView.layer.shadowRadius = 4
         trainingCellView.layer.borderWidth = 0.2
         trainingCellView.layer.borderColor = UIColor.gray.cgColor
-        trainingCellView.backgroundColor = UIColor(named: "OrangeMeuTreino")
+        trainingCellView.backgroundColor = .orangeMeuTreino
     }
     
     func setupCell(training: Training){

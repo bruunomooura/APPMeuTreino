@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385D2DC52A2573F700C43461 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2DC42A2573F700C43461 /* UIColor+Extension.swift */; };
 		38B8008B29C9586B005F35AF /* TrainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B8008929C9586B005F35AF /* TrainingCell.swift */; };
 		38B8008C29C9586B005F35AF /* TrainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B8008A29C9586B005F35AF /* TrainingCell.xib */; };
 		38C672F829F84CE8008F8DA3 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C672F729F84CE8008F8DA3 /* Training.swift */; };
@@ -104,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		385D2DC42A2573F700C43461 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		38B8008929C9586B005F35AF /* TrainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCell.swift; sourceTree = "<group>"; };
 		38B8008A29C9586B005F35AF /* TrainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingCell.xib; sourceTree = "<group>"; };
 		38C672F729F84CE8008F8DA3 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		385D2DC32A2573C600C43461 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				385D2DC42A2573F700C43461 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		38B8008429C9430E005F35AF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +280,7 @@
 		3F6448B929BA61F100BDE579 /* APPMeuTreino */ = {
 			isa = PBXGroup;
 			children = (
+				385D2DC32A2573C600C43461 /* Extensions */,
 				3F6DF7492A227D5C005BC0C2 /* Loading */,
 				88BDAB252A213B0C0035B125 /* Mock */,
 				88BDAB1E2A213AE50035B125 /* Service */,
@@ -837,6 +848,7 @@
 				3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */,
 				3F64492029BA72F500BDE579 /* ExerciseSelectionViewController.swift in Sources */,
 				3FA053FB29F452780097BA6E /* Exercise.swift in Sources */,
+				385D2DC52A2573F700C43461 /* UIColor+Extension.swift in Sources */,
 				3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */,
 				88BDAB302A213B340035B125 /* ExerciseSelectionData.swift in Sources */,
 				CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */,

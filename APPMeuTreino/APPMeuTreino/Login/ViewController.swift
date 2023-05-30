@@ -32,12 +32,12 @@ class ViewController: UIViewController {
     func configLoginView(){
         emailTextField.layer.cornerRadius = 10
         emailTextField.layer.borderWidth = 2
-        emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        emailTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         emailTextField.clipsToBounds = true
         
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.layer.borderWidth = 2
-        passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        passwordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         passwordTextField.clipsToBounds = true
         
         loginButton.layer.cornerRadius = 10
@@ -48,8 +48,8 @@ class ViewController: UIViewController {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         
-        emailTextField.text = "leandro.bruno81@gmail.com"
-        passwordTextField.text = "123456"
+       emailTextField.text = "leandro.bruno81@gmail.com"
+       passwordTextField.text = "123456"
     }
     
     private func showLoadingScreen() {
@@ -93,14 +93,14 @@ extension ViewController: UITextFieldDelegate{
         if emailTextField.hasText && passwordTextField.hasText {
             loginButton.isEnabled = true
             
-            emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            emailTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            passwordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         } else {
             loginButton.isEnabled = false
             if textField.hasText == false{
                 textField.layer.borderColor = UIColor.red.cgColor
             }else{
-                textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+                textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
             }
         }
     }

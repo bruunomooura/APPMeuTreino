@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         
         userImageView.layer.borderWidth = 2
         userImageView.layer.masksToBounds = false
-        userImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        userImageView.layer.borderColor = UIColor.blueMeuTreino.cgColor
         userImageView.layer.cornerRadius = userImageView.frame.height/2
         userImageView.clipsToBounds = true
         
@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         borderProgressBarView.layer.shadowRadius = 3
         
         borderHomeView.layer.borderWidth = 2
-        borderHomeView.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        borderHomeView.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         borderHomeView.clipsToBounds = true
         borderHomeView.layer.cornerRadius = 8
     }

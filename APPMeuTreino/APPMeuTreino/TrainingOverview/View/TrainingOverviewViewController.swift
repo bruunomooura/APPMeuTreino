@@ -27,12 +27,10 @@ class TrainingOverviewViewController: UIViewController {
         trainingTableView.separatorStyle = .none
         trainingTableView.isEditing = false
         trainingTableView.allowsSelectionDuringEditing = true
-    
-        let borderPicture = UIColor(named: "BlueMeuTreino")
-        
+
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.masksToBounds = false
-        profileImageView.layer.borderColor = borderPicture?.cgColor
+        profileImageView.layer.borderColor = UIColor.blueMeuTreino.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
     }

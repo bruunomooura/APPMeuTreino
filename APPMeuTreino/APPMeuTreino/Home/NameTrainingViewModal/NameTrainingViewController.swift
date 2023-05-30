@@ -22,7 +22,7 @@ class NameTrainingViewController: UIViewController {
     func configNameTrainingView(){
         nameTrainingTextField.delegate = self
 
-        nameTrainingTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        nameTrainingTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         nameTrainingTextField.layer.borderWidth = 2
         nameTrainingTextField.clipsToBounds = true
         nameTrainingTextField.layer.cornerRadius = 10
@@ -55,7 +55,7 @@ extension NameTrainingViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.hasText == true {
-            textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
             saveButton.isEnabled = true
         } else {
             textField.layer.borderColor = UIColor.red.cgColor

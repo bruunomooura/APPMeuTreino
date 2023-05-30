@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController {
     func configTextField(textField: UITextField){
         textField.layer.cornerRadius = 10
         textField.layer.borderWidth = 2
-        textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+        textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         textField.clipsToBounds = true
         
         textField.delegate = self
@@ -56,7 +56,7 @@ class RegisterViewController: UIViewController {
         
         editPhotoImageView.layer.borderWidth = 2
         editPhotoImageView.layer.cornerRadius = editPhotoImageView.frame.size.height/2
-        editPhotoImageView.layer.borderColor = UIColor(named: "BlueMeuTreino")?.cgColor
+        editPhotoImageView.layer.borderColor = UIColor.blueMeuTreino.cgColor
     }
     
     func configureImagePicker(){
@@ -111,17 +111,17 @@ extension RegisterViewController: UITextFieldDelegate{
         
         if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText && passwordTextField.hasText && confirmPasswordTextField.hasText && confirmPasswordTextField.hasText {
             signUpConfirmButton.isEnabled = true
-            nameTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            birthdayTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            emailTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            passwordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
-            confirmPasswordTextField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+            nameTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            birthdayTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            emailTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            passwordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            confirmPasswordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         } else {
             signUpConfirmButton.isEnabled = false
             if textField.hasText == false{
                 textField.layer.borderColor = UIColor.red.cgColor
             } else {
-                textField.layer.borderColor = UIColor(named: "OrangeMeuTreino")?.cgColor
+                textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
             }
         }
     }

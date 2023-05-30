@@ -18,8 +18,6 @@ class DataExerciseViewController: UIViewController {
     @IBOutlet weak var exerciseSettingsTextField: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var confirmeSettingsButton: UIButton!
-    
-    let customColorOrange = UIColor(named: "OrangeMeuTreino")
 
     var name: String = ""
     var placeholder: String = ""
@@ -38,7 +36,7 @@ class DataExerciseViewController: UIViewController {
     
     func configDataExerciseView() {
         exerciseSettingsTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
-        exerciseSettingsTextField.layer.borderColor = customColorOrange?.cgColor
+        exerciseSettingsTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
         exerciseSettingsTextField.layer.borderWidth = 2
         exerciseSettingsTextField.layer.cornerRadius = 10
         exerciseSettingsTextField.clipsToBounds = true
