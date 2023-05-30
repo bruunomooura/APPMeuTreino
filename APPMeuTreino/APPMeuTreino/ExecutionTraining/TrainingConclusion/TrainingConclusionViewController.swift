@@ -26,6 +26,16 @@ class TrainingConclusionViewController: UIViewController {
         super.viewDidLoad()
         configTrainingConclusionView()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            delegate?.configureTabBarIndex()
+            var presentingViewController = self.presentingViewController
+            while presentingViewController?.presentingViewController != nil {
+                presentingViewController = presentingViewController?.presentingViewController
+            }
+            presentingViewController?.dismiss(animated: true, completion: nil)
+        }
 
     func configTrainingConclusionView() {
         profileImageView.layer.borderWidth = 2
