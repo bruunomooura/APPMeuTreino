@@ -7,12 +7,21 @@
 
 import UIKit
 
+protocol NameTrainingViewControllerProtocol: AnyObject {
+    func configureTabBarIndex()
+}
+
 class NameTrainingViewController: UIViewController {
 
     @IBOutlet weak var nameTrainingTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var newTrainingView: UIView!
+    
+    private weak var delegate: NameTrainingViewControllerProtocol?
+        public func delegate(delegate: NameTrainingViewControllerProtocol?) {
+            self.delegate = delegate
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +47,7 @@ class NameTrainingViewController: UIViewController {
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         let vc: CreateTrainingViewController? = UIStoryboard(name: String(describing: CreateTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: CreateTrainingViewController.self)) as? CreateTrainingViewController
+        vc?.delegate(delegate: self)
         vc?.modalPresentationStyle = .fullScreen
         present(vc ?? UIViewController(), animated: true)
     }
@@ -65,5 +75,12 @@ extension NameTrainingViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+}
+
+extension NameTrainingViewController: CreateTrainingViewControllerProtocol{
+    func configureTabBarIndex() {
+        delegate?.configureTabBarIndex()
+        print("teste")
     }
 }

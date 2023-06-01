@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CreateTrainingViewControllerProtocol: AnyObject {
+    func configureTabBarIndex()
+}
+
 class CreateTrainingViewController: UIViewController {
     
     @IBOutlet weak var exerciseCountButton: UIButton!
@@ -16,6 +20,11 @@ class CreateTrainingViewController: UIViewController {
     @IBOutlet weak var searchExerciseSearchBar: UISearchBar!
     
     private let viewModel: CreateTrainingViewModel = CreateTrainingViewModel()
+    
+    private weak var delegate: CreateTrainingViewControllerProtocol?
+    public func delegate(delegate: CreateTrainingViewControllerProtocol?) {
+        self.delegate = delegate
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,15 +58,12 @@ class CreateTrainingViewController: UIViewController {
     }
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
-//        if let tabBarController = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController {
-//            tabBarController.selectedViewController = tabBarController.viewControllers?[1]
-//            present(tabBarController, animated: true)
-//        }
+        delegate?.configureTabBarIndex()
         var presentingViewController = self.presentingViewController
-                while presentingViewController?.presentingViewController != nil {
-                    presentingViewController = presentingViewController?.presentingViewController
-                }
-                presentingViewController?.dismiss(animated: true, completion: nil)
+        while presentingViewController?.presentingViewController != nil {
+            presentingViewController = presentingViewController?.presentingViewController
+        }
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
 

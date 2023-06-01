@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var progressBarView: UIProgressView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var progressLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,13 @@ class HomeViewController: UIViewController {
     
     @IBAction func tappedAddTrainingButton(_ sender: UIButton) {
         let vc: NameTrainingViewController? = UIStoryboard(name: String(describing: NameTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: NameTrainingViewController.self)) as? NameTrainingViewController
+        vc?.delegate(delegate: self)
         present(vc ?? UIViewController(), animated: true)
     }
-    
+}
+
+extension HomeViewController: NameTrainingViewControllerProtocol{
+    func configureTabBarIndex() {
+        tabBarController?.selectedIndex = 1
+    }
 }
