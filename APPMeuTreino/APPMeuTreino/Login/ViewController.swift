@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     private var viewModel: LoginViewModel = LoginViewModel()
     private var loadingViewController: LoadingViewController?
+    private var alert: Alert?
     
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configLoginView()
+        alert = Alert(controller: self)
         viewModel.delegate(delegate: self)
     }
     
@@ -118,6 +120,9 @@ extension ViewController: LoginViewModelProtocol {
     
     func errorLogin(errorMessage: String) {
         hideLoadingScreen()
-        Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.alert?.alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+        })
+        
     }
 }

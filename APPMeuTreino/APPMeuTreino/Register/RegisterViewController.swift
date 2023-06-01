@@ -11,6 +11,7 @@ class RegisterViewController: UIViewController {
     
     private var viewModel: RegisterViewModel = RegisterViewModel()
     private var loadingViewController: LoadingViewController?
+    private var alert: Alert?
     
     @IBOutlet weak var editPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -30,6 +31,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configRegisterView()
+        alert = Alert(controller: self)
         viewModel.delegate(delegate: self)
         
     }
@@ -152,6 +154,8 @@ extension RegisterViewController: RegisterViewModelProtocol {
     
     func errorRegister(errorMessage: String) {
         hideLoadingScreen()
-        Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.alert?.alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+        })
     }
 }

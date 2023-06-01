@@ -11,6 +11,7 @@ class ForgotPasswordViewController: UIViewController {
     
     private var viewModel: ForgotPasswordViewModel = ForgotPasswordViewModel()
     private var loadingViewController: LoadingViewController?
+    private var alert: Alert?
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,6 +22,7 @@ class ForgotPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configForgotPasswordView()
+        alert = Alert(controller: self)
         viewModel.delegate(delegate: self)
     }
     
@@ -82,13 +84,15 @@ extension ForgotPasswordViewController: UITextFieldDelegate{
 extension ForgotPasswordViewController: ForgotPasswordViewModelProtocol{
     func successSendEmail() {
         hideLoadingScreen()
-        Alert(controller: self).alertInformation(title: "Tudo certo!", message: "Te enviamos um e-mail com instruções de redefinição de senha. Verifique a sua caixa de entrada e SPAM para concluir o processo.") {
+        alert?.alertInformation(title: "Tudo certo!", message: "Te enviamos um e-mail com instruções de redefinição de senha. Verifique a sua caixa de entrada e SPAM para concluir o processo.") {
             self.navigationController?.popToRootViewController(animated: true)
         }
     }
     
     func errorSendEmail(errorMessage: String) {
         hideLoadingScreen()
-        Alert(controller: self).alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.alert?.alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
+        })
     }
 }
