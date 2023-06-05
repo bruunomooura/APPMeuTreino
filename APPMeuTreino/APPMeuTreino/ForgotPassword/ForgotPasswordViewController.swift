@@ -36,7 +36,7 @@ class ForgotPasswordViewController: UIViewController {
         
         changePasswordButton.layer.cornerRadius = 10
         changePasswordButton.isEnabled = false
-        emailTextField.text = "leandro.bruno81@gmail.com"
+        emailTextField.text = "teste@teste.com"
     }
     
     private func showLoadingScreen() {

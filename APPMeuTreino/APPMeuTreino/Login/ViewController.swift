@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         
-       emailTextField.text = "leandro.bruno81@gmail.com"
+       emailTextField.text = "teste@teste.com"
        passwordTextField.text = "123456"
     }
     
