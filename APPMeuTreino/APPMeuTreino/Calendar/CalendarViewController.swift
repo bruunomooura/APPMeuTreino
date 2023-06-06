@@ -15,7 +15,10 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configCalendar()
+    }
+    
+    func configCalendar() {
         let myCalendar: UICalendarView = UICalendarView()
         let gregorianCalendar = Calendar(identifier: .gregorian)
         myCalendar.calendar = gregorianCalendar
@@ -35,7 +38,6 @@ class CalendarViewController: UIViewController {
         self.calendarView.addSubview(myCalendar)
         myCalendar.frame = self.calendarView.bounds
         myCalendar.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        
     }
 }
 
