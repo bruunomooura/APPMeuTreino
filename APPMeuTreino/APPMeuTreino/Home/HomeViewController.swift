@@ -15,11 +15,29 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var progressBarView: UIProgressView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var progressLabel: UILabel!
-
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    var receiveName: String?
+    var name: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configHomeView()
+        configNameLabel()
+        configUserImage()
+    }
+    
+    func configUserImage() {
+        if let imageData = UserDefaults.standard.data(forKey: "UserImage") {
+            let image = UIImage(data: imageData)
+            userImageView.image = image
+        }
+    }
+    
+    func configNameLabel() {
+        if let name = UserDefaults.standard.string(forKey: "UserName") {
+            userNameLabel.text = name
+        }
     }
     
     func configHomeView(){

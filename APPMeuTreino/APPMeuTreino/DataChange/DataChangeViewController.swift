@@ -21,6 +21,7 @@ class DataChangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configDataChangeView()
+        configureUserInfo()
     }
     
     func configTextField(textField: UITextField){
@@ -45,6 +46,14 @@ class DataChangeViewController: UIViewController {
         configTextField(textField: birthdayTextField)
         configTextField(textField: emailTextField)
         
+    }
+    
+    func configureUserInfo() {
+        
+        if let imageData = UserDefaults.standard.data(forKey: "UserImage") {
+            let userImage = UIImage(data: imageData)
+            profileImageView.image = userImage
+        }
     }
     
     func configureImagePicker(){

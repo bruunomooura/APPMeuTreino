@@ -13,6 +13,18 @@ class TrainingOverviewViewController: UIViewController {
         super.viewDidLoad()
         configureTrainingTableView()
         configCell()
+        configureUserInfo()
+    }
+    
+    func configureUserInfo() {
+        if let userName = UserDefaults.standard.string(forKey: "UserName") {
+            greetingLabel.text = "Olá, \(userName)!"
+        }
+
+        if let imageData = UserDefaults.standard.data(forKey: "UserImage") {
+            let userImage = UIImage(data: imageData)
+            profileImageView.image = userImage
+        }
     }
     
     func configureTrainingTableView(){

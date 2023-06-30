@@ -35,8 +35,6 @@ class ForgotPasswordViewController: UIViewController {
         self.emailTextField.delegate = self
         
         changePasswordButton.layer.cornerRadius = 10
-        changePasswordButton.isEnabled = false
-        emailTextField.text = "teste@teste.com"
     }
     
     private func showLoadingScreen() {
@@ -68,11 +66,9 @@ extension ForgotPasswordViewController: UITextFieldDelegate{
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if emailTextField.hasText{
-            textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
-            changePasswordButton.isEnabled = true
+            textField.layer.borderColor = UIColor.blueMeuTreino.cgColor
         } else {
             textField.layer.borderColor = UIColor.red.cgColor
-            changePasswordButton.isEnabled = false
         }
     }
     
@@ -91,7 +87,7 @@ extension ForgotPasswordViewController: ForgotPasswordViewModelProtocol{
     
     func errorSendEmail(errorMessage: String) {
         hideLoadingScreen()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
             self.alert?.alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
         })
     }

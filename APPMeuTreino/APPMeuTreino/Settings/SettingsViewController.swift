@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configSettingsView()
+        loadUserImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +35,13 @@ class SettingsViewController: UIViewController {
         changeDataButton.layer.cornerRadius = 8
         changePasswordButton.layer.cornerRadius = 8
         exitButton.layer.cornerRadius = 8
+    }
+    
+    func loadUserImage() {
+        if let imageData = UserDefaults.standard.object(forKey: "UserImage") as? Data,
+           let userImage = UIImage(data: imageData) {
+            profileImageView.image = userImage
+        }
     }
     
     @IBAction func tappedChangeDataButton(_ sender: UIButton) {

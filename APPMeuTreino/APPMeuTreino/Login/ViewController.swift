@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         passwordTextField.clipsToBounds = true
         
         loginButton.layer.cornerRadius = 10
-        loginButton.isEnabled = false
         
         registerButton.layer.cornerRadius = 10
         
@@ -93,16 +92,14 @@ extension ViewController: UITextFieldDelegate{
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if emailTextField.hasText && passwordTextField.hasText {
-            loginButton.isEnabled = true
             
-            emailTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
-            passwordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            emailTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+            passwordTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
         } else {
-            loginButton.isEnabled = false
             if textField.hasText == false{
                 textField.layer.borderColor = UIColor.red.cgColor
             }else{
-                textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+                textField.layer.borderColor = UIColor.blueMeuTreino.cgColor
             }
         }
     }
@@ -120,7 +117,7 @@ extension ViewController: LoginViewModelProtocol {
     
     func errorLogin(errorMessage: String) {
         hideLoadingScreen()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
             self.alert?.alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
         })
         

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class RegisterViewController: UIViewController {
     
@@ -28,12 +29,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var editPhotoButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
+    var nameOfUser: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configRegisterView()
         alert = Alert(controller: self)
         viewModel.delegate(delegate: self)
-        
     }
     
     
@@ -54,16 +56,17 @@ class RegisterViewController: UIViewController {
         configTextField(textField: confirmPasswordTextField)
         
         signUpConfirmButton.layer.cornerRadius = 10
-        signUpConfirmButton.isEnabled = false
+        signUpConfirmButton.backgroundColor = UIColor.blueMeuTreino
         
         editPhotoImageView.layer.borderWidth = 2
         editPhotoImageView.layer.cornerRadius = editPhotoImageView.frame.size.height/2
         editPhotoImageView.layer.borderColor = UIColor.blueMeuTreino.cgColor
     }
     
-    func configureImagePicker(){
+    func configureImagePicker() {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = [kUTTypeImage as String]
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
     }
@@ -87,8 +90,22 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
-        viewModel.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
         showLoadingScreen()
+        viewModel.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        guard let typedName = nameTextField.text, nameTextField.hasText else {
+            return
+        }
+        nameOfUser = typedName
+        UserDefaults.standard.set(typedName, forKey: "UserName")
+        guard let homeViewController = tabBarController?.viewControllers?[0] as? HomeViewController else {
+            return
+        }
+        homeViewController.receiveName = typedName
+        navigationController?.popToRootViewController(animated: true)
+        if let selectedImage = editPhotoImageView.image,
+           let imageData = selectedImage.jpegData(compressionQuality: 1.0) {
+            UserDefaults.standard.set(imageData, forKey: "UserImage")
+        }
     }
 }
 
@@ -112,18 +129,16 @@ extension RegisterViewController: UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText && passwordTextField.hasText && confirmPasswordTextField.hasText && confirmPasswordTextField.hasText {
-            signUpConfirmButton.isEnabled = true
-            nameTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
-            birthdayTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
-            emailTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
-            passwordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
-            confirmPasswordTextField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+            nameTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+            birthdayTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+            emailTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+            passwordTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+            confirmPasswordTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
         } else {
-            signUpConfirmButton.isEnabled = false
             if textField.hasText == false{
                 textField.layer.borderColor = UIColor.red.cgColor
             } else {
-                textField.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+                textField.layer.borderColor = UIColor.blueMeuTreino.cgColor
             }
         }
     }
@@ -136,12 +151,21 @@ extension RegisterViewController: UITextFieldDelegate{
 extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let editedImage = info[.editedImage] as? UIImage{
-            editPhotoImageView.image = editedImage
-        }else if let originalImage = info[.originalImage] as? UIImage {
-            editPhotoImageView.image = originalImage
-        }
         picker.dismiss(animated: true, completion: nil)
+        
+        if let editedImage = info[.editedImage] as? UIImage {
+            editPhotoImageView.image = editedImage
+            
+            if let imageData = editedImage.jpegData(compressionQuality: 1.0) {
+                UserDefaults.standard.set(imageData, forKey: "UserImage")
+            }
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            editPhotoImageView.image = originalImage
+            
+            if let imageData = originalImage.jpegData(compressionQuality: 1.0) {
+                UserDefaults.standard.set(imageData, forKey: "UserImage")
+            }
+        }
     }
 }
 
@@ -154,7 +178,7 @@ extension RegisterViewController: RegisterViewModelProtocol {
     
     func errorRegister(errorMessage: String) {
         hideLoadingScreen()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
             self.alert?.alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
         })
     }
