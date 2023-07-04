@@ -54,6 +54,15 @@
                                     <action selector="tappedAddTrainingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dtj-x3-RhO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seg, 13/02/2023" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86R-K0-L8O">
+                                <rect key="frame" x="205" y="44.5" width="150" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UoW-fU-K7w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,9 +70,10 @@
                             <constraint firstItem="CXF-rs-Z0g" firstAttribute="top" secondItem="kOg-Q3-Qx5" secondAttribute="bottom" constant="22" id="4hr-ZN-YUh"/>
                             <constraint firstItem="kOg-Q3-Qx5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6vK-mC-P3S"/>
                             <constraint firstItem="BSy-GU-ZBO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="D2w-gp-Bez"/>
+                            <constraint firstItem="86R-K0-L8O" firstAttribute="top" secondItem="5Y6-nO-aSj" secondAttribute="bottom" constant="20" id="IMl-Dg-Tnd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BSy-GU-ZBO" secondAttribute="bottom" constant="30" id="Qf8-vV-l5k"/>
                             <constraint firstItem="5Y6-nO-aSj" firstAttribute="centerY" secondItem="kOg-Q3-Qx5" secondAttribute="centerY" id="U4a-j1-wUY"/>
-                            <constraint firstItem="CXF-rs-Z0g" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="b6o-JQ-9hV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="86R-K0-L8O" secondAttribute="trailing" constant="20" id="Ys0-PV-SAR"/>
                             <constraint firstItem="kOg-Q3-Qx5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-25" id="c1w-wu-yMx"/>
                             <constraint firstItem="BSy-GU-ZBO" firstAttribute="top" secondItem="CXF-rs-Z0g" secondAttribute="bottom" constant="19" id="gB4-Ju-oOh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CXF-rs-Z0g" secondAttribute="trailing" constant="12" id="j0e-bf-lyw"/>
@@ -73,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="addTrainingButton" destination="BSy-GU-ZBO" id="7nQ-2v-qoi"/>
+                        <outlet property="dateLabel" destination="86R-K0-L8O" id="CP0-G3-aNW"/>
                         <outlet property="greetingLabel" destination="5Y6-nO-aSj" id="ozI-a1-QKk"/>
                         <outlet property="profileImageView" destination="kOg-Q3-Qx5" id="fOK-Ta-pxP"/>
                         <outlet property="trainingTableView" destination="CXF-rs-Z0g" id="8py-N1-AXq"/>

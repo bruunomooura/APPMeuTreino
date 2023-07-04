@@ -6,14 +6,24 @@ class TrainingOverviewViewController: UIViewController {
     @IBOutlet weak var trainingTableView: UITableView!
     @IBOutlet weak var addTrainingButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     
     private var viewModel: TrainingOverviewViewModel = TrainingOverviewViewModel()
+    
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTrainingTableView()
         configCell()
         configureUserInfo()
+        startUpdatingDate()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopUpdatingDate()
     }
     
     func configureUserInfo() {
@@ -26,6 +36,28 @@ class TrainingOverviewViewController: UIViewController {
             profileImageView.image = userImage
         }
     }
+    
+    func startUpdatingDate() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateDate), userInfo: nil, repeats: true)
+        timer?.tolerance = 0.1
+        timer?.fire()
+    }
+    
+    func stopUpdatingDate() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc func updateDate() {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "E dd/MM/yyyy"
+            let currentDate = Date()
+            var formattedDate = dateFormatter.string(from: currentDate)
+            if let firstChar = formattedDate.first {
+                formattedDate.replaceSubrange(formattedDate.startIndex...formattedDate.startIndex, with: String(firstChar).capitalized)
+            }
+            dateLabel.text = formattedDate
+        }
     
     func configureTrainingTableView(){
         trainingTableView.delegate = self
