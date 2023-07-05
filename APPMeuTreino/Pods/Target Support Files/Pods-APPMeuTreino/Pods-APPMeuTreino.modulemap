@@ -1,0 +1,6 @@
+framework module Pods_APPMeuTreino {
+  umbrella header "Pods-APPMeuTreino-umbrella.h"
+
+  export *
+  module * { export * }
+}
