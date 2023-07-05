@@ -28,8 +28,10 @@ class CreateTrainingViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configCreateTrainingView()
-        viewModel.fetchAllRequest()
+//        configCreateTrainingView()
+//        viewModel.fetchAllRequest()
+        viewModel.delegate(delegate: self)
+        viewModel.fetch()
     }
     
     func configCreateTrainingView(){
@@ -118,5 +120,18 @@ extension CreateTrainingViewController : ExerciseSelectionViewControllerProtocol
         exerciseCountButton.setTitle("\(quantity) Exercício(s) selecionado(s)", for: .normal)
     }
 }
+
+extension CreateTrainingViewController: CreateTrainingViewModelProtocol {
+    func success() {
+        print("sucess")
+    }
+    
+    func error() {
+        print("error")
+    }
+    
+    
+}
+   
 
 

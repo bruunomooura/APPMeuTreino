@@ -62,6 +62,9 @@
 		3FE59D1D29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */; };
 		57D06760042F1AA4DA5CB6E3 /* Pods_APPMeuTreinoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAC32ED273D764EBB347B75 /* Pods_APPMeuTreinoTests.framework */; };
 		88289D6229F4703300CC4258 /* ExecutionTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */; };
+		887049082A56096800DE8664 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887049072A56096800DE8664 /* GenericService.swift */; };
+		8870490A2A5609C300DE8664 /* GetExerciseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887049092A5609C300DE8664 /* GetExerciseService.swift */; };
+		8870490C2A560A0900DE8664 /* ExerciseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870490B2A560A0900DE8664 /* ExerciseData.swift */; };
 		88A20CB52A268AB500A10407 /* EnumJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A20CB42A268AB500A10407 /* EnumJSON.swift */; };
 		88BDAB222A213AE60035B125 /* ExecutionTrainingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */; };
 		88BDAB232A213AE60035B125 /* ExerciseSelectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */; };
@@ -170,6 +173,9 @@
 		761220FA693E8DD18CE4A65A /* Pods-APPMeuTreino-APPMeuTreinoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPMeuTreino-APPMeuTreinoUITests.debug.xcconfig"; path = "Target Support Files/Pods-APPMeuTreino-APPMeuTreinoUITests/Pods-APPMeuTreino-APPMeuTreinoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B42A1027C6DF533C64A2912 /* Pods_APPMeuTreino_APPMeuTreinoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APPMeuTreino_APPMeuTreinoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingViewModel.swift; sourceTree = "<group>"; };
+		887049072A56096800DE8664 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		887049092A5609C300DE8664 /* GetExerciseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExerciseService.swift; sourceTree = "<group>"; };
+		8870490B2A560A0900DE8664 /* ExerciseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseData.swift; sourceTree = "<group>"; };
 		88A20CB42A268AB500A10407 /* EnumJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumJSON.swift; sourceTree = "<group>"; };
 		88BDAB1F2A213AE50035B125 /* ExecutionTrainingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingService.swift; sourceTree = "<group>"; };
 		88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionService.swift; sourceTree = "<group>"; };
@@ -528,6 +534,7 @@
 				88BDAB2E2A213B340035B125 /* CreateTrainingData.swift */,
 				88BDAB2C2A213B340035B125 /* ExecutionTrainingData.swift */,
 				88BDAB2D2A213B340035B125 /* ExerciseSelectionData.swift */,
+				8870490B2A560A0900DE8664 /* ExerciseData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -591,6 +598,8 @@
 				88BDAB202A213AE50035B125 /* ExerciseSelectionService.swift */,
 				88BDAB212A213AE50035B125 /* CreateTrainingService.swift */,
 				88A20CB42A268AB500A10407 /* EnumJSON.swift */,
+				887049072A56096800DE8664 /* GenericService.swift */,
+				887049092A5609C300DE8664 /* GetExerciseService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -615,7 +624,6 @@
 				268A97E1800617CA55A958D6 /* Pods-APPMeuTreinoTests.debug.xcconfig */,
 				EADCC0C263121BF9380C9D73 /* Pods-APPMeuTreinoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -788,7 +796,7 @@
 			mainGroup = 3F6448AE29BA61F100BDE579;
 			packageReferences = (
 				CB1654C12A1555CC00E091D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm.git" */,
+				3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 3F6448B829BA61F100BDE579 /* Products */;
 			projectDirPath = "";
@@ -1002,6 +1010,7 @@
 				88BDAB302A213B340035B125 /* ExerciseSelectionData.swift in Sources */,
 				CBE2F74429D0D53A0070A70F /* NameTrainingViewController.swift in Sources */,
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
+				8870490C2A560A0900DE8664 /* ExerciseData.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
 				88BDAB2F2A213B340035B125 /* ExecutionTrainingData.swift in Sources */,
 				3FAFD71829CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift in Sources */,
@@ -1009,6 +1018,7 @@
 				3F6DF7532A2288B1005BC0C2 /* ForgotPasswordViewModel.swift in Sources */,
 				CB1654C82A15590A00E091D6 /* LoginViewModel.swift in Sources */,
 				88BDAB222A213AE60035B125 /* ExecutionTrainingService.swift in Sources */,
+				8870490A2A5609C300DE8664 /* GetExerciseService.swift in Sources */,
 				3FA053FE29F453D80097BA6E /* ExerciseSelectionViewModel.swift in Sources */,
 				88BDAB232A213AE60035B125 /* ExerciseSelectionService.swift in Sources */,
 				38C672F829F84CE8008F8DA3 /* Training.swift in Sources */,
@@ -1019,6 +1029,7 @@
 				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,
 				88A20CB52A268AB500A10407 /* EnumJSON.swift in Sources */,
 				3F6DF74B2A227D5C005BC0C2 /* LoadingViewController.swift in Sources */,
+				887049082A56096800DE8664 /* GenericService.swift in Sources */,
 				3F64490B29BA710A00BDE579 /* ForgotPasswordViewController.swift in Sources */,
 				CB0158AD29D461C90083D418 /* TrainingConclusionViewController.swift in Sources */,
 				3F6448C529BA61F100BDE579 /* APPMeuTreino.xcdatamodeld in Sources */,
@@ -1377,7 +1388,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm.git" */ = {
+		3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
 			requirement = {
@@ -1398,7 +1409,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		3F6DF74D2A227EAD005BC0C2 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm.git" */;
+			package = 3F6DF74C2A227EAD005BC0C2 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
 		};
 		CB1654C22A1555CC00E091D6 /* FirebaseAuth */ = {
