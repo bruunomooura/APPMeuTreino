@@ -7,13 +7,13 @@
 
 import UIKit
 
-class TrainingCell: UITableViewCell {
+class TrainingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var trainingCellView: UIView!
     @IBOutlet weak var nameTrainingLabel: UILabel!
     @IBOutlet weak var numberOfExerciseLabel: UILabel!
     
-    static let identifier: String = String(describing: TrainingCell.self)
+    static let identifier: String = String(describing: TrainingTableViewCell.self)
     
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
@@ -21,13 +21,14 @@ class TrainingCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configureCell()
     }
 
     func configureCell(){
         trainingCellView.layer.cornerRadius = 12
         trainingCellView.layer.masksToBounds = false
         trainingCellView.layer.shadowColor = UIColor.lightGray.cgColor
-        trainingCellView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        trainingCellView.layer.shadowOffset = CGSize(width: 1, height: 1)
         trainingCellView.layer.shadowOpacity = 1
         trainingCellView.layer.shadowRadius = 4
         trainingCellView.layer.borderWidth = 0.2

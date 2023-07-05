@@ -30,7 +30,7 @@ class TrainingOverviewViewController: UIViewController {
         if let userName = UserDefaults.standard.string(forKey: "UserName") {
             greetingLabel.text = "Olá, \(userName)!"
         }
-
+        
         if let imageData = UserDefaults.standard.data(forKey: "UserImage") {
             let userImage = UIImage(data: imageData)
             profileImageView.image = userImage
@@ -49,20 +49,27 @@ class TrainingOverviewViewController: UIViewController {
     }
     
     @objc func updateDate() {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "E dd/MM/yyyy"
-            let currentDate = Date()
-            var formattedDate = dateFormatter.string(from: currentDate)
-            if let firstChar = formattedDate.first {
-                formattedDate.replaceSubrange(formattedDate.startIndex...formattedDate.startIndex, with: String(firstChar).capitalized)
-            }
-            dateLabel.text = formattedDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E dd/MM/yyyy"
+        let currentDate = Date()
+        var formattedDate = dateFormatter.string(from: currentDate)
+        if let firstChar = formattedDate.first {
+            formattedDate.replaceSubrange(formattedDate.startIndex...formattedDate.startIndex, with: String(firstChar).capitalized)
         }
+        dateLabel.text = formattedDate
+    }
     
     func configureTrainingTableView(){
         trainingTableView.delegate = self
         trainingTableView.dataSource = self
-        trainingTableView.register(TrainingCell.nib(), forCellReuseIdentifier: TrainingCell.identifier)
+        trainingTableView.register(TrainingTableViewCell.nib(), forCellReuseIdentifier: TrainingTableViewCell.identifier)
+        trainingTableView.register(NoTrainingTableViewCell.nib(), forCellReuseIdentifier: NoTrainingTableViewCell.identifier)
+        
+        if viewModel.arraySize > 3 {
+            trainingTableView.isScrollEnabled = true
+        } else {
+            trainingTableView.isScrollEnabled = false
+        }
     }
     
     func configCell(){
@@ -71,7 +78,7 @@ class TrainingOverviewViewController: UIViewController {
         trainingTableView.separatorStyle = .none
         trainingTableView.isEditing = false
         trainingTableView.allowsSelectionDuringEditing = true
-
+        
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.masksToBounds = false
         profileImageView.layer.borderColor = UIColor.blueMeuTreino.cgColor
@@ -90,28 +97,46 @@ class TrainingOverviewViewController: UIViewController {
 extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = trainingTableView.dequeueReusableCell(withIdentifier: String(describing: TrainingCell.self), for: indexPath) as? TrainingCell{
-            cell.configureCell()
-            cell.setupCell(training: viewModel.getTraining(index: indexPath.row))
-            return cell
+        if viewModel.arraySize == 0 {
+            let cell = trainingTableView.dequeueReusableCell(withIdentifier: NoTrainingTableViewCell.identifier, for: indexPath) as? NoTrainingTableViewCell
+            cell?.setupCell(text1: "Vamos começar?", text2: "Clique no botão abaixo para criar o seu primeiro treino.")
+            return cell ?? UITableViewCell()
+        } else {
+            if let cell = trainingTableView.dequeueReusableCell(withIdentifier: String(describing: TrainingTableViewCell.self), for: indexPath) as? TrainingTableViewCell{
+                cell.configureCell()
+                cell.setupCell(training: viewModel.getTraining(index: indexPath.row))
+                return cell
+            }
+            return UITableViewCell()
         }
-        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.arraySize
+        if viewModel.arraySize != 0 {
+            return viewModel.arraySize
+        } else {
+            return 1
+        }
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 105
+        if viewModel.arraySize == 0 {
+            return 300
+        } else {
+            return 100
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: String(describing: ExecutionTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ExecutionTrainingViewController.self)) as? ExecutionTrainingViewController{
-            vc.modalPresentationStyle = .fullScreen
-            vc.delegate(delegate: self)
-            present(vc, animated: true)
+        if viewModel.arraySize == 0 {
+            return
+        } else {
+            if let vc = UIStoryboard(name: String(describing: ExecutionTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ExecutionTrainingViewController.self)) as? ExecutionTrainingViewController{
+                vc.modalPresentationStyle = .fullScreen
+                vc.delegate(delegate: self)
+                present(vc, animated: true)
+            }
         }
+        
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -125,8 +150,14 @@ extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Deletar") { _, _, completionHandler in
-                completionHandler(true)
+            completionHandler(true)
+            
             self.viewModel.deleteTraining(index: indexPath.row)
+            if self.viewModel.arraySize > 3 {
+                self.trainingTableView.isScrollEnabled = true
+            } else {
+                self.trainingTableView.isScrollEnabled = false
+            }
             self.trainingTableView.reloadData()
         }
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
