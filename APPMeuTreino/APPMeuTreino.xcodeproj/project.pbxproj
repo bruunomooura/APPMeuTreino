@@ -18,6 +18,7 @@
 		3F2EAA022A57801400A968EA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EA9FF2A57801400A968EA /* UIImageView+Extension.swift */; };
 		3F2EAA032A57801400A968EA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EAA002A57801400A968EA /* ImageCache.swift */; };
 		3F2EAA042A57801400A968EA /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EAA012A57801400A968EA /* URL+Extension.swift */; };
+		3F2EAA072A5784A600A968EA /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EAA062A5784A600A968EA /* ChangePasswordViewModel.swift */; };
 		3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BA29BA61F100BDE579 /* AppDelegate.swift */; };
 		3F6448BD29BA61F100BDE579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */; };
 		3F6448BF29BA61F100BDE579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BE29BA61F100BDE579 /* ViewController.swift */; };
@@ -126,6 +127,7 @@
 		3F2EA9FF2A57801400A968EA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3F2EAA002A57801400A968EA /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		3F2EAA012A57801400A968EA /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		3F2EAA062A5784A600A968EA /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		3F6448B729BA61F100BDE579 /* APPMeuTreino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPMeuTreino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6448BA29BA61F100BDE579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6448BC29BA61F100BDE579 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +324,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		3F2EAA052A5784A600A968EA /* ChagePasswordViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F2EAA062A5784A600A968EA /* ChangePasswordViewModel.swift */,
+			);
+			path = ChagePasswordViewModel;
+			sourceTree = "<group>";
+		};
 		3F6448AE29BA61F100BDE579 = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +515,7 @@
 		3F64490529BA708100BDE579 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
+				3F2EAA052A5784A600A968EA /* ChagePasswordViewModel */,
 				3F64493C29BA73CD00BDE579 /* ChangePasswordViewController.swift */,
 				3F64493E29BA73D500BDE579 /* ChangePasswordViewController.storyboard */,
 			);
@@ -1009,6 +1020,7 @@
 				3F2EA9F82A56246300A968EA /* NoTrainingTableViewCell.swift in Sources */,
 				3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */,
 				8870490C2A560A0900DE8664 /* ExerciseData.swift in Sources */,
+				3F2EAA072A5784A600A968EA /* ChangePasswordViewModel.swift in Sources */,
 				3F2EA9FE2A577DC800A968EA /* Utils.swift in Sources */,
 				3F2EAA042A57801400A968EA /* URL+Extension.swift in Sources */,
 				3F64494329BA7C9C00BDE579 /* TabBarControllerViewController.swift in Sources */,
