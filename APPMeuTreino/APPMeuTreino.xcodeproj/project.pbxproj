@@ -12,7 +12,6 @@
 		38B8008C29C9586B005F35AF /* TrainingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B8008A29C9586B005F35AF /* TrainingTableViewCell.xib */; };
 		38C672F829F84CE8008F8DA3 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C672F729F84CE8008F8DA3 /* Training.swift */; };
 		38C672FC29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C672FB29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift */; };
-		3F056A0729C74A8000BF1B41 /* CreateTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F056A0629C74A8000BF1B41 /* CreateTrainingCollectionViewCell.swift */; };
 		3F2EA9F72A56246300A968EA /* NoTrainingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2EA9F52A56246300A968EA /* NoTrainingTableViewCell.xib */; };
 		3F2EA9F82A56246300A968EA /* NoTrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EA9F62A56246300A968EA /* NoTrainingTableViewCell.swift */; };
 		3F6448BB29BA61F100BDE579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6448BA29BA61F100BDE579 /* AppDelegate.swift */; };
@@ -61,9 +60,10 @@
 		3FAFD71929CE188B002D9563 /* ExerciseSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAFD71729CE188B002D9563 /* ExerciseSelectionCollectionViewCell.xib */; };
 		3FB6EEBC29CC786E00CE272A /* DataExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */; };
 		3FB6EEBE29CC788F00CE272A /* DataExerciseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */; };
-		3FE59D1D29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */; };
 		57D06760042F1AA4DA5CB6E3 /* Pods_APPMeuTreinoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAC32ED273D764EBB347B75 /* Pods_APPMeuTreinoTests.framework */; };
 		88289D6229F4703300CC4258 /* ExecutionTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */; };
+		8869163A2A56434400A7373D /* CreateTrainingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886916382A56434400A7373D /* CreateTrainingCollectionViewCell.swift */; };
+		8869163B2A56434400A7373D /* CreateTrainingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886916392A56434400A7373D /* CreateTrainingCollectionViewCell.xib */; };
 		887049082A56096800DE8664 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887049072A56096800DE8664 /* GenericService.swift */; };
 		8870490A2A5609C300DE8664 /* GetExerciseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887049092A5609C300DE8664 /* GetExerciseService.swift */; };
 		8870490C2A560A0900DE8664 /* ExerciseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870490B2A560A0900DE8664 /* ExerciseData.swift */; };
@@ -121,7 +121,6 @@
 		38B8008A29C9586B005F35AF /* TrainingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingTableViewCell.xib; sourceTree = "<group>"; };
 		38C672F729F84CE8008F8DA3 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		38C672FB29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOverviewViewModel.swift; sourceTree = "<group>"; };
-		3F056A0629C74A8000BF1B41 /* CreateTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTrainingCollectionViewCell.swift; path = APPMeuTreino/CreateTraining/Cell/CreateTrainingCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3F2EA9F52A56246300A968EA /* NoTrainingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoTrainingTableViewCell.xib; sourceTree = "<group>"; };
 		3F2EA9F62A56246300A968EA /* NoTrainingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoTrainingTableViewCell.swift; sourceTree = "<group>"; };
 		3F6448B729BA61F100BDE579 /* APPMeuTreino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPMeuTreino.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +145,8 @@
 		3F64491429BA717000BDE579 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		3F64491729BA71B400BDE579 /* CreateTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingViewController.swift; sourceTree = "<group>"; };
 		3F64491929BA71C000BDE579 /* CreateTrainingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTrainingViewController.storyboard; sourceTree = "<group>"; };
-		3F64491F29BA72F500BDE579 /* ExerciseSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionViewController.swift; sourceTree = "<group>"; };
-		3F64492129BA730800BDE579 /* ExerciseSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExerciseSelectionViewController.storyboard; sourceTree = "<group>"; };
+		3F64491F29BA72F500BDE579 /* ExerciseSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseSelectionViewController.swift; path = ../../CreateTraining/ExerciseSelection/View/ExerciseSelectionViewController.swift; sourceTree = "<group>"; };
+		3F64492129BA730800BDE579 /* ExerciseSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ExerciseSelectionViewController.storyboard; path = ../../CreateTraining/ExerciseSelection/View/ExerciseSelectionViewController.storyboard; sourceTree = "<group>"; };
 		3F64492429BA732800BDE579 /* TrainingOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingOverviewViewController.swift; sourceTree = "<group>"; };
 		3F64492629BA733300BDE579 /* TrainingOverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainingOverviewViewController.storyboard; sourceTree = "<group>"; };
 		3F64492829BA734200BDE579 /* ExecutionTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingViewController.swift; sourceTree = "<group>"; };
@@ -168,15 +167,16 @@
 		3F6DF74A2A227D5C005BC0C2 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		3F6DF7522A2288B1005BC0C2 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		3FA053FA29F452780097BA6E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		3FA053FD29F453D80097BA6E /* ExerciseSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionViewModel.swift; sourceTree = "<group>"; };
-		3FAFD71629CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
-		3FAFD71729CE188B002D9563 /* ExerciseSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		3FA053FD29F453D80097BA6E /* ExerciseSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseSelectionViewModel.swift; path = ../../CreateTraining/ExerciseSelection/ExerciseSelectionViewModel/ExerciseSelectionViewModel.swift; sourceTree = "<group>"; };
+		3FAFD71629CE188B002D9563 /* ExerciseSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseSelectionCollectionViewCell.swift; path = ../../CreateTraining/ExerciseSelection/Cell/ExerciseSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FAFD71729CE188B002D9563 /* ExerciseSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ExerciseSelectionCollectionViewCell.xib; path = ../../CreateTraining/ExerciseSelection/Cell/ExerciseSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		3FB6EEBB29CC786E00CE272A /* DataExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExerciseViewController.swift; sourceTree = "<group>"; };
 		3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataExerciseViewController.storyboard; sourceTree = "<group>"; };
-		3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
 		761220FA693E8DD18CE4A65A /* Pods-APPMeuTreino-APPMeuTreinoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPMeuTreino-APPMeuTreinoUITests.debug.xcconfig"; path = "Target Support Files/Pods-APPMeuTreino-APPMeuTreinoUITests/Pods-APPMeuTreino-APPMeuTreinoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B42A1027C6DF533C64A2912 /* Pods_APPMeuTreino_APPMeuTreinoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APPMeuTreino_APPMeuTreinoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88289D6129F4703300CC4258 /* ExecutionTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionTrainingViewModel.swift; sourceTree = "<group>"; };
+		886916382A56434400A7373D /* CreateTrainingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTrainingCollectionViewCell.swift; sourceTree = "<group>"; };
+		886916392A56434400A7373D /* CreateTrainingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTrainingCollectionViewCell.xib; sourceTree = "<group>"; };
 		887049072A56096800DE8664 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		887049092A5609C300DE8664 /* GetExerciseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExerciseService.swift; sourceTree = "<group>"; };
 		8870490B2A560A0900DE8664 /* ExerciseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseData.swift; sourceTree = "<group>"; };
@@ -288,8 +288,8 @@
 		3F056A0A29C74BD400BF1B41 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3F056A0629C74A8000BF1B41 /* CreateTrainingCollectionViewCell.swift */,
-				3FE59D1C29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib */,
+				886916382A56434400A7373D /* CreateTrainingCollectionViewCell.swift */,
+				886916392A56434400A7373D /* CreateTrainingCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -428,6 +428,7 @@
 		3F6448F629BA692E00BDE579 /* CreateTraining */ = {
 			isa = PBXGroup;
 			children = (
+				3FB6EEBA29CC77D100CE272A /* DataExerciseViewModal */,
 				3F056A0A29C74BD400BF1B41 /* Cell */,
 				CB154A8C29F45F2C007FC081 /* View */,
 				CB154A8B29F45F01007FC081 /* ViewModel */,
@@ -438,7 +439,6 @@
 		3F6448FB29BA6B8F00BDE579 /* ExerciseSelection */ = {
 			isa = PBXGroup;
 			children = (
-				3FB6EEBA29CC77D100CE272A /* DataExerciseViewModal */,
 				3FE59D1E29C7A824008F8632 /* Cell */,
 				3FA053FF29F457CE0097BA6E /* View */,
 				3FA053FC29F4537F0097BA6E /* ExerciseSelectionViewModel */,
@@ -585,6 +585,7 @@
 				3FB6EEBD29CC788F00CE272A /* DataExerciseViewController.storyboard */,
 			);
 			name = DataExerciseViewModal;
+			path = ExerciseSelection;
 			sourceTree = "<group>";
 		};
 		3FE59D1E29C7A824008F8632 /* Cell */ = {
@@ -837,7 +838,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2EA9F72A56246300A968EA /* NoTrainingTableViewCell.xib in Resources */,
-				3FE59D1D29C74C27008F8632 /* CreateTrainingCollectionViewCell.xib in Resources */,
 				3F64491129BA714D00BDE579 /* RegisterViewController.storyboard in Resources */,
 				CB1654C02A15547F00E091D6 /* GoogleService-Info.plist in Resources */,
 				3F64493B29BA73BE00BDE579 /* DataChangeViewController.storyboard in Resources */,
@@ -865,6 +865,7 @@
 				3F64491A29BA71C000BDE579 /* CreateTrainingViewController.storyboard in Resources */,
 				3F64493329BA738800BDE579 /* CalendarViewController.storyboard in Resources */,
 				3F6448C729BA61F300BDE579 /* Assets.xcassets in Resources */,
+				8869163B2A56434400A7373D /* CreateTrainingCollectionViewCell.xib in Resources */,
 				3F6448C229BA61F100BDE579 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1020,6 +1021,7 @@
 				3F64492D29BA736500BDE579 /* DemonstrationExerciseViewController.swift in Sources */,
 				88BDAB242A213AE60035B125 /* CreateTrainingService.swift in Sources */,
 				3F64493929BA73B600BDE579 /* DataChangeViewController.swift in Sources */,
+				8869163A2A56434400A7373D /* CreateTrainingCollectionViewCell.swift in Sources */,
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
 				88289D6229F4703300CC4258 /* ExecutionTrainingViewModel.swift in Sources */,
 				CB1654CE2A15671700E091D6 /* RegisterViewModel.swift in Sources */,
@@ -1047,7 +1049,6 @@
 				88BDAB232A213AE60035B125 /* ExerciseSelectionService.swift in Sources */,
 				38C672F829F84CE8008F8DA3 /* Training.swift in Sources */,
 				88BDAB312A213B340035B125 /* CreateTrainingData.swift in Sources */,
-				3F056A0729C74A8000BF1B41 /* CreateTrainingCollectionViewCell.swift in Sources */,
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,
 				3F64490F29BA714400BDE579 /* RegisterViewController.swift in Sources */,
 				3F64491329BA715B00BDE579 /* HomeViewController.swift in Sources */,

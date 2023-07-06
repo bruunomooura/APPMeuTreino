@@ -8,5 +8,5 @@
 import UIKit
 
 struct CreateTrainingData: Codable {
-    var exerciseType: [ExerciseType]?
+    var exercise: [Exercise]?
 }

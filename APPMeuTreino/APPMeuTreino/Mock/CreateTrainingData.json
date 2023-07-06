@@ -1,26 +1,26 @@
 
 {
-    "exerciseType": [
+    "exercise": [
         {
-            "exerciseTypeImage": "Abdominais"
+            "exerciseName": "Abdominal Alpinista",
+            "exerciseImage": "AbdominalAlpinista"
         },
         {
-            "exerciseTypeImage": "Aeróbico"
+            "exerciseName": "Abdominal Declinado",
+            "exerciseImage": "AbdominalDeclinado"
         },
         {
-            "exerciseTypeImage": "Bíceps"
+            "exerciseName": "Abdominal Em Banco Declinado",
+            "exerciseImage": "AbdominalEmBancoDeclinado"
         },
         {
-            "exerciseTypeImage": "CostasOmbros"
+            "exerciseName": "Abdominal Em V",
+            "exerciseImage": "AbdominalEmV"
         },
         {
-            "exerciseTypeImage": "MembrosInferiores"
-        },
-        {
-            "exerciseTypeImage": "Peito"
-        },
-        {
-            "exerciseTypeImage": "Triceps"
+            "exerciseName": "Abdominal Na Bola",
+            "exerciseImage": "AbdominalNaBola"
         }
+        
     ]
 }
