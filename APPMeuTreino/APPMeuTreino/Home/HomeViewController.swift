@@ -65,7 +65,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func tappedAddTrainingButton(_ sender: UIButton) {
         let vc: NameTrainingViewController? = UIStoryboard(name: String(describing: NameTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: NameTrainingViewController.self)) as? NameTrainingViewController
-        vc?.delegate(delegate: self)
+        vc?.setViewControllerDelegate(self)
         present(vc ?? UIViewController(), animated: true)
     }
 }

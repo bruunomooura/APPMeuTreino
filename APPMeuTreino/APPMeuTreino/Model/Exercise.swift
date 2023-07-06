@@ -8,5 +8,9 @@
 import Foundation
 
 struct Exercise: Codable {
-    var exerciseName, exerciseImage: String?
+    var exerciseName: String
+    var category: String
+    var details: String
+    var exerciseImage: String?
+    var exerciseVideoURL: String?
 }

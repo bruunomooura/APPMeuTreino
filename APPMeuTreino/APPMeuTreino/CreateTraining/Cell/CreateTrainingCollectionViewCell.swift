@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol CreateTrainingCollectionViewCellProtocol: AnyObject {
     func addExerciseInformations(name: String)
@@ -19,10 +20,10 @@ class CreateTrainingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var exerciseSelecionImageView: UIImageView!
     
-    private var delegate: CreateTrainingCollectionViewCellProtocol?
+    var celldelegate: CreateTrainingCollectionViewCellProtocol?
     
     func delegate(delegate:CreateTrainingCollectionViewCellProtocol){
-        self.delegate = delegate
+        self.celldelegate = delegate
     }
     
     static let identifier: String = String(describing: CreateTrainingCollectionViewCell.self)
@@ -43,12 +44,32 @@ class CreateTrainingCollectionViewCell: UICollectionViewCell {
         numberRepetitionsSelectionButton.layer.cornerRadius = 8
     }
     
+    private var player: AVPlayer?
+    private var playerLayer: AVPlayerLayer?
+    
     func setupCell(exercise: Exercise) {
         exerciseSelecionImageView.image = UIImage(named: exercise.exerciseImage ?? "")
         exerciseLabel.text = exercise.exerciseName
+        
+        if let videoURLString = exercise.exerciseVideoURL, let videoURL = URL(string: videoURLString) {
+            player = AVPlayer(url: videoURL)
+            playerLayer = AVPlayerLayer(player: player)
+            playerLayer?.frame = exerciseSelecionImageView.bounds
+            exerciseSelecionImageView.layer.addSublayer(playerLayer!)
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        playerLayer?.removeFromSuperlayer()
+        player?.pause()
+        player = nil
+        playerLayer = nil
     }
     
     @IBAction func tappedSelectionButton(_ sender: UIButton) {
-        delegate?.addExerciseInformations(name: sender.titleLabel?.text ?? "")
+        celldelegate?.addExerciseInformations(name: sender.titleLabel?.text ?? "")
     }
 }
+ 

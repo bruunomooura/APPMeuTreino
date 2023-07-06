@@ -35,22 +35,23 @@ class CreateTrainingViewController: UIViewController {
         }
     }
     
-    private weak var delegate: CreateTrainingViewControllerProtocol?
-    public func delegate(delegate: CreateTrainingViewControllerProtocol?) {
-        self.delegate = delegate
-    }
+    private weak var viewControllerDelegate: CreateTrainingViewControllerProtocol?
+        
+    public func setViewControllerDelegate(_ delegate: CreateTrainingViewControllerProtocol?) {
+            self.viewControllerDelegate = delegate
+        }
     
     private var isCellSelected = false
 
-    private var SelectedCells = Set<IndexPath>()
+    private var selectedCells = Set<IndexPath>()
    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        configCreateTrainingView()
-        viewModel.fetchAllRequest()
-//        viewModel.delegate(delegate: self)
-//        viewModel.fetch()
-    }
+            super.viewDidLoad()
+            configCreateTrainingView()
+            viewModel.fetchAllRequest { [weak self] in
+                self?.createTrainingCollectionView.reloadData()
+            }
+        }
     
     func configCreateTrainingView(){
         finishButton.layer.cornerRadius = 10
@@ -81,7 +82,7 @@ class CreateTrainingViewController: UIViewController {
     }
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
-        delegate?.configureTabBarIndex()
+        viewControllerDelegate?.configureTabBarIndex()
         var presentingViewController = self.presentingViewController
         while presentingViewController?.presentingViewController != nil {
             presentingViewController = presentingViewController?.presentingViewController
@@ -91,6 +92,15 @@ class CreateTrainingViewController: UIViewController {
 }
 
 extension CreateTrainingViewController: UISearchBarDelegate{
+    
+    private var isSearchBarEmpty: Bool {
+        return searchExerciseSearchBar.text?.isEmpty ?? true
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            viewModel.filterExercises(with: searchText)
+            createTrainingCollectionView.reloadData()
+        }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchExerciseSearchBar.resignFirstResponder()
@@ -105,36 +115,54 @@ extension CreateTrainingViewController: UISearchBarDelegate{
 extension CreateTrainingViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.arraySize
+        return isSearchBarEmpty ? viewModel.exerciseCount : viewModel.filteredExercises.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTrainingCollectionViewCell.identifier, for: indexPath) as! CreateTrainingCollectionViewCell
-        cell.setupCell(exercise: viewModel.getExerciseType(index: indexPath.row))
-        cell.delegate(delegate: self)
-        if SelectedCells.contains(indexPath) {
-            cell.backgroundColor = .orangeMeuTreino
-            isCellSelected = true
-        } else {
-            cell.backgroundColor = .white
-            isCellSelected = false
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateTrainingCollectionViewCell.identifier, for: indexPath) as? CreateTrainingCollectionViewCell else {
+            return UICollectionViewCell()
         }
-        cell.numberSeriesSelectionButton.isEnabled = isCellSelected
-        cell.numberRepetitionsSelectionButton.isEnabled = isCellSelected
-        cell.weightSelectionButton.isEnabled = isCellSelected
-        cell.layer.cornerRadius = 10
-        cell.layer.shadowColor = UIColor.lightGray.cgColor
-        cell.layer.shadowRadius = 2
-        cell.layer.shadowOffset = CGSize.zero
-        cell.layer.shadowOpacity = 0.7
-        cell.layer.masksToBounds = false
+        
+        if let exercise = viewModel.getExercise(at: indexPath.row) {
+            let exercise: Exercise
+                if isSearchBarEmpty {
+                    exercise = viewModel.getExercise(at: indexPath.row) ?? Exercise(exerciseName: "", category: "", details: "")
+                } else {
+                    exercise = viewModel.filteredExercises[indexPath.row]
+                }
+                
+            cell.setupCell(exercise: exercise)
+            
+            if selectedCells.contains(indexPath) {
+                cell.backgroundColor = .orangeMeuTreino
+                cell.numberSeriesSelectionButton.isEnabled = true
+                cell.numberRepetitionsSelectionButton.isEnabled = true
+                cell.weightSelectionButton.isEnabled = true
+            } else {
+                cell.backgroundColor = .white
+                cell.numberSeriesSelectionButton.isEnabled = false
+                cell.numberRepetitionsSelectionButton.isEnabled = false
+                cell.weightSelectionButton.isEnabled = false
+            }
+            
+            
+            cell.layer.cornerRadius = 10
+            cell.layer.shadowColor = UIColor.lightGray.cgColor
+            cell.layer.shadowRadius = 2
+            cell.layer.shadowOffset = CGSize.zero
+            cell.layer.shadowOpacity = 0.7
+            cell.layer.masksToBounds = false
+            
+            cell.celldelegate = self
+        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CreateTrainingCollectionViewCell{
             cell.backgroundColor = .orangeMeuTreino
-            SelectedCells.insert(indexPath)
+            selectedCells.insert(indexPath)
             selectedExerciseCount += 1
             cell.numberSeriesSelectionButton.isEnabled = true
             cell.numberRepetitionsSelectionButton.isEnabled = true
@@ -150,7 +178,7 @@ extension CreateTrainingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CreateTrainingCollectionViewCell{
             cell.backgroundColor = .white
-            SelectedCells.remove(indexPath)
+            selectedCells.remove(indexPath)
             selectedExerciseCount -= 1
             cell.numberSeriesSelectionButton.isEnabled = false
             cell.numberRepetitionsSelectionButton.isEnabled = false
@@ -183,15 +211,16 @@ extension CreateTrainingViewController: UICollectionViewDelegateFlowLayout{
 
 extension CreateTrainingViewController: CreateTrainingCollectionViewCellProtocol{
     func addExerciseInformations(name: String) {
-        if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController{
-            vc.name = name
-            if name == "Séries" {
-                vc.placeholder = "Nº de Séries"
-            } else if name == "Reps"{
-                vc.placeholder = "Nº de Repetições"
-            } else {
-                vc.placeholder = "Carga em Kg"            }
-            present(vc, animated: true)
+            if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController {
+                vc.name = name
+                if name == "Séries" {
+                    vc.placeholder = "Nº de Séries"
+                } else if name == "Reps" {
+                    vc.placeholder = "Nº de Repetições"
+                } else {
+                    vc.placeholder = "Carga em Kg"
+                }
+                present(vc, animated: true)
+            }
         }
     }
-}
