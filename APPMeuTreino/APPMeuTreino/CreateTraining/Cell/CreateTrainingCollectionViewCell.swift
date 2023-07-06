@@ -44,28 +44,17 @@ class CreateTrainingCollectionViewCell: UICollectionViewCell {
         numberRepetitionsSelectionButton.layer.cornerRadius = 8
     }
     
-    private var player: AVPlayer?
-    private var playerLayer: AVPlayerLayer?
-    
     func setupCell(exercise: Exercise) {
-        exerciseSelecionImageView.image = UIImage(named: exercise.exerciseImage ?? "")
-        exerciseLabel.text = exercise.exerciseName
         
-        if let videoURLString = exercise.exerciseVideoURL, let videoURL = URL(string: videoURLString) {
-            player = AVPlayer(url: videoURL)
-            playerLayer = AVPlayerLayer(player: player)
-            playerLayer?.frame = exerciseSelecionImageView.bounds
-            exerciseSelecionImageView.layer.addSublayer(playerLayer!)
+        if exercise.isSelected {
+            contentView.backgroundColor = .red
+        } else {
+            contentView.backgroundColor = .white
         }
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
         
-        playerLayer?.removeFromSuperlayer()
-        player?.pause()
-        player = nil
-        playerLayer = nil
+        exerciseLabel.text = exercise.exerciseName
+        guard let video = exercise.exerciseVideoURL, let url: URL = Utils.getThumbnail(link: video) else { return }
+        exerciseSelecionImageView.loadImageFromURL(url, placeholder: UIImage(systemName: "trash"))
     }
     
     @IBAction func tappedSelectionButton(_ sender: UIButton) {

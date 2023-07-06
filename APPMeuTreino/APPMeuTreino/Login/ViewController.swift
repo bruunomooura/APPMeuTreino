@@ -120,6 +120,5 @@ extension ViewController: LoginViewModelProtocol {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
             self.alert?.alertInformation(title: "Ops! Algo deu errado!", message: errorMessage)
         })
-        
     }
 }

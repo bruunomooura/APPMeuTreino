@@ -8,9 +8,11 @@
 import Foundation
 
 struct Exercise: Codable {
+    var id: Int?
     var exerciseName: String
     var category: String
     var details: String
     var exerciseImage: String?
     var exerciseVideoURL: String?
+    var isSelected: Bool = false
 }
