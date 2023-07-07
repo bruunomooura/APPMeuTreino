@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380EAEE82A5796FF00506190 /* FirestoreMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380EAEE72A5796FF00506190 /* FirestoreMenager.swift */; };
+		380EAEEA2A57976600506190 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380EAEE92A57976600506190 /* User.swift */; };
 		385D2DC52A2573F700C43461 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2DC42A2573F700C43461 /* UIColor+Extension.swift */; };
 		38B8008B29C9586B005F35AF /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B8008929C9586B005F35AF /* TrainingTableViewCell.swift */; };
 		38B8008C29C9586B005F35AF /* TrainingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B8008A29C9586B005F35AF /* TrainingTableViewCell.xib */; };
@@ -116,6 +118,8 @@
 /* Begin PBXFileReference section */
 		07D0E4AEE89CE92D6333A090 /* Pods-APPMeuTreino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPMeuTreino.debug.xcconfig"; path = "Target Support Files/Pods-APPMeuTreino/Pods-APPMeuTreino.debug.xcconfig"; sourceTree = "<group>"; };
 		268A97E1800617CA55A958D6 /* Pods-APPMeuTreinoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPMeuTreinoTests.debug.xcconfig"; path = "Target Support Files/Pods-APPMeuTreinoTests/Pods-APPMeuTreinoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		380EAEE72A5796FF00506190 /* FirestoreMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreMenager.swift; sourceTree = "<group>"; };
+		380EAEE92A57976600506190 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		385D2DC42A2573F700C43461 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		38B8008929C9586B005F35AF /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		38B8008A29C9586B005F35AF /* TrainingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingTableViewCell.xib; sourceTree = "<group>"; };
@@ -567,6 +571,7 @@
 				88BDAB2C2A213B340035B125 /* ExecutionTrainingData.swift */,
 				88BDAB2D2A213B340035B125 /* ExerciseSelectionData.swift */,
 				8870490B2A560A0900DE8664 /* ExerciseData.swift */,
+				380EAEE92A57976600506190 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 				88A20CB42A268AB500A10407 /* EnumJSON.swift */,
 				887049072A56096800DE8664 /* GenericService.swift */,
 				887049092A5609C300DE8664 /* GetExerciseService.swift */,
+				380EAEE72A5796FF00506190 /* FirestoreMenager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -995,6 +1001,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380EAEEA2A57976600506190 /* User.swift in Sources */,
 				CB154A8E29F45F90007FC081 /* CreateTrainingViewModel.swift in Sources */,
 				B1BC56B729D2159300E2013A /* ExecutionTrainingCollectionViewCell.swift in Sources */,
 				3F64493129BA737F00BDE579 /* CalendarViewController.swift in Sources */,
@@ -1007,6 +1014,7 @@
 				3F64493D29BA73CD00BDE579 /* ChangePasswordViewController.swift in Sources */,
 				88289D6229F4703300CC4258 /* ExecutionTrainingViewModel.swift in Sources */,
 				CB1654CE2A15671700E091D6 /* RegisterViewModel.swift in Sources */,
+				380EAEE82A5796FF00506190 /* FirestoreMenager.swift in Sources */,
 				3F2EAA022A57801400A968EA /* UIImageView+Extension.swift in Sources */,
 				3F64492529BA732800BDE579 /* TrainingOverviewViewController.swift in Sources */,
 				38C672FC29F84E0A008F8DA3 /* TrainingOverviewViewModel.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 protocol CreateTrainingViewControllerProtocol: AnyObject {
     func configureTabBarIndex()
@@ -68,6 +69,18 @@ class CreateTrainingViewController: UIViewController {
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
         viewControllerDelegate?.configureTabBarIndex()
+        
+        fireStoreManager.addWorkout(workout: Exercise(exerciseName: <#T##String#>, category: <#T##String#>, details: <#T##String#>, exerciseImage: <#T##String?#>), completion: <#T##(Result<User, Error>) -> Void#>)
+        { result in
+            
+            switch result{
+            case .success:
+                print("Deu certo")
+            case .failure(let error):
+                print("Error")
+            }
+        }
+        
         var presentingViewController = self.presentingViewController
         while presentingViewController?.presentingViewController != nil {
             presentingViewController = presentingViewController?.presentingViewController
