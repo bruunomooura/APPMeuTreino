@@ -127,6 +127,12 @@ extension ChangePasswordViewController: UITextFieldDelegate {
             textField.layer.borderColor = UIColor.red.cgColor
                 }
             }
+        if passwordTextField.text == newPasswordTextField.text && newPasswordTextField.text == confirmPasswordTextField.text {
+                passwordTextField.layer.borderColor = UIColor.red.cgColor
+                newPasswordTextField.layer.borderColor = UIColor.red.cgColor
+                confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
+                saveButton.isEnabled = false
+            }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
