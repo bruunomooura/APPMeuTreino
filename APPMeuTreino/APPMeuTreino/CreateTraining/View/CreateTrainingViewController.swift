@@ -71,6 +71,8 @@ class CreateTrainingViewController: UIViewController {
         viewControllerDelegate?.configureTabBarIndex()
         
         fireStoreManager.addWorkout(workout: Exercise(exerciseName: <#T##String#>, category: <#T##String#>, details: <#T##String#>, exerciseImage: <#T##String?#>), completion: <#T##(Result<User, Error>) -> Void#>)
+        
+    
         { result in
             
             switch result{
