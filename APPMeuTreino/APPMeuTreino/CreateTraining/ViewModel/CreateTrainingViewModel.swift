@@ -48,7 +48,7 @@ class CreateTrainingViewModel {
     }
     
     func saveWorkout() {
-        FirestoreManager.shared.addWorkout(workout: Workout(name: "Teste agora vai", exerciseList: listSelectExercise)) { result in
+        FirestoreManager.shared.addWorkout(workout: Workout(name: "TREINO 1", exerciseList: listSelectExercise)) { result in
             switch result {
             case .success(_):
                 self.delegate?.successSave()
