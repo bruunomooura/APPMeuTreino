@@ -7,12 +7,23 @@
 
 import Foundation
 
+protocol CreateTrainingViewModelProtocol: AnyObject {
+    func successSave()
+    func failureSave()
+}
+
 class CreateTrainingViewModel {
     
     private var service: GetExerciseService = GetExerciseService()
     private var exercises: [Exercise] = []
     private var filteredExercises: [Exercise] = []
     private var searchText: String = ""
+    
+    private weak var delegate: CreateTrainingViewModelProtocol?
+    
+    public func delegate(delegate: CreateTrainingViewModelProtocol?) {
+        self.delegate = delegate
+    }
     
     func fetchAllRequest(completion: @escaping () -> Void) {
         service.getExercise { [weak self] result, error in
@@ -21,7 +32,6 @@ class CreateTrainingViewModel {
                 self.updateExercises(data: result)
                 completion()
             } else {
-                // Handle error
                 completion()
             }
         }
@@ -35,6 +45,21 @@ class CreateTrainingViewModel {
             filteredExercises = exercises.filter { $0.exerciseName.localizedCaseInsensitiveContains(searchText)
             }
         }
+    }
+    
+    func saveWorkout() {
+        FirestoreManager.shared.addWorkout(workout: Workout(name: "Teste agora vai", exerciseList: listSelectExercise)) { result in
+            switch result {
+            case .success(_):
+                self.delegate?.successSave()
+            case .failure(_):
+                self.delegate?.failureSave()
+            }
+        }
+    }
+    
+    private var listSelectExercise: [Exercise] {
+        return exercises.filter({$0.isSelected == true})
     }
     
     private func updateExercises(data: ExerciseData) {

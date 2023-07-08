@@ -16,7 +16,7 @@ class ExerciseSelectionService {
                 let exerciseSelectionData: ExerciseSelectionData = try JSONDecoder().decode(ExerciseSelectionData.self, from: data)
                 completion(exerciseSelectionData, nil)
             } catch  {
-                completion(nil, error)
+                completion(nil, error as! Error)
             }
         }
     }

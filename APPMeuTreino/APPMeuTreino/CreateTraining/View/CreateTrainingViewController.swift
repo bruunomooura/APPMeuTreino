@@ -32,6 +32,7 @@ class CreateTrainingViewController: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
             configCreateTrainingView()
+            viewModel.delegate(delegate: self)
             viewModel.fetchAllRequest { [weak self] in
                 self?.createTrainingCollectionView.reloadData()
             }
@@ -62,6 +63,11 @@ class CreateTrainingViewController: UIViewController {
     func updateCount() {
         let title = "\(viewModel.numberOfSelectedItem) Exercício(s) selecionado(s)"
         exerciseCountButton.setTitle(title, for: .normal)
+        if viewModel.numberOfSelectedItem > 0 {
+            finishButton.isEnabled = true
+        } else {
+            finishButton.isEnabled = false
+        }
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
@@ -69,26 +75,17 @@ class CreateTrainingViewController: UIViewController {
     }
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
-        viewControllerDelegate?.configureTabBarIndex()
+        viewModel.saveWorkout()
+    }
+}
 
-        fireStoreManager.addWorkout(workout: Exercise(exerciseName: <#T##String#>, category: <#T##String#>, details: <#T##String#>, exerciseImage: <#T##String?#>), completion: <#T##(Result<User, Error>) -> Void#>)
-
-
-        { result in
-
-            switch result{
-            case .success:
-                print("Deu certo")
-            case .failure(let error):
-                print("Error")
-            }
-        }
-
-        var presentingViewController = self.presentingViewController
-        while presentingViewController?.presentingViewController != nil {
-            presentingViewController = presentingViewController?.presentingViewController
-        }
-        presentingViewController?.dismiss(animated: true, completion: nil)
+extension CreateTrainingViewController: CreateTrainingViewModelProtocol {
+    func successSave() {
+        dismiss(animated: true)
+    }
+    
+    func failureSave() {
+        dismiss(animated: true)
     }
 }
 

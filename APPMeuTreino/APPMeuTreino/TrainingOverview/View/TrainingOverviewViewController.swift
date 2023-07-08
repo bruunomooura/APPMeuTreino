@@ -19,6 +19,11 @@ class TrainingOverviewViewController: UIViewController {
         configCell()
         configureUserInfo()
         startUpdatingDate()
+        viewModel.delegate(delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.fetchWorkouts()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -64,12 +69,6 @@ class TrainingOverviewViewController: UIViewController {
         trainingTableView.dataSource = self
         trainingTableView.register(TrainingTableViewCell.nib(), forCellReuseIdentifier: TrainingTableViewCell.identifier)
         trainingTableView.register(NoTrainingTableViewCell.nib(), forCellReuseIdentifier: NoTrainingTableViewCell.identifier)
-        
-        if viewModel.arraySize > 3 {
-            trainingTableView.isScrollEnabled = true
-        } else {
-            trainingTableView.isScrollEnabled = false
-        }
     }
     
     func configCell(){
@@ -97,14 +96,14 @@ class TrainingOverviewViewController: UIViewController {
 extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if viewModel.arraySize == 0 {
+        if viewModel.isEmpty {
             let cell = trainingTableView.dequeueReusableCell(withIdentifier: NoTrainingTableViewCell.identifier, for: indexPath) as? NoTrainingTableViewCell
             cell?.setupCell(text1: "Vamos começar?", text2: "Clique no botão abaixo para criar o seu primeiro treino.")
             return cell ?? UITableViewCell()
         } else {
             if let cell = trainingTableView.dequeueReusableCell(withIdentifier: String(describing: TrainingTableViewCell.self), for: indexPath) as? TrainingTableViewCell{
                 cell.configureCell()
-                cell.setupCell(training: viewModel.getTraining(index: indexPath.row))
+                cell.setupCell(training: viewModel.loadCurrentWorkoutList(indexPath: indexPath))
                 return cell
             }
             return UITableViewCell()
@@ -112,14 +111,11 @@ extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.arraySize != 0 {
-            return viewModel.arraySize
-        } else {
-            return 1
-        }
+        return viewModel.isEmpty ? 1 : viewModel.numberOfRowsInSection
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if viewModel.arraySize == 0 {
+        if viewModel.isEmpty {
             return 300
         } else {
             return 100
@@ -127,18 +123,15 @@ extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if viewModel.arraySize == 0 {
-            return
-        } else {
+        if !viewModel.isEmpty {
             if let vc = UIStoryboard(name: String(describing: ExecutionTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: ExecutionTrainingViewController.self)) as? ExecutionTrainingViewController{
                 vc.modalPresentationStyle = .fullScreen
                 vc.delegate(delegate: self)
+                vc.setWorkout(workout: viewModel.loadCurrentWorkoutList(indexPath: indexPath))
                 present(vc, animated: true)
             }
         }
-        
     }
-    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -148,26 +141,40 @@ extension TrainingOverviewViewController: UITableViewDelegate, UITableViewDataSo
         }
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Deletar") { _, _, completionHandler in
-            completionHandler(true)
-            
-            self.viewModel.deleteTraining(index: indexPath.row)
-            if self.viewModel.arraySize > 3 {
-                self.trainingTableView.isScrollEnabled = true
-            } else {
-                self.trainingTableView.isScrollEnabled = false
-            }
-            self.trainingTableView.reloadData()
-        }
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
-        configuration.performsFirstActionWithFullSwipe = false
-        return configuration
-    }
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+////        let deleteAction = UIContextualAction(style: .destructive, title: "Deletar") { _, _, completionHandler in
+////            completionHandler(true)
+////
+////            self.viewModel.deleteTraining(index: indexPath.row)
+////            if self.viewModel.arraySize > 3 {
+////                self.trainingTableView.isScrollEnabled = true
+////            } else {
+////                self.trainingTableView.isScrollEnabled = false
+////            }
+////            self.trainingTableView.reloadData()
+////        }
+//        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+//        configuration.performsFirstActionWithFullSwipe = false
+//        return configuration
+//    }
 }
 
 extension TrainingOverviewViewController: ExecutionTrainingViewControllerProtocol{
     func configureTabBarIndex() {
         tabBarController?.selectedIndex = 0
+    }
+}
+
+extension TrainingOverviewViewController: TrainingOverviewViewModelProtocol {
+    func sucess() {
+        DispatchQueue.main.async {
+            self.trainingTableView.reloadData()
+        }
+    }
+    
+    func error() {
+        DispatchQueue.main.async {
+            self.trainingTableView.reloadData()
+        }
     }
 }

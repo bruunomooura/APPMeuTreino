@@ -22,7 +22,7 @@ class ChangePasswordViewModel: ChangePasswordViewModelProtocol {
         let credential = EmailAuthProvider.credential(withEmail: user.email!, password: oldPassword)
         
         user.reauthenticate(with: credential) { (authResult, error) in
-            if let errorChangePassword = error {
+            if error != nil {
                 completion(false)
                 return
             }

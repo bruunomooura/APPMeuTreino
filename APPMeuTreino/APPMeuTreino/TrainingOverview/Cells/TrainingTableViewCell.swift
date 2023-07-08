@@ -36,8 +36,8 @@ class TrainingTableViewCell: UITableViewCell {
         trainingCellView.backgroundColor = .orangeMeuTreino
     }
     
-    func setupCell(training: Training){
-        nameTrainingLabel.text = training.nameTraining
-        numberOfExerciseLabel.text = "(\(training.numberOfExercise) exercícios)"
+    func setupCell(training: Workout) {
+        nameTrainingLabel.text = training.name
+        numberOfExerciseLabel.text = "(\(training.exerciseList.count) exercícios)"
     }
 }

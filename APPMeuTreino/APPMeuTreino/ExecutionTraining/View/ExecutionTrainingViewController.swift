@@ -13,14 +13,18 @@ class ExecutionTrainingViewController: UIViewController {
     
     private var viewModel: ExecutionTrainingViewModel = ExecutionTrainingViewModel()
     private weak var delegate: ExecutionTrainingViewControllerProtocol?
+    
     public func delegate(delegate: ExecutionTrainingViewControllerProtocol?) {
         self.delegate = delegate
+    }
+    
+    public func setWorkout(workout: Workout) {
+        viewModel.setWorkout(workout: workout)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureExecutionTrainingView()
-        viewModel.fetchAllRequest()
     }
     
     func configureExecutionTrainingView(){

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Error: Swift.Error {
+enum ErrorHandler: Swift.Error {
     case fileNotFound(name: String)
     case userNotFound(name: String)
     case fileDecodingFailed(name: String, Swift.Error)

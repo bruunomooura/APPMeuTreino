@@ -32,10 +32,10 @@ class GetExerciseService: ExerciseServiceProtocol{
             case .success(let success):
                 print("SUCCESS -> \(#function)")
                 completion(success, nil)
-            case .failure(let error):
+            case .failure(_):
                 print("ERROR -> \(#function)")
                 let error = NSError(domain: "MyApp", code: -1, userInfo: [NSLocalizedDescriptionKey: "Ocorreu um erro."])
-                completion(nil, error as? Error)
+                completion(nil, error)
             }
         }
         

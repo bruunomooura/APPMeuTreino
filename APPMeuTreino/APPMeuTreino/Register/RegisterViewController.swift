@@ -8,6 +8,7 @@
 import UIKit
 import MobileCoreServices
 import Firebase
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
     
@@ -16,7 +17,7 @@ class RegisterViewController: UIViewController {
     private var alert: Alert?
     private var auth: Auth?
     private var firestore: Firestore?
-    private var fireStoreManager = FirestoreManager.shared
+
     
     
     @IBOutlet weak var editPhotoImageView: UIImageView!
@@ -55,31 +56,10 @@ class RegisterViewController: UIViewController {
         textField.delegate = self
     }
     
-    func registerNewUser() {
-        guard let emailValid = emailTextField.text, let passwordValid = passwordTextField.text else {return}
-        self.auth?.createUser(withEmail: emailValid, password: passwordValid, completion: { result, error in
-            if error != nil {
-                self.alert?.alertInformation(title: Localized.errorTitle.localized, message: Localized.emailAlreadyExist)
-            } else {
-                if let idUser = result?.user.uid {
-                    self.firestore?.collection(Localized.users.localized).document(idUser).setData([
-                        Localized.nameTitle: self.nameTextField.text ?? "",
-                        Localized.emailTitle: self.emailTextField.text ?? "",
-                        Localized.id.localized: idUser
-                    ])
-                    self.fireStoreManager.createUser(name: self.nameTextField.text ?? "", email: emailValid) { error in
-                        if error != nil {
-                            print(error?.localizedDescription as Any)
-                        } else {
-                            print("Firestore database criado")
-                        }
-                    }
-                }
-            }
-        })
-    }
-    
     func configRegisterView(){
+        editPhotoImageView.image = UIImage(systemName: "person.circle")
+        editPhotoImageView.tintColor = .blueMeuTreino
+        
         configTextField(textField: nameTextField)
         configTextField(textField: birthdayTextField)
         configTextField(textField: emailTextField)
@@ -122,23 +102,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
         showLoadingScreen()
-        viewModel.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
-        
-    
-//        guard let typedName = nameTextField.text, nameTextField.hasText else {
-//            return
-//        }
-//        nameOfUser = typedName
-//        UserDefaults.standard.set(typedName, forKey: "UserName")
-//        guard let homeViewController = tabBarController?.viewControllers?[0] as? HomeViewController else {
-//            return
-//        }
-//        homeViewController.receiveName = typedName
-        navigationController?.popToRootViewController(animated: true)
-//        if let selectedImage = editPhotoImageView.image,
-//           let imageData = selectedImage.jpegData(compressionQuality: 1.0) {
-//            UserDefaults.standard.set(imageData, forKey: "UserImage")
-//        }
+        viewModel.registerUser(name: nameTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
 }
 
@@ -206,7 +170,7 @@ extension RegisterViewController: RegisterViewModelProtocol {
     func sucessRegister() {
         hideLoadingScreen()
         let vc: TabBarControllerViewController? = UIStoryboard(name: String(describing: TabBarControllerViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: TabBarControllerViewController.self)) as? TabBarControllerViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func errorRegister(errorMessage: String) {

@@ -13,43 +13,38 @@ protocol TrainingOverviewViewModelProtocol: AnyObject{
     func error()
 }
 
-class TrainingOverviewViewModel{
-    
-    private var trainingList: [Training] = [Training(nameTraining: "TREINO 1", numberOfExercise: 5), Training(nameTraining: "TREINO 2", numberOfExercise: 6)]
+class TrainingOverviewViewModel {
     
     private var fireStoreManager = FirestoreManager.shared
-    
-    private var objectList: [Exercise] = []
-    
     private var delegate: TrainingOverviewViewModelProtocol?
-    
-    var arraySize: Int {
-        return trainingList.count
-    }
-    
+    private var workoutList: [Workout] = []
     public func delegate(delegate:TrainingOverviewViewModelProtocol){
         self.delegate = delegate
     }
     
-    func getTraining(index: Int) -> Training {
-        return trainingList[index]
-    }
-    
-    func deleteTraining(index: Int){
-        trainingList.remove(at: index)
-    }
-    
     func fetchWorkouts() {
-        fireStoreManager.getObjectData(collection: "user", forObjectType: User.self) { result in
+        fireStoreManager.getUserData { result in
             switch result {
             case.success(let sucess):
-                self.objectList = sucess.workoutList
+                self.workoutList = sucess.workoutList
                 self.delegate?.sucess()
             case.failure(let error):
                 print(error)
                 self.delegate?.error()
             }
         }
+    }
+    
+    var isEmpty: Bool {
+        workoutList.isEmpty
+    }
+    
+    var numberOfRowsInSection: Int {
+        workoutList.count
+    }
+    
+    func loadCurrentWorkoutList(indexPath: IndexPath) -> Workout {
+        return workoutList[indexPath.row]
     }
     
 }

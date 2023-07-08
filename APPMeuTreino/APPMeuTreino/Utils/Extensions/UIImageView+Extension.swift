@@ -43,6 +43,6 @@ extension UIImageView {
 }
 
 // Enum que representa os possíveis erros que podem ocorrer ao carregar uma imagem
-enum ImageLoadingError: Error {
+enum ImageLoadingError: Swift.Error {
     case unknownError
 }

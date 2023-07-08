@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ExecutionTrainingViewModel{
+class ExecutionTrainingViewModel {
     
     private var service: ExecutionTrainingService = ExecutionTrainingService()
     private var exerciseList = [Exercise]()
@@ -20,12 +20,9 @@ class ExecutionTrainingViewModel{
         return exerciseList.count
     }
     
-    public func fetchAllRequest() {
-        service.getExecutionTrainingDataJson { executionTrainingData, error in
-            if error == nil {
-                self.exerciseList = executionTrainingData?.exercise ?? []
-            }
-        }
-        
+    public func setWorkout(workout: Workout) {
+        exerciseList = workout.exerciseList
     }
+    
+
 }

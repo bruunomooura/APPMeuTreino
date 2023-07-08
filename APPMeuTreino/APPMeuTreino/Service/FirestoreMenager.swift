@@ -24,9 +24,9 @@ class FirestoreManager {
         firestore = Firestore.firestore()
     }
     
-    func createUser(name: String, email: String, completion: @escaping (Error?) -> Void) {
+    public func createUser(name: String, email: String, completion: @escaping (Error?) -> Void) {
         guard let userId = Auth.auth().currentUser?.uid else {
-            completion(NSError(domain: "FirestoreManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "User not logged in"]) as? Error)
+            completion(NSError(domain: "FirestoreManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "User not logged in"]))
             return
         }
         let user = User(userID: userId, name: name, workoutList: [])
@@ -35,35 +35,39 @@ class FirestoreManager {
             try userCollection.document(userId).setData(from: user)
             completion(nil)
         } catch let error {
-            completion(error as? Error)
+            completion(error)
         }
     }
     
-    func addWorkout(workout: Exercise, completion: @escaping (Result<Void, Error>) -> Void) {
+    public func addWorkout(workout: Workout, completion: @escaping (Result<Void, ErrorHandler>) -> Void) {
         guard let currentUserID = Auth.auth().currentUser?.uid else {
-            completion(.failure(NSError(domain: "FirestoreManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Usuário não autenticado"]) as? Error ?? Error.userNotFound(name: "Documento não encontrado")))
+            completion(.failure(NSError(domain: "FirestoreManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Usuário não autenticado"]) as? ErrorHandler ?? ErrorHandler.userNotFound(name: "Documento não encontrado")))
             return
         }
-
         do{
             let workoutData = try Firestore.Encoder().encode(workout)
 
             let userRef = firestore.collection(CollectionKeys.user.rawValue).document(currentUserID)
             userRef.updateData(["workoutList": FieldValue.arrayUnion([workoutData])]) { error in
                 if let error = error {
-                    completion(.failure(error as? Error ?? Error.fileNotFound(name: "Documento não encontrado")))
+                    completion(.failure(error as? ErrorHandler ?? ErrorHandler.fileNotFound(name: "Documento não encontrado")))
                 } else {
                     completion(.success(()))
                 }
             }
         } catch let error {
-            completion(.failure(error as? Error ?? Error.errorDetail(detail: "Erro")))
+            completion(.failure(error as? ErrorHandler ?? ErrorHandler.errorDetail(detail: "Erro")))
         }
     }
+    
+    public func getUserData(completion: @escaping (Result<User, Swift.Error>) -> Void) {
+        getObjectData(collection: "user", forObjectType: User.self, completion: completion)
+    }
+    
 
-    func getObjectData<T: Codable>(collection: String, forObjectType objectType: T.Type, completion: @escaping (Result<T, Swift.Error>) -> Void) {
+    private func getObjectData<T: Codable>(collection: String, forObjectType objectType: T.Type, completion: @escaping (Result<T, Swift.Error>) -> Void) {
         guard let currentUserID = Auth.auth().currentUser?.uid else {
-            completion(.failure(NSError(domain: "FirestoreManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Usuário não autenticado"]) as? Error ?? Error.fileNotFound(name: "Documento não existe")))
+            completion(.failure(NSError(domain: "FirestoreManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Usuário não autenticado"]) as? ErrorHandler ?? ErrorHandler.fileNotFound(name: "Documento não existe")))
             return
         }
 
