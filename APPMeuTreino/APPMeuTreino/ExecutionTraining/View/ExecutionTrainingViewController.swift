@@ -74,7 +74,6 @@ extension ExecutionTrainingViewController: UICollectionViewDataSource{
             DispatchQueue.main.async {
                 if let vc = UIStoryboard(name: "DemonstrationExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DemonstrationExerciseViewController") as? DemonstrationExerciseViewController {
                     vc.exercise = exercise
-                    vc.exerciseDetails = exerciseDetails
                     vc.modalPresentationStyle = .pageSheet
                     self?.present(vc, animated: true)
                 }

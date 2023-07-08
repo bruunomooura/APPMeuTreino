@@ -9,15 +9,17 @@ import UIKit
 import YouTubePlayer
 
 class DemonstrationExerciseViewController: UIViewController, YouTubePlayerDelegate {
-    
-    var exercise: Exercise?
-    var exerciseDetails: ExerciseDetails?
-    var exerciseService: ExerciseServiceProtocol = GetExerciseService()
+
     
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var demonstrationVideoPlayer: YouTubePlayerView!
     @IBOutlet weak var backButtonImageView: UIImageView!
     @IBOutlet weak var backButton: UIButton!
+   
+    @IBOutlet weak var playerImageView: UIImageView!
+    
+    var exercise: Exercise?
+    var exerciseService: ExerciseServiceProtocol = GetExerciseService()
    
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -33,7 +35,7 @@ class DemonstrationExerciseViewController: UIViewController, YouTubePlayerDelega
         func updateUI() {
             exerciseLabel.text = exercise?.exerciseName
             
-            guard let videoURLString = exerciseDetails?.exerciseVideoURL, let videoURL = URL(string: videoURLString) else {
+            guard let videoURLString = exercise?.exerciseVideoURL, let videoURL = URL(string: videoURLString) else {
                 return
             }
             
@@ -43,8 +45,10 @@ class DemonstrationExerciseViewController: UIViewController, YouTubePlayerDelega
         @objc func didTapVideoPlayer() {
             if demonstrationVideoPlayer.ready {
                 if demonstrationVideoPlayer.playerState == YouTubePlayerState.Playing {
+                    playerImageView.isHidden = false
                     demonstrationVideoPlayer.pause()
                 } else {
+                    playerImageView.isHidden = true
                     demonstrationVideoPlayer.play()
                 }
             }
