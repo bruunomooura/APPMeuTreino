@@ -24,6 +24,7 @@ class TrainingOverviewViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchWorkouts()
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -87,8 +88,7 @@ class TrainingOverviewViewController: UIViewController {
     
     @IBAction func tappedAddTrainingButton(_ sender: UIButton) {
         let vc: NameTrainingViewController? = UIStoryboard(name: String(describing: NameTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: NameTrainingViewController.self)) as? NameTrainingViewController
-        present(vc ?? UIViewController(), animated: true)
-        
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Hi-hD-4pe">
-                                <rect key="frame" x="8" y="159.5" width="359" height="348"/>
+                                <rect key="frame" x="15" y="159.5" width="345" height="348"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4nh-hv-9lV">
-                                        <rect key="frame" x="24.5" y="35.5" width="310" height="277.5"/>
+                                        <rect key="frame" x="17.5" y="35.5" width="310" height="277.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME DO TREINO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-pl-NTs">
                                                 <rect key="frame" x="44.5" y="0.0" width="221" height="30.5"/>
@@ -108,15 +108,16 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="348" id="BAd-5F-ADs"/>
+                                    <constraint firstItem="4nh-hv-9lV" firstAttribute="centerX" secondItem="5Hi-hD-4pe" secondAttribute="centerX" id="SmQ-X9-bMz"/>
                                     <constraint firstItem="4nh-hv-9lV" firstAttribute="centerY" secondItem="5Hi-hD-4pe" secondAttribute="centerY" id="aWL-by-jzz"/>
-                                    <constraint firstItem="4nh-hv-9lV" firstAttribute="centerX" secondItem="5Hi-hD-4pe" secondAttribute="centerX" id="ksa-47-DLW"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5Hi-hD-4pe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="Y5S-2x-i8G"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Hi-hD-4pe" secondAttribute="trailing" constant="8" id="ZiA-Zu-q5K"/>
+                            <constraint firstItem="5Hi-hD-4pe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Y5S-2x-i8G"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Hi-hD-4pe" secondAttribute="trailing" constant="15" id="ZiA-Zu-q5K"/>
                             <constraint firstItem="5Hi-hD-4pe" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="qdA-Pq-40J"/>
                         </constraints>
                     </view>

@@ -71,11 +71,12 @@ class CreateTrainingViewController: UIViewController {
     }
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
         viewModel.saveWorkout()
+        navigationController?.popToRootViewController(animated: true)
     }
 }
 

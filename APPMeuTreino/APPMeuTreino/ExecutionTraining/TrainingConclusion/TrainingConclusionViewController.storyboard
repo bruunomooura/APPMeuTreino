@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gno-vG-vAh">
-                                <rect key="frame" x="8" y="71" width="359" height="525"/>
+                                <rect key="frame" x="8" y="108.5" width="359" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você concluiu seu treino do dia com sucesso!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HP-di-gBN">
                                         <rect key="frame" x="29.5" y="232" width="300" height="52"/>
@@ -36,34 +36,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você está a x dias consecutivos sem faltas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvN-pm-U3x">
-                                        <rect key="frame" x="29.5" y="287" width="300" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="UZb-OK-TKZ"/>
-                                            <constraint firstAttribute="width" constant="300" id="V3o-5I-mvn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compartilhar treino:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hw-hi-fp0">
-                                        <rect key="frame" x="87" y="406" width="185" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="N23-Ma-tE5"/>
-                                            <constraint firstAttribute="width" constant="185" id="Skr-cE-E4A"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconYes" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-hR-KZI">
-                                        <rect key="frame" x="154.5" y="350" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="MQj-EP-xuO"/>
-                                            <constraint firstAttribute="height" constant="50" id="SdE-31-e3d"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns Maria!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFe-j2-fV6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFe-j2-fV6">
                                         <rect key="frame" x="15" y="197" width="329" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="HEK-uJ-LFE"/>
@@ -72,25 +45,7 @@
                                         <color key="textColor" name="OrangeMeuTreino"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-iP-dWp">
-                                        <rect key="frame" x="37" y="449" width="285" height="55"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconFacebook" translatesAutoresizingMaskIntoConstraints="NO" id="zmg-7s-kh2">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="BfD-pr-ccZ"/>
-                                                    <constraint firstAttribute="height" constant="55" id="syu-Xi-z2l"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconWhatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="SOB-gu-OVJ">
-                                                <rect key="frame" x="115" y="0.0" width="55" height="55"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconInstagram" translatesAutoresizingMaskIntoConstraints="NO" id="SkU-lc-OwC">
-                                                <rect key="frame" x="230" y="0.0" width="55" height="55"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="iFI-qV-xH9">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="iFI-qV-xH9">
                                         <rect key="frame" x="104.5" y="37" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="BJI-iM-peJ"/>
@@ -116,17 +71,20 @@
                                             <action selector="tappedExitButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="V6z-pe-Lfh"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconYes" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-hR-KZI">
+                                        <rect key="frame" x="129.5" y="324" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="MQj-EP-xuO"/>
+                                            <constraint firstAttribute="height" constant="100" id="SdE-31-e3d"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="lFe-j2-fV6" firstAttribute="top" secondItem="iFI-qV-xH9" secondAttribute="bottom" constant="10" id="2eU-WZ-4ur"/>
-                                    <constraint firstAttribute="height" constant="525" id="7Ia-v0-Yml"/>
+                                    <constraint firstAttribute="height" constant="450" id="7Ia-v0-Yml"/>
                                     <constraint firstItem="uMw-vV-PFV" firstAttribute="leading" secondItem="Gno-vG-vAh" secondAttribute="leading" constant="14" id="853-Kg-9VD"/>
-                                    <constraint firstItem="EvP-iP-dWp" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="BzY-LJ-30Z"/>
-                                    <constraint firstItem="OvN-pm-U3x" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="Ea1-rX-WK7"/>
-                                    <constraint firstItem="DgG-hR-KZI" firstAttribute="top" secondItem="OvN-pm-U3x" secondAttribute="bottom" constant="11" id="EqM-Kj-UoU"/>
                                     <constraint firstItem="iFI-qV-xH9" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="FQT-E7-xAV"/>
-                                    <constraint firstItem="1Hw-hi-fp0" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="KE1-QI-Vmo"/>
                                     <constraint firstItem="uMw-vV-PFV" firstAttribute="top" secondItem="Gno-vG-vAh" secondAttribute="top" constant="14" id="Lgb-yE-cFW"/>
                                     <constraint firstItem="7aO-6R-zyW" firstAttribute="top" secondItem="Gno-vG-vAh" secondAttribute="top" constant="14" id="SrK-Nz-9BR"/>
                                     <constraint firstItem="4HP-di-gBN" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="UQ8-kI-e71"/>
@@ -134,10 +92,8 @@
                                     <constraint firstItem="DgG-hR-KZI" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="cjR-Xn-7EI"/>
                                     <constraint firstItem="7aO-6R-zyW" firstAttribute="leading" secondItem="Gno-vG-vAh" secondAttribute="leading" constant="14" id="dWn-7C-vt9"/>
                                     <constraint firstItem="iFI-qV-xH9" firstAttribute="top" secondItem="Gno-vG-vAh" secondAttribute="top" constant="37" id="gIR-sv-XjC"/>
-                                    <constraint firstItem="1Hw-hi-fp0" firstAttribute="top" secondItem="DgG-hR-KZI" secondAttribute="bottom" constant="6" id="jUB-pV-qM9"/>
-                                    <constraint firstItem="OvN-pm-U3x" firstAttribute="top" secondItem="4HP-di-gBN" secondAttribute="bottom" constant="3" id="lfI-Wp-F7U"/>
+                                    <constraint firstItem="DgG-hR-KZI" firstAttribute="top" secondItem="4HP-di-gBN" secondAttribute="bottom" constant="40" id="mZm-YW-d5p"/>
                                     <constraint firstItem="4HP-di-gBN" firstAttribute="top" secondItem="lFe-j2-fV6" secondAttribute="bottom" constant="10" id="q3q-lT-Ajc"/>
-                                    <constraint firstItem="EvP-iP-dWp" firstAttribute="top" secondItem="1Hw-hi-fp0" secondAttribute="bottom" constant="8" symbolic="YES" id="wr4-fi-pNQ"/>
                                     <constraint firstItem="lFe-j2-fV6" firstAttribute="centerX" secondItem="Gno-vG-vAh" secondAttribute="centerX" id="zc1-lc-BSq"/>
                                     <constraint firstItem="lFe-j2-fV6" firstAttribute="leading" secondItem="Gno-vG-vAh" secondAttribute="leading" constant="15" id="zum-Mu-lud"/>
                                 </constraints>
@@ -154,13 +110,8 @@
                         <outlet property="checkImageView" destination="DgG-hR-KZI" id="cmT-DT-Dth"/>
                         <outlet property="congratulationsLabel" destination="lFe-j2-fV6" id="Gps-WQ-3yJ"/>
                         <outlet property="exitButton" destination="uMw-vV-PFV" id="xyH-AE-Hxf"/>
-                        <outlet property="facebookImageView" destination="zmg-7s-kh2" id="UsF-Tk-3nT"/>
-                        <outlet property="instagramImageView" destination="SkU-lc-OwC" id="uTh-dx-4NG"/>
                         <outlet property="profileImageView" destination="iFI-qV-xH9" id="RJb-HF-RJ3"/>
-                        <outlet property="shareTrainingLabel" destination="1Hw-hi-fp0" id="z6a-S0-05c"/>
                         <outlet property="text1Label" destination="4HP-di-gBN" id="iPA-Gg-vYV"/>
-                        <outlet property="text2Label" destination="OvN-pm-U3x" id="krz-Qb-fAf"/>
-                        <outlet property="whatsappImageView" destination="SOB-gu-OVJ" id="amL-O3-kLI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,12 +120,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IconFacebook" width="512" height="512"/>
-        <image name="IconInstagram" width="256" height="256"/>
+        <image name="IconLogo" width="1194" height="1194"/>
         <image name="IconNo" width="512" height="512"/>
-        <image name="IconWhatsapp" width="512" height="512"/>
         <image name="IconYes" width="512" height="512"/>
-        <image name="profile" width="609" height="609"/>
         <namedColor name="OrangeMeuTreino">
             <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

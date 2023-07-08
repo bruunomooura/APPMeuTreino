@@ -10,12 +10,7 @@ class TrainingConclusionViewController: UIViewController {
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var congratulationsLabel: UILabel!
     @IBOutlet weak var text1Label: UILabel!
-    @IBOutlet weak var text2Label: UILabel!
     @IBOutlet weak var checkImageView: UIImageView!
-    @IBOutlet weak var shareTrainingLabel: UILabel!
-    @IBOutlet weak var facebookImageView: UIImageView!
-    @IBOutlet weak var whatsappImageView: UIImageView!
-    @IBOutlet weak var instagramImageView: UIImageView!
 
     private weak var delegate: TrainingConclusionViewControllerProtocol?
     public func delegate(delegate: TrainingConclusionViewControllerProtocol?) {

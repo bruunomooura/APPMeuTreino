@@ -468,7 +468,7 @@
 			children = (
 				3FB6EEBA29CC77D100CE272A /* DataExerciseViewModal */,
 				3F056A0A29C74BD400BF1B41 /* Cell */,
-				CB154A8C29F45F2C007FC081 /* View */,
+				CB154A8C29F45F2C007FC081 /* ViewController */,
 				CB154A8B29F45F01007FC081 /* ViewModel */,
 			);
 			path = CreateTraining;
@@ -681,13 +681,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CB154A8C29F45F2C007FC081 /* View */ = {
+		CB154A8C29F45F2C007FC081 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3F64491729BA71B400BDE579 /* CreateTrainingViewController.swift */,
 				3F64491929BA71C000BDE579 /* CreateTrainingViewController.storyboard */,
 			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CB1654C62A1558DF00E091D6 /* ViewModel */ = {

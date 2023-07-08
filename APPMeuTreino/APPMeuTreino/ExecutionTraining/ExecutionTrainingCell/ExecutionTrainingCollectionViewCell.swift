@@ -59,7 +59,8 @@ class ExecutionTrainingCollectionViewCell: UICollectionViewCell {
     
     func setupCell(exercise: Exercise) {
         exerciseLabel.text = exercise.exerciseName
-        exerciseImageView.image = UIImage(named: exercise.exerciseImage ?? "")
+        guard let video = exercise.exerciseVideoURL, let url: URL = Utils.getThumbnail(link: video) else { return }
+        exerciseImageView.loadImageFromURL(url, placeholder: UIImage(named: "AppIcon"))
     }
     
     @IBAction func tappedCheckBoxButton(_ sender: UIButton) {

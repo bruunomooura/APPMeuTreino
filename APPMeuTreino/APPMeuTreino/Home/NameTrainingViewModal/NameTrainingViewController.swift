@@ -43,18 +43,25 @@ class NameTrainingViewController: UIViewController {
         saveButton.isEnabled = false
         
         newTrainingView.layer.cornerRadius = 10
+        newTrainingView.layer.masksToBounds = false
+        newTrainingView.layer.shadowColor = UIColor.lightGray.cgColor
+        newTrainingView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        newTrainingView.layer.shadowOpacity = 1
+        newTrainingView.layer.shadowRadius = 8
+        newTrainingView.layer.borderWidth = 2
+        newTrainingView.layer.borderColor = UIColor.orangeMeuTreino.cgColor
+        newTrainingView.backgroundColor = .white
+        newTrainingView.clipsToBounds = true
     }
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         let vc: CreateTrainingViewController? = UIStoryboard(name: String(describing: CreateTrainingViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: CreateTrainingViewController.self)) as? CreateTrainingViewController
-        vc?.setViewControllerDelegate(self)
-        vc?.modalPresentationStyle = .fullScreen
-        present(vc ?? UIViewController(), animated: true)
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedCancelButton(_ sender: UIButton) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
         }
 }
 

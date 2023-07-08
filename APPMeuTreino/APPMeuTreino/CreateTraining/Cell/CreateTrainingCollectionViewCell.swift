@@ -47,14 +47,14 @@ class CreateTrainingCollectionViewCell: UICollectionViewCell {
     func setupCell(exercise: Exercise) {
         
         if exercise.isSelected {
-            contentView.backgroundColor = .red
+            contentView.backgroundColor = .orangeMeuTreino
         } else {
             contentView.backgroundColor = .white
         }
         
         exerciseLabel.text = exercise.exerciseName
         guard let video = exercise.exerciseVideoURL, let url: URL = Utils.getThumbnail(link: video) else { return }
-        exerciseSelecionImageView.loadImageFromURL(url, placeholder: UIImage(systemName: "trash"))
+        exerciseSelecionImageView.loadImageFromURL(url, placeholder: UIImage(named: "AppIcon"))
     }
     
     @IBAction func tappedSelectionButton(_ sender: UIButton) {

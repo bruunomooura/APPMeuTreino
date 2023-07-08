@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     private var alert: Alert?
     private var auth: Auth?
     private var firestore: Firestore?
-
+    
     
     
     @IBOutlet weak var editPhotoImageView: UIImageView!
@@ -68,6 +68,7 @@ class RegisterViewController: UIViewController {
         
         signUpConfirmButton.layer.cornerRadius = 10
         signUpConfirmButton.backgroundColor = UIColor.blueMeuTreino
+        signUpConfirmButton.isEnabled = false
         
         editPhotoImageView.layer.borderWidth = 2
         editPhotoImageView.layer.cornerRadius = editPhotoImageView.frame.size.height/2
@@ -122,23 +123,36 @@ extension RegisterViewController: UITextFieldDelegate{
         }
         return true
     }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText && passwordTextField.hasText && confirmPasswordTextField.hasText && confirmPasswordTextField.hasText {
+        if nameTextField.hasText && birthdayTextField.hasText && emailTextField.hasText && passwordTextField.hasText && confirmPasswordTextField.hasText {
             nameTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
             birthdayTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
             emailTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
-            passwordTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
-            confirmPasswordTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+            
+            // Adicionar verificação para a diferença entre as senhas
+            if passwordTextField.text != confirmPasswordTextField.text {
+                passwordTextField.layer.borderColor = UIColor.red.cgColor
+                confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
+                signUpConfirmButton.isEnabled = false
+            } else {
+                passwordTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+                confirmPasswordTextField.layer.borderColor = UIColor.blueMeuTreino.cgColor
+                signUpConfirmButton.isEnabled = true
+            }
         } else {
-            if textField.hasText == false{
+            if textField.hasText == false {
                 textField.layer.borderColor = UIColor.red.cgColor
             } else {
                 textField.layer.borderColor = UIColor.blueMeuTreino.cgColor
             }
+            
+            if passwordTextField.text?.isEmpty == true || confirmPasswordTextField.text?.isEmpty == true {
+                signUpConfirmButton.isEnabled = false
+            }
         }
     }
+
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
