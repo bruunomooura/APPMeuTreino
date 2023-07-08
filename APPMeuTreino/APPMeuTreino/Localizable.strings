@@ -1,0 +1,100 @@
+// Register
+"registration.name_placeholder" = "Nome Completo";
+"registration.email_placeholder" = "Email";
+"registration.password_placeholder" = "Senha";
+"registration.confirm_password_placeholder" = "Confirmar Senha";
+"registration.success_message" = "Cadastro Efetuado com sucesso!";
+"registration.newaccount_error" = "Email já cadastrado";
+
+// Error
+"error.trip_name_empty" = "Sua viagem deve ter um nome!";
+"error.invalid_email" = "O email digitado não é válido";
+"error.invalid_email_password" = "Os campos não podem estar vazios e os dados precisam ser válidos";
+"error.register_tap" = "Os dados estão vazios ou inválidos";
+"misc.error_title" = "Erro";
+"misc.confirm_email_label" = "Confirme o seu email de cadastro para o envio de uma nova senha temporária";
+"error.attention" = "Atenção";
+"error.invalid_data" = "Dados incorretos";
+"error.login_message" = "Tivemos um problema inesperado, tente novamente mais tarde";
+"registration.error_message" = "Erro ao cadastrar";
+"error_contact_unavailable" = "Contato: Indisponível";
+"error.sending_email" = "Erro ao verificar seu email.";
+"not.registered_email" = "email não registrado!";
+
+// Success
+"misc.success_title" = "Sucesso";
+"misc.flight_added_successfully" = "Voo adicionado com sucesso à sua lista de viagem!";
+"misc.data_changed_successfully" = "Dados alterados com sucesso!";
+"misc.instruction_email_sent" = "Um email de instrução foi enviado para sua caixa de entrada";
+"misc.log_successfully" = "Login efetuado com sucesso";
+"email_send" = "Enviado";
+"email.reset_password" = "Email para resetar sua senha foi enviado! Verifique sua caixa de entrada.";
+
+// button titles
+"button.title_forget_password" = "Esqueci minha senha";
+"button.title_create_account" = "Não tenho uma conta";
+"button.title_login_success" = "Entrar";
+"button.title_login_google" = "Continuar com Google";
+"button.title_login_facebook" = "Continuar com Apple";
+"button.title_register" = "Registrar";
+"button.title_already_have_account" = "Já possui uma conta? Entre aqui";
+"button.title_tap_to_register" = "Recuperar senha";
+"button.title_change_image" = "Alterar imagem";
+"button.title_save" = "Salvar";
+"button.title_exit" = "Sair";
+"button.title_add_trip" = "+ Adicionar viagem";
+"button.add_title" = "Adicionar";
+"button.add_flight" = "Buscar passagens";
+
+// Label
+"label.title_name" = "Nome";
+"label.title_email" = "E-mail";
+"label.title_phone" = "Telefone";
+"label.title_change_password" = "Senha";
+"profile.name_placeholder" = "Caio Fabrini";
+"hotel.search_placeholder" = "Procure um hotel de estadia";
+"restaurant.search_placeholder" = "Procure um restaurante para visitar";
+"title.users" = "usuários";
+"label.title_trip" = "TripOrganizer";
+"label.tile_welcome" = "Olá, Fulano! Está pronto para organizar a sua viagem e facilitar a sua jornada?";
+"label.title_change_Progress" = "Altere aqui o seu progresso atual:";
+"title.restaurant_menu" = "Cardápio:";
+"label.title_assessments" = "avaliações";
+"label.title_address" = "Endereço:";
+"label.title_time" = "Horário:";
+"label.title_phone" = "Telefone";
+"Label.title_accommodation" = "Hospedagem:";
+"flight.label_title" = "Comece uma nova viagem!";
+"flight.origin_placeholder" = "Escolha a origem";
+"flight.destination_placeholder" = "Escolha o destino";
+"flight.calendarOnGoing_placeholder" = "Ida";
+"flight.alendarOutGoing_placeholder" = "Retorno";
+"flight.passengers_placeholder" = "Quantos passageiros?";
+"label.title_popular_Destinations" = "Se inspire em nossos destinos populares:";
+"label.title_new_flight" = "Nome da viagem";
+"label.title_departure_date" = "Data de partida:";
+"label.title_return_date" = "Data de retorno";
+"attraction.search_placeholder" = "Procure por um ponto turístico";
+"title.entrance_free" = "Taxa de Entrada: Gratuito";
+"label_rating" = "Avaliações -";
+"label_contact" = "Contato:";
+"label_touch_details" = "Clique em um icone para ver os detalhes";
+
+// Symbols
+"at_symbol" = "@";
+"dot_com" = ".com";
+
+// Outros
+"misc.confirm_title" = "Ok";
+"id" = "id";
+"title.ticket_view" = "Passagem";
+"title.hotel_view" = "Hotel";
+"title.restaurant_view" = "Restaurante";
+"title.attraction_view" = "Lazer";
+"profile.name_text" = "Caio Fabrini";
+"prifile.email_exemplo" = "exemple@gmail.com";
+
+
+"estabilish_work_hour_open" = "Funcionamento - Estabelecimento Aberto";
+"estabilish_work_hour_unavailable" = "Funcionamento - Dado indisponível";
+"estabilish_work_hour_closed" = "Funcionamento - Estabelecimento Fechado";

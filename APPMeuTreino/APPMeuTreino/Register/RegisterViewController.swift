@@ -7,12 +7,17 @@
 
 import UIKit
 import MobileCoreServices
+import Firebase
 
 class RegisterViewController: UIViewController {
     
     private var viewModel: RegisterViewModel = RegisterViewModel()
     private var loadingViewController: LoadingViewController?
     private var alert: Alert?
+    private var auth: Auth?
+    private var firestore: Firestore?
+    private var fireStoreManager = FirestoreManager.shared
+    
     
     @IBOutlet weak var editPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -36,6 +41,8 @@ class RegisterViewController: UIViewController {
         configRegisterView()
         alert = Alert(controller: self)
         viewModel.delegate(delegate: self)
+        self.auth = Auth.auth()
+        self.firestore = Firestore.firestore()
     }
     
     
@@ -46,6 +53,30 @@ class RegisterViewController: UIViewController {
         textField.clipsToBounds = true
         
         textField.delegate = self
+    }
+    
+    func registerNewUser() {
+        guard let emailValid = emailTextField.text, let passwordValid = passwordTextField.text else {return}
+        self.auth?.createUser(withEmail: emailValid, password: passwordValid, completion: { result, error in
+            if error != nil {
+                self.alert?.alertInformation(title: Localized.errorTitle.localized, message: Localized.emailAlreadyExist)
+            } else {
+                if let idUser = result?.user.uid {
+                    self.firestore?.collection(Localized.users.localized).document(idUser).setData([
+                        Localized.nameTitle: self.nameTextField.text ?? "",
+                        Localized.emailTitle: self.emailTextField.text ?? "",
+                        Localized.id.localized: idUser
+                    ])
+                    self.fireStoreManager.createUser(name: self.nameTextField.text ?? "", email: emailValid) { error in
+                        if error != nil {
+                            print(error?.localizedDescription as Any)
+                        } else {
+                            print("Firestore database criado")
+                        }
+                    }
+                }
+            }
+        })
     }
     
     func configRegisterView(){
@@ -92,20 +123,22 @@ class RegisterViewController: UIViewController {
     @IBAction func tappedSignUpConfirmButton(_ sender: UIButton) {
         showLoadingScreen()
         viewModel.registerUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
-        guard let typedName = nameTextField.text, nameTextField.hasText else {
-            return
-        }
-        nameOfUser = typedName
-        UserDefaults.standard.set(typedName, forKey: "UserName")
-        guard let homeViewController = tabBarController?.viewControllers?[0] as? HomeViewController else {
-            return
-        }
-        homeViewController.receiveName = typedName
+        
+    
+//        guard let typedName = nameTextField.text, nameTextField.hasText else {
+//            return
+//        }
+//        nameOfUser = typedName
+//        UserDefaults.standard.set(typedName, forKey: "UserName")
+//        guard let homeViewController = tabBarController?.viewControllers?[0] as? HomeViewController else {
+//            return
+//        }
+//        homeViewController.receiveName = typedName
         navigationController?.popToRootViewController(animated: true)
-        if let selectedImage = editPhotoImageView.image,
-           let imageData = selectedImage.jpegData(compressionQuality: 1.0) {
-            UserDefaults.standard.set(imageData, forKey: "UserImage")
-        }
+//        if let selectedImage = editPhotoImageView.image,
+//           let imageData = selectedImage.jpegData(compressionQuality: 1.0) {
+//            UserDefaults.standard.set(imageData, forKey: "UserImage")
+//        }
     }
 }
 

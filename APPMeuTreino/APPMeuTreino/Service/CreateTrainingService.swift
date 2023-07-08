@@ -8,7 +8,7 @@
 import UIKit
 
 class CreateTrainingService {
-    
+ /
     func getCreateTrainingDataJson(completion: @escaping (CreateTrainingData?, Error?) -> Void) {
         if let url = Bundle.main.url(forResource: JSONFile.createTrainingData.rawValue, withExtension: JSONFile.json.rawValue) {
             do {
@@ -16,10 +16,10 @@ class CreateTrainingService {
                 let createTrainingData: CreateTrainingData = try JSONDecoder().decode(CreateTrainingData.self, from: data)
                 completion(createTrainingData, nil)
             } catch  {
-                completion(nil, error)
+                completion(nil, error as! Error)
             }
         }
-        
+
     }
 
 }

@@ -14,6 +14,7 @@ protocol CreateTrainingViewControllerProtocol: AnyObject {
 
 class CreateTrainingViewController: UIViewController {
     
+    private var fireStoreManager = FirestoreManager.shared
     
     @IBOutlet weak var exerciseCountButton: UIButton!
     @IBOutlet weak var finishButton: UIButton!
@@ -69,12 +70,12 @@ class CreateTrainingViewController: UIViewController {
 
     @IBAction func tappedConclusionButton(_ sender: UIButton) {
         viewControllerDelegate?.configureTabBarIndex()
-        
+
         fireStoreManager.addWorkout(workout: Exercise(exerciseName: <#T##String#>, category: <#T##String#>, details: <#T##String#>, exerciseImage: <#T##String?#>), completion: <#T##(Result<User, Error>) -> Void#>)
-        
-    
+
+
         { result in
-            
+
             switch result{
             case .success:
                 print("Deu certo")
@@ -82,7 +83,7 @@ class CreateTrainingViewController: UIViewController {
                 print("Error")
             }
         }
-        
+
         var presentingViewController = self.presentingViewController
         while presentingViewController?.presentingViewController != nil {
             presentingViewController = presentingViewController?.presentingViewController

@@ -17,7 +17,6 @@ target 'APPMeuTreino' do
   end
 
 pod 'Alamofire'
-pod ‘Firebase/Core'
-pod ‘Firebase/Firestore' 
+
 
 end
