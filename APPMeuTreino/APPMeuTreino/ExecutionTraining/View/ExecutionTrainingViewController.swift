@@ -1,4 +1,5 @@
 import UIKit
+import YouTubePlayer
 
 protocol ExecutionTrainingViewControllerProtocol: AnyObject {
     func configureTabBarIndex()
@@ -13,6 +14,7 @@ class ExecutionTrainingViewController: UIViewController {
     
     private var viewModel: ExecutionTrainingViewModel = ExecutionTrainingViewModel()
     private weak var delegate: ExecutionTrainingViewControllerProtocol?
+    private var service: ExerciseServiceProtocol = GetExerciseService()
     
     public func delegate(delegate: ExecutionTrainingViewControllerProtocol?) {
         self.delegate = delegate
@@ -62,43 +64,53 @@ extension ExecutionTrainingViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExecutionTrainingCollectionViewCell.identifier, for: indexPath) as? ExecutionTrainingCollectionViewCell
         cell?.setupCell(exercise: viewModel.getExercise(index: indexPath.row))
         cell?.delegate(delegate: self)
-            return cell ?? UICollectionViewCell()
+        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = UIStoryboard(name: String(describing: DemonstrationExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DemonstrationExerciseViewController.self)) as? DemonstrationExerciseViewController{
-            vc.modalPresentationStyle = .pageSheet
-            present(vc, animated: true)
-        }
-    }
-}
-
-extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.width/3)
-    }
-
-}
-
-extension ExecutionTrainingViewController: ExecutionTrainingCollectionViewCellProtocol{
-    
-    func addExerciseInformation(name: String) {
-        if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController{
-            vc.name = name
-            if name == "Séries" {
-                vc.placeholder = "Nº de Séries"
-            } else if name == "Reps"{
-                vc.placeholder = "Nº de Repetições"
-            } else {
-                vc.placeholder = "Carga em Kg"
+        let exercise = viewModel.getExercise(index: indexPath.row)
+        
+        service.getExerciseDetails(for: exercise) { [weak self] exerciseDetails in
+            DispatchQueue.main.async {
+                if let vc = UIStoryboard(name: "DemonstrationExerciseViewController", bundle: nil).instantiateViewController(withIdentifier: "DemonstrationExerciseViewController") as? DemonstrationExerciseViewController {
+                    vc.exercise = exercise
+                    vc.exerciseDetails = exerciseDetails
+                    vc.modalPresentationStyle = .pageSheet
+                    self?.present(vc, animated: true)
+                }
             }
-            present(vc, animated: true)
         }
     }
 }
-
-extension ExecutionTrainingViewController: TrainingConclusionViewControllerProtocol{
-    func configureTabBarIndex() {
-        delegate?.configureTabBarIndex()
+    
+    
+    extension ExecutionTrainingViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: view.frame.width, height: view.frame.width/3)
+        }
+        
     }
-}
+    
+    extension ExecutionTrainingViewController: ExecutionTrainingCollectionViewCellProtocol{
+        
+        func addExerciseInformation(name: String) {
+            if let vc = UIStoryboard(name: String(describing: DataExerciseViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: DataExerciseViewController.self)) as? DataExerciseViewController{
+                vc.name = name
+                if name == "Séries" {
+                    vc.placeholder = "Nº de Séries"
+                } else if name == "Reps"{
+                    vc.placeholder = "Nº de Repetições"
+                } else {
+                    vc.placeholder = "Carga em Kg"
+                }
+                present(vc, animated: true)
+            }
+        }
+    }
+    
+    extension ExecutionTrainingViewController: TrainingConclusionViewControllerProtocol{
+        func configureTabBarIndex() {
+            delegate?.configureTabBarIndex()
+        }
+    }
+

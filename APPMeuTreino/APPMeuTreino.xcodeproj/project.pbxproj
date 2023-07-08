@@ -10,6 +10,7 @@
 		380EAEE82A5796FF00506190 /* FirestoreMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380EAEE72A5796FF00506190 /* FirestoreMenager.swift */; };
 		380EAEEA2A57976600506190 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380EAEE92A57976600506190 /* User.swift */; };
 		385D2DC52A2573F700C43461 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2DC42A2573F700C43461 /* UIColor+Extension.swift */; };
+		386728FA2A5968CC00053F76 /* ExerciseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386728F92A5968CC00053F76 /* ExerciseDetails.swift */; };
 		38B8008B29C9586B005F35AF /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B8008929C9586B005F35AF /* TrainingTableViewCell.swift */; };
 		38B8008C29C9586B005F35AF /* TrainingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38B8008A29C9586B005F35AF /* TrainingTableViewCell.xib */; };
 		38C672F829F84CE8008F8DA3 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C672F729F84CE8008F8DA3 /* Training.swift */; };
@@ -127,6 +128,7 @@
 		380EAEE72A5796FF00506190 /* FirestoreMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreMenager.swift; sourceTree = "<group>"; };
 		380EAEE92A57976600506190 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		385D2DC42A2573F700C43461 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		386728F92A5968CC00053F76 /* ExerciseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetails.swift; sourceTree = "<group>"; };
 		38B8008929C9586B005F35AF /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		38B8008A29C9586B005F35AF /* TrainingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingTableViewCell.xib; sourceTree = "<group>"; };
 		38C672F729F84CE8008F8DA3 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 				88BDAB2D2A213B340035B125 /* ExerciseSelectionData.swift */,
 				8870490B2A560A0900DE8664 /* ExerciseData.swift */,
 				380EAEE92A57976600506190 /* User.swift */,
+				386728F92A5968CC00053F76 /* ExerciseDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1059,6 +1062,7 @@
 				8870490A2A5609C300DE8664 /* GetExerciseService.swift in Sources */,
 				884D0DFD2A58CAFF00224428 /* Error.swift in Sources */,
 				88BDAB232A213AE60035B125 /* ExerciseSelectionService.swift in Sources */,
+				386728FA2A5968CC00053F76 /* ExerciseDetails.swift in Sources */,
 				38C672F829F84CE8008F8DA3 /* Training.swift in Sources */,
 				88BDAB312A213B340035B125 /* CreateTrainingData.swift in Sources */,
 				3F64491829BA71B400BDE579 /* CreateTrainingViewController.swift in Sources */,

@@ -17,6 +17,6 @@ target 'APPMeuTreino' do
   end
 
 pod 'Alamofire'
-
+pod 'YouTubePlayer'
 
 end

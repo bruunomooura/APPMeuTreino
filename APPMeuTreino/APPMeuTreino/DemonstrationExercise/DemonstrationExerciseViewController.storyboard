@@ -9,11 +9,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="futur2.ttf">
-            <string>Futura-Book</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Demonstration Exercise View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -48,58 +43,30 @@
                                     <constraint firstAttribute="width" constant="30" id="p4g-KJ-0De"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AbdominalVplayer" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-Uv-TIh">
-                                <rect key="frame" x="30" y="110.5" width="315" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="CLm-tW-yjd"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plg-PS-Ml7">
-                                <rect key="frame" x="30" y="299.5" width="120" height="32.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="IEi-Qe-Z4z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-M6-hFQ">
-                                <rect key="frame" x="30" y="340" width="315" height="154"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="154" id="v5T-mB-c1v"/>
-                                </constraints>
-                                <string key="text">Posição inicial: deite-se no chão com os braços esticados acima da cabeça. Mantenha as pernas juntas e esticadas. Enquanto expira, levante o tronco com os braço e pernas para cima numa posição perpendicular ao solo. As mãos devem tocar nos pés.
-Enquanto inspira, volte à posição inicial.</string>
-                                <fontDescription key="fontDescription" name="Futura-Book" family="Futura-Book" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLJ-wg-fqp" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="8" y="142" width="359" height="208"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8jM-VV-M15" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2nr-ef-fVw"/>
-                            <constraint firstItem="plg-PS-Ml7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="30" id="8Oo-IK-zbt"/>
                             <constraint firstItem="Rn1-6h-3gT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CfH-i9-jXT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6rN-M6-hFQ" secondAttribute="trailing" constant="30" id="HN9-HT-yh9"/>
-                            <constraint firstItem="5ET-Uv-TIh" firstAttribute="top" secondItem="Rn1-6h-3gT" secondAttribute="bottom" constant="8" id="HPG-6V-Fro"/>
-                            <constraint firstItem="plg-PS-Ml7" firstAttribute="top" secondItem="5ET-Uv-TIh" secondAttribute="bottom" constant="19" id="TlG-uJ-Uyt"/>
-                            <constraint firstItem="6rN-M6-hFQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="WV2-v8-tES"/>
+                            <constraint firstItem="oLJ-wg-fqp" firstAttribute="top" secondItem="Rn1-6h-3gT" secondAttribute="bottom" constant="39.5" id="I8a-2k-8Sh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oLJ-wg-fqp" secondAttribute="trailing" constant="8" id="LoX-D7-RB3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="oLJ-wg-fqp" secondAttribute="bottom" constant="317" id="aDI-Dt-He2"/>
                             <constraint firstItem="7zT-kq-yyx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="f5I-hR-OLq"/>
+                            <constraint firstItem="oLJ-wg-fqp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="gYL-ch-3ES"/>
                             <constraint firstItem="Rn1-6h-3gT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="jmW-W4-GLo"/>
-                            <constraint firstItem="6rN-M6-hFQ" firstAttribute="top" secondItem="plg-PS-Ml7" secondAttribute="bottom" constant="8" id="ksa-mD-Aw0"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5ET-Uv-TIh" secondAttribute="trailing" constant="30" id="mPc-1i-KGQ"/>
                             <constraint firstItem="8jM-VV-M15" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="mb6-WM-Oto"/>
                             <constraint firstItem="7zT-kq-yyx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="mbE-n3-Vdo"/>
-                            <constraint firstItem="5ET-Uv-TIh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="rYx-bN-mL5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="7zT-kq-yyx" id="3vm-Xc-9Qa"/>
                         <outlet property="backButtonImageView" destination="8jM-VV-M15" id="dsc-eN-MIt"/>
-                        <outlet property="demonstrationViewImageView" destination="5ET-Uv-TIh" id="c4a-6j-11p"/>
-                        <outlet property="descriptionLabel" destination="plg-PS-Ml7" id="Oeb-Xe-cJn"/>
-                        <outlet property="descriptionTextLabel" destination="6rN-M6-hFQ" id="hTe-L2-k8T"/>
+                        <outlet property="demonstrationVideoPlayer" destination="oLJ-wg-fqp" id="PKN-mL-XDr"/>
                         <outlet property="exerciseLabel" destination="Rn1-6h-3gT" id="1Q3-E2-DVu"/>
                     </connections>
                 </viewController>
@@ -109,11 +76,13 @@ Enquanto inspira, volte à posição inicial.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="AbdominalVplayer" width="1920" height="1080"/>
         <image name="BackArrow" width="868" height="674"/>
         <namedColor name="OrangeMeuTreino">
             <color red="0.92900002002716064" green="0.4309999942779541" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
