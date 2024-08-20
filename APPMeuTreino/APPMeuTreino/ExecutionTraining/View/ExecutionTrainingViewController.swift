@@ -1,5 +1,5 @@
 import UIKit
-import YouTubePlayer
+//import YouTubePlayer
 
 protocol ExecutionTrainingViewControllerProtocol: AnyObject {
     func configureTabBarIndex()

@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 protocol ForgotPasswordViewModelProtocol: AnyObject {
     func successSendEmail()

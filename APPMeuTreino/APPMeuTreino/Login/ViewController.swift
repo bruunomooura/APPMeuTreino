@@ -64,8 +64,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        viewModel.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
-        showLoadingScreen()
+//        viewModel.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+//        showLoadingScreen()
+              let numbers = [0]
+              let _ = numbers[1]
     }
     
     @IBAction func tappedSignupButton(_ sender: UIButton) {

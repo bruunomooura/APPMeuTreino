@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 protocol ChangePasswordViewModelProtocol: AnyObject {
     func changePassword(oldPassword: String, newPassword: String, completion: @escaping (Bool) -> Void)

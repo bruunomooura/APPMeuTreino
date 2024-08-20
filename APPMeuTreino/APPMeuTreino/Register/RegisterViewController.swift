@@ -9,6 +9,7 @@ import UIKit
 import MobileCoreServices
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
